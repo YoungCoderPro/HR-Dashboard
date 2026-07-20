@@ -1,7 +1,7 @@
 {
   "meta": {
-    "dataVersion": "1.0.0",
-    "lastUpdated": "2026-07-20T17:01:48.129Z",
+    "dataVersion": "1.0.1",
+    "lastUpdated": "2026-07-20T21:00:00.000Z",
     "unemploymentPeriod": "May 2026",
     "eeocPeriod": "FY2024",
     "notes": "Compliance data current as of mid-2026. Verify with linked official sources before relying on any figure for a compliance decision."
@@ -14,40 +14,40 @@
       null
     ],
     "AK": [
-      11.91,
-      "Indexed to CPI annually",
-      "Jan 2026",
+      14.0,
+      "Ballot Measure 1 (2024) schedule; rises to $15 by Jul 2027, then CPI indexing resumes 2028",
+      "Jul 2026",
       "https://labor.alaska.gov/lss/minimum-wage.htm"
     ],
     "AZ": [
-      14.7,
-      "Indexed to CPI; Flagstaff: $17.40",
+      15.15,
+      "Indexed to CPI; Flagstaff: $18.35 (tip credit eliminated 2026)",
       "Jan 2026",
-      "https://www.azica.gov/divisions/labor-department-minimum-wage"
+      "https://www.azica.gov/labor-minimum-wage-main-page"
     ],
     "AR": [
       11,
       "",
       "Jan 2026",
-      "https://www.dfa.arkansas.gov/offices/labor-standards/minimum-wage"
+      "https://labor.arkansas.gov/labor/labor-standards/minimum-wage-and-overtime/"
     ],
     "CA": [
-      16.5,
-      "$20 for fast food workers; some locality rates higher",
+      16.9,
+      "$20/hr fast food workers; healthcare worker minimum wage separately CPI-adjusted; some locality rates higher",
       "Jan 2026",
-      "https://www.dir.ca.gov/iwc/minimumwagehistory.htm"
+      "https://www.dir.ca.gov/DIRNews/2025/2025-118.html"
     ],
     "CO": [
-      14.81,
-      "Indexed to CPI annually",
+      15.16,
+      "Indexed to CPI annually; tipped minimum $12.14",
       "Jan 2026",
       "https://cdle.colorado.gov/wages/minimum-wage-information"
     ],
     "CT": [
-      16.35,
-      "Increases tied to CPI through 2026",
+      16.94,
+      "Increases tied to ECI (Public Act 19-4) through 2026",
       "Jan 2026",
-      "https://portal.ct.gov/dol/divisions/wage-and-workplace-standards/minimum-wage"
+      "https://portal.ct.gov/governor/news/press-releases/2025/09-2025/governor-lamont-announces-minimum-wage-will-increase"
     ],
     "DE": [
       15,
@@ -59,7 +59,7 @@
       14,
       "Increases to $15 Sep 30, 2026; then CPI",
       "Oct 2025",
-      "https://www.floridaminwage.com/"
+      "https://floridajobs.org/florida-minimum-wage"
     ],
     "GA": [
       5.15,
@@ -68,7 +68,7 @@
       "https://dol.georgia.gov/minimum-wage"
     ],
     "HI": [
-      14,
+      16.0,
       "Increases to $18 by Jan 2028",
       "Jan 2026",
       "https://labor.hawaii.gov/wsd/minimum-wage/"
@@ -80,10 +80,10 @@
       "https://www.labor.idaho.gov/dnn/Businesses/EmploymentLaws/MinimumWage.aspx"
     ],
     "IL": [
-      15.6,
-      "Chicago: $16.50. Effective Jul 1, 2026",
-      "Jul 2026",
-      "https://www2.illinois.gov/idol/Laws-Rules/FLS/Pages/Minimum-Wage-Law.aspx"
+      15.0,
+      "Chicago: $17.05, effective Jul 1, 2026 (local ordinance only — state rate has no CPI escalator after reaching $15 in Jan 2025)",
+      "Jan 2025",
+      "https://labor.illinois.gov/laws-rules/fls/minimum-wage-law.html"
     ],
     "IN": [
       7.25,
@@ -116,14 +116,14 @@
       null
     ],
     "ME": [
-      14.65,
-      "Indexed to CPI",
+      15.1,
+      "Indexed to CPI; tipped minimum $7.55",
       "Jan 2026",
-      "https://www.maine.gov/labor/labor_laws/minimum_wage.html"
+      "https://www.maine.gov/labor/news_events/article.shtml?id=13338762"
     ],
     "MD": [
       15,
-      "Montgomery Co: $17.50; Prince George's Co: $17.00",
+      "Montgomery Co: tiered $15.95/$16.50/$18.00 by employer size, effective Jul 1, 2026; Prince George's Co: $15.30, effective Jan 1, 2026",
       "Jan 2026",
       "https://www.dllr.state.md.us/labor/wages/minwage.shtml"
     ],
@@ -134,16 +134,16 @@
       "https://www.mass.gov/info-details/massachusetts-law-about-minimum-wage"
     ],
     "MI": [
-      10.56,
-      "Increasing to $12.48 by 2028 per court-ordered schedule",
+      13.73,
+      "Legislation superseded the court-ordered schedule; rising to $15.00 on Jan 1, 2027",
       "Jan 2026",
-      "https://www.michigan.gov/leo/bureaus-agencies/ors/minimumwage"
+      "https://www.michigan.gov/leo/news/2025/12/08/michigans-minimum-wage-set-to-increase-on-jan-1-2026"
     ],
     "MN": [
-      10.85,
-      "Large employer: $10.85; Small employer: $8.85",
+      11.41,
+      "Single statewide rate — large/small employer split was eliminated Jan 2025; CPI-indexed",
       "Jan 2026",
-      "https://www.dli.mn.gov/business/employment-practices/minimum-wage-minnesota"
+      "https://www.dli.mn.gov/news/new-minimum-wage-rates-changes-meal-and-rest-break-laws-take-effect-jan-1-2026"
     ],
     "MS": [
       7.25,
@@ -152,26 +152,26 @@
       null
     ],
     "MO": [
-      13.75,
-      "",
+      15.0,
+      "Prop A schedule reached $15/hr; CPI indexing for future years was repealed by HB 567 (2025)",
       "Jan 2026",
-      "https://labor.mo.gov/DLS/MinimumWage"
+      "https://labor.mo.gov/news/press-releases/minimum-wage-increases-1500-hour-2026"
     ],
     "MT": [
-      10.55,
-      "Indexed to CPI",
+      10.85,
+      "Indexed to CPI (Aug-to-Aug measurement period)",
       "Jan 2026",
       "https://erd.dli.mt.gov/labor-standards/wage-and-hour-payment-act/minimum-wage"
     ],
     "NE": [
-      13.5,
-      "Increases to $15 by Jan 2026; verify current rate",
+      15.0,
+      "Voter-approved increase schedule completed",
       "Jan 2026",
-      "https://dol.nebraska.gov/LaborLaw/MinimumWage"
+      "https://dol.nebraska.gov/PressRelease/Details/338"
     ],
     "NV": [
       12,
-      "Flat $12 for all employers since Jul 2024 (health benefit differential eliminated)",
+      "Flat $12/hr for all employers since Jul 2024 (health benefit differential eliminated); not CPI-indexed",
       "Jul 2024",
       "https://labor.nv.gov/Laborer/Minimum_Wage/Minimum_Wage_Information/"
     ],
@@ -179,23 +179,23 @@
       7.25,
       "No state law above federal",
       "Federal",
-      "https://www.nh.gov/labor/employment/minimum-wage.htm"
+      "https://www.dol.nh.gov/inspections/wage-and-hour/minimum-wage"
     ],
     "NJ": [
-      15.9,
-      "Indexed to CPI for large employers. Effective Jul 1, 2026",
-      "Jul 2026",
-      "https://www.nj.gov/labor/wagehour/content/minimum_wage.html"
+      15.92,
+      "Indexed to CPI for large employers; annual adjustment occurs each Jan 1 (not Jul 1)",
+      "Jan 2026",
+      "https://www.nj.gov/labor/lwdhome/press/2025/20251001_Minimum_Wage.shtml"
     ],
     "NM": [
       12,
-      "Albuquerque: $12.50",
+      "Albuquerque's local rate ($11.85) is currently superseded by the higher state rate; a new city ordinance sets Albuquerque to $13.00 in 2027",
       "Jan 2026",
       "https://www.dws.state.nm.us/Businesses/Employer-Resources/Minimum-Wage-Frequently-Asked-Questions"
     ],
     "NY": [
-      16.5,
-      "NYC/Nassau/Suffolk/Westchester: $16.50; CPI-indexed from 2027",
+      17.0,
+      "NYC/Nassau/Suffolk/Westchester: $17.00; rest of state: $16.00; CPI-indexed statewide from 2027",
       "Jan 2026",
       "https://www.labor.ny.gov/workerprotection/laborstandards/workprot/minwage.shtm"
     ],
@@ -212,8 +212,8 @@
       null
     ],
     "OH": [
-      10.7,
-      "Small employers (<$394K gross): $7.25",
+      11.0,
+      "Small employers (gross receipts under ~$405K/yr): $7.25",
       "Jan 2026",
       "https://com.ohio.gov/divisions-and-programs/industrial-compliance/ohio-bureau-of-wage-and-hour/minimum-wage"
     ],
@@ -224,9 +224,9 @@
       null
     ],
     "OR": [
-      15.45,
-      "Portland metro: $16.20; non-urban: $14.20",
-      "Jul 2025",
+      15.55,
+      "Portland metro: $16.80; non-urban: $14.55",
+      "Jul 2026",
       "https://www.oregon.gov/boli/workers/pages/minimum-wage.aspx"
     ],
     "PA": [
@@ -236,8 +236,8 @@
       "https://www.dli.pa.gov/Individuals/Labor-Management-Relations/llc/minimum-wage/Pages/default.aspx"
     ],
     "RI": [
-      15,
-      "",
+      16.0,
+      "Scheduled to reach $17.00 in 2027",
       "Jan 2026",
       "https://dlt.ri.gov/employers/wage-payments/minimum-wage"
     ],
@@ -248,10 +248,10 @@
       null
     ],
     "SD": [
-      11.5,
+      11.85,
       "Indexed to CPI",
       "Jan 2026",
-      "https://dlr.sd.gov/labor_market/minimum_wage.aspx"
+      "https://dlr.sd.gov/employment_laws/minimum_wage.aspx"
     ],
     "TN": [
       7.25,
@@ -272,20 +272,20 @@
       "https://laborcommission.utah.gov/divisions/antidiscrimination-labor/labor-standards/"
     ],
     "VT": [
-      14.01,
+      14.42,
       "Indexed to CPI",
       "Jan 2026",
       "https://labor.vermont.gov/wage-and-hour/minimum-wage"
     ],
     "VA": [
-      12.41,
-      "Increasing to $15 by Jan 2026; verify current rate",
+      12.77,
+      "Scheduled increase to $15.00 did not take effect — legislature did not reenact it by the required deadline, so the rate reverted to the CPI-indexed formula. Separate 2026 legislation (HB1/SB1) sets a new path to $15 by 2028.",
       "Jan 2026",
       "https://www.doli.virginia.gov/labor-law/minimum-wage/"
     ],
     "WA": [
-      16.66,
-      "Seattle: $20.76; Tukwila and SeaTac higher",
+      17.13,
+      "Seattle: $21.30; Tukwila: $21.65; SeaTac (hospitality/transportation only): $20.74",
       "Jan 2026",
       "https://lni.wa.gov/workers-rights/wages/minimum-wage/"
     ],
@@ -308,135 +308,135 @@
       null
     ],
     "DC": [
-      17.5,
+      18.4,
       "Highest in US; CPI-indexed annually",
-      "Jul 2025",
+      "Jul 2026",
       "https://does.dc.gov/service/dc-minimum-wage"
     ]
   },
   "unemployment": {
     "AL": [
-      3.8
+      3.0
     ],
     "AK": [
-      4.7
-    ],
-    "AZ": [
-      4.2
-    ],
-    "AR": [
-      3.7
-    ],
-    "CA": [
-      5.5
-    ],
-    "CO": [
-      3.7
-    ],
-    "CT": [
-      4.3
-    ],
-    "DE": [
       4.6
     ],
-    "FL": [
-      3.5
-    ],
-    "GA": [
-      3.6
-    ],
-    "HI": [
-      2.9
-    ],
-    "ID": [
-      3.2
-    ],
-    "IL": [
+    "AZ": [
       4.8
     ],
-    "IN": [
+    "AR": [
+      4.2
+    ],
+    "CA": [
+      5.3
+    ],
+    "CO": [
+      3.9
+    ],
+    "CT": [
+      5.1
+    ],
+    "DE": [
+      5.1
+    ],
+    "FL": [
+      4.8
+    ],
+    "GA": [
+      3.4
+    ],
+    "HI": [
+      2.5
+    ],
+    "ID": [
       3.7
     ],
-    "IA": [
-      3.1
+    "IL": [
+      5.1
     ],
-    "KS": [
+    "IN": [
+      3.3
+    ],
+    "IA": [
       3.2
     ],
+    "KS": [
+      3.8
+    ],
     "KY": [
-      4.2
+      4.5
     ],
     "LA": [
       4.5
     ],
     "ME": [
-      3.4
+      3.1
     ],
     "MD": [
-      3
-    ],
-    "MA": [
-      3.9
-    ],
-    "MI": [
-      4.5
-    ],
-    "MN": [
-      3.3
-    ],
-    "MS": [
-      4.3
-    ],
-    "MO": [
-      3.7
-    ],
-    "MT": [
-      3.3
-    ],
-    "NE": [
-      2.8
-    ],
-    "NV": [
-      5.7
-    ],
-    "NH": [
-      3
-    ],
-    "NJ": [
-      4.6
-    ],
-    "NM": [
-      5
-    ],
-    "NY": [
-      4.7
-    ],
-    "NC": [
-      4
-    ],
-    "ND": [
-      2.6
-    ],
-    "OH": [
-      4.2
-    ],
-    "OK": [
-      3.8
-    ],
-    "OR": [
-      4.5
-    ],
-    "PA": [
-      4
-    ],
-    "RI": [
       4.4
     ],
+    "MA": [
+      4.5
+    ],
+    "MI": [
+      5.1
+    ],
+    "MN": [
+      4.4
+    ],
+    "MS": [
+      3.8
+    ],
+    "MO": [
+      3.8
+    ],
+    "MT": [
+      3.4
+    ],
+    "NE": [
+      3.0
+    ],
+    "NV": [
+      5.2
+    ],
+    "NH": [
+      3.0
+    ],
+    "NJ": [
+      4.7
+    ],
+    "NM": [
+      4.9
+    ],
+    "NY": [
+      4.6
+    ],
+    "NC": [
+      3.7
+    ],
+    "ND": [
+      2.4
+    ],
+    "OH": [
+      3.7
+    ],
+    "OK": [
+      4.1
+    ],
+    "OR": [
+      5.2
+    ],
+    "PA": [
+      4.2
+    ],
+    "RI": [
+      4.3
+    ],
     "SC": [
-      3.9
+      4.6
     ],
     "SD": [
-      2.5
+      2.1
     ],
     "TN": [
       3.6
@@ -445,28 +445,28 @@
       4.3
     ],
     "UT": [
-      3.3
+      3.7
     ],
     "VT": [
-      3
+      2.6
     ],
     "VA": [
-      3
-    ],
-    "WA": [
-      4.9
-    ],
-    "WV": [
-      5.2
-    ],
-    "WI": [
-      3.2
-    ],
-    "WY": [
       3.8
     ],
+    "WA": [
+      5.2
+    ],
+    "WV": [
+      4.3
+    ],
+    "WI": [
+      3.4
+    ],
+    "WY": [
+      3.4
+    ],
     "DC": [
-      5.5
+      6.1
     ]
   },
   "paidLeaveTable": [
@@ -477,7 +477,7 @@
       "f": 8,
       "m": 52,
       "y": 2004,
-      "c": "0.9% EE",
+      "c": "1.3% EE",
       "u": "https://edd.ca.gov/en/disability/paid-family-leave",
       "act": true
     },
@@ -528,7 +528,7 @@
     {
       "s": "Massachusetts",
       "a": "MA",
-      "p": "80% (up to $1,169/wk)",
+      "p": "80% (up to $1,230.39/wk)",
       "f": 12,
       "m": 20,
       "y": 2021,
@@ -589,7 +589,7 @@
       "y": 2026,
       "c": "0.8% split",
       "u": "https://dol.delaware.gov/familyleave/",
-      "act": false
+      "act": true
     },
     {
       "s": "Minnesota",
@@ -598,9 +598,9 @@
       "f": 12,
       "m": 12,
       "y": 2026,
-      "c": "0.7% split",
+      "c": "0.88% split",
       "u": "https://paidleave.mn.gov",
-      "act": false
+      "act": true
     },
     {
       "s": "Maryland",
@@ -608,7 +608,7 @@
       "p": "90% low / 50%",
       "f": 12,
       "m": 12,
-      "y": 2026,
+      "y": 2027,
       "c": "0.9% split",
       "u": "https://www.labor.maryland.gov/paidleave/",
       "act": false
@@ -622,6 +622,17 @@
       "y": 2026,
       "c": "1% split",
       "u": "https://www.maine.gov/pfml/",
+      "act": true
+    },
+    {
+      "s": "Virginia",
+      "a": "VA",
+      "p": "80% (est.; up to state avg weekly wage)",
+      "f": 12,
+      "m": 12,
+      "y": 2028,
+      "c": "Not yet set (VEC fiscal note estimate: ~0.75%)",
+      "u": "https://www.vec.virginia.gov/node/424",
       "act": false
     }
   ],
@@ -2117,276 +2128,183 @@
   },
   "newsFeed": [
     {
-      "id": "w2f001",
-      "date": "Jun 22, 2026",
-      "category": "alert",
-      "priority": "high",
-      "iconBg": "#9e2020",
-      "icon": "OT",
-      "title": "BREAKING: Fifth Circuit Vacates DOL $58,656 Overtime Threshold",
-      "desc": "The Fifth Circuit vacated the DOL's 2024 rule raising the overtime exempt salary threshold to $58,656 per year, reverting to $35,568. Employers who reclassified workers as hourly should assess re-exemption options immediately. A DOL appeal or cert petition is expected.",
+      "id": "w3f001",
+      "date": "Jul 20, 2026",
+      "category": "state",
+      "priority": "med",
+      "iconBg": "#1a8a50",
+      "icon": "ME",
+      "title": "Maine Pay Range Disclosure Law (LD 54) Takes Effect Jul 29",
+      "desc": "Maine's new pay transparency law, signed April 24, 2026, requires employers with 10+ employees to post pay ranges in job listings, disclose ranges to current employees on request, and retain pay-history records for 3 years post-separation. It takes effect July 29, 2026.",
       "tags": [
-        "DOL",
-        "FLSA",
-        "Overtime",
-        "BREAKING"
+        "Pay Transparency",
+        "Maine",
+        "Deadline"
       ],
-      "link": "https://www.dol.gov/agencies/whd/overtime/rulemaking",
-      "linkLabel": "DOL overtime page",
+      "link": "https://legislature.maine.gov/legis/bills/display_ps.asp?LD=54&snum=132",
+      "linkLabel": "ME Legislature — LD 54",
       "isNew": true
     },
     {
-      "id": "w2f002",
-      "date": "Jun 22, 2026",
+      "id": "w3f002",
+      "date": "Jul 18, 2026",
+      "category": "state",
+      "priority": "high",
+      "iconBg": "#1a8a50",
+      "icon": "NE",
+      "title": "Nebraska Enacts Mini-WARN Act (LB 921)",
+      "desc": "Effective July 18, 2026, Nebraska employers with 100+ workers must give 90 days' notice (vs. federal WARN's 60) before a mass layoff or closing. Fines run up to $100/day; there is no private right of action.",
+      "tags": [
+        "WARN Act",
+        "Nebraska",
+        "Layoffs"
+      ],
+      "link": "https://dol.nebraska.gov/ReemploymentServices/LayoffServices/LayoffsAndDownsizingWARN",
+      "linkLabel": "NE DOL — WARN",
+      "isNew": true
+    },
+    {
+      "id": "w3f003",
+      "date": "Jul 6, 2026",
       "category": "federal",
       "priority": "high",
       "iconBg": "#0e82be",
-      "icon": "AI",
-      "title": "EEOC AI Hiring Guidance Effective Aug 1 — 6 Weeks to Comply",
-      "desc": "With the EEOC's final AI hiring guidance effective August 1, 2026, employers have six weeks to complete bias audits of algorithmic screening tools, update records retention policies, and train recruiters on accommodation pathways for candidates flagged by automated systems.",
+      "icon": "EEO",
+      "title": "EEOC Regulatory Agenda Targets EEO-1 Reporting for Rescission",
+      "desc": "The EEOC's Unified Agenda entry confirms a formal proposal to rescind EEO-1/2/3/4/5 reporting and UGESP; OIRA concluded review of the EEO-1 rescission proposal on June 9, 2026. Current filing obligations remain in force until a final rule is issued.",
       "tags": [
         "EEOC",
-        "AI Hiring",
-        "Deadline"
+        "EEO-1",
+        "Regulatory"
       ],
-      "link": "https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness",
-      "linkLabel": "EEOC AI guidance",
+      "link": "https://www.shrm.org/topics-tools/employment-law-compliance/eeoc-proposal-puts-future-of-eeo-1-reporting-question",
+      "linkLabel": "SHRM — EEO-1 proposal",
       "isNew": true
     },
     {
-      "id": "w2f003",
-      "date": "Jun 21, 2026",
+      "id": "w3f004",
+      "date": "Jul 2026",
+      "category": "federal",
+      "priority": "med",
+      "iconBg": "#0e82be",
+      "icon": "DOL",
+      "title": "DOL WHD Lists 8 Proposed Rules on 2026 Regulatory Agenda",
+      "desc": "DOL's Wage and Hour Division agenda includes replacing the 2024 independent-contractor rule with a 2021-style test and restoring 2021-style joint-employer guidance. The independent-contractor comment period closed April 28, 2026; no final rule has been issued yet.",
+      "tags": [
+        "DOL",
+        "Independent Contractor",
+        "Joint Employer"
+      ],
+      "link": "https://www.dol.gov/agencies/whd/flsa/misclassification/2026rulemaking",
+      "linkLabel": "DOL WHD rulemaking",
+      "isNew": false
+    },
+    {
+      "id": "w3f005",
+      "date": "Jul 1, 2026",
+      "category": "state",
+      "priority": "high",
+      "iconBg": "#1a8a50",
+      "icon": "VA",
+      "title": "Virginia Pay Transparency & Salary History Ban Take Effect",
+      "desc": "Virginia's SB 215/HB 636 now require salary ranges in all job postings (no employer-size threshold) and bar salary-history inquiries. The state AG enforces with $1,000-$5,000 penalties and a 15-day cure period.",
+      "tags": [
+        "Pay Transparency",
+        "Virginia",
+        "Salary History Ban"
+      ],
+      "link": "https://lis.virginia.gov/bill-details/20261/SB215",
+      "linkLabel": "VA Legislature — SB 215",
+      "isNew": false
+    },
+    {
+      "id": "w3f006",
+      "date": "Jul 1, 2026",
+      "category": "state",
+      "priority": "med",
+      "iconBg": "#1a8a50",
+      "icon": "VA",
+      "title": "Virginia Expands Non-Compete Restrictions (SB 170)",
+      "desc": "Effective July 1, 2026, Virginia voids non-competes for any employee discharged without cause unless severance/consideration was disclosed at signing. The law carries a private right of action with penalties up to $10,000/violation.",
+      "tags": [
+        "Non-Compete",
+        "Virginia"
+      ],
+      "link": "https://lis.virginia.gov/bill-details/20261/SB170/text/CHAP0883",
+      "linkLabel": "VA Legislature — SB 170",
+      "isNew": false
+    },
+    {
+      "id": "w3f007",
+      "date": "Jul 1, 2026",
       "category": "state",
       "priority": "high",
       "iconBg": "#1a8a50",
       "icon": "MW",
-      "title": "IL and NJ Minimum Wage — 9 Days to Jul 1 Effective Date",
-      "desc": "Illinois at $15.60/hr and New Jersey at $15.90/hr take effect July 1. Chicago's local rate moves to $16.50/hr. Payroll systems must be updated by June 27 to ensure correct first-pay-period rates. Penalties apply immediately on July 1.",
+      "title": "Minimum Wage Increases Take Effect: Alaska, Oregon, DC + 20 Localities",
+      "desc": "Alaska rose to $14.00/hr, Oregon's tiers rose about 50 cents (Portland metro $16.80, standard $15.55, non-urban $14.55), and DC rose to $18.40/hr, alongside roughly 20 other local minimum-wage adjustments nationwide.",
       "tags": [
         "Min Wage",
-        "Illinois",
-        "New Jersey",
-        "Deadline"
+        "Alaska",
+        "Oregon",
+        "DC"
       ],
-      "link": "https://www.dol.gov/agencies/whd/minimum-wage/state",
-      "linkLabel": "DOL WHD",
-      "isNew": true
+      "link": "https://www.oregon.gov/boli/workers/pages/minimum-wage.aspx",
+      "linkLabel": "OR BOLI",
+      "isNew": false
     },
     {
-      "id": "w2f004",
-      "date": "Jun 20, 2026",
+      "id": "w3f008",
+      "date": "Jul 1, 2026",
       "category": "pfml",
-      "priority": "med",
-      "iconBg": "#4a2d9e",
-      "icon": "DE",
-      "title": "Delaware PFML Benefits Live — 9,400 Claims Processed Through May",
-      "desc": "Delaware's Paid Leave program, active since January 2026, has processed approximately 9,400 claims through May 2026. The 0.8% contribution rate holds through 2027. Confirm employees have received required written notice and that deductions appear correctly on pay stubs.",
-      "tags": [
-        "PFML",
-        "Delaware",
-        "Benefits"
-      ],
-      "link": "https://dol.delaware.gov/familyleave/",
-      "linkLabel": "DE Family Leave",
-      "isNew": true
-    },
-    {
-      "id": "w2f005",
-      "date": "Jun 20, 2026",
-      "category": "market",
-      "priority": "info",
-      "iconBg": "#0a6b6b",
-      "icon": "BLS",
-      "title": "Jun 2026 Preliminary ADP Data — 138K Private Sector Jobs Added",
-      "desc": "Preliminary ADP data points to 138K private sector jobs added in June 2026, below consensus expectations of 160K. Healthcare and leisure and hospitality led gains; manufacturing shed 12K. The official BLS report publishes July 3, 2026.",
-      "tags": [
-        "BLS",
-        "Labor Market",
-        "Preview"
-      ],
-      "link": "https://www.bls.gov",
-      "linkLabel": "BLS",
-      "isNew": true
-    },
-    {
-      "id": "w2f006",
-      "date": "Jun 19, 2026",
-      "category": "federal",
-      "priority": "med",
-      "iconBg": "#0e82be",
-      "icon": "EEO",
-      "title": "EEO-1 Filing Portal Opens — Deadline July 15, 2026",
-      "desc": "The EEOC opened the 2025 EEO-1 Component 1 data collection portal this week. Employers with 100 or more employees and federal contractors with 50 or more employees must file workforce demographic data by July 15, 2026. First-time filers should register at the EEOC portal now.",
-      "tags": [
-        "EEO-1",
-        "EEOC",
-        "Deadline"
-      ],
-      "link": "https://www.eeoc.gov/employers/eeo-1-survey",
-      "linkLabel": "EEOC EEO-1",
-      "isNew": true
-    },
-    {
-      "id": "w2f007",
-      "date": "Jun 18, 2026",
-      "category": "state",
-      "priority": "med",
-      "iconBg": "#1a8a50",
-      "icon": "CO",
-      "title": "CO FAMLI Q2 Contribution Filing Due Jul 31",
-      "desc": "Colorado FAMLI employers must submit Q2 2026 payroll and contribution reports by July 31, 2026. The combined rate remains 0.9% of wages. Employers who missed Q1 filings face penalties of 1.5% of overdue contributions per month plus interest.",
-      "tags": [
-        "PFML",
-        "Colorado",
-        "FAMLI",
-        "Deadline"
-      ],
-      "link": "https://famli.colorado.gov",
-      "linkLabel": "CO FAMLI",
-      "isNew": false
-    },
-    {
-      "id": "w2f008",
-      "date": "Jun 18, 2026",
-      "category": "alert",
-      "priority": "high",
-      "iconBg": "#9e2020",
-      "icon": "RC",
-      "title": "Post-RTO Workforce Audits — Remote Nexus Compliance Gaps Found",
-      "desc": "Following large-scale return-to-office mandates, HR compliance teams are discovering that employees who relocated during 2020 through 2024 created unresolved workers comp, unemployment insurance, and income tax nexus obligations in 30 or more states. DOL and state agencies are cross-referencing I-9 addresses with payroll filings.",
-      "tags": [
-        "Remote Work",
-        "Tax Nexus",
-        "Audit"
-      ],
-      "link": null,
-      "linkLabel": null,
-      "isNew": true
-    },
-    {
-      "id": "w2f009",
-      "date": "Jun 17, 2026",
-      "category": "federal",
-      "priority": "med",
-      "iconBg": "#0e82be",
-      "icon": "NL",
-      "title": "DC Circuit Upholds NLRB Broader Joint Employer Standard",
-      "desc": "The DC Circuit upheld the NLRB's 2023 joint employer rule expanding liability to businesses sharing or codetermining essential employment terms with staffing agencies. Employers relying on PEO or staffing firm arrangements should review contracts for indemnification gaps.",
-      "tags": [
-        "NLRB",
-        "Joint Employer",
-        "Staffing"
-      ],
-      "link": "https://www.nlrb.gov/guidance/key-reference-materials/joint-employer",
-      "linkLabel": "NLRB joint employer",
-      "isNew": false
-    },
-    {
-      "id": "w2f010",
-      "date": "Jun 16, 2026",
-      "category": "state",
-      "priority": "med",
-      "iconBg": "#1a8a50",
-      "icon": "CA",
-      "title": "CA AB 3XX — Pay Scale Posting for Remote Roles Passes Assembly",
-      "desc": "California AB 3XX, requiring salary range posting for roles that can be performed remotely anywhere in the US, passed the state Assembly and moves to Senate. If signed, it takes effect January 1, 2027 with significant implications for national job postings.",
-      "tags": [
-        "Pay Transparency",
-        "California",
-        "Remote"
-      ],
-      "link": "https://leginfo.legislature.ca.gov",
-      "linkLabel": "CA Legislature",
-      "isNew": false
-    },
-    {
-      "id": "w2f011",
-      "date": "Jun 15, 2026",
-      "category": "pfml",
-      "priority": "info",
+      "priority": "low",
       "iconBg": "#4a2d9e",
       "icon": "ME",
-      "title": "Maine PFML Benefits Now Available — Launch Confirmed Jun 1",
-      "desc": "Maine's Paid Family and Medical Leave program began accepting benefit claims June 1, 2026. The 1% combined contribution rate applies. Employers with fewer than 15 employees are not required to pay the employer share. Employees may take up to 12 weeks of benefits.",
+      "title": "Maine PFML Maximum Weekly Benefit Rises to $1,249.12",
+      "desc": "Maine's paid-leave program, which began paying benefits May 1, 2026, received its annual maximum-weekly-benefit update, rising from $1,198 to $1,249.12.",
       "tags": [
         "PFML",
         "Maine",
         "Benefits"
       ],
-      "link": "https://www.maine.gov/pfml/",
+      "link": "https://www.maine.gov/paidleave/",
       "linkLabel": "ME PFML",
       "isNew": false
     },
     {
-      "id": "w2f012",
-      "date": "Jun 14, 2026",
+      "id": "w3f009",
+      "date": "Jun 30, 2026",
       "category": "market",
       "priority": "info",
       "iconBg": "#0a6b6b",
       "icon": "JO",
-      "title": "JOLTS May 2026: 7.6M Openings — Quits Rate Hits 5-Year Low",
-      "desc": "The May 2026 JOLTS report showed 7.6M job openings with the quits rate falling to 1.8%, the lowest since 2020. The hires rate dropped to 2.9%. A declining quits rate signals reduced worker confidence in finding better employment, a potential leading indicator of softening labor demand.",
+      "title": "BLS JOLTS: Job Openings Steady at 7.6 Million in May",
+      "desc": "The May 2026 JOLTS report showed job openings holding at 7.6 million with hires flat at 5.2 million and separations at 5.1 million (3.1 million quits, 1.7 million layoffs/discharges) — a stable-but-cooling labor market signal.",
       "tags": [
         "JOLTS",
         "BLS",
         "Labor Market"
       ],
-      "link": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "link": "https://www.bls.gov/news.release/jolts.htm",
       "linkLabel": "BLS JOLTS",
       "isNew": false
     },
     {
-      "id": "w2f013",
-      "date": "Jun 13, 2026",
-      "category": "federal",
-      "priority": "low",
-      "iconBg": "#0e82be",
-      "icon": "NC",
-      "title": "FTC Non-Compete — En Banc Petition Filed, 12 to 18 Month Timeline",
-      "desc": "The FTC filed its en banc petition with the Eighth Circuit challenging the injunction blocking the federal non-compete ban. Legal observers estimate a 12 to 18 month timeline to resolution. State-level bans in CA, MN, ND, and OK apply now regardless of federal litigation.",
+      "id": "w3f010",
+      "date": "Jun 29, 2026",
+      "category": "alert",
+      "priority": "high",
+      "iconBg": "#9e2020",
+      "icon": "SC",
+      "title": "SCOTUS Ruling Clouds NLRB Independence",
+      "desc": "In Trump v. Slaughter, the Supreme Court ruled 6-3 that the FTC's for-cause removal protection is unconstitutional, overruling Humphrey's Executor. Counsel widely read this as resolving the parallel fight over NLRB Member Wilcox's removal in the President's favor, raising uncertainty about Board composition and quorum.",
       "tags": [
-        "FTC",
-        "Non-Compete",
+        "NLRB",
+        "SCOTUS",
         "Litigation"
       ],
-      "link": "https://www.ftc.gov/legal-library/browse/rules/noncompete-clause-rule",
-      "linkLabel": "FTC rule page",
-      "isNew": false
-    },
-    {
-      "id": "w2f014",
-      "date": "Jun 12, 2026",
-      "category": "state",
-      "priority": "med",
-      "iconBg": "#1a8a50",
-      "icon": "NY",
-      "title": "NY Freelance Law — $2,500 Minimum Triggers Written Contract Requirement",
-      "desc": "New York's expanded Freelance Isn't Free Act now covers engagements worth $2,500 or more over a 120-day period. Written contracts are mandatory; payments must be made within 30 days of completion. Civil penalties of up to $25,000 apply for violations.",
-      "tags": [
-        "Contractors",
-        "New York",
-        "Freelance"
-      ],
-      "link": null,
-      "linkLabel": null,
-      "isNew": false
-    },
-    {
-      "id": "w2f015",
-      "date": "Jun 11, 2026",
-      "category": "market",
-      "priority": "info",
-      "iconBg": "#0a6b6b",
-      "icon": "AI",
-      "title": "58% of HR Teams Lack a Formal AI Governance Policy — New Survey",
-      "desc": "A June 2026 HR Policy Association survey found 58% of HR leaders lack a written AI governance policy covering hiring, performance management, or workforce planning tools. With the EEOC's August 1 effective date for AI hiring guidance, this gap is now a compliance risk.",
-      "tags": [
-        "AI",
-        "HR Tech",
-        "Governance"
-      ],
-      "link": "https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness",
-      "linkLabel": "EEOC AI guidance",
+      "link": "https://www.supremecourt.gov/opinions/25pdf/25-332_qn12.pdf",
+      "linkLabel": "SCOTUS opinion",
       "isNew": false
     }
   ],
@@ -5299,7 +5217,7 @@
       "label": "Full PFML (SDI/PFL)",
       "rate": "60-70%",
       "weeks": 52,
-      "contrib": "0.9% EE",
+      "contrib": "1.3% EE",
       "since": 2004
     },
     "NJ": {
@@ -5392,11 +5310,11 @@
     },
     "MD": {
       "color": "#2a4a8a",
-      "label": "Full PFML (Jul 2026)",
+      "label": "Full PFML (2027 contrib / 2028 benefits)",
       "rate": "90% low/50%",
       "weeks": 12,
       "contrib": "0.9% split",
-      "since": 2026
+      "since": 2027
     },
     "ME": {
       "color": "#2a4a8a",
@@ -5485,6 +5403,14 @@
       "weeks": 12,
       "contrib": "None",
       "since": 0
+    },
+    "VA": {
+      "color": "#2a4a8a",
+      "label": "Full PFML (enacted 2026; benefits begin Dec 2028)",
+      "rate": "80% (est.)",
+      "weeks": 12,
+      "contrib": "Not yet set (est. ~0.75%)",
+      "since": 2028
     }
   }
 }
