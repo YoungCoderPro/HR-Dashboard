@@ -1,7 +1,7 @@
 {
   "meta": {
-    "dataVersion": "1.0.0",
-    "lastUpdated": "2026-07-20T17:01:48.129Z",
+    "dataVersion": "1.0.1",
+    "lastUpdated": "2026-07-20T19:55:10.000Z",
     "unemploymentPeriod": "May 2026",
     "eeocPeriod": "FY2024",
     "notes": "Compliance data current as of mid-2026. Verify with linked official sources before relying on any figure for a compliance decision."
@@ -14,9 +14,9 @@
       null
     ],
     "AK": [
-      11.91,
-      "Indexed to CPI annually",
-      "Jan 2026",
+      14,
+      "Ballot Measure 1 schedule: $13 (Jul 2025) -> $14 (Jul 2026) -> $15 (Jul 2027); CPI indexing resumes 2028",
+      "Jul 2026",
       "https://labor.alaska.gov/lss/minimum-wage.htm"
     ],
     "AZ": [
@@ -164,8 +164,8 @@
       "https://erd.dli.mt.gov/labor-standards/wage-and-hour-payment-act/minimum-wage"
     ],
     "NE": [
-      13.5,
-      "Increases to $15 by Jan 2026; verify current rate",
+      15,
+      "Final step of Initiative 433 schedule ($10.50 -> $12 -> $13.50 -> $15)",
       "Jan 2026",
       "https://dol.nebraska.gov/LaborLaw/MinimumWage"
     ],
@@ -224,9 +224,9 @@
       null
     ],
     "OR": [
-      15.45,
-      "Portland metro: $16.20; non-urban: $14.20",
-      "Jul 2025",
+      15.55,
+      "Portland metro: $16.80; non-urban: $14.55",
+      "Jul 2026",
       "https://www.oregon.gov/boli/workers/pages/minimum-wage.aspx"
     ],
     "PA": [
@@ -278,10 +278,10 @@
       "https://labor.vermont.gov/wage-and-hour/minimum-wage"
     ],
     "VA": [
-      12.41,
-      "Increasing to $15 by Jan 2026; verify current rate",
+      12.77,
+      "CPI-indexed fallback rate (original $15 reenactment did not occur); new law (HB1/SB1, signed Apr 2026) sets $13.75 (Jan 2027) then $15.00 (Jan 2028)",
       "Jan 2026",
-      "https://www.doli.virginia.gov/labor-law/minimum-wage/"
+      "https://doli.virginia.gov/2025/07/29/virginia-minimum-wage-rate-increasing-effective-january-1-2026/"
     ],
     "WA": [
       16.66,
@@ -291,8 +291,8 @@
     ],
     "WV": [
       8.75,
-      "",
-      "",
+      "Set by 2014 HB 4283 (W. Va. Code Sec. 21-5C-2); no increase since",
+      "Jan 2016",
       "https://labor.wv.gov/Wage-Hour/Minimum_Wage/Pages/Minimum-Wage.aspx"
     ],
     "WI": [
@@ -308,9 +308,9 @@
       null
     ],
     "DC": [
-      17.5,
+      18.4,
       "Highest in US; CPI-indexed annually",
-      "Jul 2025",
+      "Jul 2026",
       "https://does.dc.gov/service/dc-minimum-wage"
     ]
   },
@@ -589,7 +589,7 @@
       "y": 2026,
       "c": "0.8% split",
       "u": "https://dol.delaware.gov/familyleave/",
-      "act": false
+      "act": true
     },
     {
       "s": "Minnesota",
@@ -598,9 +598,9 @@
       "f": 12,
       "m": 12,
       "y": 2026,
-      "c": "0.7% split",
+      "c": "0.88% split",
       "u": "https://paidleave.mn.gov",
-      "act": false
+      "act": true
     },
     {
       "s": "Maryland",
@@ -608,7 +608,7 @@
       "p": "90% low / 50%",
       "f": 12,
       "m": 12,
-      "y": 2026,
+      "y": 2028,
       "c": "0.9% split",
       "u": "https://www.labor.maryland.gov/paidleave/",
       "act": false
@@ -622,7 +622,7 @@
       "y": 2026,
       "c": "1% split",
       "u": "https://www.maine.gov/pfml/",
-      "act": false
+      "act": true
     }
   ],
   "workersComp": {
@@ -1357,7 +1357,7 @@
           "pdf": "https://www.dllr.state.md.us/labor/wages/documents/minimumwageposter.pdf"
         },
         {
-          "n": "Maryland PFML (Jul 2026)",
+          "n": "Maryland PFML (benefits Jan 2028)",
           "r": "15+ employees",
           "pdf": "https://www.labor.maryland.gov/paidleave/"
         },
@@ -2117,6 +2117,183 @@
   },
   "newsFeed": [
     {
+      "id": "w2f016",
+      "date": "Jul 20, 2026",
+      "category": "alert",
+      "priority": "high",
+      "iconBg": "#9e2020",
+      "icon": "AI",
+      "title": "Correction Watch: No Confirmed EEOC AI Hiring Rule With Aug 1 Deadline",
+      "desc": "This cycle's research could not verify the EEOC AI hiring guidance and Aug 1, 2026 compliance deadline referenced elsewhere in this dashboard. The EEOC's 2023 AI/algorithmic-decision-tool guidance was in fact removed from EEOC.gov in Jan 2025 following a change in administration priorities, and no replacement guidance with an Aug 1, 2026 effective date could be located on EEOC.gov, the Federal Register, or reputable employment-law trackers. Treat the earlier Aug 1 deadline as unconfirmed pending compliance-owner review.",
+      "tags": [
+        "EEOC",
+        "AI Hiring",
+        "Correction"
+      ],
+      "link": "https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness",
+      "linkLabel": "EEOC AI hiring page",
+      "isNew": true
+    },
+    {
+      "id": "w2f017",
+      "date": "Jul 15, 2026",
+      "category": "federal",
+      "priority": "med",
+      "iconBg": "#0e82be",
+      "icon": "NL",
+      "title": "NLRB Nominees Advance — Board Nears Full Republican Majority",
+      "desc": "The Senate HELP Committee approved NLRB nominees James Macy and David Prouty. If confirmed on the floor, Macy would give Republicans a 3-member majority, positioning the Board to revisit joint-employer, election-rule, and related precedent later in 2026.",
+      "tags": [
+        "NLRB",
+        "Board Composition"
+      ],
+      "link": "https://ogletree.com/insights-resources/blog-posts/beltway-buzz-july-17-2026/",
+      "linkLabel": "Ogletree Beltway Buzz",
+      "isNew": true
+    },
+    {
+      "id": "w2f018",
+      "date": "Jul 1, 2026",
+      "category": "state",
+      "priority": "high",
+      "iconBg": "#1a8a50",
+      "icon": "MW",
+      "title": "Jul 1 Minimum Wage Increases Take Effect in Alaska, DC, Oregon and 20+ Localities",
+      "desc": "Alaska rose to $14.00/hr, DC to $18.40/hr, and Oregon's three-tier system increased (Portland metro $16.80, standard $15.55, non-urban $14.55). More than 20 other cities and counties, including Chicago, Los Angeles, San Francisco, and Denver, also raised local minimums the same day. Confirm payroll systems reflect the correct first-pay-period rates.",
+      "tags": [
+        "Min Wage",
+        "State Law",
+        "Payroll"
+      ],
+      "link": "https://ogletree.com/insights-resources/blog-posts/2026-midyear-state-and-local-minimum-wage-increases/",
+      "linkLabel": "Ogletree summary",
+      "isNew": true
+    },
+    {
+      "id": "w2f019",
+      "date": "Jul 1, 2026",
+      "category": "pfml",
+      "priority": "med",
+      "iconBg": "#4a2d9e",
+      "icon": "ME",
+      "title": "Maine PFML Maximum Weekly Benefit Rises to $1,249.12",
+      "desc": "Maine's Paid Family and Medical Leave program, live since May 2026, raised its maximum weekly benefit from $1,198 to $1,249.12 effective July 1 under its annual SAWW-indexed adjustment. The 1% combined contribution rate and 12-week combined benefit cap are unchanged.",
+      "tags": [
+        "PFML",
+        "Maine"
+      ],
+      "link": "https://www.ebglaw.com/insights/publications/2026-family-and-medical-leave-law-updates-what-employers-in-seven-states-need-to-know",
+      "linkLabel": "EBG Law update",
+      "isNew": true
+    },
+    {
+      "id": "w2f020",
+      "date": "Jun 23, 2026",
+      "category": "alert",
+      "priority": "med",
+      "iconBg": "#9e2020",
+      "icon": "WH",
+      "title": "DOL Recovers $1.7M in Back Wages for 1,666 Workers in Franklin, TN",
+      "desc": "DOL's Wage and Hour Division recovered $1,730,598 in back wages after a multi-trade contractor failed to pay workers in violation of the FLSA — a current example of active wage-and-hour enforcement worth flagging in contractor-oversight training.",
+      "tags": [
+        "DOL",
+        "FLSA",
+        "Wage & Hour"
+      ],
+      "link": "https://www.dol.gov/newsroom/releases/whd/whd20260623",
+      "linkLabel": "DOL press release",
+      "isNew": true
+    },
+    {
+      "id": "w2f021",
+      "date": "Jun 4, 2026",
+      "category": "federal",
+      "priority": "high",
+      "iconBg": "#0e82be",
+      "icon": "EN",
+      "title": "EEOC Releases New National Enforcement Plan",
+      "desc": "The EEOC replaced its 2023 Strategic Enforcement Plan with a new National Enforcement Plan prioritizing DEI-related race and sex discrimination claims, national-origin claims, certain sex-based workplace issues, and religious accommodation — a real shift in what triggers agency-initiated investigations.",
+      "tags": [
+        "EEOC",
+        "Enforcement Priorities"
+      ],
+      "link": "https://www.eeoc.gov/newsroom/eeoc-releases-new-national-enforcement-plan",
+      "linkLabel": "EEOC newsroom",
+      "isNew": true
+    },
+    {
+      "id": "w2f022",
+      "date": "May 21, 2026",
+      "category": "federal",
+      "priority": "med",
+      "iconBg": "#0e82be",
+      "icon": "EEO",
+      "title": "EEOC Proposes Rescinding EEO-1 Demographic Reporting Requirements",
+      "desc": "The EEOC submitted a formal proposal to OIRA to eliminate federal EEO-1 (and related EEO-2 through EEO-5) demographic reporting for private employers and contractors. The proposal must still clear OMB review and a comment period, so employers should continue planning to file for 2026.",
+      "tags": [
+        "EEOC",
+        "EEO-1",
+        "Reporting"
+      ],
+      "link": "https://www.cooley.com/news/insight/2026/2026-05-21-eeoc-proposes-to-eliminate-eeo1-reporting",
+      "linkLabel": "Cooley alert",
+      "isNew": true
+    },
+    {
+      "id": "w2f023",
+      "date": "May 14, 2026",
+      "category": "state",
+      "priority": "info",
+      "iconBg": "#1a8a50",
+      "icon": "CO",
+      "title": "Colorado Delays AI Employment-Discrimination Law to Jan 2027",
+      "desc": "Gov. Polis signed SB 189, pushing back Colorado's AI Act (originally set for June 30, 2026) and substantially narrowing it. The algorithmic-discrimination duty-of-care and impact-assessment obligations for employers are now delayed to Jan 1, 2027 with a scaled-back, disclosure-focused framework.",
+      "tags": [
+        "AI Hiring",
+        "Colorado",
+        "State Law"
+      ],
+      "link": "https://www.fisherphillips.com/en/news-insights/colorado-delays-ai-law-to-june-2026.html",
+      "linkLabel": "Fisher Phillips alert",
+      "isNew": true
+    },
+    {
+      "id": "w2f024",
+      "date": "Feb 27, 2026",
+      "category": "federal",
+      "priority": "med",
+      "iconBg": "#0e82be",
+      "icon": "NL",
+      "title": "Joint-Employer Standard Clarified: Narrower 2020 Rule Now in Effect",
+      "desc": "The NLRB's rule reinstating the narrower 2020 joint-employer standard took effect Feb 27, 2026, after the Board's 2023 broader rule was vacated by a Texas federal court in Mar 2024. This supersedes the joint-employer status described in this dashboard's earlier Jun 17 item; employers using staffing agencies or PEOs face a higher bar for joint-employer liability than that item indicated.",
+      "tags": [
+        "NLRB",
+        "Joint Employer",
+        "Correction"
+      ],
+      "link": "https://www.nlrb.gov/guidance/key-reference-materials/joint-employer",
+      "linkLabel": "NLRB joint employer",
+      "isNew": true
+    },
+    {
+      "id": "w2f025",
+      "date": "Feb 12, 2026",
+      "category": "federal",
+      "priority": "info",
+      "iconBg": "#0e82be",
+      "icon": "NC",
+      "title": "FTC Formally Removes Non-Compete Rule From Federal Register",
+      "desc": "The FTC's 2024 non-compete ban, vacated by a Texas federal court, was formally withdrawn from the CFR effective Feb 12, 2026 after the FTC dropped its Fifth Circuit appeal in Sept 2025. The agency now pursues non-competes case by case (e.g., an April 2026 consent order covering 18,000+ low-wage workers) rather than under a blanket rule — superseding this dashboard's earlier item on the en banc petition.",
+      "tags": [
+        "FTC",
+        "Non-Compete",
+        "Litigation"
+      ],
+      "link": "https://www.federalregister.gov/d/2026-02866",
+      "linkLabel": "Federal Register",
+      "isNew": true
+    },
+    {
       "id": "w2f001",
       "date": "Jun 22, 2026",
       "category": "alert",
@@ -2133,7 +2310,7 @@
       ],
       "link": "https://www.dol.gov/agencies/whd/overtime/rulemaking",
       "linkLabel": "DOL overtime page",
-      "isNew": true
+      "isNew": false
     },
     {
       "id": "w2f002",
@@ -2151,7 +2328,7 @@
       ],
       "link": "https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness",
       "linkLabel": "EEOC AI guidance",
-      "isNew": true
+      "isNew": false
     },
     {
       "id": "w2f003",
@@ -2170,7 +2347,7 @@
       ],
       "link": "https://www.dol.gov/agencies/whd/minimum-wage/state",
       "linkLabel": "DOL WHD",
-      "isNew": true
+      "isNew": false
     },
     {
       "id": "w2f004",
@@ -2188,7 +2365,7 @@
       ],
       "link": "https://dol.delaware.gov/familyleave/",
       "linkLabel": "DE Family Leave",
-      "isNew": true
+      "isNew": false
     },
     {
       "id": "w2f005",
@@ -2206,7 +2383,7 @@
       ],
       "link": "https://www.bls.gov",
       "linkLabel": "BLS",
-      "isNew": true
+      "isNew": false
     },
     {
       "id": "w2f006",
@@ -2224,7 +2401,7 @@
       ],
       "link": "https://www.eeoc.gov/employers/eeo-1-survey",
       "linkLabel": "EEOC EEO-1",
-      "isNew": true
+      "isNew": false
     },
     {
       "id": "w2f007",
@@ -2261,7 +2438,7 @@
       ],
       "link": null,
       "linkLabel": null,
-      "isNew": true
+      "isNew": false
     },
     {
       "id": "w2f009",
@@ -2444,8 +2621,8 @@
     "AK": {
       "mw": {
         "s": 30,
-        "v": "$11.91/hr",
-        "n": "CPI-indexed annually; well above federal floor.",
+        "v": "$14.00/hr (Jul 2026)",
+        "n": "Ballot Measure 1 schedule; rises to $15 Jul 2027.",
         "c": [
           "dol_whd"
         ]
@@ -2806,8 +2983,8 @@
     "DC": {
       "mw": {
         "s": 95,
-        "v": "$17.50/hr",
-        "n": "Highest rate in US along with NYC; annual CPI adjustments.",
+        "v": "$18.40/hr (Jul 2026)",
+        "n": "Highest rate in US; annual CPI adjustments each Jul 1.",
         "c": [
           "dc_does",
           "dol_whd"
@@ -3423,8 +3600,8 @@
       },
       "pfml": {
         "s": 75,
-        "v": "MD Time to Care Act — 0.90% split, 12 wks (Jul 2026)",
-        "n": "Contributions active; benefits begin Jul 2026; 15+ EE for employer share.",
+        "v": "MD Time to Care Act — 0.90% split, 12 wks (benefits Jan 2028)",
+        "n": "Timeline delayed twice; contributions begin Jan 2027, benefits begin Jan 3, 2028; 15+ EE for employer share.",
         "c": [
           "md_pfml"
         ]
@@ -3772,8 +3949,8 @@
     "NE": {
       "mw": {
         "s": 30,
-        "v": "$13.50/hr",
-        "n": "Voter-approved increases.",
+        "v": "$15.00/hr",
+        "n": "Final step of voter-approved Initiative 433, reached Jan 2026.",
         "c": [
           "dol_whd"
         ]
@@ -4281,8 +4458,8 @@
     "OR": {
       "mw": {
         "s": 65,
-        "v": "$14.70/hr statewide; Portland $15.45/hr",
-        "n": "Metro areas higher; CPI-indexed; among highest in US.",
+        "v": "$15.55/hr standard; Portland metro $16.80/hr; non-urban $14.55/hr",
+        "n": "Three-tier system, effective Jul 2026; CPI-indexed; among highest in US.",
         "c": [
           "or_boli",
           "dol_whd"
@@ -4733,8 +4910,8 @@
     "VA": {
       "mw": {
         "s": 45,
-        "v": "$13.50/hr; $15.00 Jan 2026",
-        "n": "Scheduled to reach $15 Jan 2026.",
+        "v": "$12.77/hr (CPI-indexed fallback)",
+        "n": "Original $15 reenactment did not occur; new law sets $13.75 (2027) then $15.00 (2028).",
         "c": [
           "dol_whd"
         ]
@@ -5392,11 +5569,11 @@
     },
     "MD": {
       "color": "#2a4a8a",
-      "label": "Full PFML (Jul 2026)",
+      "label": "Full PFML (Jan 2028)",
       "rate": "90% low/50%",
       "weeks": 12,
       "contrib": "0.9% split",
-      "since": 2026
+      "since": 2028
     },
     "ME": {
       "color": "#2a4a8a",
