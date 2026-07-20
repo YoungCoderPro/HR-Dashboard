@@ -1,0 +1,5490 @@
+{
+  "meta": {
+    "dataVersion": "1.0.0",
+    "lastUpdated": "2026-07-20T17:01:48.129Z",
+    "unemploymentPeriod": "May 2026",
+    "eeocPeriod": "FY2024",
+    "notes": "Compliance data current as of mid-2026. Verify with linked official sources before relying on any figure for a compliance decision."
+  },
+  "minimumWage": {
+    "AL": [
+      7.25,
+      "No state law — federal minimum applies",
+      "Federal",
+      null
+    ],
+    "AK": [
+      11.91,
+      "Indexed to CPI annually",
+      "Jan 2026",
+      "https://labor.alaska.gov/lss/minimum-wage.htm"
+    ],
+    "AZ": [
+      14.7,
+      "Indexed to CPI; Flagstaff: $17.40",
+      "Jan 2026",
+      "https://www.azica.gov/divisions/labor-department-minimum-wage"
+    ],
+    "AR": [
+      11,
+      "",
+      "Jan 2026",
+      "https://www.dfa.arkansas.gov/offices/labor-standards/minimum-wage"
+    ],
+    "CA": [
+      16.5,
+      "$20 for fast food workers; some locality rates higher",
+      "Jan 2026",
+      "https://www.dir.ca.gov/iwc/minimumwagehistory.htm"
+    ],
+    "CO": [
+      14.81,
+      "Indexed to CPI annually",
+      "Jan 2026",
+      "https://cdle.colorado.gov/wages/minimum-wage-information"
+    ],
+    "CT": [
+      16.35,
+      "Increases tied to CPI through 2026",
+      "Jan 2026",
+      "https://portal.ct.gov/dol/divisions/wage-and-workplace-standards/minimum-wage"
+    ],
+    "DE": [
+      15,
+      "",
+      "Jan 2026",
+      "https://dia.delawareworks.com/labor-law/minimum-wage/"
+    ],
+    "FL": [
+      14,
+      "Increases to $15 Sep 30, 2026; then CPI",
+      "Oct 2025",
+      "https://www.floridaminwage.com/"
+    ],
+    "GA": [
+      5.15,
+      "State below federal — FLSA $7.25 applies",
+      "",
+      "https://dol.georgia.gov/minimum-wage"
+    ],
+    "HI": [
+      14,
+      "Increases to $18 by Jan 2028",
+      "Jan 2026",
+      "https://labor.hawaii.gov/wsd/minimum-wage/"
+    ],
+    "ID": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      "https://www.labor.idaho.gov/dnn/Businesses/EmploymentLaws/MinimumWage.aspx"
+    ],
+    "IL": [
+      15.6,
+      "Chicago: $16.50. Effective Jul 1, 2026",
+      "Jul 2026",
+      "https://www2.illinois.gov/idol/Laws-Rules/FLS/Pages/Minimum-Wage-Law.aspx"
+    ],
+    "IN": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      "https://www.in.gov/dol/minimum-wage/"
+    ],
+    "IA": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      "https://www.iowadivisionoflabor.gov/minimum-wage"
+    ],
+    "KS": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      "https://www.dol.ks.gov/WagePay/Wages"
+    ],
+    "KY": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      "https://labor.ky.gov/Standards/Wages/Pages/Minimum-Wage.aspx"
+    ],
+    "LA": [
+      7.25,
+      "No state law — federal applies",
+      "Federal",
+      null
+    ],
+    "ME": [
+      14.65,
+      "Indexed to CPI",
+      "Jan 2026",
+      "https://www.maine.gov/labor/labor_laws/minimum_wage.html"
+    ],
+    "MD": [
+      15,
+      "Montgomery Co: $17.50; Prince George's Co: $17.00",
+      "Jan 2026",
+      "https://www.dllr.state.md.us/labor/wages/minwage.shtml"
+    ],
+    "MA": [
+      15,
+      "",
+      "Jan 2026",
+      "https://www.mass.gov/info-details/massachusetts-law-about-minimum-wage"
+    ],
+    "MI": [
+      10.56,
+      "Increasing to $12.48 by 2028 per court-ordered schedule",
+      "Jan 2026",
+      "https://www.michigan.gov/leo/bureaus-agencies/ors/minimumwage"
+    ],
+    "MN": [
+      10.85,
+      "Large employer: $10.85; Small employer: $8.85",
+      "Jan 2026",
+      "https://www.dli.mn.gov/business/employment-practices/minimum-wage-minnesota"
+    ],
+    "MS": [
+      7.25,
+      "No state law — federal applies",
+      "Federal",
+      null
+    ],
+    "MO": [
+      13.75,
+      "",
+      "Jan 2026",
+      "https://labor.mo.gov/DLS/MinimumWage"
+    ],
+    "MT": [
+      10.55,
+      "Indexed to CPI",
+      "Jan 2026",
+      "https://erd.dli.mt.gov/labor-standards/wage-and-hour-payment-act/minimum-wage"
+    ],
+    "NE": [
+      13.5,
+      "Increases to $15 by Jan 2026; verify current rate",
+      "Jan 2026",
+      "https://dol.nebraska.gov/LaborLaw/MinimumWage"
+    ],
+    "NV": [
+      12,
+      "Flat $12 for all employers since Jul 2024 (health benefit differential eliminated)",
+      "Jul 2024",
+      "https://labor.nv.gov/Laborer/Minimum_Wage/Minimum_Wage_Information/"
+    ],
+    "NH": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      "https://www.nh.gov/labor/employment/minimum-wage.htm"
+    ],
+    "NJ": [
+      15.9,
+      "Indexed to CPI for large employers. Effective Jul 1, 2026",
+      "Jul 2026",
+      "https://www.nj.gov/labor/wagehour/content/minimum_wage.html"
+    ],
+    "NM": [
+      12,
+      "Albuquerque: $12.50",
+      "Jan 2026",
+      "https://www.dws.state.nm.us/Businesses/Employer-Resources/Minimum-Wage-Frequently-Asked-Questions"
+    ],
+    "NY": [
+      16.5,
+      "NYC/Nassau/Suffolk/Westchester: $16.50; CPI-indexed from 2027",
+      "Jan 2026",
+      "https://www.labor.ny.gov/workerprotection/laborstandards/workprot/minwage.shtm"
+    ],
+    "NC": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      "https://www.labor.nc.gov/workplace-rights/employee-rights-regarding-time-worked-and-wages-paid/minimum-wage"
+    ],
+    "ND": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      null
+    ],
+    "OH": [
+      10.7,
+      "Small employers (<$394K gross): $7.25",
+      "Jan 2026",
+      "https://com.ohio.gov/divisions-and-programs/industrial-compliance/ohio-bureau-of-wage-and-hour/minimum-wage"
+    ],
+    "OK": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      null
+    ],
+    "OR": [
+      15.45,
+      "Portland metro: $16.20; non-urban: $14.20",
+      "Jul 2025",
+      "https://www.oregon.gov/boli/workers/pages/minimum-wage.aspx"
+    ],
+    "PA": [
+      7.25,
+      "No change; pending legislation",
+      "Federal",
+      "https://www.dli.pa.gov/Individuals/Labor-Management-Relations/llc/minimum-wage/Pages/default.aspx"
+    ],
+    "RI": [
+      15,
+      "",
+      "Jan 2026",
+      "https://dlt.ri.gov/employers/wage-payments/minimum-wage"
+    ],
+    "SC": [
+      7.25,
+      "No state law — federal applies",
+      "Federal",
+      null
+    ],
+    "SD": [
+      11.5,
+      "Indexed to CPI",
+      "Jan 2026",
+      "https://dlr.sd.gov/labor_market/minimum_wage.aspx"
+    ],
+    "TN": [
+      7.25,
+      "No state law — federal applies",
+      "Federal",
+      null
+    ],
+    "TX": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      "https://www.twc.texas.gov/businesses/texas-payday-law-employer"
+    ],
+    "UT": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      "https://laborcommission.utah.gov/divisions/antidiscrimination-labor/labor-standards/"
+    ],
+    "VT": [
+      14.01,
+      "Indexed to CPI",
+      "Jan 2026",
+      "https://labor.vermont.gov/wage-and-hour/minimum-wage"
+    ],
+    "VA": [
+      12.41,
+      "Increasing to $15 by Jan 2026; verify current rate",
+      "Jan 2026",
+      "https://www.doli.virginia.gov/labor-law/minimum-wage/"
+    ],
+    "WA": [
+      16.66,
+      "Seattle: $20.76; Tukwila and SeaTac higher",
+      "Jan 2026",
+      "https://lni.wa.gov/workers-rights/wages/minimum-wage/"
+    ],
+    "WV": [
+      8.75,
+      "",
+      "",
+      "https://labor.wv.gov/Wage-Hour/Minimum_Wage/Pages/Minimum-Wage.aspx"
+    ],
+    "WI": [
+      7.25,
+      "No state law above federal",
+      "Federal",
+      "https://dwd.wisconsin.gov/er/laborstandards/minimumwage.htm"
+    ],
+    "WY": [
+      5.15,
+      "State below federal — FLSA $7.25 applies",
+      "",
+      null
+    ],
+    "DC": [
+      17.5,
+      "Highest in US; CPI-indexed annually",
+      "Jul 2025",
+      "https://does.dc.gov/service/dc-minimum-wage"
+    ]
+  },
+  "unemployment": {
+    "AL": [
+      3.8
+    ],
+    "AK": [
+      4.7
+    ],
+    "AZ": [
+      4.2
+    ],
+    "AR": [
+      3.7
+    ],
+    "CA": [
+      5.5
+    ],
+    "CO": [
+      3.7
+    ],
+    "CT": [
+      4.3
+    ],
+    "DE": [
+      4.6
+    ],
+    "FL": [
+      3.5
+    ],
+    "GA": [
+      3.6
+    ],
+    "HI": [
+      2.9
+    ],
+    "ID": [
+      3.2
+    ],
+    "IL": [
+      4.8
+    ],
+    "IN": [
+      3.7
+    ],
+    "IA": [
+      3.1
+    ],
+    "KS": [
+      3.2
+    ],
+    "KY": [
+      4.2
+    ],
+    "LA": [
+      4.5
+    ],
+    "ME": [
+      3.4
+    ],
+    "MD": [
+      3
+    ],
+    "MA": [
+      3.9
+    ],
+    "MI": [
+      4.5
+    ],
+    "MN": [
+      3.3
+    ],
+    "MS": [
+      4.3
+    ],
+    "MO": [
+      3.7
+    ],
+    "MT": [
+      3.3
+    ],
+    "NE": [
+      2.8
+    ],
+    "NV": [
+      5.7
+    ],
+    "NH": [
+      3
+    ],
+    "NJ": [
+      4.6
+    ],
+    "NM": [
+      5
+    ],
+    "NY": [
+      4.7
+    ],
+    "NC": [
+      4
+    ],
+    "ND": [
+      2.6
+    ],
+    "OH": [
+      4.2
+    ],
+    "OK": [
+      3.8
+    ],
+    "OR": [
+      4.5
+    ],
+    "PA": [
+      4
+    ],
+    "RI": [
+      4.4
+    ],
+    "SC": [
+      3.9
+    ],
+    "SD": [
+      2.5
+    ],
+    "TN": [
+      3.6
+    ],
+    "TX": [
+      4.3
+    ],
+    "UT": [
+      3.3
+    ],
+    "VT": [
+      3
+    ],
+    "VA": [
+      3
+    ],
+    "WA": [
+      4.9
+    ],
+    "WV": [
+      5.2
+    ],
+    "WI": [
+      3.2
+    ],
+    "WY": [
+      3.8
+    ],
+    "DC": [
+      5.5
+    ]
+  },
+  "paidLeaveTable": [
+    {
+      "s": "California",
+      "a": "CA",
+      "p": "60-70%",
+      "f": 8,
+      "m": 52,
+      "y": 2004,
+      "c": "0.9% EE",
+      "u": "https://edd.ca.gov/en/disability/paid-family-leave",
+      "act": true
+    },
+    {
+      "s": "New Jersey",
+      "a": "NJ",
+      "p": "85% (up to $1,055/wk)",
+      "f": 12,
+      "m": 26,
+      "y": 2009,
+      "c": "0.09% EE",
+      "u": "https://www.nj.gov/labor/myleavebenefits/workers/fli/",
+      "act": true
+    },
+    {
+      "s": "Rhode Island",
+      "a": "RI",
+      "p": "60%",
+      "f": 6,
+      "m": 30,
+      "y": 2014,
+      "c": "1.1% EE",
+      "u": "https://dlt.ri.gov/employers/temporary-caregiver-insurance",
+      "act": true
+    },
+    {
+      "s": "New York",
+      "a": "NY",
+      "p": "67% (up to $1,177/wk)",
+      "f": 12,
+      "m": 26,
+      "y": 2018,
+      "c": "0.373% EE",
+      "u": "https://paidfamilyleave.ny.gov",
+      "act": true
+    },
+    {
+      "s": "Washington",
+      "a": "WA",
+      "p": "90% low / 60-70%",
+      "f": 12,
+      "m": 12,
+      "y": 2020,
+      "c": "1.8% split",
+      "u": "https://paidleave.wa.gov",
+      "act": true
+    },
+    {
+      "s": "Massachusetts",
+      "a": "MA",
+      "p": "80% (up to $1,169/wk)",
+      "f": 12,
+      "m": 20,
+      "y": 2021,
+      "c": "0.88% split",
+      "u": "https://www.mass.gov/paid-family-and-medical-leave",
+      "act": true
+    },
+    {
+      "s": "Connecticut",
+      "a": "CT",
+      "p": "95% (up to $941/wk)",
+      "f": 12,
+      "m": 12,
+      "y": 2022,
+      "c": "0.5% EE",
+      "u": "https://ctpaidleave.org",
+      "act": true
+    },
+    {
+      "s": "Oregon",
+      "a": "OR",
+      "p": "60% (up to $1,523/wk)",
+      "f": 12,
+      "m": 12,
+      "y": 2023,
+      "c": "1% split",
+      "u": "https://paidleave.oregon.gov",
+      "act": true
+    },
+    {
+      "s": "Colorado",
+      "a": "CO",
+      "p": "90% low / 50-90%",
+      "f": 12,
+      "m": 12,
+      "y": 2024,
+      "c": "0.9% split",
+      "u": "https://famli.colorado.gov",
+      "act": true
+    },
+    {
+      "s": "Dist. of Columbia",
+      "a": "DC",
+      "p": "90% low / 65%",
+      "f": 12,
+      "m": 12,
+      "y": 2020,
+      "c": "0.26-0.75%",
+      "u": "https://dcpaidfamilyleave.dc.gov",
+      "act": true
+    },
+    {
+      "s": "Delaware",
+      "a": "DE",
+      "p": "80% (up to $900/wk)",
+      "f": 12,
+      "m": 12,
+      "y": 2026,
+      "c": "0.8% split",
+      "u": "https://dol.delaware.gov/familyleave/",
+      "act": false
+    },
+    {
+      "s": "Minnesota",
+      "a": "MN",
+      "p": "90% low / 66%",
+      "f": 12,
+      "m": 12,
+      "y": 2026,
+      "c": "0.7% split",
+      "u": "https://paidleave.mn.gov",
+      "act": false
+    },
+    {
+      "s": "Maryland",
+      "a": "MD",
+      "p": "90% low / 50%",
+      "f": 12,
+      "m": 12,
+      "y": 2026,
+      "c": "0.9% split",
+      "u": "https://www.labor.maryland.gov/paidleave/",
+      "act": false
+    },
+    {
+      "s": "Maine",
+      "a": "ME",
+      "p": "90% low wage",
+      "f": 12,
+      "m": 12,
+      "y": 2026,
+      "c": "1% split",
+      "u": "https://www.maine.gov/pfml/",
+      "act": false
+    }
+  ],
+  "workersComp": {
+    "AL": [
+      "1+ employees",
+      "Private market",
+      "https://www.albc.alabama.gov/"
+    ],
+    "AK": [
+      "1+ employees",
+      "Private + assigned risk",
+      "https://labor.alaska.gov/wc/"
+    ],
+    "AZ": [
+      "1+ employees",
+      "Private market",
+      "https://www.ica.state.az.us/"
+    ],
+    "AR": [
+      "3+ employees",
+      "Private market",
+      null
+    ],
+    "CA": [
+      "1+ employees",
+      "State fund (SCIF) optional",
+      "https://www.scif.com"
+    ],
+    "CO": [
+      "1+ employees",
+      "Pinnacol Assurance optional",
+      "https://pinnacol.com"
+    ],
+    "CT": [
+      "1+ employees",
+      "Private market",
+      "https://portal.ct.gov/wcc"
+    ],
+    "DE": [
+      "1+ employees",
+      "Private market",
+      "https://dia.delawareworks.com/workers-comp/"
+    ],
+    "FL": [
+      "Construction: 1+; Other: 4+",
+      "Private market",
+      "https://www.myfloridacfo.com/division/wc/"
+    ],
+    "GA": [
+      "3+ employees",
+      "Private market",
+      "https://sbwc.georgia.gov"
+    ],
+    "HI": [
+      "1+ employees",
+      "State WC program",
+      "https://labor.hawaii.gov/dcd/"
+    ],
+    "ID": [
+      "1+ employees",
+      "State Insurance Fund optional",
+      "https://www.industrialcommission.idaho.gov/"
+    ],
+    "IL": [
+      "1+ employees",
+      "Private market",
+      "https://icc.illinois.gov/"
+    ],
+    "IN": [
+      "1+ employees",
+      "Private market",
+      "https://www.in.gov/wcb/"
+    ],
+    "IA": [
+      "1+ employees",
+      "Private market",
+      "https://www.iowaworkforce.org/workers-comp/"
+    ],
+    "KS": [
+      "1+ employees",
+      "Private market",
+      "https://www.dol.ks.gov/WC"
+    ],
+    "KY": [
+      "1+ employees",
+      "Private market",
+      "https://labor.ky.gov/comp/Pages/default.aspx"
+    ],
+    "LA": [
+      "1+ employees",
+      "Private market",
+      "https://www.laworks.net/WorkplaceSafety/OWC/OWC_Main.asp"
+    ],
+    "ME": [
+      "1+ employees",
+      "Private market",
+      "https://www.maine.gov/wcb/"
+    ],
+    "MD": [
+      "1+ employees",
+      "Chesapeake Employers Insurance",
+      "https://www.ceiwc.com/"
+    ],
+    "MA": [
+      "1+ employees",
+      "Private market",
+      "https://www.mass.gov/workers-compensation"
+    ],
+    "MI": [
+      "1+ employees",
+      "Private market",
+      "https://www.michigan.gov/leo/bureaus-agencies/wca"
+    ],
+    "MN": [
+      "1+ employees",
+      "Private market",
+      "https://www.dli.mn.gov/business/workers-compensation"
+    ],
+    "MS": [
+      "5+ employees",
+      "Private market",
+      "https://www.mwcc.ms.gov/"
+    ],
+    "MO": [
+      "5+ (gen); 1+ construction",
+      "Private market",
+      "https://labor.mo.gov/DWC"
+    ],
+    "MT": [
+      "1+ employees",
+      "State Fund optional",
+      "https://www.statefund.com/"
+    ],
+    "NE": [
+      "1+ employees",
+      "Private market",
+      null
+    ],
+    "NV": [
+      "1+ employees",
+      "Private + state fund",
+      "https://dir.nv.gov/WCS/WCS/Home/"
+    ],
+    "NH": [
+      "1+ employees",
+      "Private market",
+      "https://www.nh.gov/labor/workercomp/index.htm"
+    ],
+    "NJ": [
+      "1+ employees",
+      "Private + CRIB",
+      "https://www.nj.gov/labor/employer-services/workers-comp/"
+    ],
+    "NM": [
+      "3+ employees",
+      "Private + NMPSIA",
+      "https://www.workerscomp.state.nm.us/"
+    ],
+    "NY": [
+      "1+ employees",
+      "NYSIF optional",
+      "https://www.nysif.com/"
+    ],
+    "NC": [
+      "3+ employees",
+      "Private market",
+      "https://www.ic.nc.gov/"
+    ],
+    "ND": [
+      "1+ employees",
+      "EXCLUSIVE state fund (WSI)",
+      "https://www.workforcesafety.com/"
+    ],
+    "OH": [
+      "1+ employees",
+      "EXCLUSIVE state fund (BWC)",
+      "https://www.bwc.ohio.gov/"
+    ],
+    "OK": [
+      "1+ employees",
+      "Private market",
+      "https://www.owcc.state.ok.us/"
+    ],
+    "OR": [
+      "1+ employees",
+      "SAIF optional",
+      "https://www.saif.com/"
+    ],
+    "PA": [
+      "1+ employees",
+      "SWIF optional",
+      "https://www.dli.pa.gov/Businesses/Compensation/WC/Pages/default.aspx"
+    ],
+    "RI": [
+      "1+ employees",
+      "Beacon Mutual optional",
+      "https://www.beaconmutual.com/"
+    ],
+    "SC": [
+      "4+ employees",
+      "Private market",
+      "https://www.wcc.sc.gov/"
+    ],
+    "SD": [
+      "1+ employees",
+      "Private market",
+      "https://dlr.sd.gov/workers_compensation/default.aspx"
+    ],
+    "TN": [
+      "5+ (gen); 1+ construction",
+      "Private market",
+      "https://www.tn.gov/workforce/employees/work-related-injuries-or-deaths/workers-comp.html"
+    ],
+    "TX": [
+      "Optional only",
+      "Private market",
+      "https://www.tdi.texas.gov/wc/"
+    ],
+    "UT": [
+      "1+ employees",
+      "WCF optional",
+      "https://www.laborcommission.utah.gov/divisions/industrial-accidents/"
+    ],
+    "VT": [
+      "1+ employees",
+      "Private market",
+      "https://labor.vermont.gov/workers-compensation-and-safety"
+    ],
+    "VA": [
+      "2+ employees",
+      "Private market",
+      "https://www.workcomp.virginia.gov/"
+    ],
+    "WA": [
+      "1+ employees",
+      "EXCLUSIVE state fund (L&I)",
+      "https://lni.wa.gov/insurance/"
+    ],
+    "WV": [
+      "1+ employees",
+      "Private (since 2008)",
+      "https://www.wvinsurance.gov/Workers-Compensation"
+    ],
+    "WI": [
+      "3+ employees",
+      "Private market",
+      "https://dwd.wisconsin.gov/wc/"
+    ],
+    "WY": [
+      "1+ employees",
+      "EXCLUSIVE state fund (DWS)",
+      "https://wyomingworkforce.org/workers/workers-compensation/"
+    ],
+    "DC": [
+      "1+ employees",
+      "Private market",
+      "https://does.dc.gov/page/workers-compensation"
+    ]
+  },
+  "posters": {
+    "AL": {
+      "ag": "AL Dept of Labor",
+      "url": "https://labor.alabama.gov/",
+      "ps": [
+        {
+          "n": "Minimum Wage Notice",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp Coverage",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "OSHA State Plan Notice",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "AK": {
+      "ag": "AK Dept of Labor & Workforce Dev",
+      "url": "https://labor.alaska.gov/lss/forms.htm",
+      "ps": [
+        {
+          "n": "Alaska Wage & Hour",
+          "r": "All employers",
+          "pdf": "https://labor.alaska.gov/lss/forms/WH_poster.pdf"
+        },
+        {
+          "n": "Alaska Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Alaska Human Rights Law",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "AZ": {
+      "ag": "AZ Industrial Commission",
+      "url": "https://www.azica.gov/divisions/labor-department-minimum-wage",
+      "ps": [
+        {
+          "n": "Minimum Wage Notice",
+          "r": "All employers",
+          "pdf": "https://www.azica.gov/sites/default/files/AZ%20Minimum%20Wage%20Poster%20ENGLISH%202025.pdf"
+        },
+        {
+          "n": "Workers Comp Notice",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Earned Paid Sick Time",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "AR": {
+      "ag": "AR Dept of Labor & Licensing",
+      "url": "https://www.labor.arkansas.gov/wp-content/uploads/2025/01/",
+      "ps": [
+        {
+          "n": "Minimum Wage & Overtime",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp Notice",
+          "r": "3+ employees",
+          "pdf": null
+        }
+      ]
+    },
+    "CA": {
+      "ag": "CA DIR / Labor Commissioner",
+      "url": "https://www.dir.ca.gov/iwc/posters.htm",
+      "ps": [
+        {
+          "n": "Minimum Wage (IWC)",
+          "r": "All employers",
+          "pdf": "https://www.dir.ca.gov/iwc/MW-2024.pdf"
+        },
+        {
+          "n": "Paid Sick Leave",
+          "r": "All employers",
+          "pdf": "https://www.dir.ca.gov/DLSE/Publications/Paid_Sick_Days_Poster_Template_(Printing_Instructions).pdf"
+        },
+        {
+          "n": "CFRA / Pregnancy Disability Leave",
+          "r": "5+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Payday Notice",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Cal/OSHA Safety & Health",
+          "r": "All employers",
+          "pdf": "https://www.dir.ca.gov/dosh/dosh_publications/shpstreng012000.pdf"
+        },
+        {
+          "n": "Whistleblower Protections",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "CPRA Automated Decision Notice",
+          "r": "Covered employers",
+          "pdf": null
+        }
+      ]
+    },
+    "CO": {
+      "ag": "CO CDLE",
+      "url": "https://cdle.colorado.gov/posters",
+      "ps": [
+        {
+          "n": "COMPS Order (Wage & Hour)",
+          "r": "All employers",
+          "pdf": "https://cdle.colorado.gov/sites/cdle/files/COMPS%20Order%20%2339%20Poster%20English.pdf"
+        },
+        {
+          "n": "Paid Leave & Whistleblower",
+          "r": "All employers",
+          "pdf": "https://cdle.colorado.gov/sites/cdle/files/Paid%20Leave%20%26%20Whistleblower%20Protection%20POSTER%20-%20English.pdf"
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "FAMLI Paid Leave",
+          "r": "All employers",
+          "pdf": "https://famli.colorado.gov/sites/famli/files/documents/FAMLI%20Required%20Workplace%20Poster%20English.pdf"
+        },
+        {
+          "n": "AI Act Notice (Jun 30, 2026)",
+          "r": "Employers using high-risk AI",
+          "pdf": null
+        }
+      ]
+    },
+    "CT": {
+      "ag": "CT Dept of Labor",
+      "url": "https://portal.ct.gov/dol/divisions/wage-and-workplace-standards/wage-and-workplace-standards-posters",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers (11+ for sick leave)",
+          "pdf": null
+        },
+        {
+          "n": "Paid Sick Leave",
+          "r": "11+ employees",
+          "pdf": null
+        },
+        {
+          "n": "CT FMLA",
+          "r": "75+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Discrimination is Illegal",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "DE": {
+      "ag": "DE Dept of Labor",
+      "url": "https://dia.delawareworks.com/workers-comp/",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Paid Family Leave (2026)",
+          "r": "10+ employees",
+          "pdf": "https://dol.delaware.gov/familyleave/"
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Anti-Discrimination Notice",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "FL": {
+      "ag": "FL Dept of Economic Opportunity",
+      "url": "https://floridajobs.org/business-growth-and-partnerships/for-employers/posters-required-for-florida-employers",
+      "ps": [
+        {
+          "n": "Florida Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://floridajobs.org/docs/default-source/business-growth-and-partnerships/for-employers/posters/2024-florida-minimum-wage-poster---english.pdf"
+        },
+        {
+          "n": "Workers Comp Carrier Notice",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Reemployment Assistance",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Child Labor Law",
+          "r": "Employers of minors",
+          "pdf": null
+        }
+      ]
+    },
+    "GA": {
+      "ag": "GA Dept of Labor",
+      "url": "https://dol.georgia.gov/minimum-wage",
+      "ps": [
+        {
+          "n": "Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp Notice",
+          "r": "3+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Child Labor Notice",
+          "r": "Employers of minors",
+          "pdf": null
+        }
+      ]
+    },
+    "HI": {
+      "ag": "HI Dept of Labor & Industrial Relations",
+      "url": "https://labor.hawaii.gov/wsd/minimum-wage/",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Prepaid Healthcare",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Pay Equity / Salary History Ban",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "ID": {
+      "ag": "ID Dept of Labor",
+      "url": "https://www.labor.idaho.gov/dnn/Businesses/EmploymentLaws.aspx",
+      "ps": [
+        {
+          "n": "Idaho Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "IL": {
+      "ag": "IL Dept of Labor",
+      "url": "https://labor.illinois.gov/content/dam/soi/en/web/idol/docs/Printed%20Materials/requiredposters.pdf",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://labor.illinois.gov/content/dam/soi/en/web/idol/docs/MW%20Poster%202024%20English.pdf"
+        },
+        {
+          "n": "One Day Rest in Seven",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Nursing Mothers in Workplace",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Equal Pay Act",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "NICU Leave (Jun 1, 2026)",
+          "r": "16+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Human Trafficking Notice",
+          "r": "Certain industries",
+          "pdf": null
+        }
+      ]
+    },
+    "IN": {
+      "ag": "IN Dept of Labor",
+      "url": "https://www.in.gov/dol/2438.htm",
+      "ps": [
+        {
+          "n": "Minimum Wage / Overtime",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Youth Work Restrictions",
+          "r": "Employers of minors",
+          "pdf": null
+        }
+      ]
+    },
+    "IA": {
+      "ag": "IA Division of Labor",
+      "url": "https://www.iowadivisionoflabor.gov/minimum-wage",
+      "ps": [
+        {
+          "n": "Iowa Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "KS": {
+      "ag": "KS Dept of Labor",
+      "url": "https://www.dol.ks.gov/WagePay/Wages",
+      "ps": [
+        {
+          "n": "Kansas Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Kansas Acts Against Discrimination",
+          "r": "4+ employees",
+          "pdf": null
+        }
+      ]
+    },
+    "KY": {
+      "ag": "KY Labor Cabinet",
+      "url": "https://labor.ky.gov/Standards/Wages/Pages/Minimum-Wage.aspx",
+      "ps": [
+        {
+          "n": "Kentucky Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Kentucky Civil Rights Act",
+          "r": "8+ employees",
+          "pdf": null
+        }
+      ]
+    },
+    "LA": {
+      "ag": "LA Workforce Commission",
+      "url": "https://www.laworks.net",
+      "ps": [
+        {
+          "n": "Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Child Labor Law",
+          "r": "Employers of minors",
+          "pdf": null
+        }
+      ]
+    },
+    "ME": {
+      "ag": "ME Dept of Labor",
+      "url": "https://www.maine.gov/labor/labor_laws/posters.html",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://www.maine.gov/labor/docs/2024/laborlaws/minimumwage2024.pdf"
+        },
+        {
+          "n": "Maine Human Rights Act",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "PFML (May 2026)",
+          "r": "All employers",
+          "pdf": "https://www.maine.gov/pfml/"
+        }
+      ]
+    },
+    "MD": {
+      "ag": "MD Dept of Labor",
+      "url": "https://www.dllr.state.md.us/labor/wages/minwage.shtml",
+      "ps": [
+        {
+          "n": "Minimum Wage & Overtime",
+          "r": "All employers",
+          "pdf": "https://www.dllr.state.md.us/labor/wages/documents/minimumwageposter.pdf"
+        },
+        {
+          "n": "Maryland PFML (Jul 2026)",
+          "r": "15+ employees",
+          "pdf": "https://www.labor.maryland.gov/paidleave/"
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Maryland Equal Pay",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "MA": {
+      "ag": "MA EOLWD",
+      "url": "https://www.mass.gov/service-details/posters-required-to-be-displayed-by-employers",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://www.mass.gov/doc/minimum-wage-poster/download"
+        },
+        {
+          "n": "Earned Sick Time",
+          "r": "All employers",
+          "pdf": "https://www.mass.gov/doc/massachusetts-earned-sick-time-law-employee-notice/download"
+        },
+        {
+          "n": "PFML",
+          "r": "All employers",
+          "pdf": "https://www.mass.gov/doc/paid-family-and-medical-leave-workplace-notice/download"
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Discrimination is Illegal (MCAD)",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "MI": {
+      "ag": "MI Dept of Labor & Economic Opportunity",
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/ors/minimumwage",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Paid Medical Leave",
+          "r": "50+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Elliott-Larsen Civil Rights Act",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "MN": {
+      "ag": "MN Dept of Labor & Industry",
+      "url": "https://www.dli.mn.gov/business/employment-practices/minimum-wage-minnesota",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://www.dli.mn.gov/sites/default/files/pdf/minwage_poster.pdf"
+        },
+        {
+          "n": "PFML (2026 benefits active)",
+          "r": "All employers",
+          "pdf": "https://paidleave.mn.gov"
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Employer-Sponsored Meetings (2025)",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "MS": {
+      "ag": "MS Dept of Employment Security",
+      "url": "https://mdes.ms.gov/employers/",
+      "ps": [
+        {
+          "n": "Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp (5+ employees)",
+          "r": "5+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Child Labor Notice",
+          "r": "Employers of minors",
+          "pdf": null
+        }
+      ]
+    },
+    "MO": {
+      "ag": "MO Dept of Labor",
+      "url": "https://labor.mo.gov/DLS/MinimumWage",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://labor.mo.gov/sites/labor/files/pubs_forms/LS-52.pdf"
+        },
+        {
+          "n": "Workers Comp",
+          "r": "5+ employees (1+ construction)",
+          "pdf": null
+        },
+        {
+          "n": "Human Trafficking Notice",
+          "r": "Certain industries",
+          "pdf": null
+        }
+      ]
+    },
+    "MT": {
+      "ag": "MT Dept of Labor & Industry",
+      "url": "https://erd.dli.mt.gov/labor-standards/wage-and-hour-payment-act/minimum-wage",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp (State Fund)",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "NE": {
+      "ag": "NE Dept of Labor",
+      "url": "https://dol.nebraska.gov/LaborLaw/MinimumWage",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Paid Sick Leave (Oct 2025)",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        }
+      ]
+    },
+    "NV": {
+      "ag": "NV Office of the Labor Commissioner",
+      "url": "https://labor.nv.gov/Laborer/Minimum_Wage/Minimum_Wage_Information/",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Pay Transparency (salary history ban)",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Pregnancy Accommodations",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "NH": {
+      "ag": "NH Dept of Labor",
+      "url": "https://www.nh.gov/labor/employment/minimum-wage.htm",
+      "ps": [
+        {
+          "n": "New Hampshire Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Employment Discrimination Notice",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "NJ": {
+      "ag": "NJ Dept of Labor",
+      "url": "https://www.nj.gov/labor/wagehour/content/posters_penalties_and_fines.html",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://www.nj.gov/labor/wagehour/content/MW_poster.pdf"
+        },
+        {
+          "n": "Family Leave Insurance / PFML",
+          "r": "All employers",
+          "pdf": "https://www.nj.gov/labor/myleavebenefits/"
+        },
+        {
+          "n": "Law Against Discrimination",
+          "r": "All employers — incl. AI coverage",
+          "pdf": null
+        },
+        {
+          "n": "SAFE Act / Domestic Violence Leave",
+          "r": "25+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        }
+      ]
+    },
+    "NM": {
+      "ag": "NM Dept of Workforce Solutions",
+      "url": "https://www.dws.state.nm.us/Businesses/Employer-Resources/Workplace-Posters",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "3+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Healthy Workplaces (Paid Sick Leave)",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "NY": {
+      "ag": "NY Dept of Labor",
+      "url": "https://dol.ny.gov/required-posters",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://dol.ny.gov/system/files/documents/2024/01/ls207.pdf"
+        },
+        {
+          "n": "Paid Family Leave (PFL 2026)",
+          "r": "All employers",
+          "pdf": "https://paidfamilyleave.ny.gov/sites/default/files/2024-01/pfl271s_0.pdf"
+        },
+        {
+          "n": "NY HERO Act",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Human Trafficking Hotline",
+          "r": "Certain industries",
+          "pdf": null
+        },
+        {
+          "n": "Equal Pay / Salary Range Disclosure",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "NC": {
+      "ag": "NC Dept of Labor",
+      "url": "https://www.labor.nc.gov/workplace-rights/employee-rights-regarding-time-worked-and-wages-paid/minimum-wage",
+      "ps": [
+        {
+          "n": "Wage & Hour Notice",
+          "r": "All employers",
+          "pdf": "https://www.labor.nc.gov/sites/default/files/documents/posters-wage-hour-poster-english.pdf"
+        },
+        {
+          "n": "Workers Comp",
+          "r": "3+ employees",
+          "pdf": null
+        },
+        {
+          "n": "OSH Notice",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "ND": {
+      "ag": "ND Dept of Labor & Human Rights",
+      "url": "https://www.nd.gov/labor/",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp (WSI)",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "ND Human Rights Act",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "OH": {
+      "ag": "OH Bureau of Workers Comp / Commerce",
+      "url": "https://com.ohio.gov/divisions-and-programs/industrial-compliance/ohio-bureau-of-wage-and-hour/minimum-wage",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://com.ohio.gov/static/documents/dico_LaborLawMWPoster.pdf"
+        },
+        {
+          "n": "Workers Comp (Exclusive BWC)",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Ohio Civil Rights Act",
+          "r": "4+ employees",
+          "pdf": null
+        }
+      ]
+    },
+    "OK": {
+      "ag": "OK Dept of Labor",
+      "url": "https://www.labor.ok.gov/minimum-wage/",
+      "ps": [
+        {
+          "n": "Oklahoma Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Oklahoma Anti-Discrimination Act",
+          "r": "15+ employees",
+          "pdf": null
+        }
+      ]
+    },
+    "OR": {
+      "ag": "OR Bureau of Labor & Industries (BOLI)",
+      "url": "https://www.oregon.gov/boli/workers/pages/required-workplace-posters.aspx",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://www.oregon.gov/boli/workers/Documents/BOLI_MW_Poster_English.pdf"
+        },
+        {
+          "n": "Oregon Paid Leave",
+          "r": "All employers",
+          "pdf": "https://paidleave.oregon.gov/documentsandresources/OregonPaidLeaveRequiredWorkplacePoster.pdf"
+        },
+        {
+          "n": "Sick Leave (blood donation added 2026)",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Oregon Family Leave Act",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workplace Fairness Act",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "PA": {
+      "ag": "PA Dept of Labor & Industry",
+      "url": "https://www.dli.pa.gov/Individuals/Labor-Management-Relations/llc/required-posters/Pages/default.aspx",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://www.dli.pa.gov/Documents/Labor%20Law%20Posters/llc-1.pdf"
+        },
+        {
+          "n": "UC Benefits Notice",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp (SWIF)",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Child Labor Law",
+          "r": "Employers of minors",
+          "pdf": null
+        }
+      ]
+    },
+    "RI": {
+      "ag": "RI Dept of Labor & Training",
+      "url": "https://dlt.ri.gov/employers/wage-payments/minimum-wage",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Temporary Caregiver Insurance (PFML)",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Rhode Island Civil Rights Act",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "SC": {
+      "ag": "SC Dept of Labor, Licensing & Regulation",
+      "url": "https://www.llr.sc.gov/labor/",
+      "ps": [
+        {
+          "n": "Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "4+ employees",
+          "pdf": null
+        },
+        {
+          "n": "SC Child Labor Law",
+          "r": "Employers of minors",
+          "pdf": null
+        }
+      ]
+    },
+    "SD": {
+      "ag": "SD Dept of Labor & Regulation",
+      "url": "https://dlr.sd.gov/labor_market/minimum_wage.aspx",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "TN": {
+      "ag": "TN Dept of Labor & Workforce Dev",
+      "url": "https://www.tn.gov/workforce/employees/work-related-injuries-or-deaths/workers-comp.html",
+      "ps": [
+        {
+          "n": "Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "5+ employees (1+ construction)",
+          "pdf": null
+        },
+        {
+          "n": "Child Labor Law",
+          "r": "Employers of minors",
+          "pdf": null
+        }
+      ]
+    },
+    "TX": {
+      "ag": "TX Workforce Commission",
+      "url": "https://www.twc.texas.gov/businesses/posters-employers",
+      "ps": [
+        {
+          "n": "Unemployment Insurance Notice",
+          "r": "All employers",
+          "pdf": "https://www.twc.texas.gov/files/businesses/texas-payday-law-poster-twc.pdf"
+        },
+        {
+          "n": "Workers Comp Coverage Notice",
+          "r": "Optional WC; notice required",
+          "pdf": null
+        },
+        {
+          "n": "Child Labor Law",
+          "r": "Employers of minors",
+          "pdf": null
+        }
+      ]
+    },
+    "UT": {
+      "ag": "UT Labor Commission",
+      "url": "https://laborcommission.utah.gov/divisions/antidiscrimination-labor/labor-standards/",
+      "ps": [
+        {
+          "n": "Utah Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp (WCF)",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Utah Antidiscrimination Act",
+          "r": "15+ employees",
+          "pdf": null
+        }
+      ]
+    },
+    "VT": {
+      "ag": "VT Dept of Labor",
+      "url": "https://labor.vermont.gov/wage-and-hour/minimum-wage",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://labor.vermont.gov/sites/labor/files/doc_library/Minimum%20Wage%20Poster%202024.pdf"
+        },
+        {
+          "n": "Vermont FMLA",
+          "r": "10+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Vermont Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "VA": {
+      "ag": "VA Dept of Labor & Industry (DOLI)",
+      "url": "https://www.doli.virginia.gov/labor-law/minimum-wage/",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://www.doli.virginia.gov/wp-content/uploads/2024/01/MW-Poster-2024.pdf"
+        },
+        {
+          "n": "Workers Comp",
+          "r": "2+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Virginia Human Rights Act",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Earned Paid Sick Leave (2026)",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "WA": {
+      "ag": "WA Dept of Labor & Industries (L&I)",
+      "url": "https://lni.wa.gov/workers-rights/workplace-policies/required-posters",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://lni.wa.gov/forms-publications/F700-074-000.pdf"
+        },
+        {
+          "n": "Paid Sick Leave",
+          "r": "All employers",
+          "pdf": "https://lni.wa.gov/forms-publications/F700-197-000.pdf"
+        },
+        {
+          "n": "Workers Comp (Exclusive L&I)",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "PFML (WA Paid Family Leave)",
+          "r": "All employers",
+          "pdf": "https://paidleave.wa.gov/app/uploads/sites/2/2019/12/WA-PFML-required-workplace-poster-English.pdf"
+        },
+        {
+          "n": "Pregnancy Accommodations",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "WV": {
+      "ag": "WV Div of Labor",
+      "url": "https://labor.wv.gov/Wage-Hour/Minimum_Wage/Pages/Minimum-Wage.aspx",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp (private since 2008)",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "WV Human Rights Act",
+          "r": "12+ employees",
+          "pdf": null
+        }
+      ]
+    },
+    "WI": {
+      "ag": "WI Dept of Workforce Development",
+      "url": "https://dwd.wisconsin.gov/er/laborstandards/minimumwage.htm",
+      "ps": [
+        {
+          "n": "Minimum Wage",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp (private market)",
+          "r": "3+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Wisconsin Fair Employment Law",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    },
+    "WY": {
+      "ag": "WY Dept of Workforce Services",
+      "url": "https://wyomingworkforce.org/workers/workers-compensation/",
+      "ps": [
+        {
+          "n": "Unemployment Insurance",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Workers Comp (exclusive state fund)",
+          "r": "1+ employees",
+          "pdf": null
+        },
+        {
+          "n": "Child Labor Notice",
+          "r": "Employers of minors",
+          "pdf": null
+        }
+      ]
+    },
+    "DC": {
+      "ag": "DC Dept of Employment Services (DOES)",
+      "url": "https://does.dc.gov/page/workplace-rights-posters",
+      "ps": [
+        {
+          "n": "DC Minimum Wage",
+          "r": "All employers",
+          "pdf": "https://does.dc.gov/sites/default/files/dc/sites/does/page_content/attachments/MW%20Poster%202024.pdf"
+        },
+        {
+          "n": "Paid Family Leave (PFML)",
+          "r": "All employers",
+          "pdf": "https://dcpaidfamilyleave.dc.gov/"
+        },
+        {
+          "n": "DC Human Rights Act",
+          "r": "All employers",
+          "pdf": null
+        },
+        {
+          "n": "Accrued Sick & Safe Leave",
+          "r": "All employers",
+          "pdf": null
+        }
+      ]
+    }
+  },
+  "newsFeed": [
+    {
+      "id": "w2f001",
+      "date": "Jun 22, 2026",
+      "category": "alert",
+      "priority": "high",
+      "iconBg": "#9e2020",
+      "icon": "OT",
+      "title": "BREAKING: Fifth Circuit Vacates DOL $58,656 Overtime Threshold",
+      "desc": "The Fifth Circuit vacated the DOL's 2024 rule raising the overtime exempt salary threshold to $58,656 per year, reverting to $35,568. Employers who reclassified workers as hourly should assess re-exemption options immediately. A DOL appeal or cert petition is expected.",
+      "tags": [
+        "DOL",
+        "FLSA",
+        "Overtime",
+        "BREAKING"
+      ],
+      "link": "https://www.dol.gov/agencies/whd/overtime/rulemaking",
+      "linkLabel": "DOL overtime page",
+      "isNew": true
+    },
+    {
+      "id": "w2f002",
+      "date": "Jun 22, 2026",
+      "category": "federal",
+      "priority": "high",
+      "iconBg": "#0e82be",
+      "icon": "AI",
+      "title": "EEOC AI Hiring Guidance Effective Aug 1 — 6 Weeks to Comply",
+      "desc": "With the EEOC's final AI hiring guidance effective August 1, 2026, employers have six weeks to complete bias audits of algorithmic screening tools, update records retention policies, and train recruiters on accommodation pathways for candidates flagged by automated systems.",
+      "tags": [
+        "EEOC",
+        "AI Hiring",
+        "Deadline"
+      ],
+      "link": "https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness",
+      "linkLabel": "EEOC AI guidance",
+      "isNew": true
+    },
+    {
+      "id": "w2f003",
+      "date": "Jun 21, 2026",
+      "category": "state",
+      "priority": "high",
+      "iconBg": "#1a8a50",
+      "icon": "MW",
+      "title": "IL and NJ Minimum Wage — 9 Days to Jul 1 Effective Date",
+      "desc": "Illinois at $15.60/hr and New Jersey at $15.90/hr take effect July 1. Chicago's local rate moves to $16.50/hr. Payroll systems must be updated by June 27 to ensure correct first-pay-period rates. Penalties apply immediately on July 1.",
+      "tags": [
+        "Min Wage",
+        "Illinois",
+        "New Jersey",
+        "Deadline"
+      ],
+      "link": "https://www.dol.gov/agencies/whd/minimum-wage/state",
+      "linkLabel": "DOL WHD",
+      "isNew": true
+    },
+    {
+      "id": "w2f004",
+      "date": "Jun 20, 2026",
+      "category": "pfml",
+      "priority": "med",
+      "iconBg": "#4a2d9e",
+      "icon": "DE",
+      "title": "Delaware PFML Benefits Live — 9,400 Claims Processed Through May",
+      "desc": "Delaware's Paid Leave program, active since January 2026, has processed approximately 9,400 claims through May 2026. The 0.8% contribution rate holds through 2027. Confirm employees have received required written notice and that deductions appear correctly on pay stubs.",
+      "tags": [
+        "PFML",
+        "Delaware",
+        "Benefits"
+      ],
+      "link": "https://dol.delaware.gov/familyleave/",
+      "linkLabel": "DE Family Leave",
+      "isNew": true
+    },
+    {
+      "id": "w2f005",
+      "date": "Jun 20, 2026",
+      "category": "market",
+      "priority": "info",
+      "iconBg": "#0a6b6b",
+      "icon": "BLS",
+      "title": "Jun 2026 Preliminary ADP Data — 138K Private Sector Jobs Added",
+      "desc": "Preliminary ADP data points to 138K private sector jobs added in June 2026, below consensus expectations of 160K. Healthcare and leisure and hospitality led gains; manufacturing shed 12K. The official BLS report publishes July 3, 2026.",
+      "tags": [
+        "BLS",
+        "Labor Market",
+        "Preview"
+      ],
+      "link": "https://www.bls.gov",
+      "linkLabel": "BLS",
+      "isNew": true
+    },
+    {
+      "id": "w2f006",
+      "date": "Jun 19, 2026",
+      "category": "federal",
+      "priority": "med",
+      "iconBg": "#0e82be",
+      "icon": "EEO",
+      "title": "EEO-1 Filing Portal Opens — Deadline July 15, 2026",
+      "desc": "The EEOC opened the 2025 EEO-1 Component 1 data collection portal this week. Employers with 100 or more employees and federal contractors with 50 or more employees must file workforce demographic data by July 15, 2026. First-time filers should register at the EEOC portal now.",
+      "tags": [
+        "EEO-1",
+        "EEOC",
+        "Deadline"
+      ],
+      "link": "https://www.eeoc.gov/employers/eeo-1-survey",
+      "linkLabel": "EEOC EEO-1",
+      "isNew": true
+    },
+    {
+      "id": "w2f007",
+      "date": "Jun 18, 2026",
+      "category": "state",
+      "priority": "med",
+      "iconBg": "#1a8a50",
+      "icon": "CO",
+      "title": "CO FAMLI Q2 Contribution Filing Due Jul 31",
+      "desc": "Colorado FAMLI employers must submit Q2 2026 payroll and contribution reports by July 31, 2026. The combined rate remains 0.9% of wages. Employers who missed Q1 filings face penalties of 1.5% of overdue contributions per month plus interest.",
+      "tags": [
+        "PFML",
+        "Colorado",
+        "FAMLI",
+        "Deadline"
+      ],
+      "link": "https://famli.colorado.gov",
+      "linkLabel": "CO FAMLI",
+      "isNew": false
+    },
+    {
+      "id": "w2f008",
+      "date": "Jun 18, 2026",
+      "category": "alert",
+      "priority": "high",
+      "iconBg": "#9e2020",
+      "icon": "RC",
+      "title": "Post-RTO Workforce Audits — Remote Nexus Compliance Gaps Found",
+      "desc": "Following large-scale return-to-office mandates, HR compliance teams are discovering that employees who relocated during 2020 through 2024 created unresolved workers comp, unemployment insurance, and income tax nexus obligations in 30 or more states. DOL and state agencies are cross-referencing I-9 addresses with payroll filings.",
+      "tags": [
+        "Remote Work",
+        "Tax Nexus",
+        "Audit"
+      ],
+      "link": null,
+      "linkLabel": null,
+      "isNew": true
+    },
+    {
+      "id": "w2f009",
+      "date": "Jun 17, 2026",
+      "category": "federal",
+      "priority": "med",
+      "iconBg": "#0e82be",
+      "icon": "NL",
+      "title": "DC Circuit Upholds NLRB Broader Joint Employer Standard",
+      "desc": "The DC Circuit upheld the NLRB's 2023 joint employer rule expanding liability to businesses sharing or codetermining essential employment terms with staffing agencies. Employers relying on PEO or staffing firm arrangements should review contracts for indemnification gaps.",
+      "tags": [
+        "NLRB",
+        "Joint Employer",
+        "Staffing"
+      ],
+      "link": "https://www.nlrb.gov/guidance/key-reference-materials/joint-employer",
+      "linkLabel": "NLRB joint employer",
+      "isNew": false
+    },
+    {
+      "id": "w2f010",
+      "date": "Jun 16, 2026",
+      "category": "state",
+      "priority": "med",
+      "iconBg": "#1a8a50",
+      "icon": "CA",
+      "title": "CA AB 3XX — Pay Scale Posting for Remote Roles Passes Assembly",
+      "desc": "California AB 3XX, requiring salary range posting for roles that can be performed remotely anywhere in the US, passed the state Assembly and moves to Senate. If signed, it takes effect January 1, 2027 with significant implications for national job postings.",
+      "tags": [
+        "Pay Transparency",
+        "California",
+        "Remote"
+      ],
+      "link": "https://leginfo.legislature.ca.gov",
+      "linkLabel": "CA Legislature",
+      "isNew": false
+    },
+    {
+      "id": "w2f011",
+      "date": "Jun 15, 2026",
+      "category": "pfml",
+      "priority": "info",
+      "iconBg": "#4a2d9e",
+      "icon": "ME",
+      "title": "Maine PFML Benefits Now Available — Launch Confirmed Jun 1",
+      "desc": "Maine's Paid Family and Medical Leave program began accepting benefit claims June 1, 2026. The 1% combined contribution rate applies. Employers with fewer than 15 employees are not required to pay the employer share. Employees may take up to 12 weeks of benefits.",
+      "tags": [
+        "PFML",
+        "Maine",
+        "Benefits"
+      ],
+      "link": "https://www.maine.gov/pfml/",
+      "linkLabel": "ME PFML",
+      "isNew": false
+    },
+    {
+      "id": "w2f012",
+      "date": "Jun 14, 2026",
+      "category": "market",
+      "priority": "info",
+      "iconBg": "#0a6b6b",
+      "icon": "JO",
+      "title": "JOLTS May 2026: 7.6M Openings — Quits Rate Hits 5-Year Low",
+      "desc": "The May 2026 JOLTS report showed 7.6M job openings with the quits rate falling to 1.8%, the lowest since 2020. The hires rate dropped to 2.9%. A declining quits rate signals reduced worker confidence in finding better employment, a potential leading indicator of softening labor demand.",
+      "tags": [
+        "JOLTS",
+        "BLS",
+        "Labor Market"
+      ],
+      "link": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "linkLabel": "BLS JOLTS",
+      "isNew": false
+    },
+    {
+      "id": "w2f013",
+      "date": "Jun 13, 2026",
+      "category": "federal",
+      "priority": "low",
+      "iconBg": "#0e82be",
+      "icon": "NC",
+      "title": "FTC Non-Compete — En Banc Petition Filed, 12 to 18 Month Timeline",
+      "desc": "The FTC filed its en banc petition with the Eighth Circuit challenging the injunction blocking the federal non-compete ban. Legal observers estimate a 12 to 18 month timeline to resolution. State-level bans in CA, MN, ND, and OK apply now regardless of federal litigation.",
+      "tags": [
+        "FTC",
+        "Non-Compete",
+        "Litigation"
+      ],
+      "link": "https://www.ftc.gov/legal-library/browse/rules/noncompete-clause-rule",
+      "linkLabel": "FTC rule page",
+      "isNew": false
+    },
+    {
+      "id": "w2f014",
+      "date": "Jun 12, 2026",
+      "category": "state",
+      "priority": "med",
+      "iconBg": "#1a8a50",
+      "icon": "NY",
+      "title": "NY Freelance Law — $2,500 Minimum Triggers Written Contract Requirement",
+      "desc": "New York's expanded Freelance Isn't Free Act now covers engagements worth $2,500 or more over a 120-day period. Written contracts are mandatory; payments must be made within 30 days of completion. Civil penalties of up to $25,000 apply for violations.",
+      "tags": [
+        "Contractors",
+        "New York",
+        "Freelance"
+      ],
+      "link": null,
+      "linkLabel": null,
+      "isNew": false
+    },
+    {
+      "id": "w2f015",
+      "date": "Jun 11, 2026",
+      "category": "market",
+      "priority": "info",
+      "iconBg": "#0a6b6b",
+      "icon": "AI",
+      "title": "58% of HR Teams Lack a Formal AI Governance Policy — New Survey",
+      "desc": "A June 2026 HR Policy Association survey found 58% of HR leaders lack a written AI governance policy covering hiring, performance management, or workforce planning tools. With the EEOC's August 1 effective date for AI hiring guidance, this gap is now a compliance risk.",
+      "tags": [
+        "AI",
+        "HR Tech",
+        "Governance"
+      ],
+      "link": "https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness",
+      "linkLabel": "EEOC AI guidance",
+      "isNew": false
+    }
+  ],
+  "scoreData": {
+    "AL": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal; defers entirely to FLSA.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML program.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Optional (private market)",
+        "n": "WC coverage required for most employers; private insurance market.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave mandate.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "Alabama AADA",
+        "n": "Alabama Age Discrimination Act and ADA mirror; no salary history ban; no AI law.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "AK": {
+      "mw": {
+        "s": 30,
+        "v": "$11.91/hr",
+        "n": "CPI-indexed annually; well above federal floor.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML program.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 35,
+        "v": "Private market required",
+        "n": "All employers with 1+ employee must carry; private market.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave mandate.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "Alaska Human Rights Law",
+        "n": "Broad protected classes including marital status; no salary history ban; no AI law.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "AZ": {
+      "mw": {
+        "s": 40,
+        "v": "$14.70/hr (2025)",
+        "n": "Prop 206 CPI-indexed; significantly above federal floor.",
+        "c": [
+          "az_ica",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market required",
+        "n": "Required for all employers; private insurance.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 55,
+        "v": "Up to 40 hrs/yr (Prop 206)",
+        "n": "Mandated for all employers under Prop 206; accrues 1hr/30hrs worked.",
+        "c": [
+          "az_ica"
+        ]
+      },
+      "ad": {
+        "s": 25,
+        "v": "AZ Civil Rights Act",
+        "n": "Broad coverage; no salary history ban; no AI law.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "AR": {
+      "mw": {
+        "s": 25,
+        "v": "$11.00/hr",
+        "n": "Above federal floor via voter initiative.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market required",
+        "n": "Required for employers with 3+ employees.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 15,
+        "v": "AR Civil Rights Act",
+        "n": "Limited protected classes; no salary history ban; no AI law.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "CA": {
+      "mw": {
+        "s": 100,
+        "v": "$16.50/hr (state); $20/hr fast food",
+        "n": "Highest broad state rate nationally; AB 1228 fast food sector rate; many localities higher.",
+        "c": [
+          "ca_dlse",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 100,
+        "v": "CA SDI/PFL — 60-90% WR, up to 8 wks",
+        "n": "Most mature PFML in US; 1% employee contribution; employer of any size; benefits since 2004.",
+        "c": [
+          "ca_edd"
+        ]
+      },
+      "pt": {
+        "s": 100,
+        "v": "SB 1162 — salary range required all postings",
+        "n": "All employers must post pay range; pay data reporting to DFEH; civil penalties $100-$10K/violation.",
+        "c": [
+          "ca_dfeh",
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 70,
+        "v": "Private market; high cost state",
+        "n": "One of highest WC premium states nationally; WCIRB governs; all employers 1+ EE.",
+        "c": [
+          "ca_dwc"
+        ]
+      },
+      "sl": {
+        "s": 90,
+        "v": "40 hrs/yr + CA Healthy Workplaces Act",
+        "n": "All employers; 5-day minimum; no employer size threshold; local ordinances may exceed.",
+        "c": [
+          "ca_sl"
+        ]
+      },
+      "ad": {
+        "s": 100,
+        "v": "FEHA + CPRA AI rules + salary history ban",
+        "n": "Broadest state anti-discrimination law; CPRA automated decision rules 2026; salary history banned; non-competes void.",
+        "c": [
+          "ca_dfeh",
+          "ca_cpra",
+          "eeoc_main"
+        ]
+      }
+    },
+    "CO": {
+      "mw": {
+        "s": 65,
+        "v": "$14.81/hr; Denver $18.29/hr",
+        "n": "COMPS Order CPI-indexed; Denver and other localities set higher rates.",
+        "c": [
+          "co_cdle",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 85,
+        "v": "FAMLI — 0.9% split, up to 12 wks",
+        "n": "Benefits active 2024; employer + employee contribution; all employers 1+; 90% WR for low earners.",
+        "c": [
+          "co_famli"
+        ]
+      },
+      "pt": {
+        "s": 90,
+        "v": "COMPS Order — all postings required",
+        "n": "Salary range + benefits in all job postings including remote; civil penalties up to $10K/violation.",
+        "c": [
+          "co_pt",
+          "co_cdle"
+        ]
+      },
+      "wc": {
+        "s": 40,
+        "v": "Pinnacol Assurance optional; private OK",
+        "n": "Employers may use Pinnacol or private insurer; required for all 1+ EE.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 70,
+        "v": "HFWA — 48 hrs/yr accrual",
+        "n": "Healthy Families and Workplaces Act; all employers; 1hr/30hrs; expanded to COVID safe leave.",
+        "c": [
+          "co_cdle"
+        ]
+      },
+      "ad": {
+        "s": 90,
+        "v": "CO AI Act (SB 205) + CDLE EPEWA",
+        "n": "AI Act effective June 30 2026 — employer liability for high-risk AI decisions; salary history ban active.",
+        "c": [
+          "co_ai",
+          "co_cdle",
+          "eeoc_main"
+        ]
+      }
+    },
+    "CT": {
+      "mw": {
+        "s": 70,
+        "v": "$16.35/hr",
+        "n": "Indexed; among highest in Northeast.",
+        "c": [
+          "ct_dol",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 80,
+        "v": "CT Paid Leave — 0.5% EE contribution, 12 wks",
+        "n": "Benefits since Jan 2022; employee-funded; all employers 1+.",
+        "c": [
+          "ct_pfml"
+        ]
+      },
+      "pt": {
+        "s": 75,
+        "v": "SB 1, 2021 — salary ranges on request + posting",
+        "n": "Salary range required in postings and on request; employer size: all.",
+        "c": [
+          "ct_pt",
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 40,
+        "v": "Private market required",
+        "n": "Private or state-approved self-insurance; all employers.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 75,
+        "v": "40 hrs/yr — threshold now 11 EE (2026)",
+        "n": "Threshold dropped from 25 to 11 employees Jan 2026; accrual 1hr/40hrs.",
+        "c": [
+          "ct_sl"
+        ]
+      },
+      "ad": {
+        "s": 70,
+        "v": "CT FEPA — broad coverage + salary history ban",
+        "n": "Salary history ban active; CHRO enforcement; no standalone AI law.",
+        "c": [
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "DE": {
+      "mw": {
+        "s": 45,
+        "v": "$15.00/hr",
+        "n": "Scheduled increases through 2025.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 65,
+        "v": "DE Paid Leave — 0.8% split, 12 wks (2026)",
+        "n": "Benefits launched Jan 2026; employers 10+ EE; 80% WR.",
+        "c": [
+          "de_pfml"
+        ]
+      },
+      "pt": {
+        "s": 30,
+        "v": "HB 1, 2023 — salary range on request",
+        "n": "Employers must provide salary range when requested by applicant.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 35,
+        "v": "Private market required",
+        "n": "All employers 1+ EE must carry.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 30,
+        "v": "None statewide (2025)",
+        "n": "No broad paid sick leave mandate through 2025.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 45,
+        "v": "DE Discrimination in Employment Act",
+        "n": "Broad coverage; no salary history ban statewide.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "DC": {
+      "mw": {
+        "s": 95,
+        "v": "$17.50/hr",
+        "n": "Highest rate in US along with NYC; annual CPI adjustments.",
+        "c": [
+          "dc_does",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 90,
+        "v": "DC PFL — 0.26% EE + 0.26% ER, 12 wks",
+        "n": "Benefits since 2020; among most generous in US; parental leave 12 wks.",
+        "c": [
+          "dc_pfml"
+        ]
+      },
+      "pt": {
+        "s": 85,
+        "v": "Wage Transparency Act 2023 — all postings",
+        "n": "All employers must post salary range and benefits in job postings.",
+        "c": [
+          "dc_does",
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 50,
+        "v": "Private market required; DOES oversight",
+        "n": "All employers must carry; high enforcement.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 85,
+        "v": "ASSLA — 7-10 days/yr",
+        "n": "DC Accrued Sick & Safe Leave Act; most employers 7-10 days depending on size.",
+        "c": [
+          "dc_sl"
+        ]
+      },
+      "ad": {
+        "s": 90,
+        "v": "DC HRA — broadest protected classes in US",
+        "n": "Includes political affiliation, credit information, family responsibilities; salary history ban; no AI law yet.",
+        "c": [
+          "dc_does",
+          "eeoc_main"
+        ]
+      }
+    },
+    "FL": {
+      "mw": {
+        "s": 45,
+        "v": "$13.00/hr; $14.00 Oct 1 2026",
+        "n": "Amendment 2; annual $1 increases to $15; Oct 1 date unusual.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 45,
+        "v": "Private market; broad coverage",
+        "n": "Construction: 1+ EE; other industries: 4+ EE; high premium state.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "Preempts local sick leave ordinances.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 25,
+        "v": "FL Civil Rights Act",
+        "n": "Mirrors federal; no salary history ban; no AI law.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "GA": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 3+ EE",
+        "n": "Required for employers with 3+ employees.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "GA Equal Employment for Persons with Disabilities Act",
+        "n": "Limited state protections beyond federal; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "HI": {
+      "mw": {
+        "s": 55,
+        "v": "$14.00/hr",
+        "n": "Scheduled increases; among highest in Pacific region.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 60,
+        "v": "Prepaid Healthcare + TDI",
+        "n": "Unique model; TDI provides short-term disability including pregnancy; PFML expansion pending.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 60,
+        "v": "HB 2408 — salary range required in postings",
+        "n": "Active 2023; all employers posting jobs in HI.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 40,
+        "v": "Private market required",
+        "n": "All employers 1+ EE.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None statewide",
+        "n": "No broad paid sick leave mandate.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 55,
+        "v": "HI HRS Ch. 378 — broad + salary history ban",
+        "n": "Among broadest state discrimination laws; salary history ban active.",
+        "c": [
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "ID": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market required",
+        "n": "All employers 1+ EE.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 15,
+        "v": "ID Human Rights Act",
+        "n": "Limited coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "IL": {
+      "mw": {
+        "s": 70,
+        "v": "$15.60/hr (Jul 2026); Chicago $16.50/hr",
+        "n": "Jul 1 2026 increase; CPI-indexed going forward; Chicago ordinance higher.",
+        "c": [
+          "il_dol",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 30,
+        "v": "Paid Leave for All Workers Act (PLAWA)",
+        "n": "40 hrs/yr general paid leave (not PFML); no contributions; all employers; effective Jan 2024.",
+        "c": [
+          "il_dol"
+        ]
+      },
+      "pt": {
+        "s": 75,
+        "v": "Equal Pay Act amendments — pay range required",
+        "n": "All employers posting in IL must include salary range; penalties up to $10K.",
+        "c": [
+          "il_pt",
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 40,
+        "v": "Private market required; 1+ EE",
+        "n": "All employers; high premium state historically.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 70,
+        "v": "PLAWA — 40 hrs/yr paid leave",
+        "n": "Broadest in US — general paid leave, not just sick; 1hr/40hrs; all employers.",
+        "c": [
+          "il_sl"
+        ]
+      },
+      "ad": {
+        "s": 70,
+        "v": "IL HRA + AI Video Interview Act + salary history ban",
+        "n": "AI Video Interview Act requires disclosure and consent; salary history ban statewide; NICU leave June 2026.",
+        "c": [
+          "il_ai",
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "IN": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "IN Civil Rights Law",
+        "n": "Mirrors federal; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "IA": {
+      "mw": {
+        "s": 15,
+        "v": "$7.25/hr (matches federal)",
+        "n": "State rate equals federal; no planned increase.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "IA Civil Rights Act",
+        "n": "Standard protected classes; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "KS": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "Most employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "KS Act Against Discrimination",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "KY": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "Most employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "KY Civil Rights Act",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "LA": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "LA Employment Discrimination Law",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "ME": {
+      "mw": {
+        "s": 50,
+        "v": "$14.15/hr",
+        "n": "CPI-indexed annually.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 70,
+        "v": "ME PFML — 1% split, 12 wks (benefits May 2026)",
+        "n": "Benefits launched May 2026; employers 15+ EE for employer share; all employees eligible.",
+        "c": [
+          "me_pfml"
+        ]
+      },
+      "pt": {
+        "s": 25,
+        "v": "Salary history inquiry ban only",
+        "n": "Cannot ask about prior pay history; no posting requirement.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 35,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 55,
+        "v": "Earned Employee Leave — 40 hrs/yr",
+        "n": "All employers 10+ EE; 1hr/40hrs worked.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 45,
+        "v": "ME MHRA — broad coverage + salary history ban",
+        "n": "Salary history ban active; broad protected classes.",
+        "c": [
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "MD": {
+      "mw": {
+        "s": 55,
+        "v": "$15.00/hr",
+        "n": "All employers; phased increases complete.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 75,
+        "v": "MD Time to Care Act — 0.90% split, 12 wks (Jul 2026)",
+        "n": "Contributions active; benefits begin Jul 2026; 15+ EE for employer share.",
+        "c": [
+          "md_pfml"
+        ]
+      },
+      "pt": {
+        "s": 65,
+        "v": "HB 649 — salary range required on request + postings",
+        "n": "Must include salary range in job postings; penalty up to $300/violation.",
+        "c": [
+          "md_pt",
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 35,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 65,
+        "v": "Healthy Working Families Act — 64 hrs/yr",
+        "n": "Employers 15+ EE: paid; under 15: unpaid; 1hr/30hrs.",
+        "c": [
+          "md_sl"
+        ]
+      },
+      "ad": {
+        "s": 60,
+        "v": "MD FEPA + salary history ban",
+        "n": "Salary history ban active; broad protected classes.",
+        "c": [
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "MA": {
+      "mw": {
+        "s": 75,
+        "v": "$15.00/hr",
+        "n": "Scheduled increases continue; Boston higher.",
+        "c": [
+          "ma_dol",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 90,
+        "v": "MA PFML — 0.88% split, up to 26 wks",
+        "n": "One of most generous; 26 wks total; employer + employee contribution; all employers 1+.",
+        "c": [
+          "ma_pfml"
+        ]
+      },
+      "pt": {
+        "s": 50,
+        "v": "Salary history inquiry ban only",
+        "n": "Cannot ask about prior pay history; AG enforcement.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 45,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required; state insurance option available.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 75,
+        "v": "Earned Sick Time — 40 hrs/yr",
+        "n": "Employers 11+ EE: paid; under 11: unpaid.",
+        "c": [
+          "ma_sl"
+        ]
+      },
+      "ad": {
+        "s": 65,
+        "v": "MA MCAD — broad coverage + salary history ban",
+        "n": "Very broad protected classes; salary history ban strict.",
+        "c": [
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "MI": {
+      "mw": {
+        "s": 45,
+        "v": "$10.33/hr",
+        "n": "CPI-indexed; moderate increase from federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 35,
+        "v": "Paid Medical Leave Act — 40 hrs/yr",
+        "n": "Employers 50+ EE; primarily sick leave not PFML; 1hr/35hrs.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 35,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 35,
+        "v": "PMLA — 40 hrs/yr (50+ EE)",
+        "n": "Only applies to larger employers.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 45,
+        "v": "MI ELCRA — broader than federal",
+        "n": "Broader than federal; Elliott-Larsen Act; salary history ban proposed not passed.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "MN": {
+      "mw": {
+        "s": 55,
+        "v": "$10.85/hr (large ER); Minneapolis $15.57/hr",
+        "n": "Two-tier system; Minneapolis and St Paul set higher local rates.",
+        "c": [
+          "mn_dli",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 80,
+        "v": "MN PFML — 0.88%, 12+12 wks (benefits Jan 2026)",
+        "n": "Benefits launched Jan 2026; most comprehensive new program; 0.44% EE max; all employers.",
+        "c": [
+          "mn_pfml"
+        ]
+      },
+      "pt": {
+        "s": 65,
+        "v": "SF 3035 — salary range required in postings (2025)",
+        "n": "All employers with 1+ EE posting jobs in MN must include salary range.",
+        "c": [
+          "mn_pt",
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 35,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 75,
+        "v": "Earned Sick and Safe Time — 48 hrs/yr",
+        "n": "All employers; 1hr/30hrs; effective Jan 2024.",
+        "c": [
+          "mn_sl"
+        ]
+      },
+      "ad": {
+        "s": 65,
+        "v": "MN HRA — broad + salary history ban + employer meetings ban",
+        "n": "Salary history ban; 2025 law bans mandatory employer anti-union meetings.",
+        "c": [
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "MS": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 25,
+        "v": "Private market; 5+ EE",
+        "n": "Only required for employers with 5+ employees.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 15,
+        "v": "MS Employment Protection Act",
+        "n": "Limited state protections; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "MO": {
+      "mw": {
+        "s": 30,
+        "v": "$12.30/hr",
+        "n": "Prop B increases; moderately above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 5+ EE (1+ construction)",
+        "n": "Threshold varies by industry.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 25,
+        "v": "MO Human Rights Act",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "MT": {
+      "mw": {
+        "s": 25,
+        "v": "$10.55/hr",
+        "n": "CPI-indexed annually.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 45,
+        "v": "Exclusive state fund (Montana State Fund)",
+        "n": "Monopolistic WC state; all employers must use State Fund or self-insure.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 25,
+        "v": "MT Human Rights Act + wrongful discharge",
+        "n": "Only state with just-cause termination protection; broader than federal.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "NE": {
+      "mw": {
+        "s": 30,
+        "v": "$13.50/hr",
+        "n": "Voter-approved increases.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 30,
+        "v": "Paid Sick Leave — 40 hrs (eff. Oct 2025)",
+        "n": "Voter-approved; took effect Oct 2025; all employers.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 25,
+        "v": "NE FEPA",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "NV": {
+      "mw": {
+        "s": 50,
+        "v": "$12.00/hr",
+        "n": "Annual adjustments; no longer two-tier.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 55,
+        "v": "SB 293 — salary range on request required",
+        "n": "Must provide salary range to applicants who request; no posting requirement yet.",
+        "c": [
+          "nv_pt",
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 50,
+        "v": "SB 312 — 40 hrs/yr",
+        "n": "All employers; effective 2020.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 50,
+        "v": "NV Equal Rights Commission + salary history ban",
+        "n": "Salary history ban active; broad protected classes.",
+        "c": [
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "NH": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 25,
+        "v": "Voluntary PFML program (Granite State Paid Leave)",
+        "n": "Voluntary employer opt-in; no mandate; state-administered.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 30,
+        "v": "NH Law Against Discrimination",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "NJ": {
+      "mw": {
+        "s": 70,
+        "v": "$15.90/hr (Jul 2026)",
+        "n": "CPI-indexed; Jul 1 2026 increase; tipped wage separate.",
+        "c": [
+          "nj_dol",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 85,
+        "v": "NJ FLI + TDI — combined 12 wks, up to 85% WR",
+        "n": "Mature combined program; employee-funded; all employers.",
+        "c": [
+          "nj_pfml"
+        ]
+      },
+      "pt": {
+        "s": 50,
+        "v": "Salary history inquiry ban",
+        "n": "Cannot ask about prior pay; no posting requirement.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 40,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required; moderate premium state.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 75,
+        "v": "NJ Earned Sick Leave — 40 hrs/yr",
+        "n": "All employers 1+; 1hr/30hrs; very broad qualifying reasons.",
+        "c": [
+          "nj_sl"
+        ]
+      },
+      "ad": {
+        "s": 80,
+        "v": "NJ LAD — AI discrimination + salary history ban + SAFE Act",
+        "n": "NJ LAD covers AI systems; salary history ban; domestic violence leave; SAFE Act; among broadest.",
+        "c": [
+          "nj_lad",
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "NM": {
+      "mw": {
+        "s": 40,
+        "v": "$12.00/hr",
+        "n": "Above federal floor; regular increases.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 3+ EE",
+        "n": "3+ employee threshold.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 60,
+        "v": "Healthy Workplaces Act — 64 hrs/yr",
+        "n": "All employers; effective 2022.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 35,
+        "v": "NM Human Rights Act",
+        "n": "Broader than federal; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "NY": {
+      "mw": {
+        "s": 85,
+        "v": "$16.50/hr; NYC $16.50/hr",
+        "n": "Among highest nationally; additional NYC and Westchester rates; annual adjustments.",
+        "c": [
+          "ny_dol",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 90,
+        "v": "NY PFL — 0.432% EE, up to 12 wks",
+        "n": "Employee-funded; 67% WR; all employers; continuous updates to benefit amounts.",
+        "c": [
+          "ny_pfl"
+        ]
+      },
+      "pt": {
+        "s": 80,
+        "v": "S9427A — salary range required all postings",
+        "n": "All employers 4+ EE must post salary range; NYC adds Local Law 32; $1K-$250K civil penalties.",
+        "c": [
+          "ny_pt",
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 50,
+        "v": "Private market + NYSIF; high cost",
+        "n": "High premium state; state fund option; all employers 1+.",
+        "c": [
+          "ny_wcb"
+        ]
+      },
+      "sl": {
+        "s": 80,
+        "v": "NY Paid Sick Leave — 40-56 hrs/yr",
+        "n": "Graduated by employer size; 100+ EE: 56 hrs paid; all employers must offer.",
+        "c": [
+          "ny_sl"
+        ]
+      },
+      "ad": {
+        "s": 90,
+        "v": "NY HRL + NYC AEDT Law + salary history ban",
+        "n": "NYC Local Law 144 regulates AI hiring tools; salary history ban statewide; broad HRL coverage.",
+        "c": [
+          "nyc_ll144",
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "NC": {
+      "mw": {
+        "s": 15,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 3+ EE",
+        "n": "3+ employee threshold.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 25,
+        "v": "NC Equal Employment Practices Act",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "ND": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 50,
+        "v": "Exclusive state fund (WSI) — monopolistic",
+        "n": "Only WSI; no private market; all employers.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 30,
+        "v": "ND Human Rights Act + non-compete ban",
+        "n": "Non-competes generally void; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "OH": {
+      "mw": {
+        "s": 25,
+        "v": "$10.45/hr",
+        "n": "CPI-indexed annually.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 55,
+        "v": "Exclusive state fund (BWC) — monopolistic",
+        "n": "Ohio BWC only; no private market; high compliance burden.",
+        "c": [
+          "oh_bwc"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 30,
+        "v": "OH Civil Rights Commission",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "OK": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 30,
+        "v": "OK Anti-Discrimination Act + non-compete ban",
+        "n": "Non-competes largely void; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "OR": {
+      "mw": {
+        "s": 65,
+        "v": "$14.70/hr statewide; Portland $15.45/hr",
+        "n": "Metro areas higher; CPI-indexed; among highest in US.",
+        "c": [
+          "or_boli",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 85,
+        "v": "OR Paid Leave — 1% split, 12 wks",
+        "n": "Benefits since Sep 2023; employer + employee split; all employers 1+.",
+        "c": [
+          "or_pfml"
+        ]
+      },
+      "pt": {
+        "s": 50,
+        "v": "Salary history inquiry ban",
+        "n": "Cannot ask about prior pay; enforcement active.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 40,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 70,
+        "v": "OR PSL — 40 hrs/yr + blood donation (2026)",
+        "n": "All employers; expanded to blood donation as qualifying reason Jan 2026.",
+        "c": [
+          "or_sl"
+        ]
+      },
+      "ad": {
+        "s": 70,
+        "v": "OR BOLI — Workplace Fairness Act + salary history ban",
+        "n": "WFA anti-harassment requirements; salary history ban; no standalone AI law.",
+        "c": [
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "PA": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 35,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave (Philadelphia has local ordinance).",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 40,
+        "v": "PA HRL + PHRA — broader than federal",
+        "n": "Broader than federal; no statewide salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "RI": {
+      "mw": {
+        "s": 50,
+        "v": "$14.00/hr",
+        "n": "Annual increases scheduled.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 65,
+        "v": "RI TCI — 1.1% EE, 4-6 wks",
+        "n": "Temporary Caregiver Insurance; employee-funded; expanding scope.",
+        "c": [
+          "ri_tci"
+        ]
+      },
+      "pt": {
+        "s": 40,
+        "v": "Salary range required in postings (2023)",
+        "n": "RI law requires posting; moderate coverage.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 35,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 60,
+        "v": "RI Healthy and Safe Families — 40 hrs/yr",
+        "n": "All employers 18+ EE; expanding.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 50,
+        "v": "RI FEPA — broader than federal",
+        "n": "Standard+ coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "SC": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 25,
+        "v": "Private market; 4+ EE",
+        "n": "Required for employers with 4+ employees.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "SC Human Affairs Law",
+        "n": "Mirrors federal; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "SD": {
+      "mw": {
+        "s": 25,
+        "v": "$11.20/hr",
+        "n": "CPI-indexed annually.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "SD Human Relations Act",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "TN": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 5+ EE (1+ construction)",
+        "n": "Threshold varies by industry.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "TN Human Rights Act",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "TX": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 15,
+        "v": "Optional (nonsubscriber allowed)",
+        "n": "Only state where WC is fully optional; non-subscribers face unlimited tort liability.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "Preempts local sick leave ordinances.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 20,
+        "v": "TX Labor Code — mirrors federal",
+        "n": "Standard federal mirror; no salary history ban statewide.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "UT": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 25,
+        "v": "UT Antidiscrimination Act",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "VT": {
+      "mw": {
+        "s": 45,
+        "v": "$14.01/hr",
+        "n": "Annual CPI adjustments.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 35,
+        "v": "VT Parental & Family Leave (VT FLA)",
+        "n": "Job-protected leave for employers 10+; partially paid via state program; limited scope.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 35,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 50,
+        "v": "VT PSL — 40 hrs/yr",
+        "n": "All employers 5+ EE.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 40,
+        "v": "VT Fair Employment Practices Act",
+        "n": "Broad coverage including credit; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "VA": {
+      "mw": {
+        "s": 45,
+        "v": "$13.50/hr; $15.00 Jan 2026",
+        "n": "Scheduled to reach $15 Jan 2026.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 30,
+        "v": "Salary history inquiry ban",
+        "n": "Cannot ask about prior pay; active since 2020.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 2+ EE",
+        "n": "Employers with 2+ employees required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 40,
+        "v": "Virginia Paid Leave (effective 2026)",
+        "n": "Virginia earned sick leave effective 2026; details pending full implementation.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 45,
+        "v": "VA Human Rights Act — expanded 2020 + salary history ban",
+        "n": "Expanded to cover employers 1+; salary history ban; broader than federal.",
+        "c": [
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "WA": {
+      "mw": {
+        "s": 85,
+        "v": "$16.66/hr; Seattle $20.76/hr",
+        "n": "Among highest nationally; CPI-indexed; Seattle significantly higher.",
+        "c": [
+          "wa_lni",
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 90,
+        "v": "WA PFML — 0.74% split, 12-18 wks",
+        "n": "Mature program since 2020; employer + employee split; up to 18 wks combined.",
+        "c": [
+          "wa_pfml"
+        ]
+      },
+      "pt": {
+        "s": 80,
+        "v": "EPOA — salary range required all postings",
+        "n": "All employers 15+ EE; civil penalties $500-$1K/violation first offense.",
+        "c": [
+          "wa_pt",
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 55,
+        "v": "Exclusive state fund (L&I) — monopolistic",
+        "n": "Washington L&I only; no private market; quarterly premium filings.",
+        "c": [
+          "wa_lni_wc"
+        ]
+      },
+      "sl": {
+        "s": 75,
+        "v": "WA PSL — 1hr/40hrs; all employers",
+        "n": "All employers; broad qualifying reasons.",
+        "c": [
+          "wa_sl"
+        ]
+      },
+      "ad": {
+        "s": 75,
+        "v": "WA LAD — broad coverage + salary history ban",
+        "n": "Salary history ban; broad protected classes; AGO enforcement.",
+        "c": [
+          "eeoc_main",
+          "shrm_pt"
+        ]
+      }
+    },
+    "WV": {
+      "mw": {
+        "s": 15,
+        "v": "$8.75/hr",
+        "n": "Slightly above federal floor.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 30,
+        "v": "Private market; 1+ EE",
+        "n": "All employers required.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 25,
+        "v": "WV Human Rights Act",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "WI": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 35,
+        "v": "Private market; 3+ EE",
+        "n": "Private market required; 3+ employee threshold.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 30,
+        "v": "WI Fair Employment Law",
+        "n": "Standard coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    },
+    "WY": {
+      "mw": {
+        "s": 0,
+        "v": "$7.25/hr (federal floor)",
+        "n": "No state minimum wage above federal.",
+        "c": [
+          "dol_whd"
+        ]
+      },
+      "pfml": {
+        "s": 0,
+        "v": "None",
+        "n": "No state PFML.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "pt": {
+        "s": 0,
+        "v": "None",
+        "n": "No pay transparency law.",
+        "c": [
+          "shrm_pt"
+        ]
+      },
+      "wc": {
+        "s": 45,
+        "v": "Exclusive state fund (WSCD) — monopolistic",
+        "n": "Wyoming WSCD only; no private market.",
+        "c": [
+          "wy_wscd"
+        ]
+      },
+      "sl": {
+        "s": 0,
+        "v": "None",
+        "n": "No statewide paid sick leave.",
+        "c": [
+          "brightmine"
+        ]
+      },
+      "ad": {
+        "s": 15,
+        "v": "WY Fair Employment Act",
+        "n": "Limited coverage; no salary history ban.",
+        "c": [
+          "eeoc_main"
+        ]
+      }
+    }
+  },
+  "eeoc": {
+    "AL": {
+      "charges": 1842,
+      "rate": 9.1,
+      "top": "Retaliation",
+      "note": "Above-average charge rate; retaliation and Title VII most common."
+    },
+    "AK": {
+      "charges": 132,
+      "rate": 4.2,
+      "top": "Disability",
+      "note": "Below-average charge rate; disability and retaliation most common."
+    },
+    "AZ": {
+      "charges": 2287,
+      "rate": 7.6,
+      "top": "Retaliation",
+      "note": "Growing charge volume; retaliation and national origin prominent."
+    },
+    "AR": {
+      "charges": 921,
+      "rate": 7.5,
+      "top": "Title VII",
+      "note": "Moderate charge rate; race and sex discrimination common."
+    },
+    "CA": {
+      "charges": 9842,
+      "rate": 6.1,
+      "top": "Retaliation",
+      "note": "Highest absolute volume; DFEH/CRD parallel state enforcement adds complexity."
+    },
+    "CO": {
+      "charges": 1456,
+      "rate": 5.9,
+      "top": "Retaliation",
+      "note": "Below-average rate; CDLE enforces parallel state law."
+    },
+    "CT": {
+      "charges": 987,
+      "rate": 6.6,
+      "top": "Disability",
+      "note": "Moderate volume; CHRO state enforcement active."
+    },
+    "DE": {
+      "charges": 389,
+      "rate": 9.3,
+      "top": "Retaliation",
+      "note": "High per-capita rate; small workforce amplifies numbers."
+    },
+    "DC": {
+      "charges": 612,
+      "rate": 17.1,
+      "top": "Retaliation",
+      "note": "Highest per-capita rate in US; DC HRA broadest protected classes; OHR active."
+    },
+    "FL": {
+      "charges": 7341,
+      "rate": 8,
+      "top": "Retaliation",
+      "note": "Second highest absolute volume; high retaliation and disability charges."
+    },
+    "GA": {
+      "charges": 5823,
+      "rate": 12.4,
+      "top": "Retaliation",
+      "note": "Very high per-capita rate; Atlanta metro drives volume; retaliation #1."
+    },
+    "HI": {
+      "charges": 398,
+      "rate": 6.8,
+      "top": "Disability",
+      "note": "Moderate rate; HCRC state enforcement alongside EEOC."
+    },
+    "ID": {
+      "charges": 312,
+      "rate": 4.1,
+      "top": "Sex",
+      "note": "Below-average charge rate."
+    },
+    "IL": {
+      "charges": 4123,
+      "rate": 7.5,
+      "top": "Retaliation",
+      "note": "High volume; IDHR state enforcement active; Chicago metro concentration."
+    },
+    "IN": {
+      "charges": 1876,
+      "rate": 6.6,
+      "top": "Disability",
+      "note": "Moderate volume; ICRC state enforcement."
+    },
+    "IA": {
+      "charges": 678,
+      "rate": 4.9,
+      "top": "Sex",
+      "note": "Below-average rate."
+    },
+    "KS": {
+      "charges": 712,
+      "rate": 5.7,
+      "top": "Retaliation",
+      "note": "Moderate charge rate."
+    },
+    "KY": {
+      "charges": 1342,
+      "rate": 7.3,
+      "top": "Retaliation",
+      "note": "Above-average per-capita rate; KCHR state enforcement."
+    },
+    "LA": {
+      "charges": 1987,
+      "rate": 10.2,
+      "top": "Race",
+      "note": "High per-capita rate; race discrimination most common basis."
+    },
+    "ME": {
+      "charges": 289,
+      "rate": 5.1,
+      "top": "Disability",
+      "note": "Below-average rate; MHRC state enforcement."
+    },
+    "MD": {
+      "charges": 2341,
+      "rate": 8.9,
+      "top": "Retaliation",
+      "note": "High rate; MCHR state enforcement; federal contractor concentration."
+    },
+    "MA": {
+      "charges": 1876,
+      "rate": 6.3,
+      "top": "Disability",
+      "note": "Moderate rate; MCAD state enforcement among most active in US."
+    },
+    "MI": {
+      "charges": 3234,
+      "rate": 7.6,
+      "top": "Disability",
+      "note": "Above-average rate; MDCR state enforcement."
+    },
+    "MN": {
+      "charges": 1543,
+      "rate": 6.4,
+      "top": "Race",
+      "note": "Moderate rate; MDHR state enforcement active."
+    },
+    "MS": {
+      "charges": 1289,
+      "rate": 10.7,
+      "top": "Race",
+      "note": "High per-capita rate; race discrimination most prominent."
+    },
+    "MO": {
+      "charges": 1987,
+      "rate": 7.6,
+      "top": "Retaliation",
+      "note": "Above-average rate; MCHR state enforcement."
+    },
+    "MT": {
+      "charges": 198,
+      "rate": 4.4,
+      "top": "Sex",
+      "note": "Below-average rate."
+    },
+    "NE": {
+      "charges": 523,
+      "rate": 6.2,
+      "top": "Retaliation",
+      "note": "Moderate rate; NEOC state enforcement."
+    },
+    "NV": {
+      "charges": 1876,
+      "rate": 13.2,
+      "top": "Retaliation",
+      "note": "Very high per-capita rate; gaming/hospitality sector concentration."
+    },
+    "NH": {
+      "charges": 287,
+      "rate": 4.9,
+      "top": "Disability",
+      "note": "Below-average rate."
+    },
+    "NJ": {
+      "charges": 3456,
+      "rate": 8.9,
+      "top": "Retaliation",
+      "note": "High rate; DCR state enforcement very active."
+    },
+    "NM": {
+      "charges": 612,
+      "rate": 6.8,
+      "top": "National Origin",
+      "note": "Moderate rate; national origin prominent given demographics."
+    },
+    "NY": {
+      "charges": 6234,
+      "rate": 7.4,
+      "top": "Retaliation",
+      "note": "High absolute volume; DHR state enforcement among most active; NYC CCHR adds layer."
+    },
+    "NC": {
+      "charges": 4123,
+      "rate": 9.2,
+      "top": "Retaliation",
+      "note": "High per-capita rate; retaliation and race most common."
+    },
+    "ND": {
+      "charges": 98,
+      "rate": 3,
+      "top": "Disability",
+      "note": "Lowest charge rate in US; small workforce."
+    },
+    "OH": {
+      "charges": 4567,
+      "rate": 9,
+      "top": "Disability",
+      "note": "High volume; OCRC state enforcement active."
+    },
+    "OK": {
+      "charges": 1123,
+      "rate": 6.8,
+      "top": "Retaliation",
+      "note": "Moderate rate; OHRC state enforcement."
+    },
+    "OR": {
+      "charges": 876,
+      "rate": 4.9,
+      "top": "Retaliation",
+      "note": "Below-average rate; BOLI state enforcement active."
+    },
+    "PA": {
+      "charges": 3987,
+      "rate": 7.3,
+      "top": "Disability",
+      "note": "High absolute volume; PHRC state enforcement."
+    },
+    "RI": {
+      "charges": 312,
+      "rate": 6.7,
+      "top": "Disability",
+      "note": "Moderate per-capita rate."
+    },
+    "SC": {
+      "charges": 2341,
+      "rate": 10.7,
+      "top": "Retaliation",
+      "note": "High per-capita rate; retaliation and race most common."
+    },
+    "SD": {
+      "charges": 112,
+      "rate": 3,
+      "top": "Sex",
+      "note": "Very low charge rate."
+    },
+    "TN": {
+      "charges": 2876,
+      "rate": 9.8,
+      "top": "Retaliation",
+      "note": "High per-capita rate; retaliation and disability common."
+    },
+    "TX": {
+      "charges": 11234,
+      "rate": 9.1,
+      "top": "Retaliation",
+      "note": "Highest absolute volume in US; large workforce; retaliation #1."
+    },
+    "UT": {
+      "charges": 567,
+      "rate": 4,
+      "top": "Religion",
+      "note": "Below-average rate; religion discrimination above national average."
+    },
+    "VT": {
+      "charges": 143,
+      "rate": 5.1,
+      "top": "Disability",
+      "note": "Low absolute volume; VHRC state enforcement."
+    },
+    "VA": {
+      "charges": 2987,
+      "rate": 8.2,
+      "top": "Retaliation",
+      "note": "High rate; DOLI state enforcement; federal contractor concentration in NoVA."
+    },
+    "WA": {
+      "charges": 1876,
+      "rate": 5.8,
+      "top": "Disability",
+      "note": "Moderate rate; WSHRC state enforcement active."
+    },
+    "WV": {
+      "charges": 412,
+      "rate": 6,
+      "top": "Disability",
+      "note": "Moderate rate."
+    },
+    "WI": {
+      "charges": 1543,
+      "rate": 6.1,
+      "top": "Disability",
+      "note": "Moderate rate; ERD state enforcement."
+    },
+    "WY": {
+      "charges": 98,
+      "rate": 4,
+      "top": "Sex",
+      "note": "Very low charge rate; small workforce."
+    }
+  },
+  "paidLeaveMap": {
+    "CA": {
+      "color": "#2a4a8a",
+      "label": "Full PFML (SDI/PFL)",
+      "rate": "60-70%",
+      "weeks": 52,
+      "contrib": "0.9% EE",
+      "since": 2004
+    },
+    "NJ": {
+      "color": "#2a4a8a",
+      "label": "Full PFML (FLI+TDI)",
+      "rate": "85%",
+      "weeks": 26,
+      "contrib": "0.09% EE",
+      "since": 2009
+    },
+    "RI": {
+      "color": "#1a6b6b",
+      "label": "TDI / TCI",
+      "rate": "60%",
+      "weeks": 30,
+      "contrib": "1.1% EE",
+      "since": 2014
+    },
+    "NY": {
+      "color": "#2a4a8a",
+      "label": "Full PFML (NY PFL)",
+      "rate": "67%",
+      "weeks": 26,
+      "contrib": "0.432% EE",
+      "since": 2018
+    },
+    "WA": {
+      "color": "#2a4a8a",
+      "label": "Full PFML (WA PFML)",
+      "rate": "90% low/60-70%",
+      "weeks": 12,
+      "contrib": "1.8% split",
+      "since": 2020
+    },
+    "MA": {
+      "color": "#2a4a8a",
+      "label": "Full PFML",
+      "rate": "80%",
+      "weeks": 26,
+      "contrib": "0.88% split",
+      "since": 2021
+    },
+    "CT": {
+      "color": "#2a4a8a",
+      "label": "Full PFML",
+      "rate": "95%",
+      "weeks": 12,
+      "contrib": "0.5% EE",
+      "since": 2022
+    },
+    "OR": {
+      "color": "#2a4a8a",
+      "label": "Full PFML",
+      "rate": "60%",
+      "weeks": 12,
+      "contrib": "1% split",
+      "since": 2023
+    },
+    "CO": {
+      "color": "#2a4a8a",
+      "label": "Full PFML (FAMLI)",
+      "rate": "90% low/50-90%",
+      "weeks": 12,
+      "contrib": "0.9% split",
+      "since": 2024
+    },
+    "DC": {
+      "color": "#2a4a8a",
+      "label": "Full PFML",
+      "rate": "90% low/65%",
+      "weeks": 12,
+      "contrib": "0.26-0.75%",
+      "since": 2020
+    },
+    "DE": {
+      "color": "#2a4a8a",
+      "label": "Full PFML (2026)",
+      "rate": "80%",
+      "weeks": 12,
+      "contrib": "0.8% split",
+      "since": 2026
+    },
+    "MN": {
+      "color": "#2a4a8a",
+      "label": "Full PFML (Jan 2026)",
+      "rate": "90% low/66%",
+      "weeks": 12,
+      "contrib": "0.88% split",
+      "since": 2026
+    },
+    "MD": {
+      "color": "#2a4a8a",
+      "label": "Full PFML (Jul 2026)",
+      "rate": "90% low/50%",
+      "weeks": 12,
+      "contrib": "0.9% split",
+      "since": 2026
+    },
+    "ME": {
+      "color": "#2a4a8a",
+      "label": "Full PFML (May 2026)",
+      "rate": "90% low wage",
+      "weeks": 12,
+      "contrib": "1% split",
+      "since": 2026
+    },
+    "HI": {
+      "color": "#1a6b6b",
+      "label": "TDI (Temporary Disability)",
+      "rate": "58%",
+      "weeks": 26,
+      "contrib": "EE funded",
+      "since": 1969
+    },
+    "AK": {
+      "color": "#4a3a1a",
+      "label": "Partial/Sick Leave",
+      "rate": "N/A",
+      "weeks": 0,
+      "contrib": "N/A",
+      "since": 0
+    },
+    "AZ": {
+      "color": "#4a3a1a",
+      "label": "Sick Leave Only",
+      "rate": "N/A",
+      "weeks": 0,
+      "contrib": "N/A",
+      "since": 0
+    },
+    "IL": {
+      "color": "#4a3a1a",
+      "label": "Sick Leave only (ESLA)",
+      "rate": "N/A",
+      "weeks": 0,
+      "contrib": "N/A",
+      "since": 0
+    },
+    "MI": {
+      "color": "#4a3a1a",
+      "label": "Paid Medical Leave (50+ EE)",
+      "rate": "N/A",
+      "weeks": 0,
+      "contrib": "N/A",
+      "since": 0
+    },
+    "NE": {
+      "color": "#4a3a1a",
+      "label": "Paid Sick Leave (Oct 2025)",
+      "rate": "N/A",
+      "weeks": 0,
+      "contrib": "N/A",
+      "since": 2025
+    },
+    "NM": {
+      "color": "#4a3a1a",
+      "label": "Healthy Workplaces Act",
+      "rate": "N/A",
+      "weeks": 0,
+      "contrib": "N/A",
+      "since": 0
+    },
+    "NV": {
+      "color": "#4a3a1a",
+      "label": "Sick Leave Only (SB 312)",
+      "rate": "N/A",
+      "weeks": 0,
+      "contrib": "N/A",
+      "since": 0
+    },
+    "NH": {
+      "color": "#4a3a1a",
+      "label": "Voluntary PFML program",
+      "rate": "Varies",
+      "weeks": 0,
+      "contrib": "Opt-in",
+      "since": 0
+    },
+    "VT": {
+      "color": "#4a3a1a",
+      "label": "VT FMLA (10+ EE, unpaid)",
+      "rate": "Unpaid",
+      "weeks": 12,
+      "contrib": "None",
+      "since": 0
+    }
+  }
+}

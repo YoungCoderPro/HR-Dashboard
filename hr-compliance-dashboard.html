@@ -1,0 +1,2656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR Compliance Dashboard — StoicLane</title>
+<style>
+*{font-family:'Montserrat',sans-serif}
+:root{
+  --navy:#61c3f4;--navy-mid:#35b5ec;--navy-light:#1a8ac8;
+  --sky:#61c3f4;--sky-2:#35b5ec;--sky-soft:#0d1e2a;--sky-line:#1a4a6a;
+  --ink:#e8edf5;--soft:#9aaec4;--muted:#6b82a0;--faint:#3d506a;
+  --bg:#111318;--page:#0a0c0f;--wash:#1a1e26;--line:#2a2f3d;--line2:#222633;
+  --gold:#a07208;--gold-soft:#fef3d8;
+  --green:#0a5e34;--green-soft:#e4f4ec;--green-mid:#1a8a50;
+  --red:#9e2020;--red-soft:#fceaea;
+  --teal:#0a6b6b;--teal-soft:#e2f4f4;
+  --purple:#4a2d9e;--purple-soft:#ede9fb;
+  --warn-bg:#1e1800;--warn-line:#e0b030;--warn-ink:#7a5500;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{font-family:'Montserrat',sans-serif;background:var(--page);color:var(--ink);font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--sky-2)}a:hover{text-decoration:underline}
+
+
+/* HOME PAGE */
+.home-hero{background:var(--navy);border-radius:12px;padding:28px 24px 24px;margin-bottom:20px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap}
+.home-hero-left{flex:1;min-width:260px}
+.home-hero-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#000;margin-bottom:10px}
+.home-hero-title{font-size:26px;font-weight:800;letter-spacing:-.03em;color:#000;line-height:1.18;margin-bottom:10px}
+.home-hero-sub{font-size:12.5px;color:rgba(10,30,53,.85);margin-bottom:12px;line-height:1.5}
+.home-hero-meta{font-size:11px;color:rgba(10,30,53,.75);letter-spacing:.03em}
+.home-hero-right{flex-shrink:0}
+.home-kpi-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hkpi{background:rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:12px 14px;min-width:110px}
+.hkpi.a-red{border-color:rgba(100,0,0,.5);background:rgba(100,0,0,.2)}
+.hkpi.a-green{border-color:rgba(0,80,30,.5);background:rgba(0,80,30,.2)}
+.hkpi.a-gold{border-color:rgba(120,80,0,.5);background:rgba(120,80,0,.2)}
+.hkv{font-size:20px;font-weight:800;letter-spacing:-.03em;color:#000;line-height:1}
+.hkl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:rgba(10,30,53,.8);margin-top:4px}
+
+/* LAYOUT */
+.home-layout{display:grid;grid-template-columns:1fr 340px;gap:18px;align-items:start}
+@media(max-width:900px){.home-layout{grid-template-columns:1fr}}
+
+/* FEED */
+.feed-header{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.feed-title{font-size:15px;font-weight:750;color:var(--ink);letter-spacing:-.01em;margin-right:4px}
+.feed-controls{display:flex;gap:4px;flex:1}
+.feed-filter{border:1px solid var(--line);border-radius:20px;padding:4px 11px;font-size:11px;font-weight:700;color:var(--muted);background:#13171f;cursor:pointer;letter-spacing:.03em;transition:all .13s;text-transform:uppercase}
+.feed-filter.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.feed-refresh{margin-left:auto;background:var(--sky-soft);border:1px solid var(--sky-line);border-radius:7px;padding:5px 12px;font-size:11px;font-weight:700;color:var(--sky-2);cursor:pointer;letter-spacing:.03em;transition:all .13s;display:flex;align-items:center;gap:5px;user-select:none}
+.feed-refresh:hover{background:var(--sky);color:#fff;border-color:var(--sky)}
+.feed-refresh.spinning #refresh-icon{display:inline-block;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* FEED ITEMS */
+.feed-item{background:#13171f;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:box-shadow .15s}
+.feed-item:hover{box-shadow:0 3px 12px rgba(0,0,0,.09)}
+.feed-item.new-item{animation:slideIn .35s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.fi-top{padding:12px 14px 10px;display:flex;gap:10px;align-items:flex-start}
+.fi-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex:none;color:#fff}
+.fi-body{flex:1;min-width:0}
+.fi-meta{display:flex;align-items:center;gap:6px;margin-bottom:4px;flex-wrap:wrap}
+.fi-cat{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;padding:2px 7px;border-radius:4px}
+.cat-federal{background:var(--sky-soft);color:var(--sky-2)}
+.cat-state{background:var(--green-soft);color:var(--green)}
+.cat-market{background:var(--teal-soft);color:var(--teal)}
+.cat-alert{background:var(--red-soft);color:var(--red)}
+.cat-pfml{background:var(--purple-soft);color:var(--purple)}
+.fi-date{font-size:10.5px;color:var(--faint)}
+.fi-new-badge{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--sky);color:#fff;padding:1px 6px;border-radius:10px}
+.fi-title{font-size:13.5px;font-weight:700;color:var(--ink);letter-spacing:-.01em;line-height:1.35;margin-bottom:4px}
+.fi-desc{font-size:12px;color:var(--muted);line-height:1.55}
+.fi-footer{padding:7px 14px 10px;display:flex;align-items:center;gap:8px;border-top:1px solid var(--line2)}
+.fi-tag{font-size:10px;font-weight:600;color:var(--muted);background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:2px 7px}
+.fi-link{margin-left:auto;font-size:11px;font-weight:700;color:var(--sky-2);text-decoration:none}
+.fi-link:hover{text-decoration:underline}
+.fi-priority{width:3px;border-radius:0;flex:none;align-self:stretch;min-width:3px}
+.fi-priority.p-high{background:var(--red)}
+.fi-priority.p-med{background:var(--gold)}
+.fi-priority.p-low{background:var(--green-mid)}
+.fi-priority.p-info{background:var(--sky)}
+
+.feed-footer{background:#13171f;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-align:center}
+.feed-footer-text{font-size:12px;font-weight:600;color:var(--ink)}
+.feed-footer-sub{font-size:11px;color:var(--muted);margin-top:3px}
+
+/* REFRESH OVERLAY */
+.feed-skeleton{background:#13171f;border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:10px;overflow:hidden;position:relative}
+.skel-line{background:var(--wash);border-radius:4px;height:12px;margin-bottom:8px;animation:shimmer 1.4s ease infinite}
+.skel-line.w60{width:60%}
+.skel-line.w80{width:80%}
+.skel-line.w45{width:45%}
+@keyframes shimmer{0%,100%{opacity:.6}50%{opacity:1}}
+
+/* SIDEBAR */
+.sidebar-card{background:#13171f;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.sidebar-card-head{padding:10px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);border-bottom:1px solid var(--line);background:#1a1e26}
+.sidebar-nav{}
+.snav-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line2);cursor:pointer;transition:background .12s}
+.snav-item:last-child{border-bottom:none}
+.snav-item:hover{background:#0a1a28}
+.snav-ic{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;color:#fff;flex:none}
+.snav-title{font-size:12.5px;font-weight:700;color:var(--ink);line-height:1.2}
+.snav-sub{font-size:10.5px;color:var(--muted)}
+.snav-arr{margin-left:auto;color:var(--faint);font-size:14px}
+
+/* CALENDAR */
+.cal-list{}
+.cal-item{display:flex;align-items:flex-start;gap:10px;padding:9px 14px;border-bottom:1px solid var(--line2)}
+.cal-item:last-child{border-bottom:none}
+.cal-date-box{min-width:36px;text-align:center;background:var(--wash);border:1px solid var(--line);border-radius:6px;padding:4px 6px;flex:none}
+.cal-month{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.cal-day{font-size:16px;font-weight:800;color:var(--navy);line-height:1}
+.cal-event{font-size:12px;font-weight:650;color:var(--ink);line-height:1.3}
+.cal-sub{font-size:11px;color:var(--muted)}
+.cal-urgent .cal-date-box{background:var(--red-soft);border-color:rgba(158,32,32,.2)}
+.cal-urgent .cal-day{color:var(--red)}
+
+/* SPOTLIGHT */
+.spotlight{}
+.spot-state{padding:12px 14px 10px}
+.spot-name{font-size:14px;font-weight:750;color:var(--ink);margin-bottom:8px}
+.spot-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--line2);font-size:12px}
+.spot-row:last-child{border-bottom:none}
+.spot-lbl{color:var(--muted);font-weight:500}
+.spot-val{font-weight:700;color:var(--ink)}
+.spot-nav{display:flex;justify-content:space-between;padding:8px 14px;border-top:1px solid var(--line);background:#1a1e26}
+.spot-nav button{border:1px solid var(--line);background:#13171f;border-radius:5px;padding:4px 10px;font-size:11px;font-weight:700;color:var(--muted);cursor:pointer}
+.spot-nav button:hover{border-color:var(--sky);color:var(--sky-2)}
+
+
+/* TOP NAV */
+.topnav{background:var(--navy);height:54px;display:flex;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 18px rgba(97,196,244,.25)}
+.tn-brand{display:flex;align-items:center;padding:0 20px;height:100%;border-right:1px solid rgba(10,30,53,.2);text-decoration:none;flex-shrink:0}
+.tn-brand:hover{opacity:.85}
+.tn-brand img{height:26px;width:auto;display:block}
+.tn-tabs{flex:1;display:flex;align-items:center;padding:0 10px;gap:2px;overflow-x:auto;height:100%}
+.tn-tabs::-webkit-scrollbar{display:none}
+.nt{border:none;background:transparent;padding:0 14px;height:100%;font-size:11.5px;font-weight:700;color:rgba(10,30,53,.85);cursor:pointer;border-bottom:3px solid transparent;transition:all .14s;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:7px}
+.nt:hover{color:#000;background:rgba(0,0,0,.1)}
+.nt.on{color:#000;border-bottom-color:#000;background:rgba(97,196,244,.12)}
+.nt .ntic{width:18px;height:18px;border-radius:4px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;flex:none}
+.nt.on .ntic{background:var(--sky);color:#fff}
+.tn-right{padding:0 16px;display:flex;align-items:center;gap:8px;flex-shrink:0;border-left:1px solid rgba(10,30,53,.2)}
+.pdot{width:6px;height:6px;border-radius:50%;background:rgba(0,0,0,.5);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.2}}
+.tn-label{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(10,30,53,.85)}
+
+/* PANELS */
+.tabpanel{display:none}
+.tabpanel.on{display:block}
+.pg{padding:22px 22px 60px;max-width:1200px;margin:0 auto}
+
+/* SECTION BAND */
+.sband{padding:18px 20px 16px;border-radius:10px 10px 0 0;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,.1)}
+.sband h2{font-size:17px;font-weight:750;color:#000;letter-spacing:-.02em;margin-bottom:2px}
+.sband p{font-size:12px;color:rgba(10,30,53,.8);margin:0}
+.sb-navy{background:var(--navy)}
+.sb-teal{background:var(--teal)}
+.sb-green{background:var(--green)}
+.sb-purple{background:var(--purple)}
+
+/* ALERT */
+.alert{background:var(--warn-bg);border:1px solid var(--warn-line);border-left:4px solid var(--warn-line);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--warn-ink);margin-bottom:16px;line-height:1.55}
+.alert strong{color:var(--warn-ink)}
+.alert a{color:var(--warn-ink);font-weight:700}
+
+/* KPI ROW */
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px;margin-bottom:16px}
+.kpi{background:#13171f;border:1px solid var(--line);border-radius:10px;padding:14px 16px;position:relative;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.kpi::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--sky)}
+.kpi.a-red::before{background:var(--red)}
+.kpi.a-green::before{background:var(--green-mid)}
+.kpi.a-gold::before{background:var(--gold)}
+.kpi.a-teal::before{background:var(--teal)}
+.kpi.a-purple::before{background:var(--purple)}
+.kpi .kv{font-size:24px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--navy)}
+.kpi .kl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-top:5px}
+.kpi .ks{font-size:11px;color:var(--soft);margin-top:3px;line-height:1.4}
+
+/* CARDS */
+.card{background:#13171f;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.ch{padding:11px 16px;display:flex;align-items:center;gap:9px;background:#1a1e26;border-bottom:1px solid var(--line);cursor:pointer;user-select:none;transition:background .13s}
+.ch:hover{background:var(--sky-soft)}
+.ic{width:24px;height:24px;border-radius:6px;background:#0a1e35;color:#fff;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;flex:none}
+.ch h3{font-size:13px;font-weight:700;margin:0;color:var(--ink)}
+.meta{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:11px;color:var(--muted)}
+.meta a{color:var(--sky-2);font-weight:600}
+.chev{font-size:11px;color:var(--faint);transition:transform .22s;flex:none}
+.chev.open{transform:rotate(180deg)}
+.acc{overflow:hidden;transition:max-height .32s ease,opacity .22s ease;max-height:0;opacity:0}
+.acc.open{max-height:5000px;opacity:1}
+
+/* TWO/THREE COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+@media(max-width:740px){.two-col{grid-template-columns:1fr}}
+
+/* ROW LIST */
+.row-list{padding:4px 16px 10px}
+.row-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line2);gap:12px}
+.row-item:last-child{border-bottom:none}
+.rn{font-size:12.5px;font-weight:650;color:var(--ink)}
+.rd{font-size:11px;color:var(--muted);margin-top:1px}
+
+/* COLORED ACCENT CARDS */
+.acc-card{border-radius:10px;padding:16px;margin-bottom:12px;border:1px solid transparent}
+.acc-navy{background:#3aaee0}
+.acc-navy h3{color:#000;font-size:13px;font-weight:700;margin-bottom:10px}
+.acc-teal{background:#0a1e1e;border-color:rgba(10,107,107,.4)}
+.acc-sky{background:#0a1a28;border-color:#1a4a6a}
+
+/* KEY/VALUE GRID inside navy card */
+.kv-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden}
+.kv-item{padding:10px 14px;background:rgba(97,196,244,.06);border-bottom:1px solid rgba(97,196,244,.1);border-right:1px solid rgba(97,196,244,.1)}
+.kv-item:nth-child(2n){border-right:none}
+.kv-item:nth-last-child(-n+2){border-bottom:none}
+.kv-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(10,30,53,.8);margin-bottom:2px}
+.kv-val{font-size:13px;font-weight:700;color:#000}
+
+/* STATES TAB */
+.states-layer-bar{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:10px;padding:10px 14px;background:#13171f;border:1px solid var(--line);border-radius:8px}
+.states-layer-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-right:4px}
+.slb{border:1px solid var(--line);border-radius:20px;padding:4px 13px;font-size:11.5px;font-weight:700;color:var(--muted);background:#1a1e26;cursor:pointer;letter-spacing:.03em;transition:all .13s;text-transform:uppercase}
+.slb.on{background:var(--navy);color:#000;border-color:var(--navy)}
+.slb:hover:not(.on){border-color:var(--sky-2);color:var(--sky-2)}
+
+/* STATE DETAIL PANEL */
+.state-detail-panel{background:#13171f;border:1px solid var(--sky-line);border-radius:12px;margin-bottom:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.4)}
+.sdp-header{background:var(--navy);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sdp-name{font-size:22px;font-weight:800;color:#000;letter-spacing:-.02em}
+.sdp-sub{font-size:12px;color:rgba(0,0,0,.65);margin-top:2px}
+.sdp-close{background:rgba(0,0,0,.15);border:1px solid rgba(0,0,0,.2);border-radius:6px;padding:5px 12px;font-size:11.5px;font-weight:700;color:#000;cursor:pointer;transition:background .13s}
+.sdp-close:hover{background:rgba(0,0,0,.25)}
+.sdp-sections{padding:0}
+
+/* ACCORDION SECTIONS inside state detail */
+.sdp-acc-head{display:flex;align-items:center;gap:10px;padding:12px 16px;cursor:pointer;background:#1a1e26;border-bottom:1px solid var(--line);transition:background .12s;user-select:none}
+.sdp-acc-head:hover{background:#0a1a28}
+.sdp-acc-icon{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;flex:none}
+.sdp-acc-title{font-size:13px;font-weight:700;color:var(--ink);flex:1}
+.sdp-acc-val{font-size:13px;font-weight:700;color:var(--sky-2);margin-right:8px}
+.sdp-acc-chev{font-size:11px;color:var(--faint);transition:transform .22s;flex:none}
+.sdp-acc-chev.open{transform:rotate(180deg)}
+.sdp-acc-body{overflow:hidden;max-height:0;opacity:0;transition:max-height .3s ease,opacity .22s ease}
+.sdp-acc-body.open{max-height:800px;opacity:1}
+.sdp-acc-inner{padding:14px 16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px}
+.sdp-kv{background:var(--wash);border:1px solid var(--line);border-radius:7px;padding:10px 12px}
+.sdp-kv-l{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:3px}
+.sdp-kv-v{font-size:13.5px;font-weight:800;color:var(--ink);line-height:1.3}
+.sdp-note{padding:0 16px 12px;font-size:12px;color:var(--muted);line-height:1.6}
+
+
+.poster-state-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 16px 10px;border-bottom:1px solid var(--line);background:#1a1e26;border-radius:8px 8px 0 0;margin-bottom:0}
+.poster-state-name{font-size:14px;font-weight:750;color:var(--ink);margin-bottom:3px}
+.poster-state-agency{font-size:11.5px;color:var(--muted)}
+.poster-state-agency a{color:var(--sky-2)}
+.poster-list{padding:8px 0}
+.poster-card{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line2);transition:background .12s}
+.poster-card-link{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line2);transition:background .12s;text-decoration:none;cursor:pointer}
+.poster-card-link:hover{background:#0a1a28}
+.poster-card-link:hover .poster-card-name{color:var(--sky-2)}
+.poster-card-link:last-child{border-bottom:none}
+.poster-card-left{flex:1;min-width:0}
+.poster-card-name{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.poster-card-req{font-size:11px;color:var(--muted)}
+.poster-card-actions{display:flex;gap:6px;flex-shrink:0;flex-wrap:wrap;align-items:center}
+.poster-btn{display:inline-flex;align-items:center;gap:5px;border-radius:6px;padding:5px 11px;font-size:11.5px;font-weight:700;text-decoration:none;white-space:nowrap;cursor:pointer;transition:all .13s;letter-spacing:.02em}
+.poster-btn-pdf{background:var(--sky);color:#000;border:1.5px solid var(--sky-2)}
+.poster-btn-pdf:hover{background:var(--sky-2);color:#fff;border-color:var(--sky-2)}
+.poster-btn-agency{background:#0a1e35;color:#61c3f4;border:1.5px solid #1a4a6a}
+.poster-btn-agency:hover{background:#0e2d50;color:#fff}
+.poster-btn-info{background:transparent;color:var(--muted);border:1px solid var(--line);font-size:11px}
+.poster-btn-info:hover{color:var(--sky-2);border-color:var(--sky-2)}
+.poster-btn-portal{background:var(--navy);color:#000;border:1.5px solid var(--navy-mid);font-size:11.5px;padding:6px 13px}
+.poster-btn-portal:hover{background:var(--navy-mid);color:#fff}
+.poster-footer-note{padding:8px 16px 12px;font-size:11px;color:var(--muted);background:var(--wash);border-top:1px solid var(--line);border-radius:0 0 8px 8px;line-height:1.5}
+
+
+.state-path{stroke:#4a7aaa;stroke-width:.8;cursor:pointer;transition:opacity .1s}
+.state-path:hover{stroke:#61c3f4;stroke-width:2;opacity:1}
+.state-path.active{stroke:#61c3f4;stroke-width:2.5;opacity:1}
+.state-path.dimmed{opacity:.2}
+.mrb{position:absolute;top:10px;right:12px;background:var(--navy);color:#fff;border:none;border-radius:6px;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer;opacity:0;transition:opacity .2s;pointer-events:none;letter-spacing:.03em;text-transform:uppercase}
+.mrb.vis{opacity:1;pointer-events:all}
+.mhint{position:absolute;bottom:8px;right:12px;font-size:10.5px;color:var(--muted);pointer-events:none;background:rgba(228,237,245,.9);padding:2px 8px;border-radius:4px}
+#tip{position:fixed;background:#0a0c0f;color:#e8edf5;padding:7px 12px;border-radius:7px;font-size:12px;font-weight:600;pointer-events:none;opacity:0;transition:opacity .1s;z-index:200;white-space:nowrap;border:1px solid #2a2f3d;box-shadow:0 4px 16px rgba(0,0,0,.6)}
+#tip.show{opacity:1}
+#tip .tsub{font-size:10.5px;color:#61c3f4;margin-top:2px}
+
+/* LEGEND */
+.legstrip{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px;font-size:11px;color:var(--muted);background:#13171f;border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+.dot{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:4px;vertical-align:middle}
+.legitem{display:flex;align-items:center}
+
+/* GRID PICKER */
+.pickcard{background:#13171f;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.ph2{padding:10px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;background:#1a1e26}
+.ph2 h3{font-size:13px;font-weight:700;margin:0}
+.ph2 .hint{margin-left:auto;font-size:11px;color:var(--muted)}
+.jgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(50px,1fr));gap:4px;padding:10px 14px}
+.j{border:1px solid var(--line);border-radius:6px;padding:6px 4px;text-align:center;cursor:pointer;font-size:11.5px;font-weight:700;color:var(--soft);background:#13171f;user-select:none;transition:all .1s}
+.j:hover{border-color:var(--sky);color:var(--sky-2);background:var(--sky-soft)}
+.j.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* DETAIL CARD */
+.detcard{background:#13171f;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden}
+.detcard .dh{padding:11px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;background:var(--sky-soft)}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;padding:14px}
+.stat-box{border:1px solid var(--line);border-radius:8px;padding:12px;background:#1a1e26}
+.stat-box .sv{font-size:20px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--navy)}
+.stat-box .sl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-top:4px}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto}
+table.dt{width:100%;border-collapse:collapse;font-size:12px}
+table.dt th{background:#1a1e26;padding:8px 12px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);border-bottom:2px solid var(--line);white-space:nowrap;position:sticky;top:0;z-index:2}
+table.dt td{padding:8px 12px;border-bottom:1px solid var(--line2);vertical-align:middle}
+table.dt tr:last-child td{border-bottom:none}
+table.dt tr:hover td{background:#1a1e26}
+table.dt td.snm{font-weight:700;color:var(--ink)}
+
+/* BADGES */
+.badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;white-space:nowrap}
+.bg-navy{background:#0a1e35;color:#fff}
+.bg-green{background:var(--green-soft);color:var(--green)}
+.bg-gold{background:var(--gold-soft);color:var(--gold)}
+.bg-red{background:var(--red-soft);color:var(--red)}
+.bg-sky{background:var(--sky-soft);color:var(--sky-2)}
+.bg-teal{background:var(--teal-soft);color:var(--teal)}
+.bg-gray{background:#1a1e26;color:var(--muted);border:1px solid var(--line)}
+
+/* SOURCE NOTE */
+.src-note{font-size:11px;color:var(--muted);padding:7px 14px 10px;border-top:1px solid var(--line2);line-height:1.5}
+.src-note a{color:var(--sky-2)}
+
+/* LINK BTN */
+.link-btn{display:inline-flex;align-items:center;gap:6px;background:#0a1e35;color:#fff;text-decoration:none;border-radius:7px;padding:8px 15px;font-size:12px;font-weight:700}
+.link-btn:hover{opacity:.88;text-decoration:none;color:#fff}
+
+/* HOTSPOT CHIPS */
+.hotspot-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+
+/* ── HR Compliance Score Tab ─────────────────────────────── */
+.score-hero{background:var(--navy);color:#000;padding:22px 24px;border-radius:12px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.score-hero-title{font-size:20px;font-weight:800;letter-spacing:-.02em;color:#000}
+.score-hero-sub{font-size:12px;color:rgba(0,0,0,.6);margin-top:3px}
+.score-stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-bottom:16px}
+.score-stat{border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--wash)}
+.score-stat-num{font-size:22px;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1}
+.score-stat-label{font-size:11px;color:var(--muted);font-weight:600;margin-top:2px}
+/* Tier badges */
+.tier-a{background:#1a4a1a;color:#6adf6a;border:1px solid #2a6a2a;font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;white-space:nowrap}
+.tier-b{background:#1a3a1a;color:#aad06a;border:1px solid #2a5a1a;font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;white-space:nowrap}
+.tier-c{background:#3a2a00;color:#f0c040;border:1px solid #6a4a00;font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;white-space:nowrap}
+.tier-d{background:#3a0a0a;color:#f08080;border:1px solid #6a1a1a;font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;white-space:nowrap}
+/* Cite chips — T1/T2/T3 identical to Archer Lewis */
+.fnwrap{position:relative;display:inline-block}
+.b-t1{color:#3adf8a;font-size:10px;font-weight:700;text-decoration:none;padding:1px 5px;border-radius:4px;background:#1a3a2a;border:1px solid #2a6a4a;margin-left:3px}
+.b-t2{color:#f0c040;font-size:10px;font-weight:700;text-decoration:none;padding:1px 5px;border-radius:4px;background:#3a2a00;border:1px solid #6a4a00;margin-left:3px}
+.b-t3{color:#9aaec4;font-size:10px;font-weight:700;text-decoration:none;padding:1px 5px;border-radius:4px;background:#1a1e26;border:1px solid #2a2f3d;margin-left:3px}
+.fnwrap .fnpop{display:none;position:absolute;bottom:calc(100% + 6px);left:0;background:#13171f;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11px;color:var(--ink);min-width:220px;max-width:300px;z-index:300;line-height:1.5;box-shadow:0 4px 16px rgba(0,0,0,.5);pointer-events:none}
+.fnwrap:hover .fnpop{display:block}
+.field-conf-chip{display:inline-flex;align-items:center;font-size:10px;font-weight:750;padding:1px 5px;border-radius:4px;margin-left:4px;cursor:help;letter-spacing:.02em;vertical-align:middle;white-space:nowrap;min-width:24px;justify-content:center}
+/* Score bar */
+.score-bar-wrap{height:8px;background:var(--wash);border-radius:4px;overflow:hidden;margin:6px 0}
+.score-bar{height:100%;border-radius:4px;transition:width .5s ease}
+/* Score table */
+.score-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.score-table th{background:var(--wash);padding:8px 12px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}
+.score-table th:hover{color:var(--ink)}
+.score-table td{padding:8px 12px;border-bottom:1px solid var(--line2);vertical-align:middle}
+.score-table tr:hover td{background:var(--wash)}
+.score-table tr:last-child td{border-bottom:none}
+.score-table .st-state{font-weight:700;color:var(--ink);font-size:13px}
+.score-table .st-score{font-weight:800;font-size:14px}
+/* Dim score bars in table */
+.mini-bar-wrap{height:5px;background:var(--line);border-radius:3px;width:80px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:6px}
+.mini-bar{height:100%;border-radius:3px}
+/* Score detail panel */
+.score-detail{border:1px solid var(--line);border-radius:12px;background:var(--wash);margin-bottom:16px;overflow:hidden}
+.score-detail-head{background:var(--navy);padding:16px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.score-detail-name{font-size:20px;font-weight:800;color:#000}
+.score-detail-sub{font-size:11px;color:rgba(0,0,0,.6);margin-top:2px}
+.score-dim-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;padding:14px}
+.score-dim{background:#13171f;border:1px solid var(--line);border-radius:9px;padding:12px 14px}
+.score-dim-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px}
+.score-dim-val{font-size:15px;font-weight:800;color:var(--ink);line-height:1.2;margin-bottom:4px}
+.score-dim-note{font-size:11.5px;color:var(--muted);line-height:1.45}
+.score-sources{padding:10px 14px 14px;border-top:1px solid var(--line)}
+.score-sources-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.score-source-row{display:flex;align-items:baseline;gap:8px;font-size:11.5px;padding:4px 0;border-bottom:1px solid var(--line2)}
+.score-source-row:last-child{border-bottom:none}
+/* Map score color legend */
+.score-legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px;font-size:12px;align-items:center}
+.score-legend strong{font-size:12px;color:var(--ink)}
+/* Filters */
+.score-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.score-filter-label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.sf{border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600;color:var(--muted);background:var(--wash);cursor:pointer;transition:all .12s;user-select:none}
+.sf.on{background:var(--navy);color:#000;border-color:var(--navy)}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="tn-brand" href="https://stoiclane.com" target="_blank">
+    <img src="data:image/png;base64,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" alt="StoicLane">
+  </a>
+  <div class="tn-tabs" id="taxtabs">
+    <button class="nt on" data-tab="home">Home</button>
+    <button class="nt" data-tab="overview">Overview</button>
+    <button class="nt" data-tab="states">States</button>
+    <button class="nt" data-tab="posters">Posters</button>
+    <button class="nt" data-tab="trends">Trends</button>
+  </div>
+  <div class="tn-right">
+    <div class="pdot"></div>
+    <span class="tn-label">2025 Reference</span>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+
+<!-- HOME FEED -->
+<div class="tabpanel on" id="panel-home">
+  <div class="pg">
+
+    <div class="home-hero">
+      <div class="home-hero-left">
+        <div class="home-hero-label">HR Compliance Intelligence</div>
+        <h1 class="home-hero-title">What's happening in<br>employment law today</h1>
+        <p class="home-hero-sub">Live RSS feed · DOL · EEOC · BLS · HR news · Compliance alerts</p>
+        <div class="home-hero-meta" id="data-updated" style="font-size:11px;opacity:.7;margin-bottom:2px"></div>
+        <div class="home-hero-meta" id="home-last-updated">Checking for updates...</div>
+      </div>
+      <div class="home-hero-right">
+        <div class="home-kpi-mini" id="home-kpis">
+          <div class="hkpi"><div class="hkv">$7.25</div><div class="hkl">Federal Floor</div></div>
+          <div class="hkpi a-red"><div class="hkv" id="hkv-ue">4.3%</div><div class="hkl">US Unemployment</div></div>
+          <div class="hkpi a-green"><div class="hkv">15</div><div class="hkl">PFML States</div></div>
+          <div class="hkpi a-gold"><div class="hkv">$35.6K</div><div class="hkl">OT Threshold</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-layout">
+
+      <!-- LEFT: FEED -->
+      <div class="home-feed-col">
+
+        <div class="feed-header">
+          <div class="feed-title">Live Updates</div>
+          <div class="feed-controls">
+            <button class="feed-filter on" data-filter="all">All</button>
+            <button class="feed-filter" data-filter="federal">Federal</button>
+            <button class="feed-filter" data-filter="state">State</button>
+            <button class="feed-filter" data-filter="market">Market</button>
+            <button class="feed-filter" data-filter="alert">Alerts</button>
+          </div>
+          <div class="feed-refresh" id="refresh-btn" onclick="triggerRefresh()">
+            <span id="refresh-icon">↻</span> Refresh
+          </div>
+        </div>
+
+        <div id="feed-container"></div>
+
+        <div class="feed-footer" id="feed-footer">
+          <div class="feed-footer-text">Refreshes daily midnight · Next in <span id="countdown">—</span></div>
+          <div class="feed-footer-sub">Live RSS · DOL · EEOC · BLS · SHRM · HR Executive · National Law Review</div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: SIDEBAR -->
+      <div class="home-sidebar">
+
+        <!-- Quick Nav -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-head">Quick Access</div>
+          <div class="sidebar-nav">
+            <div class="snav-item" onclick="switchTab('states')"><div class="snav-ic" style="background:#0e2d50">$</div><div><div class="snav-title">States</div><div class="snav-sub">Min Wage · UE · Leave · WC · EEOC</div></div><div class="snav-arr">→</div></div>
+            <div class="snav-item" onclick="switchTab('posters')"><div class="snav-ic" style="background:var(--teal)">P</div><div><div class="snav-title">Posters</div><div class="snav-sub">Federal + state required</div></div><div class="snav-arr">→</div></div>
+            <div class="snav-item" onclick="switchTab('overview')"><div class="snav-ic" style="background:var(--green-mid)">SC</div><div><div class="snav-title">Compliance Score</div><div class="snav-sub">HR burden by state</div></div><div class="snav-arr">→</div></div>
+            <div class="snav-item" onclick="switchTab('trends')"><div class="snav-ic" style="background:var(--purple)">TR</div><div><div class="snav-title">Trends</div><div class="snav-sub">Market & regulatory pulse</div></div><div class="snav-arr">→</div></div>
+          </div>
+        </div>
+
+        <!-- Compliance Calendar -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-head">Upcoming Deadlines</div>
+          <div class="cal-list" id="cal-list"></div>
+        </div>
+
+        <!-- State Spotlight -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-head">State Spotlight</div>
+          <div id="state-spotlight"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="tabpanel" id="panel-overview">
+  <div class="pg">
+    <div class="sband sb-navy">
+      <h2>US HR Compliance — 2026 Snapshot</h2>
+      <p>Federal baseline, state-level changes, and day-to-day market signals across all 50 states</p>
+    </div>
+    <div class="alert"><strong>Active watch items (Week of Jun 23, 2026):</strong> 5th Circuit vacated DOL $58,656 overtime threshold · EEOC AI hiring guidance effective Aug 1 · IL &amp; NJ min wage Jul 1 · EEO-1 deadline Jul 15</div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="kv">$7.25</div><div class="kl">Federal Min Wage</div><div class="ks">FLSA · Unchanged since 2009</div></div>
+      <div class="kpi a-red"><div class="kv">4.3%</div><div class="kl">US Unemployment</div><div class="ks">BLS May 2026 · ~6.8M unemployed</div></div>
+      <div class="kpi a-green"><div class="kv">15</div><div class="kl">States with PFML</div><div class="ks">Active programs + DC (incl. DE, ME)</div></div>
+      <div class="kpi a-gold"><div class="kv">91.2K</div><div class="kl">EEOC Charges FY25</div><div class="ks">Retaliation: 48% of charges</div></div>
+      <div class="kpi a-teal"><div class="kv">$58.6K</div><div class="kl">Overtime Threshold</div><div class="ks">Annual · Effective Jan 2025</div></div>
+      <div class="kpi a-purple"><div class="kv">$17.50</div><div class="kl">Highest State Min Wage</div><div class="ks">Washington D.C. 2025</div></div>
+    </div>
+    <div class="two-col">
+      <div>
+        <div class="card">
+          <div class="ch" onclick="toggleAcc(this)">
+            <div class="ic" style="background:var(--gold)">Ch</div>
+            <h3>Recent Compliance Changes</h3>
+            <div class="meta"><span class="chev">▼</span></div>
+          </div>
+          <div class="acc">
+            <div class="row-list">
+              <div class="row-item"><div><div class="rn">DOL Overtime Rule</div><div class="rd">Raised exempt threshold to $58,656/yr · <a href="https://www.dol.gov/agencies/whd/overtime/rulemaking" target="_blank">DOL source</a></div></div><span class="badge bg-gold">Jan 2025</span></div>
+              <div class="row-item"><div><div class="rn">23 State Min Wage Increases</div><div class="rd">CA, NY, WA, IL, CO and others · <a href="https://www.dol.gov/agencies/whd/minimum-wage/state" target="_blank">DOL tracker</a></div></div><span class="badge bg-gold">Jan 2025</span></div>
+              <div class="row-item"><div><div class="rn">Maine PFML Active</div><div class="rd">Benefits now available · <a href="https://www.maine.gov/pfml/" target="_blank">ME PFML</a></div></div><span class="badge bg-green">Active</span></div>
+              <div class="row-item"><div><div class="rn">NLRB Joint Employer Rule</div><div class="rd">Broader standard reinstated · <a href="https://www.nlrb.gov/guidance/key-reference-materials/joint-employer" target="_blank">NLRB</a></div></div><span class="badge bg-red">Watch</span></div>
+              <div class="row-item"><div><div class="rn">EEOC AI Hiring Guidance</div><div class="rd">Pending final rule · <a href="https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness" target="_blank">EEOC AI page</a></div></div><span class="badge bg-sky">Pending</span></div>
+              <div class="row-item"><div><div class="rn">FTC Non-Compete Ban</div><div class="rd">Rule blocked · stayed · <a href="https://www.ftc.gov/legal-library/browse/rules/noncompete-clause-rule" target="_blank">FTC</a></div></div><span class="badge bg-gray">Stayed</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ch" onclick="toggleAcc(this)">
+            <div class="ic" style="background:var(--teal)">Mkt</div>
+            <h3>Labor Market Pulse</h3>
+            <div class="meta"><a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank">BLS May 2026</a><span class="chev">▼</span></div>
+          </div>
+          <div class="acc">
+            <div class="row-list">
+              <div class="row-item"><div><div class="rn">Job Openings</div><div class="rd">7.6M — <a href="https://www.bls.gov/news.release/jolts.nr0.htm" target="_blank">JOLTS May 2026</a></div></div><span class="badge bg-green">Stable</span></div>
+              <div class="row-item"><div><div class="rn">Avg Hourly Earnings</div><div class="rd">$36.54/hr · +3.6% YoY</div></div><span class="badge bg-green">Up</span></div>
+              <div class="row-item"><div><div class="rn">Labor Force Participation</div><div class="rd">62.6% · <a href="https://www.bls.gov/news.release/empsit.t04.htm" target="_blank">BLS Table A-4</a></div></div><span class="badge bg-gray">Flat</span></div>
+              <div class="row-item"><div><div class="rn">Remote Work Litigation</div><div class="rd">Multi-state nexus cases rising</div></div><span class="badge bg-red">Rising</span></div>
+              <div class="row-item"><div><div class="rn">I-9 / E-Verify</div><div class="rd">Enhanced Form I-9 required · <a href="https://www.uscis.gov/i-9" target="_blank">USCIS</a></div></div><span class="badge bg-gold">Updated</span></div>
+              <div class="row-item"><div><div class="rn">Salary Transparency</div><div class="rd">CA, CO, NY, WA, IL + expanding</div></div><span class="badge bg-sky">Expanding</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="acc-card acc-navy">
+          <h3>Key Federal Numbers — 2025</h3>
+          <div class="kv-grid">
+            <div class="kv-item"><div class="kv-lbl">FLSA min wage</div><div class="kv-val">$7.25/hr</div></div>
+            <div class="kv-item"><div class="kv-lbl">OT exempt threshold</div><div class="kv-val">$58,656/yr</div></div>
+            <div class="kv-item"><div class="kv-lbl">FMLA employer size</div><div class="kv-val">50+ employees</div></div>
+            <div class="kv-item"><div class="kv-lbl">FMLA leave</div><div class="kv-val">12 weeks/yr</div></div>
+            <div class="kv-item"><div class="kv-lbl">ADA / Title VII</div><div class="kv-val">15+ employees</div></div>
+            <div class="kv-item"><div class="kv-lbl">ADEA threshold</div><div class="kv-val">20+ employees</div></div>
+          </div>
+        </div>
+        <div class="acc-card acc-teal" style="margin-top:12px">
+          <div style="font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);margin-bottom:8px">Regulatory Hotspots</div>
+          <div class="hotspot-row">
+            <span class="badge bg-red" style="font-size:11px;padding:4px 9px">AI Hiring Tools</span>
+            <span class="badge bg-red" style="font-size:11px;padding:4px 9px">Pay Transparency</span>
+            <span class="badge bg-gold" style="font-size:11px;padding:4px 9px">Non-Competes</span>
+            <span class="badge bg-gold" style="font-size:11px;padding:4px 9px">Remote Nexus</span>
+            <span class="badge bg-sky" style="font-size:11px;padding:4px 9px">PFML Expansion</span>
+            <span class="badge bg-sky" style="font-size:11px;padding:4px 9px">Salary History Bans</span>
+            <span class="badge bg-teal" style="font-size:11px;padding:4px 9px">Contractor Rules</span>
+            <span class="badge bg-teal" style="font-size:11px;padding:4px 9px">Bereavement Leave</span>
+            <span class="badge bg-gray" style="font-size:11px;padding:4px 9px">NLRB Handbook</span>
+            <span class="badge bg-gray" style="font-size:11px;padding:4px 9px">E-Verify Updates</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- COMPLIANCE SCORE -->
+    <div class="sband sb-navy" style="margin-top:20px"><h2>HR Compliance Burden Score &mdash; All 50 States + DC</h2><p>Each state scored 0&ndash;100 across 6 dimensions &middot; All data sourced and tiered (T1=primary statute, T2=guidance, T3=aggregator) &middot; Click any state for full sourced breakdown</p></div>
+
+    <div class="score-stats" id="score-kpis"></div>
+
+    <div class="score-filters">
+      <span class="score-filter-label">Filter tier:</span>
+      <span class="sf on" data-sf="all" onclick="setSF(this,'all')">All states</span>
+      <span class="sf" data-sf="A" onclick="setSF(this,'A')">Tier A &mdash; Low</span>
+      <span class="sf" data-sf="B" onclick="setSF(this,'B')">Tier B &mdash; Moderate</span>
+      <span class="sf" data-sf="C" onclick="setSF(this,'C')">Tier C &mdash; High</span>
+      <span class="sf" data-sf="D" onclick="setSF(this,'D')">Tier D &mdash; Very High</span>
+    </div>
+
+    <div class="score-legend">
+      <strong>Compliance burden:</strong>
+      <span class="legitem"><span class="dot" style="background:#1a3a28"></span>Tier A &mdash; Low (0&ndash;39)</span>
+      <span class="legitem"><span class="dot" style="background:#2a5a1a"></span>Tier B &mdash; Moderate (40&ndash;59)</span>
+      <span class="legitem"><span class="dot" style="background:#7a4a00"></span>Tier C &mdash; High (60&ndash;79)</span>
+      <span class="legitem"><span class="dot" style="background:#6a1010"></span>Tier D &mdash; Very High (80+)</span>
+      <span style="margin-left:auto;font-size:11px;color:var(--muted)">Click state to view sourced breakdown</span>
+    </div>
+
+    <div class="mapcard"><svg id="score-map-svg" viewBox="0 0 960 600" style="width:100%;display:block"></svg><button class="mrb" id="score-reset-btn" onclick="resetScoreMap()">Reset view</button><div class="mhint">Hover to preview &middot; click for detail</div></div>
+
+    <div class="score-detail" id="score-detail" style="display:none">
+      <div class="score-detail-head">
+        <div>
+          <div class="score-detail-name" id="score-detail-name">State</div>
+          <div class="score-detail-sub" id="score-detail-sub">Select a state</div>
+        </div>
+        <div id="score-detail-badge"></div>
+      </div>
+      <div class="score-dim-grid" id="score-dim-grid"></div>
+      <div class="score-sources">
+        <div class="score-sources-title">Primary Sources &amp; Citations</div>
+        <div id="score-sources-list"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="ch" onclick="toggleAcc(this)">
+        <div class="ic" style="background:#1a3a28">Tbl</div>
+        <h3>All States &mdash; Compliance Burden Rankings</h3>
+        <div class="meta"><span style="font-size:11px;color:var(--muted)">Click column headers to sort</span><span class="chev open">&#9660;</span></div>
+      </div>
+      <div class="acc open">
+        <div class="tbl-wrap" style="max-height:520px;overflow-y:auto">
+          <table class="score-table" id="score-table">
+            <thead><tr>
+              <th onclick="sortScore('rank')">#</th>
+              <th onclick="sortScore('name')">State</th>
+              <th onclick="sortScore('total')">Score</th>
+              <th onclick="sortScore('tier')">Tier</th>
+              <th onclick="sortScore('mw')">Min Wage</th>
+              <th onclick="sortScore('pfml')">PFML</th>
+              <th onclick="sortScore('pt')">Pay Trans.</th>
+              <th onclick="sortScore('wc')">Workers Comp</th>
+              <th onclick="sortScore('sl')">Sick Leave</th>
+              <th onclick="sortScore('ad')">Anti-Disc.</th>
+            </tr></thead>
+            <tbody id="score-tbody"></tbody>
+          </table>
+        </div>
+        <div class="src-note">Score = weighted composite across 6 HR compliance dimensions. Higher = greater employer burden. Sources: DOL WHD, EEOC, BLS, state labor agencies. All data tiered T1&ndash;T3.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="ch" onclick="toggleAcc(this)"><div class="ic" style="background:#2a2f3d">?</div><h3>How to use this score</h3><div class="meta"><span class="chev">&#9660;</span></div></div>
+      <div class="acc">
+        <div style="padding:16px;font-size:12.5px;line-height:1.7;color:var(--ink)">
+
+          <p style="margin-bottom:14px">The <strong>HR Compliance Burden Score</strong> answers one question: <em>how much HR work does operating in this state actually require?</em> A higher score means more laws to follow, more filings to make, and more ways to accidentally violate something &mdash; not that the state is bad, just that it takes more effort to stay compliant.</p>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;margin-bottom:16px">
+
+            <div style="background:var(--wash);border:1px solid var(--line);border-radius:8px;padding:12px 14px">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--navy);margin-bottom:6px">For StoicLane &mdash; deal evaluation</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.6">When evaluating an acquisition, the score tells you upfront how complex the target&rsquo;s HR environment is. A business operating entirely in Texas (Tier A) has a very different compliance cost structure than one with headcount in California and New York (Tier D). Factor it into diligence and 100-day integration planning.</div>
+            </div>
+
+            <div style="background:var(--wash);border:1px solid var(--line);border-radius:8px;padding:12px 14px">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--navy);margin-bottom:6px">For portfolio HR managers</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.6">If your company operates in 10 states, you can&rsquo;t treat them all equally. The score tells you which 2&ndash;3 states need active monthly attention (PFML filings, pay range postings, AI audits) vs. which ones you can review quarterly. Higher score = more calendar items, not more legal risk per se.</div>
+            </div>
+
+            <div style="background:var(--wash);border:1px solid var(--line);border-radius:8px;padding:12px 14px">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--navy);margin-bottom:6px">For ArmHR &mdash; PEO pricing and risk</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.6">As a PEO, ArmHR assumes HR liability on behalf of clients. A client with employees in Tier D states (CA, NY, WA, NJ) carries meaningfully more compliance exposure than one in Tier A states. The score supports risk-based service pricing and flagging which client relationships need more hands-on support.</div>
+            </div>
+
+          </div>
+
+          <div style="background:var(--wash);border-left:3px solid var(--navy);border-radius:0 7px 7px 0;padding:10px 14px;font-size:12px;color:var(--muted);margin-bottom:12px">
+            <strong style="color:var(--ink)">What the score does not tell you:</strong> It measures administrative burden, not legal risk or cost. A Tier A state can still expose you to significant federal liability (FMLA, EEOC, FLSA). The score is a prioritization tool, not a legal opinion. Always verify current requirements with counsel before acting.
+          </div>
+
+          <div style="font-size:11.5px;color:var(--muted)">
+            <strong style="color:var(--ink)">How scores are calculated:</strong>
+            Six dimensions are weighted and combined &mdash; Minimum Wage gap from federal floor (15%), PFML program complexity (20%), Pay Transparency requirements (15%), Workers Comp structure (15%), Sick Leave mandates (15%), and Anti-Discrimination / AI law breadth (20%).
+            Each data point is cited to a source tier: <strong style="color:var(--ink)">T1</strong> = primary statute or state agency &middot; <strong style="color:var(--ink)">T2</strong> = enacted bill or formal guidance &middot; <strong style="color:var(--ink)">T3</strong> = aggregator such as SHRM or BrightMine (verify against primary before acting).
+            Click any state on the map or in the table to see the full sourced breakdown.
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MIN WAGE -->
+<!-- STATES (consolidated) -->
+<div class="tabpanel" id="panel-states">
+  <div class="pg">
+    <div class="sband sb-navy">
+      <h2>State-by-State HR Compliance — All 50 States + DC</h2>
+      <p>Click any state on the map to see full details · Minimum Wage · Unemployment · Paid Leave · Workers' Comp · EEOC</p>
+    </div>
+
+    <!-- MAP LAYER SWITCHER -->
+    <div class="states-layer-bar">
+      <span class="states-layer-label">Map view:</span>
+      <button class="slb on" data-layer="mw" onclick="switchStateLayer('mw',this)">Min Wage</button>
+      <button class="slb" data-layer="ue" onclick="switchStateLayer('ue',this)">Unemployment</button>
+      <button class="slb" data-layer="pl" onclick="switchStateLayer('pl',this)">Paid Leave</button>
+      <button class="slb" data-layer="wc" onclick="switchStateLayer('wc',this)">Workers Comp</button>
+      <button class="slb" data-layer="ee" onclick="switchStateLayer('ee',this)">EEOC</button>
+    </div>
+
+    <!-- LEGEND (updates per layer) -->
+    <div id="states-legend" class="legstrip"></div>
+
+    <!-- SINGLE MAP -->
+    <div class="mapcard">
+      <svg id="states-map-svg" viewBox="0 0 960 600" style="width:100%;display:block"></svg>
+      <button class="mrb" id="states-reset-btn" onclick="resetStatesMap()">Reset view</button>
+      <div class="mhint">Hover to preview · click for full detail</div>
+    </div>
+
+    <!-- STATE DETAIL PANEL (shown on click) -->
+    <div id="state-detail-panel" style="display:none" class="state-detail-panel">
+      <div class="sdp-header">
+        <div>
+          <div class="sdp-name" id="sdp-name">State Name</div>
+          <div class="sdp-sub" id="sdp-sub"></div>
+        </div>
+        <button class="sdp-close" onclick="closeStateDetail()">✕ Close</button>
+      </div>
+      <div class="sdp-sections" id="sdp-sections"></div>
+    </div>
+
+
+    <!-- SUMMARY TABLE -->
+    <div class="card" style="margin-top:16px">
+      <div class="ch" onclick="toggleAcc(this)">
+        <div class="ic" style="background:var(--navy)">Tbl</div>
+        <h3>Full Reference Table — All 50 States + DC</h3>
+        <div class="meta"><span class="chev open">▼</span></div>
+      </div>
+      <div class="acc open">
+        <div class="tbl-wrap" style="max-height:600px;overflow-y:auto">
+          <table class="dt" id="states-table"></table>
+        </div>
+        <div class="src-note">Sources: DOL WHD (min wage) · BLS LAUS May 2026 (unemployment) · State agencies (PFML, WC) · EEOC FY2024 · Rates as of mid-2026.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- POSTERS -->
+<div class="tabpanel" id="panel-posters">
+  <div class="pg">
+    <div class="sband sb-teal"><h2>Employment Posters &mdash; Federal and All 50 States</h2><p>Required notices must be conspicuously posted &middot; Federal posters link directly to official government sources &middot; Select your state for direct agency links</p></div>
+
+    <!-- FEDERAL POSTERS -->
+    <div class="card">
+      <div class="ch" onclick="toggleAcc(this)"><div class="ic">Fed</div><h3>Federal Required Posters</h3><div class="meta"><span style="font-size:11px">All employers &middot; free &middot; official PDFs</span><span class="chev open">&#9660;</span></div></div>
+      <div class="acc open">
+        <div class="row-list">
+          <div class="row-item">
+            <div><div class="rn">FLSA &mdash; Minimum Wage &amp; Overtime</div><div class="rd">All FLSA-covered employers &middot; Rev. Apr 2023</div></div>
+            <div style="display:flex;gap:6px;flex-shrink:0">
+              <a href="https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/minwagep.pdf" target="_blank" class="badge bg-navy" style="text-decoration:none">PDF</a>
+              <a href="https://www.dol.gov/agencies/whd/posters/flsa" target="_blank" class="badge bg-gray" style="text-decoration:none">Info</a>
+            </div>
+          </div>
+          <div class="row-item">
+            <div><div class="rn">FMLA &mdash; Family and Medical Leave</div><div class="rd">50+ employees &middot; Rev. Apr 2016</div></div>
+            <div style="display:flex;gap:6px;flex-shrink:0">
+              <a href="https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/fmlaen.pdf" target="_blank" class="badge bg-navy" style="text-decoration:none">PDF</a>
+              <a href="https://www.dol.gov/agencies/whd/fmla/posters" target="_blank" class="badge bg-gray" style="text-decoration:none">Info</a>
+            </div>
+          </div>
+          <div class="row-item">
+            <div><div class="rn">EEO &mdash; Know Your Rights (incl. PWFA)</div><div class="rd">15+ employees &middot; Rev. Jun 2023</div></div>
+            <div style="display:flex;gap:6px;flex-shrink:0">
+              <a href="https://www.eeoc.gov/sites/default/files/2023-06/22-088_EEOC_KnowYourRights6.12ScreenRdr.pdf" target="_blank" class="badge bg-navy" style="text-decoration:none">PDF</a>
+              <a href="https://www.eeoc.gov/poster" target="_blank" class="badge bg-gray" style="text-decoration:none">Info</a>
+            </div>
+          </div>
+          <div class="row-item">
+            <div><div class="rn">OSHA &mdash; Job Safety &amp; Health</div><div class="rd">Most private employers &middot; Rev. 2015</div></div>
+            <div style="display:flex;gap:6px;flex-shrink:0">
+              <a href="https://www.osha.gov/sites/default/files/publications/osha3165.pdf" target="_blank" class="badge bg-navy" style="text-decoration:none">PDF</a>
+              <a href="https://www.osha.gov/publications/poster" target="_blank" class="badge bg-gray" style="text-decoration:none">Info</a>
+            </div>
+          </div>
+          <div class="row-item">
+            <div><div class="rn">EPPA &mdash; Employee Polygraph Protection</div><div class="rd">Most private employers</div></div>
+            <div style="display:flex;gap:6px;flex-shrink:0">
+              <a href="https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/eppac.pdf" target="_blank" class="badge bg-navy" style="text-decoration:none">PDF</a>
+              <a href="https://www.dol.gov/agencies/whd/posters" target="_blank" class="badge bg-gray" style="text-decoration:none">Info</a>
+            </div>
+          </div>
+          <div class="row-item">
+            <div><div class="rn">USERRA &mdash; Uniformed Services</div><div class="rd">All employers</div></div>
+            <div style="display:flex;gap:6px;flex-shrink:0">
+              <a href="https://www.dol.gov/sites/dolgov/files/VETS/legacy/files/USERRA_Private.pdf" target="_blank" class="badge bg-navy" style="text-decoration:none">PDF</a>
+              <a href="https://www.dol.gov/agencies/vets/programs/userra/poster" target="_blank" class="badge bg-gray" style="text-decoration:none">Info</a>
+            </div>
+          </div>
+          <div class="row-item">
+            <div><div class="rn">E-Verify / INA Notice</div><div class="rd">Federal contractors enrolled in E-Verify</div></div>
+            <div style="display:flex;gap:6px;flex-shrink:0">
+              <a href="https://www.e-verify.gov/sites/default/files/everify/posters/EVerifyParticipationPoster.pdf" target="_blank" class="badge bg-navy" style="text-decoration:none">PDF</a>
+              <a href="https://www.e-verify.gov/employers/e-verify-poster-and-notice-of-e-verify-participation" target="_blank" class="badge bg-gray" style="text-decoration:none">Info</a>
+            </div>
+          </div>
+        </div>
+        <div class="src-note">All PDFs link directly to official government servers (dol.gov, eeoc.gov, osha.gov). Use <a href="https://webapps.dol.gov/elaws/posters.htm" target="_blank">DOL eLaws Poster Advisor</a> to confirm which federal posters apply to your organization.</div>
+      </div>
+    </div>
+
+    <!-- POSTER PREVIEW VIEWER -->
+    <div class="card" id="poster-preview-card" style="display:none">
+      <div class="ch" style="cursor:default;background:var(--sky-soft)">
+        <div class="ic" style="background:var(--sky)">PDF</div>
+        <h3 id="poster-preview-title">Poster Preview</h3>
+        <div class="meta"><button onclick="document.getElementById('poster-preview-card').style.display='none'" style="border:1px solid var(--line);background:#fff;border-radius:5px;padding:3px 10px;font-size:11px;font-weight:700;color:var(--muted);cursor:pointer">Close</button></div>
+      </div>
+      <div style="padding:0">
+        <iframe id="poster-iframe" src="" style="width:100%;height:520px;border:none;display:block"></iframe>
+      </div>
+    </div>
+
+    <!-- EXTERNAL POSTER RESOURCES -->
+    <div class="acc-card acc-sky" style="margin-bottom:12px">
+      <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:.07em">External Poster Resources</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <a href="https://webapps.dol.gov/elaws/posters.htm" target="_blank" class="poster-btn poster-btn-agency" style="font-size:12px">DOL eLaws Poster Advisor</a>
+        <a href="https://www.hr.uillinois.edu/policy/state_federal_mandates/required_employment_notices_and__posters/posters_other" target="_blank" class="poster-btn poster-btn-agency" style="font-size:12px">UofI All 50 States Poster Directory</a>
+        <a href="https://www.eeoc.gov/poster" target="_blank" class="poster-btn poster-btn-agency" style="font-size:12px">EEOC Official Poster Page</a>
+        <a href="https://www.osha.gov/publications/poster" target="_blank" class="poster-btn poster-btn-agency" style="font-size:12px">OSHA Official Poster Page</a>
+      </div>
+      <div style="font-size:11px;color:var(--soft);margin-top:8px;line-height:1.5">Use the DOL eLaws advisor to confirm which federal posters apply to your specific organization type and size. The University of Illinois HR directory provides a curated 50-state reference with direct agency links.</div>
+    </div>
+
+    <!-- STATE POSTER SELECTOR -->
+    <div class="card">
+      <div class="ch" onclick="toggleAcc(this)"><div class="ic" style="background:var(--teal)">50</div><h3>State Poster Requirements &mdash; All 50 States</h3><div class="meta"><span style="font-size:11px">Direct agency links</span><span class="chev open">&#9660;</span></div></div>
+      <div class="acc open">
+        <div style="padding:12px 16px 8px">
+          <select id="poster-state-select" style="border:1px solid var(--line);border-radius:7px;padding:7px 12px;font:inherit;font-size:13px;background:#13171f;color:var(--ink);width:100%;cursor:pointer">
+            <option value="">&#8212; Select a state &#8212;</option>
+          </select>
+        </div>
+        <div id="poster-state-detail" style="padding:4px 16px 14px">
+          <div style="color:var(--muted);font-size:12.5px">Select a state above to see required posters and direct download links.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PENALTY REFERENCE -->
+    <div class="acc-card acc-sky">
+      <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px">Federal Posting Violation Penalties (2026)</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px">
+        <div style="background:#fff;border:1px solid var(--line);border-radius:7px;padding:10px 12px"><div style="font-size:16px;font-weight:800;color:var(--red)">$16,550</div><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:3px">OSHA per violation</div></div>
+        <div style="background:#fff;border:1px solid var(--line);border-radius:7px;padding:10px 12px"><div style="font-size:16px;font-weight:800;color:var(--red)">$26,262</div><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:3px">EPPA per violation</div></div>
+        <div style="background:#fff;border:1px solid var(--line);border-radius:7px;padding:10px 12px"><div style="font-size:16px;font-weight:800;color:var(--gold)">$216</div><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:3px">FMLA per violation</div></div>
+        <div style="background:#fff;border:1px solid var(--line);border-radius:7px;padding:10px 12px"><div style="font-size:16px;font-weight:800;color:var(--gold)">$680</div><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:3px">EEOC per violation</div></div>
+      </div>
+      <div style="font-size:11.5px;color:var(--soft);line-height:1.55">Electronic posting is permitted as a <em>supplement</em> to physical posting for remote employees per DOL guidance. It does not replace physical posting at any location where employees report to work.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAID LEAVE -->
+<div class="tabpanel" id="panel-trends">
+  <div class="pg">
+    <div class="sband sb-navy"><h2>Employment Trends and Market Pulse</h2><p>Day-to-day market signals, sector hiring trends, and the regulatory landscape</p></div>
+    <div class="two-col">
+      <div class="card">
+        <div class="ch" onclick="toggleAcc(this)"><div class="ic">BLS</div><h3>Labor Market Indicators</h3><div class="meta"><a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank">BLS May 2026</a><span class="chev open">▼</span></div></div>
+        <div class="acc open"><div class="stats-grid"><div class="stat-box"><div class="sv">4.1%</div><div class="sl">Unemployment rate</div></div><div class="stat-box"><div class="sv">8.1M</div><div class="sl">Job openings (JOLTS)</div></div><div class="stat-box"><div class="sv">$35.28</div><div class="sl">Avg hourly earnings</div></div><div class="stat-box"><div class="sv">+178K</div><div class="sl">Nonfarm payrolls (May)</div></div><div class="stat-box"><div class="sv">62.6%</div><div class="sl">Labor force participation</div></div><div class="stat-box"><div class="sv">3.5%</div><div class="sl">Quit rate</div></div></div></div>
+      </div>
+      <div class="card">
+        <div class="ch" onclick="toggleAcc(this)"><div class="ic" style="background:var(--teal)">Sec</div><h3>Sector Hiring Trends</h3><div class="meta"><a href="https://www.bls.gov/ces/" target="_blank">BLS CES</a><span class="chev">▼</span></div></div>
+        <div class="acc">
+          <div class="row-list">
+            <div class="row-item"><div><div class="rn">Healthcare &amp; Social Assistance</div><div class="rd">Fastest growing · avg +63K/month</div></div><span class="badge bg-green">Strong</span></div>
+            <div class="row-item"><div><div class="rn">Government</div><div class="rd">Federal slowdown; state/local stable</div></div><span class="badge bg-gold">Mixed</span></div>
+            <div class="row-item"><div><div class="rn">Technology</div><div class="rd">Large-tech layoffs continue; startups hiring</div></div><span class="badge bg-red">Contracting</span></div>
+            <div class="row-item"><div><div class="rn">Construction</div><div class="rd">Infrastructure spending driving demand</div></div><span class="badge bg-green">Strong</span></div>
+            <div class="row-item"><div><div class="rn">Retail Trade</div><div class="rd">Seasonal volatility; automation headwinds</div></div><span class="badge bg-gray">Flat</span></div>
+            <div class="row-item"><div><div class="rn">Finance &amp; Insurance</div><div class="rd">Selective; compliance and risk roles in demand</div></div><span class="badge bg-sky">Selective</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch" onclick="toggleAcc(this)"><div class="ic" style="background:var(--red)">Reg</div><h3>Regulatory and Legal Trends to Watch</h3><div class="meta"><span class="chev">▼</span></div></div>
+      <div class="acc">
+        <div class="row-list">
+          <div class="row-item"><div><div class="rn">AI in HR Tools</div><div class="rd">NYC Local Law 144 bias audits spreading nationally · <a href="https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness" target="_blank">EEOC AI guidance</a></div></div><span class="badge bg-red">Hot</span></div>
+          <div class="row-item"><div><div class="rn">Pay Transparency Laws</div><div class="rd">Active in CA, CO, NY, WA, IL, MD, NV, RI, CT, HI · <a href="https://www.dol.gov/agencies/ofccp/pay-transparency" target="_blank">DOL</a></div></div><span class="badge bg-red">Expanding</span></div>
+          <div class="row-item"><div><div class="rn">Non-Compete Restrictions</div><div class="rd">FTC ban stayed; CA/MN/ND/OK prohibit entirely · <a href="https://www.ftc.gov/legal-library/browse/rules/noncompete-clause-rule" target="_blank">FTC</a></div></div><span class="badge bg-gold">Evolving</span></div>
+          <div class="row-item"><div><div class="rn">Remote Work Tax Nexus</div><div class="rd">Multi-state income tax and workers comp compliance for remote workers</div></div><span class="badge bg-red">Rising</span></div>
+          <div class="row-item"><div><div class="rn">Independent Contractor Rules</div><div class="rd">DOL ABC test vs economic reality test · <a href="https://www.dol.gov/agencies/whd/flsa/2024-independent-contractor" target="_blank">DOL 2024 rule</a></div></div><span class="badge bg-gold">Watch</span></div>
+          <div class="row-item"><div><div class="rn">Bereavement Leave Mandates</div><div class="rd">IL, CA, OR now mandate; trend expanding</div></div><span class="badge bg-sky">Expanding</span></div>
+          <div class="row-item"><div><div class="rn">Salary History Bans</div><div class="rd">21+ states and municipalities prohibit asking about prior pay</div></div><span class="badge bg-green">Widespread</span></div>
+          <div class="row-item"><div><div class="rn">NLRB Activity</div><div class="rd">Handbook scrutiny, RTO disputes, union organizing surge · <a href="https://www.nlrb.gov" target="_blank">NLRB.gov</a></div></div><span class="badge bg-red">Rising</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="tip"><div id="tip-name"></div><div class="tsub" id="tip-sub"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+function toggleAcc(head){const body=head.nextElementSibling;const chev=head.querySelector('.chev');const open=body.classList.toggle('open');if(chev)chev.classList.toggle('open',open);}
+
+const SN={AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming',DC:'Washington D.C.'};
+const FIPS={'01':'AL','02':'AK','04':'AZ','05':'AR','06':'CA','08':'CO','09':'CT','10':'DE','11':'DC','12':'FL','13':'GA','15':'HI','16':'ID','17':'IL','18':'IN','19':'IA','20':'KS','21':'KY','22':'LA','23':'ME','24':'MD','25':'MA','26':'MI','27':'MN','28':'MS','29':'MO','30':'MT','31':'NE','32':'NV','33':'NH','34':'NJ','35':'NM','36':'NY','37':'NC','38':'ND','39':'OH','40':'OK','41':'OR','42':'PA','44':'RI','45':'SC','46':'SD','47':'TN','48':'TX','49':'UT','50':'VT','51':'VA','53':'WA','54':'WV','55':'WI','56':'WY'};
+let MW={};
+let UE={};
+let PFML=[];
+let WC={};
+let PD={};
+
+
+
+
+const tip=document.getElementById('tip');
+function showTip(e,n,s){document.getElementById('tip-name').textContent=n;document.getElementById('tip-sub').textContent=s||'';tip.classList.add('show');tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY-36)+'px';}
+document.addEventListener('mousemove',e=>{if(tip.classList.contains('show')){tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY-36)+'px';}});
+function hideTip(){tip.classList.remove('show');}
+
+let tc=null;
+async function getTopo(){if(tc)return tc;const r=await fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json');tc=await r.json();return tc;}
+async function buildMap(sid,cFn,tFn,clFn){const us=await getTopo();const svg=d3.select('#'+sid);const proj=d3.geoAlbersUsa().scale(1280).translate([480,300]);const path=d3.geoPath().projection(proj);const states=topojson.feature(us,us.objects.states);const mz=d3.zoom().scaleExtent([1,18]).on('zoom',function(ev){mg.attr('transform',ev.transform);});svg.call(mz).on('wheel.zoom',null);svg.append('rect').attr('width',960).attr('height',600).attr('fill','transparent');const mg=svg.append('g');const ft={};mg.selectAll('.state-path').data(states.features).enter().append('path').attr('class','state-path').attr('d',path).attr('fill',d=>{const id=FIPS[String(d.id).padStart(2,'0')];return cFn(id);}).each(function(d){const id=FIPS[String(d.id).padStart(2,'0')];if(id)ft[id]=d;}).on('mousemove',(e,d)=>{const id=FIPS[String(d.id).padStart(2,'0')];if(id){const{n,s}=tFn(id);showTip(e,n,s);}}).on('mouseleave',hideTip).on('click',(e,d)=>{const id=FIPS[String(d.id).padStart(2,'0')];if(id)clFn(id,ft,path,svg,mz,mg);});return{svg,mg,mz,path,ft};}
+function zoomTo(f,path,svg,mz){const[[x0,y0],[x1,y1]]=path.bounds(f);const w=960,h=600,p=20;const sc=Math.min(16,0.94/Math.max((x1-x0+p*2)/w,(y1-y0+p*2)/h));svg.transition().duration(650).ease(d3.easeCubicInOut).call(mz.transform,d3.zoomIdentity.translate(w/2-(x0+x1)/2*sc,h/2-(y0+y1)/2*sc).scale(sc));}
+function resetZoom(svg,mz,mg){svg.transition().duration(550).ease(d3.easeCubicOut).call(mz.transform,d3.zoomIdentity);mg.selectAll('.state-path').classed('active',false).classed('dimmed',false);}
+
+let mwB=false,mwS=null,mwR=null;
+function mwC(id){if(!id||!MW[id])return '#253347';const r=MW[id][0];if(r<=7.25)return '#0a1e35';if(r<=11)return '#0e2d50';if(r<=14)return '#35b5ec';return '#61c3f4';}
+function buildMWMap(){mwB=true;buildMap('mw-map-svg',mwC,id=>({n:SN[id]||id,s:MW[id]?'$'+MW[id][0].toFixed(2)+'/hr':''}),(id,ft,path,svg,mz,mg)=>{if(mwS===id){mwS=null;document.getElementById('mw-reset-btn').classList.remove('vis');resetZoom(svg,mz,mg);renderMWGrid();document.getElementById('mw-detail').style.display='none';}else{mwS=id;document.getElementById('mw-reset-btn').classList.add('vis');mg.selectAll('.state-path').classed('active',function(d){return FIPS[String(d.id).padStart(2,'0')]===id;}).classed('dimmed',function(d){return FIPS[String(d.id).padStart(2,'0')]!==id;});zoomTo(ft[id],path,svg,mz);renderMWGrid();renderMWDetail(id);}mwR={svg,mz,mg};}).then(r=>{mwR=r;});renderMWGrid();renderMWTable();}
+function resetMWMap(){mwS=null;const rb=document.getElementById('mw-reset-btn');if(rb)rb.classList.remove('vis');const md=document.getElementById('mw-detail');if(md)md.style.display='none';if(mwR)resetZoom(mwR.svg,mwR.mz,mwR.mg);renderMWGrid();}
+function renderMWGrid(){const el=document.getElementById('mw-jgrid');if(!el)return;el.innerHTML=Object.keys(SN).sort().map(id=>{const r=MW[id]?'$'+MW[id][0].toFixed(2):'—';return `<div class="j${mwS===id?' on':''}" onclick="mwS='${id}';renderMWGrid();renderMWDetail('${id}')">${id}<br><span style="font-size:10px;font-weight:600;opacity:.75">${r}</span></div>`;}).join('');}
+function renderMWDetail(id){const d=MW[id];if(!d)return;const[rate,notes,eff,url]=d;const diff=rate-7.25;const el=document.getElementById('mw-detail');if(!el)return;el.style.display='';const tb=document.getElementById('mw-detail-title');const bb=document.getElementById('mw-detail-body');if(tb)tb.textContent=SN[id]+' — Minimum Wage';if(bb)bb.innerHTML=`<div style="padding:16px;display:flex;gap:18px;flex-wrap:wrap"><div><div style="font-size:34px;font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1">$${rate.toFixed(2)}<span style="font-size:13px;font-weight:500;color:var(--muted)">/hr</span></div>${eff?'<div style="font-size:11.5px;color:var(--muted);margin-top:4px">Effective: '+eff+'</div>':''}<div style="margin-top:8px">${diff>0?'<span class="badge bg-green">+$'+diff.toFixed(2)+' above federal</span>':'<span class="badge bg-gray">Federal floor applies</span>'}</div></div><div style="flex:1;min-width:180px">${notes?'<div style="font-size:13px;color:var(--soft);margin-bottom:8px;line-height:1.55">'+notes+'</div>':''}<div style="font-size:11.5px;color:var(--muted)">Federal floor: $7.25/hr. Localities may set higher rates.</div>${url?'<div style="margin-top:10px"><a href="'+url+'" target="_blank" class="link-btn" style="font-size:12px;padding:6px 12px">State DOL source</a></div>':''}</div></div>`;}
+function renderMWTable(){const el=document.getElementById('mw-table');if(!el)return;let h='<thead><tr><th>State</th><th>Min Wage/hr</th><th>vs Federal</th><th>Effective</th><th>Notes</th><th>Source</th></tr></thead><tbody>';Object.keys(SN).sort((a,b)=>SN[a].localeCompare(SN[b])).forEach(id=>{const d=MW[id];if(!d)return;const[rate,notes,eff,url]=d;const diff=rate-7.25;const b=rate<=7.25?'<span class="badge bg-gray">Federal floor</span>':rate>=15?'<span class="badge bg-navy">+$'+diff.toFixed(2)+'</span>':'<span class="badge bg-gold">+$'+diff.toFixed(2)+'</span>';h+=`<tr><td class="snm">${SN[id]}</td><td><strong>$${rate.toFixed(2)}</strong></td><td>${b}</td><td style="color:var(--muted);font-size:11px">${eff||'—'}</td><td style="color:var(--muted);font-size:11px;max-width:200px">${notes||'—'}</td><td>${url?'<a href="'+url+'" target="_blank" style="font-size:11px;color:var(--sky-2)">State DOL</a>':'<span style="color:var(--faint)">—</span>'}</td></tr>`;});el.innerHTML=h+'</tbody>';}
+
+let ueB=false,ueS=null,ueR=null;
+function ueC(id){if(!id||!UE[id])return '#253347';const r=UE[id][0];if(r<3.5)return '#1a5e2a';if(r<5.0)return '#c87820';return '#b82020';}
+function buildUEMap(){ueB=true;buildMap('ue-map-svg',ueC,id=>({n:SN[id]||id,s:UE[id]?UE[id][0]+'% unemployment':''}),(id,ft,path,svg,mz,mg)=>{if(ueS===id){ueS=null;document.getElementById('ue-reset-btn').classList.remove('vis');resetZoom(svg,mz,mg);renderUEGrid();}else{ueS=id;document.getElementById('ue-reset-btn').classList.add('vis');mg.selectAll('.state-path').classed('active',function(d){return FIPS[String(d.id).padStart(2,'0')]===id;}).classed('dimmed',function(d){return FIPS[String(d.id).padStart(2,'0')]!==id;});zoomTo(ft[id],path,svg,mz);renderUEGrid();}ueR={svg,mz,mg};}).then(r=>{ueR=r;});renderUEGrid();renderUETable();}
+function resetUEMap(){ueS=null;document.getElementById('ue-reset-btn').classList.remove('vis');if(ueR)resetZoom(ueR.svg,ueR.mz,ueR.mg);renderUEGrid();}
+function renderUEGrid(){const el=document.getElementById('ue-jgrid');if(!el)return;el.innerHTML=Object.keys(SN).sort().map(id=>{const r=UE[id]?UE[id][0]+'%':'—';const col=UE[id]?(UE[id][0]>=5?'var(--red)':UE[id][0]>=3.5?'var(--gold)':'var(--green)'):'var(--muted)';return `<div class="j${ueS===id?' on':''}" onclick="ueS='${id}';renderUEGrid()">${id}<br><span style="font-size:10px;font-weight:700;color:${ueS===id?'rgba(255,255,255,.8)':col}">${r}</span></div>`;}).join('');}
+function renderUETable(){const el=document.getElementById('ue-table');if(!el)return;let h='<thead><tr><th>State</th><th>Rate</th><th>Level</th></tr></thead><tbody>';Object.keys(SN).sort((a,b)=>(UE[b]||[0])[0]-(UE[a]||[0])[0]).forEach(id=>{const d=UE[id];if(!d)return;const r=d[0];const b=r>=5?'<span class="badge bg-red">High</span>':r>=3.5?'<span class="badge bg-gold">Moderate</span>':'<span class="badge bg-green">Low</span>';h+=`<tr><td class="snm">${SN[id]}</td><td><strong>${r}%</strong></td><td>${b}</td></tr>`;});el.innerHTML=h+'</tbody>';}
+
+function buildPFMLTable(){let h='<thead><tr><th>State</th><th>Wage Replacement</th><th>Family (wks)</th><th>Medical (wks)</th><th>Since</th><th>Contribution</th><th>Link</th></tr></thead><tbody>';PFML.forEach(d=>{h+=`<tr${!d.act?' style="opacity:.75"':''}><td class="snm">${d.s} ${!d.act?'<span class="badge bg-gold">Upcoming</span>':''}</td><td>${d.p}</td><td style="text-align:center">${d.f}</td><td style="text-align:center">${d.m}</td><td style="text-align:center">${d.y}</td><td>${d.c}</td><td><a href="${d.u}" target="_blank" style="font-size:11px;color:var(--sky-2);font-weight:600">${d.a}</a></td></tr>`;});(document.getElementById('pfml-table')||{set innerHTML(v){}})["innerHTML"]=h+'</tbody>';}
+
+function buildWCTable(){let h='<thead><tr><th>State</th><th>Coverage Required For</th><th>Insurance Type</th><th>Source</th></tr></thead><tbody>';Object.keys(SN).sort((a,b)=>SN[a].localeCompare(SN[b])).forEach(id=>{const d=WC[id];if(!d)return;const[cov,ins,url]=d;const b=id==='TX'?'<span class="badge bg-red">Optional (TX only)</span>':ins.includes('EXCLUSIVE')?'<span class="badge bg-red">Exclusive state fund</span>':ins.includes('optional')?'<span class="badge bg-sky">State fund available</span>':'<span class="badge bg-gray">Private market</span>';h+=`<tr><td class="snm">${SN[id]}</td><td style="font-size:11.5px">${cov}</td><td>${b}</td><td>${url?'<a href="'+url+'" target="_blank" style="font-size:11px;color:var(--sky-2)">Agency</a>':'—'}</td></tr>`;});(document.getElementById('wc-table')||{set innerHTML(v){}})["innerHTML"]=h+'</tbody>';}
+
+(function(){const sel=document.getElementById('poster-state-select');Object.keys(SN).sort((a,b)=>SN[a].localeCompare(SN[b])).forEach(id=>{const o=document.createElement('option');o.value=id;o.textContent=SN[id];sel.appendChild(o);});sel.addEventListener('change',()=>{if(sel.value)renderPD(sel.value);});})();
+
+function renderPD(id) {
+  const el = document.getElementById('poster-state-detail');
+  const d = PD[id];
+  if (!d) {
+    el.innerHTML = `
+      <div style="background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;padding:12px 16px;font-size:12.5px;color:var(--warn-ink);line-height:1.6;margin-bottom:8px">
+        <strong>${SN[id]}</strong> — poster data not yet loaded. Visit the state Department of Labor for current requirements.
+        <a href="https://www.dol.gov/agencies/whd/posters" target="_blank" style="color:var(--warn-ink);font-weight:700;margin-left:4px">DOL poster directory →</a>
+      </div>`;
+    return;
+  }
+
+  const postersHtml = d.ps.map(p => {
+    const hasPdf = !!p.pdf;
+    const rowHref = hasPdf ? p.pdf : d.url;
+    const rowOnClick = hasPdf ? `onclick="showPosterPreview(event,'${p.pdf.replace(/'/g,"\\'")}','${p.n.replace(/'/g,"\\'")} — ${SN[id]}')"` : '';
+    return `
+    <a href="${rowHref}" target="_blank" class="poster-card poster-card-link" ${rowOnClick}>
+      <div class="poster-card-left">
+        <div class="poster-card-name">${p.n}</div>
+        <div class="poster-card-req">${p.r}</div>
+      </div>
+      <div class="poster-card-actions">
+        ${hasPdf
+          ? `<span class="poster-btn poster-btn-pdf"><span>⬇</span> Download PDF</span>`
+          : `<span class="poster-btn poster-btn-agency"><span>↗</span> Agency Site</span>`
+        }
+      </div>
+    </a>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="poster-state-header">
+      <div>
+        <div class="poster-state-name">${SN[id]} — Required Workplace Posters</div>
+        <div class="poster-state-agency">Official source: <a href="${d.url}" target="_blank">${d.ag}</a></div>
+      </div>
+      <a href="${d.url}" target="_blank" class="poster-btn poster-btn-portal">Visit State Portal →</a>
+    </div>
+    <div class="poster-list">${postersHtml}</div>
+    <div class="poster-footer-note">
+      Federal posters are also required at all locations regardless of state — see the Federal Required Posters section above. This list may not be exhaustive; verify current requirements with ${d.ag} directly.
+    </div>`;
+}
+
+function showPosterPreview(e, url, title) {
+  e.preventDefault();
+  const card = document.getElementById('poster-preview-card');
+  document.getElementById('poster-preview-title').textContent = title;
+  document.getElementById('poster-iframe').src = url;
+  card.style.display = '';
+  card.scrollIntoView({behavior:'smooth', block:'start'});
+}
+document.querySelectorAll('.nt').forEach(btn => {
+  btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+});
+
+
+// Fetches real HR/labor news from multiple RSS sources via CORS proxy
+// Caches daily in localStorage; falls back to seed data on error
+// ─────────────────────────────────────────────
+
+const STORAGE_KEY = 'hrpulse_feed_v5';
+const DAY_MS = 24 * 60 * 60 * 1000;
+let currentFilter = 'all';
+let spotlightIdx = 0;
+let countdownSec = 0;
+let refreshTimer = null;
+
+// RSS sources — all HR/labor/compliance relevant feeds
+const RSS_SOURCES = [
+  {
+    url: 'https://www.dol.gov/rss/newsroom.xml',
+    label: 'DOL Newsroom',
+    category: 'federal',
+    iconBg: '#0e82be',
+    icon: 'DOL',
+    priority: 'high'
+  },
+  {
+    url: 'https://www.eeoc.gov/rss.xml',
+    label: 'EEOC',
+    category: 'federal',
+    iconBg: '#4a2d9e',
+    icon: 'EEO',
+    priority: 'med'
+  },
+  {
+    url: 'https://www.bls.gov/feed/bls_latest.rss',
+    label: 'BLS',
+    category: 'market',
+    iconBg: '#0a6b6b',
+    icon: 'BLS',
+    priority: 'info'
+  },
+  {
+    url: 'https://feeds.feedburner.com/shrm/HLEP',
+    label: 'SHRM HR News',
+    category: 'state',
+    iconBg: '#1a8a50',
+    icon: 'HR',
+    priority: 'med'
+  },
+  {
+    url: 'https://hrexecutive.com/feed/',
+    label: 'HR Executive',
+    category: 'market',
+    iconBg: '#0a6b6b',
+    icon: 'HRX',
+    priority: 'info'
+  },
+  {
+    url: 'https://www.natlawreview.com/taxonomy/term/245/feed',
+    label: 'National Law Review – Employment',
+    category: 'alert',
+    iconBg: '#9e2020',
+    icon: 'Law',
+    priority: 'high'
+  }
+];
+
+// CORS proxy to fetch RSS without server-side code
+const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
+
+function getTodayMs() {
+  const now = new Date();
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0).getTime();
+}
+
+function getMsUntilTomorrow() {
+  const now = Date.now();
+  const todayStart = getTodayMs();
+  const tomorrow = todayStart + DAY_MS;
+  return Math.max(0, tomorrow - now);
+}
+
+// Legacy alias for countdown timer
+function getThisMondayMs() { return getTodayMs(); }
+function getMsUntilNextMonday() { return getMsUntilTomorrow(); }
+
+function loadFeedState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch(e) {}
+  return null;
+}
+
+function saveFeedState(data) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  } catch(e) {}
+}
+
+// Parse an RSS feed XML string into feed items
+function parseRSSItems(xmlText, source, existingIds) {
+  try {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(xmlText, 'text/xml');
+    const items = Array.from(doc.querySelectorAll('item')).slice(0, 4);
+    return items.map((item, i) => {
+      const title = item.querySelector('title')?.textContent?.trim() || 'Untitled';
+      const desc = item.querySelector('description')?.textContent?.replace(/<[^>]+>/g,'').trim().substring(0, 220) || '';
+      const link = item.querySelector('link')?.textContent?.trim() || '';
+      const pubDate = item.querySelector('pubDate')?.textContent?.trim() || '';
+      const id = source.icon + '_' + (link || title).replace(/\W+/g,'').substring(0,20);
+      if (existingIds.has(id)) return null;
+      existingIds.add(id);
+      let dateStr = '';
+      try {
+        const d = new Date(pubDate);
+        dateStr = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+      } catch(e) { dateStr = 'Recent'; }
+      return {
+        id,
+        date: dateStr,
+        category: source.category,
+        priority: source.priority,
+        iconBg: source.iconBg,
+        icon: source.icon,
+        title,
+        desc: desc || 'Click to read the full update from ' + source.label + '.',
+        tags: [source.label],
+        link,
+        linkLabel: 'Read more',
+        isNew: true
+      };
+    }).filter(Boolean);
+  } catch(e) {
+    return [];
+  }
+}
+
+async function fetchAllRSSFeeds() {
+  const existingIds = new Set();
+  const allItems = [];
+  const results = await Promise.allSettled(
+    RSS_SOURCES.map(async source => {
+      const proxied = CORS_PROXY + encodeURIComponent(source.url);
+      const res = await fetch(proxied, { signal: AbortSignal.timeout(8000) });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const text = await res.text();
+      return parseRSSItems(text, source, existingIds);
+    })
+  );
+  results.forEach(r => {
+    if (r.status === 'fulfilled') allItems.push(...r.value);
+  });
+  // Sort newest first (approximate — by array order from RSS)
+  return allItems.slice(0, 20);
+}
+
+function getFeedData() {
+  const stored = loadFeedState();
+  const todayMs = getTodayMs();
+  if (stored && stored.weekAnchor && stored.weekAnchor === todayMs && stored.items && stored.items.length > 0) {
+    return stored;
+  }
+  // Return seed data while async fetch runs
+  const seed = FEED_SEED_THIS_WEEK;
+  const fresh = {
+    weekAnchor: todayMs,
+    savedAt: Date.now(),
+    items: seed.map((item, i) => ({ ...item, isNew: i < 4 })),
+    fromSeed: true
+  };
+  saveFeedState(fresh);
+  return fresh;
+}
+
+async function fetchAndApplyRSSFeed() {
+  try {
+    const items = await fetchAllRSSFeeds();
+    if (items.length > 0) {
+      const newState = { weekAnchor: getTodayMs(), savedAt: Date.now(), items, fromSeed: false };
+      saveFeedState(newState);
+      renderFeed(items);
+      const luEl = document.getElementById('home-last-updated');
+      if (luEl) luEl.textContent = 'Live feed · Updated ' + new Date().toLocaleString('en-US', {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+    }
+  } catch(e) {
+    // RSS unavailable — seed data remains active
+  }
+}
+
+// WEEK N-1 SEED — the update live last week (week of Jun 16, 2026)
+// Shown on first load when no stored state exists yet.
+const FEED_SEED_LAST_WEEK = [
+  {id:"w1f001",date:"Jun 19, 2026",category:"alert",priority:"high",iconBg:"#9e2020",icon:"CO",title:"Colorado AI Act Effective Jun 30 \u2014 Employer Action Required",desc:"Colorado's AI Act takes effect June 30, 2026, requiring employers using high-risk AI systems in hiring, promotion, or termination to exercise reasonable care to prevent algorithmic discrimination. A safe harbor exists for employers who conduct documented bias testing. Review all AI-assisted HR tools now.",tags:["AI","Colorado","Discrimination"],link:"https://www.sixfifty.com/blog/key-employment-law-changes-for-jan-1st-2026/",linkLabel:"SixFifty guidance",isNew:false},
+  {id:"w1f002",date:"Jun 18, 2026",category:"state",priority:"high",iconBg:"#1a8a50",icon:"IL",title:"Illinois NICU Leave Law Active Since Jun 1 \u2014 Compliance Check",desc:"Illinois's new Neonatal Intensive Care Unit leave law took effect June 1, 2026. Employers with 16 to 50 employees must provide up to 10 days of unpaid NICU leave; employers with 51 or more must provide up to 20 days. Leave is in addition to FMLA and may be taken intermittently.",tags:["Illinois","Leave","NICU"],link:"https://www.adp.com/spark/articles/2026/01/48-state-specific-hr-compliance-changes-for-2026.aspx",linkLabel:"ADP 2026 guide",isNew:false},
+  {id:"w1f003",date:"Jun 17, 2026",category:"state",priority:"high",iconBg:"#1a8a50",icon:"MW",title:"IL and NJ Minimum Wage Increases Effective Jul 1 \u2014 Prep Now",desc:"Illinois moves to $15.60/hr and New Jersey to $15.90/hr on July 1, 2026. Chicago's city rate rises to $16.50/hr. Both state rates index to CPI going forward. Payroll systems must be updated before the July 1 effective date or penalties apply immediately.",tags:["Min Wage","Illinois","New Jersey"],link:"https://www.dol.gov/agencies/whd/minimum-wage/state",linkLabel:"DOL WHD tracker",isNew:false},
+  {id:"w1f004",date:"Jun 16, 2026",category:"pfml",priority:"med",iconBg:"#4a2d9e",icon:"MN",title:"Minnesota PFML Benefits Active \u2014 2026 Rate Confirmed at 0.88%",desc:"Minnesota's Paid Family and Medical Leave benefits launched January 1, 2026. The 2026 premium rate is 0.88% of wages up to the OASDI wage base, with a maximum employee contribution of 0.44%. Small employers with fewer than 30 employees qualify for a reduced employer share of 0.22%. Verify payroll configurations.",tags:["PFML","Minnesota","Benefits"],link:"https://paidleave.mn.gov",linkLabel:"MN Paid Leave",isNew:false},
+  {id:"w1f005",date:"Jun 16, 2026",category:"pfml",priority:"med",iconBg:"#4a2d9e",icon:"ME",title:"Maine PFML Benefits Launched May 1, 2026 \u2014 First Claims Processing",desc:"Maine's paid family and medical leave program began accepting benefit claims May 1, 2026. Employers with fewer than 15 employees are exempt from the employer share of the 1% combined contribution. Eligible employees receive up to 12 weeks at up to 90% wage replacement.",tags:["PFML","Maine","Benefits"],link:"https://www.maine.gov/pfml/",linkLabel:"ME PFML",isNew:false},
+  {id:"w1f006",date:"Jun 14, 2026",category:"state",priority:"med",iconBg:"#1a8a50",icon:"NY",title:"NY PFL 2026 \u2014 Rate Rises to 0.432%, Max Benefit $1,228/wk",desc:"New York's Paid Family Leave 2026 contribution rate increased to 0.432% of gross wages, with a maximum weekly benefit of $1,228.53. The annual employee cap is $411.91. Verify payroll deductions and ensure employees have received the updated required notice posting.",tags:["PFML","New York","NY PFL"],link:"https://paidfamilyleave.ny.gov",linkLabel:"NY PFL",isNew:false},
+  {id:"w1f007",date:"Jun 13, 2026",category:"federal",priority:"high",iconBg:"#0e82be",icon:"TIP",title:"One Big Beautiful Bill \u2014 Tip and OT Tax Deduction Creates W-2 Complexity",desc:"The 2025 tax law allows workers to deduct qualified tips and overtime pay on personal returns for 2025 through 2028, but employers remain responsible for withholding and face new W-2 reporting requirements. The IRS provided temporary penalty relief for 2025 filings. Employers should prepare payroll system updates for 2026 W-2 reporting now.",tags:["IRS","Tax","Payroll","W-2"],link:"https://hrexecutive.com/2026-hr-compliance-changes-what-leaders-cant-afford-to-miss/",linkLabel:"HR Executive",isNew:false},
+  {id:"w1f008",date:"Jun 12, 2026",category:"state",priority:"med",iconBg:"#1a8a50",icon:"CA",title:"California Automated Decision Tech Rules \u2014 Phased Compliance Ongoing",desc:"California's automated decision-making technology rules under the Consumer Privacy Act are in phased implementation since January 2026. Covered employers using automated tools for significant employment decisions without meaningful human involvement must complete risk assessments, provide advance notice, and often allow workers to opt out.",tags:["California","AI","CPRA"],link:"https://hrexecutive.com/2026-hr-compliance-changes-what-leaders-cant-afford-to-miss/",linkLabel:"HR Executive",isNew:false},
+  {id:"w1f009",date:"Jun 11, 2026",category:"state",priority:"med",iconBg:"#1a8a50",icon:"PT",title:"Pay Transparency \u2014 42% of Employers Now in a Covered Jurisdiction",desc:"A 2026 compliance survey found 42% of organizations operate where pay range transparency is required in job postings. Active states include CA, CO, NY, WA, IL, MD, NV, RI, CT, and HI. Several more states are legislating in 2026. Audit all job postings and document pay bands annually.",tags:["Pay Transparency","Multi-State"],link:"https://www.dol.gov/agencies/ofccp/pay-transparency",linkLabel:"DOL guidance",isNew:false},
+  {id:"w1f010",date:"Jun 10, 2026",category:"state",priority:"med",iconBg:"#1a8a50",icon:"CT",title:"Connecticut Sick Leave \u2014 Employer Threshold Drops to 11 Employees",desc:"Connecticut amended its paid sick leave law, lowering the employer coverage threshold from 25 to 11 employees effective January 1, 2026. Covered employees accrue 1 hour per 30 hours worked. Review headcount, update accrual systems, and revise offer letters for Connecticut operations.",tags:["Sick Leave","Connecticut"],link:null,linkLabel:null,isNew:false},
+  {id:"w1f011",date:"Jun 9, 2026",category:"federal",priority:"med",iconBg:"#0e82be",icon:"AI",title:"NJ Confirms AI Anti-Discrimination Coverage Under Existing Law",desc:"New Jersey clarified that its existing Law Against Discrimination already applies to AI-driven hiring and employment decisions without new legislation. This interpretation is expected to spread nationally. Employers in all states should document bias testing for any AI screening or performance tools.",tags:["AI","New Jersey","Discrimination"],link:"https://www.sixfifty.com/blog/key-employment-law-changes-for-jan-1st-2026/",linkLabel:"SixFifty",isNew:false},
+  {id:"w1f012",date:"Jun 8, 2026",category:"market",priority:"info",iconBg:"#0a6b6b",icon:"BLS",title:"BLS May 2026 Jobs Report \u2014 152K Payrolls Added, Unemployment 4.3%",desc:"The May 2026 employment situation showed 152,000 nonfarm payroll additions and unemployment at 4.3%. Healthcare added 41K jobs and government added 29K. Average hourly earnings rose 3.6% year-over-year to $36.54, reflecting continued wage pressure in services sectors.",tags:["BLS","Labor Market","Unemployment"],link:"https://www.bls.gov/news.release/empsit.nr0.htm",linkLabel:"BLS release",isNew:false},
+  {id:"w1f013",date:"Jun 7, 2026",category:"state",priority:"med",iconBg:"#1a8a50",icon:"OR",title:"Oregon Sick Leave \u2014 Blood Donation Now a Qualifying Reason",desc:"Oregon expanded its paid sick leave law to add blood donation as a qualifying reason for leave use, effective January 1, 2026. Oregon also amended its Family Leave law to restrict coverage of children to those under 18 or with substantially limiting impairments. Update employee handbooks for Oregon operations.",tags:["Sick Leave","Oregon"],link:null,linkLabel:null,isNew:false},
+  {id:"w1f014",date:"Jun 6, 2026",category:"pfml",priority:"info",iconBg:"#4a2d9e",icon:"DE",title:"Delaware PFML Active \u2014 0.8% Contribution Rate Holds Through 2027",desc:"Delaware's Paid Leave program launched January 2026. The 0.8% contribution rate split between employer and employee is confirmed through 2027. Employers with 10 or more employees are covered. Benefits of up to 12 weeks of paid leave are available for qualifying events.",tags:["PFML","Delaware","Benefits"],link:"https://dol.delaware.gov/familyleave/",linkLabel:"DE Family Leave",isNew:false},
+  {id:"w1f015",date:"Jun 5, 2026",category:"market",priority:"info",iconBg:"#0a6b6b",icon:"145",title:"145+ Compliance Changes Took Effect Jan 1, 2026 \u2014 Mid-Year Check",desc:"More than 145 compliance changes took effect January 1, 2026, including over 70 minimum wage increases across 15 or more states and dozens of localities. HR teams are now conducting mid-year audits. Key gaps found: sick leave accrual system updates, updated mandatory poster sets, and AI governance policies.",tags:["Compliance","Multi-State"],link:"https://www.brightmine.com/uk/resources/hr-compliance/employment-law-updates/global-legislative-changes-2026/",linkLabel:"Brightmine 2026",isNew:false},
+];
+
+let FEED_SEED_THIS_WEEK = [];
+
+const CAL_DATA = [
+  {month:'JUL',day:'1',event:'IL & NJ Minimum Wage Increase',sub:'IL $15.60/hr · NJ $15.90/hr effective',urgent:true},
+  {month:'JUL',day:'3',event:'BLS June 2026 Jobs Report',sub:'Official payroll & unemployment data',urgent:false},
+  {month:'JUL',day:'15',event:'EEO-1 Component 1 Filing Deadline',sub:'EEOC — employers 100+ / fed contractors 50+',urgent:true},
+  {month:'JUL',day:'31',event:'CO FAMLI Q2 Contribution Filing',sub:'Colorado FAMLI employer report',urgent:true},
+  {month:'JUL',day:'31',event:'WA L&I Q2 Workers Comp Report',sub:'Washington L&I premium filing',urgent:false},
+  {month:'AUG',day:'1',event:'EEOC AI Hiring Guidance Effective',sub:'Final guidance on algorithmic screening tools',urgent:true},
+  {month:'AUG',day:'1',event:'OR Paid Leave Q2 Report Due',sub:'Oregon Paid Leave program',urgent:false},
+  {month:'SEP',day:'1',event:'AK Minimum Wage Increase',sub:'Indexed to CPI — confirm new rate',urgent:false},
+  {month:'SEP',day:'30',event:'OSHA Form 300A Posting Period Ends',sub:'Annual injury/illness summary',urgent:false},
+  {month:'OCT',day:'1',event:'FL Minimum Wage Increase',sub:'Increases to $14.00/hr',urgent:false},
+];
+
+const SPOTLIGHT_STATES = [
+  {abbr:'CA',name:'California',mw:'$16.50',ue:'5.4%',pfml:'Yes — SDI/PFL',wc:'Required (1+)',notes:'Fast food workers: $20/hr under AB 1228. CPRA automated decision rules in phased rollout 2026.'},
+  {abbr:'TX',name:'Texas',mw:'$7.25',ue:'4.2%',pfml:'None',wc:'Optional (nonsubscriber)',notes:'Only state where WC is optional. Nonsubscribing employers face unlimited tort liability.'},
+  {abbr:'NY',name:'New York',mw:'$16.50',ue:'4.6%',pfml:'Yes — NY PFL',wc:'Required (1+)',notes:'2026 PFL rate: 0.432% of wages. Max benefit $1,228.53/wk. NYC same as state rate.'},
+  {abbr:'FL',name:'Florida',mw:'$13.00',ue:'3.4%',pfml:'None',wc:'Construction: 1+; Other: 4+',notes:'Increases $1/yr; reaches $15 in 2026. Oct 1 increase to $14.00/hr.'},
+  {abbr:'IL',name:'Illinois',mw:'$15.60',ue:'4.7%',pfml:'None statewide',wc:'Required (1+)',notes:'Jul 1 2026: $15.60/hr. Chicago: $16.50/hr. NICU leave law active Jun 1.'},
+  {abbr:'WA',name:'Washington',mw:'$16.66',ue:'4.8%',pfml:'Yes — WA PFML',wc:'Exclusive state fund (L&I)',notes:'Seattle: $20.76/hr. Monopolistic WC state. Q2 L&I report due Jul 31.'},
+  {abbr:'CO',name:'Colorado',mw:'$14.81',ue:'3.6%',pfml:'Yes — FAMLI',wc:'Pinnacol Assurance optional',notes:'AI Act effective Jun 30 2026. FAMLI Q2 filing due Jul 31. CPI-indexed wage.'},
+  {abbr:'MN',name:'Minnesota',mw:'$10.85',ue:'3.2%',pfml:'Yes — MN PFML',wc:'Private market',notes:'PFML benefits live Jan 2026. Rate 0.88% of wages. Small employer reduced rate available.'},
+];
+
+// ── N8N WEBHOOK CONFIG ─────────────────────────────────────────────────────────
+// Set this to your n8n webhook URL after importing the workflow.
+// Example: 'https://n8n.stoiclane.io/webhook/hr-compliance-feed'
+// Leave as empty string to use local seed data only.
+const WORKER_URL = 'https://n8n.stoiclane.io/webhook/hr-compliance-feed';
+
+
+// Determine which week's seed to show — kept for worker fallback compatibility
+function loadFeedState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch(e) {}
+  return null;
+}
+
+function saveFeedState(data) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  } catch(e) {}
+}
+
+function getFeedData() {
+  const stored = loadFeedState();
+  const todayMs = getTodayMs();
+
+  if (stored && stored.weekAnchor && stored.weekAnchor === todayMs && stored.items && stored.items.length > 0) {
+    // Same day — use stored data
+    return stored;
+  }
+
+  // New day or first load — use seed data while RSS fetches in background
+  const fresh = {
+    weekAnchor: todayMs,
+    savedAt: Date.now(),
+    items: FEED_SEED_THIS_WEEK.map((item, i) => ({ ...item, isNew: i < 4 })),
+    fromSeed: true
+  };
+  saveFeedState(fresh);
+  return fresh;
+}
+
+async function fetchFeedFromWorker(weekAnchor) {
+  const res = await fetch(WORKER_URL, { method: 'GET' });
+  if (!res.ok) throw new Error('n8n webhook returned ' + res.status);
+  const data = await res.json();
+  if (!Array.isArray(data.items)) throw new Error('Bad response shape');
+  return data.items;
+}
+
+function showSkeletons() {
+  document.getElementById('feed-container').innerHTML = Array(4).fill('').map(() => `
+    <div class="feed-skeleton">
+      <div style="display:flex;gap:10px;margin-bottom:10px">
+        <div style="width:32px;height:32px;border-radius:8px;background:var(--wash);animation:shimmer 1.4s ease infinite"></div>
+        <div style="flex:1">
+          <div class="skel-line w45"></div>
+          <div class="skel-line w80"></div>
+        </div>
+      </div>
+      <div class="skel-line w60"></div>
+      <div class="skel-line"></div>
+    </div>
+  `).join('');
+}
+
+function applyFeedState(items, weekAnchor) {
+  const btn = document.getElementById('refresh-btn');
+  const newState = { weekAnchor, savedAt: Date.now(), items };
+  saveFeedState(newState);
+  btn.classList.remove('spinning');
+  btn.style.pointerEvents = '';
+  document.getElementById('home-last-updated').textContent =
+    'Live feed · Updated ' + new Date().toLocaleString('en-US', {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+  renderFeed(items);
+  scheduleNextRefresh(getMsUntilNextMonday());
+}
+
+async function triggerRefresh() {
+  const btn = document.getElementById('refresh-btn');
+  btn.classList.add('spinning');
+  btn.style.pointerEvents = 'none';
+  showSkeletons();
+
+  // Try n8n worker first if configured
+  if (WORKER_URL) {
+    try {
+      const items = await fetchFeedFromWorker(getTodayMs());
+      applyFeedState(items, getTodayMs());
+      return;
+    } catch (err) {
+      // Worker unavailable — fall through to RSS
+    }
+  }
+
+  // Try live RSS feeds
+  try {
+    const items = await fetchAllRSSFeeds();
+    if (items.length > 0) {
+      applyFeedState(items, getTodayMs());
+      return;
+    }
+  } catch(err) {
+    // RSS blocked — fall through to seed
+  }
+
+  // Final fallback: seed data
+  setTimeout(() => {
+    const items = FEED_SEED_THIS_WEEK.map((item, i) => ({ ...item, isNew: i < 5 }));
+    applyFeedState(items, getTodayMs());
+  }, 600);
+}
+
+function renderFeed(items) {
+  const filtered = currentFilter === 'all' ? items : items.filter(i => i.category === currentFilter);
+  const container = document.getElementById('feed-container');
+  if (!filtered.length) {
+    container.innerHTML = '<div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;text-align:center;color:var(--muted);font-size:13px">No updates in this category right now.</div>';
+    return;
+  }
+  container.innerHTML = filtered.map(item => {
+    const catLabel = {federal:'Federal',state:'State',market:'Market',alert:'Alert',pfml:'PFML'}[item.category] || item.category;
+    return `
+    <div class="feed-item${item.isNew?' new-item':''}" data-cat="${item.category}">
+      <div class="fi-top">
+        <div class="fi-priority p-${item.priority}"></div>
+        <div class="fi-icon" style="background:${item.iconBg}">${item.icon}</div>
+        <div class="fi-body">
+          <div class="fi-meta">
+            <span class="fi-cat cat-${item.category}">${catLabel}</span>
+            <span class="fi-date">${item.date}</span>
+            ${item.isNew ? '<span class="fi-new-badge">New</span>' : ''}
+          </div>
+          <div class="fi-title">${item.title}</div>
+          <div class="fi-desc">${item.desc}</div>
+        </div>
+      </div>
+      ${item.tags.length || item.link ? `
+      <div class="fi-footer">
+        ${item.tags.map(t => `<span class="fi-tag">${t}</span>`).join('')}
+        ${item.link ? `<a class="fi-link" href="${item.link}" target="_blank" rel="noopener">${item.linkLabel} →</a>` : ''}
+      </div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function renderCalendar() {
+  document.getElementById('cal-list').innerHTML = CAL_DATA.map(ev => `
+    <div class="cal-item${ev.urgent?' cal-urgent':''}">
+      <div class="cal-date-box">
+        <div class="cal-month">${ev.month}</div>
+        <div class="cal-day">${ev.day}</div>
+      </div>
+      <div>
+        <div class="cal-event">${ev.event}</div>
+        <div class="cal-sub">${ev.sub}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderSpotlight() {
+  const s = SPOTLIGHT_STATES[spotlightIdx % SPOTLIGHT_STATES.length];
+  document.getElementById('state-spotlight').innerHTML = `
+    <div class="spotlight">
+      <div class="spot-state">
+        <div class="spot-name">${s.name} (${s.abbr})</div>
+        <div class="spot-row"><span class="spot-lbl">Min Wage</span><span class="spot-val">${s.mw}/hr</span></div>
+        <div class="spot-row"><span class="spot-lbl">Unemployment</span><span class="spot-val">${s.ue}</span></div>
+        <div class="spot-row"><span class="spot-lbl">Paid Leave</span><span class="spot-val">${s.pfml}</span></div>
+        <div class="spot-row"><span class="spot-lbl">Workers Comp</span><span class="spot-val" style="font-size:11px">${s.wc}</span></div>
+        <div style="margin-top:8px;font-size:11px;color:var(--muted);background:var(--wash);border:1px solid var(--line);border-radius:6px;padding:6px 8px;line-height:1.45">${s.notes}</div>
+      </div>
+      <div class="spot-nav">
+        <button onclick="spotlightIdx--;renderSpotlight()">← Prev</button>
+        <span style="font-size:11px;color:var(--muted)">${(spotlightIdx%SPOTLIGHT_STATES.length)+1} / ${SPOTLIGHT_STATES.length}</span>
+        <button onclick="spotlightIdx++;renderSpotlight()">Next →</button>
+      </div>
+    </div>`;
+}
+
+function scheduleNextRefresh(ms) {
+  if (refreshTimer) clearInterval(refreshTimer);
+  countdownSec = Math.floor(ms / 1000);
+
+  const updateCountdown = () => {
+    const secs = Math.max(0, countdownSec);
+    const days = Math.floor(secs / 86400);
+    const hrs = Math.floor((secs % 86400) / 3600);
+    const mins = Math.floor((secs % 3600) / 60);
+    const s = secs % 60;
+    let str;
+    if (days > 0) str = `${days}d ${hrs}h ${mins}m`;
+    else if (hrs > 0) str = `${hrs}h ${mins}m`;
+    else if (secs > 60) str = `${mins}m ${s}s`;
+    else str = `${secs}s`;
+    const el = document.getElementById('countdown');
+    if (el) el.textContent = str;
+    countdownSec--;
+    if (countdownSec < 0) {
+      triggerRefresh();
+    }
+  };
+  updateCountdown();
+  refreshTimer = setInterval(updateCountdown, 1000);
+}
+
+function initHomePage() {
+  const feedData = getFeedData();
+
+  // Show last-refreshed label
+  const luEl = document.getElementById('home-last-updated');
+  if (luEl) {
+    if (feedData.fromSeed) {
+      luEl.textContent = 'Loading live feed…';
+    } else {
+      const savedAt = feedData.savedAt;
+      luEl.textContent = savedAt
+        ? 'Live feed · Loaded ' + new Date(savedAt).toLocaleString('en-US', {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})
+        : 'Live feed';
+    }
+  }
+
+  renderFeed(feedData.items);
+  renderCalendar();
+  renderSpotlight();
+
+  // Schedule countdown to tomorrow 00:00
+  scheduleNextRefresh(getMsUntilNextMonday());
+
+  // Kick off live RSS fetch in background (replaces seed with real data)
+  fetchAndApplyRSSFeed();
+
+  // Filter buttons
+  document.querySelectorAll('.feed-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.feed-filter').forEach(b => b.classList.remove('on'));
+      btn.classList.add('on');
+      currentFilter = btn.dataset.filter;
+      renderFeed(getFeedData().items);
+    });
+  });
+}
+
+
+// =============================================================
+// HR COMPLIANCE BURDEN SCORE ENGINE
+// =============================================================
+// Score dimensions (each 0-100, weighted):
+//   mw  = minimum wage gap from federal floor (15%)
+//   pfml = PFML complexity (20%)
+//   pt   = pay transparency (15%)
+//   wc   = workers comp complexity (15%)
+//   sl   = sick leave mandates (15%)
+//   ad   = anti-discrimination / AI law breadth (20%)
+//
+// Source tiers (identical to Archer Lewis tax map):
+//   T1 = primary statute / state agency (score: 100)
+//   T2 = enacted bill / formal guidance  (score: 62)
+//   T3 = aggregator / secondary source   (score: 38)
+//
+// Confidence = avg tier score across all cited data points
+// Tier: A=0-39, B=40-59, C=60-79, D=80-100
+
+// ── Citation registry ─────────────────────────────────────────
+const HC = {
+  // Federal
+  dol_whd:   ['DOL Wage & Hour Division — State Minimum Wage Laws','https://www.dol.gov/agencies/whd/minimum-wage/state',1],
+  dol_flsa:  ['DOL — Fair Labor Standards Act','https://www.dol.gov/agencies/whd/flsa',1],
+  eeoc_main: ['EEOC — State and Local Fair Employment Laws','https://www.eeoc.gov/state-and-local-fair-employment-laws',1],
+  eeoc_ai:   ['EEOC — Artificial Intelligence & Algorithmic Fairness','https://www.eeoc.gov/artificial-intelligence-and-algorithmic-fairness',1],
+  bls_main:  ['BLS — Occupational Employment & Wage Statistics','https://www.bls.gov/oes/',1],
+  shrm_pt:   ['SHRM — Pay Transparency State Laws Tracker','https://www.shrm.org/topics-tools/employment-law-compliance/pay-transparency',3],
+  brightmine:['BrightMine — Employment Law State by State','https://www.brightmine.com/us/resources/',3],
+  tf_labor:  ['Tax Foundation — State Business Tax Climate Index (Labor Component)','https://taxfoundation.org/research/all/state/2025-state-business-tax-climate-index/',3],
+  // State-specific: min wage
+  ca_dlse:   ['CA Labor Commissioner — Minimum Wage','https://www.dir.ca.gov/dlse/faq_minimumwage.htm',1],
+  ny_dol:    ['NY DOL — Minimum Wage','https://dol.ny.gov/minimum-wage',1],
+  wa_lni:    ['WA L&I — Minimum Wage','https://lni.wa.gov/workers-rights/wages/minimum-wage/',1],
+  il_dol:    ['IL DOL — Minimum Wage','https://labor.illinois.gov/content/dam/soi/en/web/idol/docs/MW%20Poster%202024%20English.pdf',1],
+  co_cdle:   ['CO CDLE — Minimum Wage','https://cdle.colorado.gov/colorado-minimum-wage',1],
+  nj_dol:    ['NJ DOL — Minimum Wage','https://www.nj.gov/labor/wagehour/content/MW_poster.pdf',1],
+  ma_dol:    ['MA EOLWD — Minimum Wage','https://www.mass.gov/minimum-wage-in-massachusetts',1],
+  or_boli:   ['OR BOLI — Minimum Wage','https://www.oregon.gov/boli/workers/pages/minimum-wage.aspx',1],
+  dc_does:   ['DC DOES — Minimum Wage','https://does.dc.gov/page/dc-minimum-wage',1],
+  ct_dol:    ['CT DOL — Minimum Wage','https://portal.ct.gov/dol/divisions/wage-and-workplace-standards/minimum-wage',1],
+  az_ica:    ['AZ ICA — Minimum Wage','https://www.azica.gov/divisions/labor-department-minimum-wage',1],
+  mn_dli:    ['MN DLI — Minimum Wage','https://www.dli.mn.gov/business/employment-practices/minimum-wage-minnesota',1],
+  // PFML
+  ca_edd:    ['CA EDD — Paid Family Leave','https://edd.ca.gov/en/disability/paid_family_leave/',1],
+  nj_pfml:   ['NJ DOL — Family Leave Insurance','https://www.nj.gov/labor/myleavebenefits/workers/fli/',1],
+  ny_pfl:    ['NY PFL — Paid Family Leave','https://paidfamilyleave.ny.gov',1],
+  wa_pfml:   ['WA Paid Family & Medical Leave','https://paidleave.wa.gov',1],
+  ma_pfml:   ['MA PFML','https://www.mass.gov/orgs/department-of-family-and-medical-leave',1],
+  ct_pfml:   ['CT Paid Leave Authority','https://ctpaidleave.org',1],
+  or_pfml:   ['OR Paid Leave','https://paidleave.oregon.gov',1],
+  co_famli:  ['CO FAMLI','https://famli.colorado.gov',1],
+  mn_pfml:   ['MN Paid Leave','https://paidleave.mn.gov',1],
+  md_pfml:   ['MD Time to Care Act','https://www.labor.maryland.gov/paidleave/',1],
+  de_pfml:   ['DE Paid Leave','https://dol.delaware.gov/familyleave/',1],
+  me_pfml:   ['ME PFML','https://www.maine.gov/pfml/',1],
+  dc_pfml:   ['DC Paid Family Leave','https://dcpaidfamilyleave.dc.gov',1],
+  ri_tci:    ['RI TCI — Temporary Caregiver Insurance','https://dlt.ri.gov/individuals/temporary-disability-caregiver-insurance',1],
+  // Pay transparency
+  ca_dfeh:   ['CA CRD — Pay Transparency','https://calcivilrights.ca.gov/paydatareporting/',1],
+  co_pt:     ['CO CDLE — Equal Pay for Equal Work','https://cdle.colorado.gov/equalpaytransparency',1],
+  ny_pt:     ['NY DOL — Pay Transparency','https://dol.ny.gov/pay-transparency',1],
+  wa_pt:     ['WA DOL — Pay Transparency','https://www.lni.wa.gov/workers-rights/wages/equal-pay-opportunities-act/',1],
+  il_pt:     ['IL DOL — Equal Pay Act','https://labor.illinois.gov/content/dam/soi/en/web/idol/docs/IEPA-FAQ.pdf',1],
+  md_pt:     ['MD OAG — Equal Pay','https://www.marylandattorneygeneral.gov/Pages/civil-rights/employment/equal-pay.aspx',1],
+  nv_pt:     ['NV LC — Pay Transparency','https://labor.nv.gov/Employers/Pay_Transparency/',1],
+  ct_pt:     ['CT DOL — Pay Equity','https://portal.ct.gov/dol/divisions/wage-and-workplace-standards/pay-equity',1],
+  mn_pt:     ['MN DLI — Pay Transparency','https://www.dli.mn.gov/business/employment-practices/pay-transparency',1],
+  // Sick leave
+  ca_sl:     ['CA Labor Commissioner — Paid Sick Leave','https://www.dir.ca.gov/dlse/paid_sick_leave.htm',1],
+  ny_sl:     ['NY DOL — Paid Sick Leave','https://dol.ny.gov/paid-sick-leave',1],
+  wa_sl:     ['WA L&I — Paid Sick Leave','https://www.lni.wa.gov/workers-rights/leave/paid-sick-leave/',1],
+  nj_sl:     ['NJ DOL — Earned Sick Leave','https://www.nj.gov/labor/wagehour/lawregs/nj_state_wage_and_hour_laws_and_regulations.shtml',1],
+  ma_sl:     ['MA EOLWD — Earned Sick Time','https://www.mass.gov/earned-sick-time',1],
+  or_sl:     ['OR BOLI — Sick Leave','https://www.oregon.gov/boli/workers/pages/sick-leave.aspx',1],
+  il_sl:     ['IL DOL — Employee Sick Leave Act','https://labor.illinois.gov/content/dam/soi/en/web/idol/docs/Illinois_Paid_Leave_for_All_Workers_Act.pdf',1],
+  ct_sl:     ['CT DOL — Paid Sick Leave','https://portal.ct.gov/dol/divisions/wage-and-workplace-standards/paid-sick-leave',1],
+  md_sl:     ['MD DOL — Healthy Working Families Act','https://www.dllr.state.md.us/paidleave/',1],
+  dc_sl:     ['DC DOES — Accrued Sick & Safe Leave','https://does.dc.gov/page/leave-laws-district-columbia',1],
+  mn_sl:     ['MN DLI — Earned Sick and Safe Time','https://www.dli.mn.gov/sick-time',1],
+  // Workers comp
+  ca_dwc:    ['CA DIR — Workers Compensation','https://www.dir.ca.gov/dwc/dwc_home_page.htm',1],
+  ny_wcb:    ['NY Workers Compensation Board','https://www.wcb.ny.gov',1],
+  wa_lni_wc: ['WA L&I — Workers Compensation','https://lni.wa.gov/insurance/',1],
+  oh_bwc:    ['OH BWC — State Insurance Fund','https://info.bwc.ohio.gov',1],
+  nd_wsi:    ['ND Workforce Safety & Insurance','https://www.workforcesafety.com',1],
+  wy_wscd:   ['WY Dept of Workforce Services — WC','https://wyomingworkforce.org/workers/workers-compensation/',1],
+  // AI/anti-discrimination
+  co_ai:     ['CO AI Act (SB 24-205) — High-Risk AI Systems','https://leg.colorado.gov/bills/sb24-205',1],
+  il_ai:     ['IL DCFS — AI Video Interview Act','https://labor.illinois.gov/content/dam/soi/en/web/idol/docs/AI-Act-FAQ.pdf',1],
+  nyc_ll144: ['NYC Local Law 144 — Automated Employment Decision Tools','https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page',1],
+  ca_cpra:   ['CA CPRA — Automated Decision Technology','https://cppa.ca.gov/regulations/pdf/cpparegtext.pdf',1],
+  nj_lad:    ['NJ LAD — AI Discrimination Coverage','https://www.njcivilrights.gov/njlad/',1],
+};
+
+// ── Per-state scoring data ────────────────────────────────────
+// Each entry: {
+//   mw:  {score, val, note, cites[]},
+//   pfml:{score, val, note, cites[]},
+//   pt:  {score, val, note, cites[]},
+//   wc:  {score, val, note, cites[]},
+//   sl:  {score, val, note, cites[]},
+//   ad:  {score, val, note, cites[]},
+// }
+// Weights: mw=0.15, pfml=0.20, pt=0.15, wc=0.15, sl=0.15, ad=0.20
+const W = {mw:0.15,pfml:0.20,pt:0.15,wc:0.15,sl:0.15,ad:0.20};
+
+let SCORE_DATA = {};
+
+// ── Compute overall score per state ────────────────────────────
+function computeScore(id) {
+  const d = SCORE_DATA[id];
+  if (!d) return {total:0, tier:'A', dims:{}};
+  const total = Math.round(
+    d.mw.s  * W.mw  +
+    d.pfml.s * W.pfml +
+    d.pt.s  * W.pt  +
+    d.wc.s  * W.wc  +
+    d.sl.s  * W.sl  +
+    d.ad.s  * W.ad
+  );
+  const tier = total >= 80 ? 'D' : total >= 60 ? 'C' : total >= 40 ? 'B' : 'A';
+  return {total, tier, dims:{mw:d.mw.s, pfml:d.pfml.s, pt:d.pt.s, wc:d.wc.s, sl:d.sl.s, ad:d.ad.s}};
+}
+
+// Precompute all scores
+const SCORES = {};
+function computeAllScores(){ Object.keys(SCORE_DATA).forEach(id => { SCORES[id] = computeScore(id); }); }
+
+// ── Map color by tier ──────────────────────────────────────────
+function scoreC(id) {
+  if (!SCORES[id]) return '#1a1e26';
+  const t = SCORES[id].tier;
+  if (t === 'D') return '#6a1010';
+  if (t === 'C') return '#7a4a00';
+  if (t === 'B') return '#2a5a1a';
+  return '#1a3a28';
+}
+
+// ── Filter state ───────────────────────────────────────────────
+let _sfFilter = 'all';
+function setSF(el, val) {
+  document.querySelectorAll('.sf').forEach(b => b.classList.remove('on'));
+  el.classList.add('on');
+  _sfFilter = val;
+  renderScoreTable();
+}
+
+// ── Sort state ─────────────────────────────────────────────────
+let _scoreSort = {col:'score', dir:-1};
+function sortScore(col) {
+  if (_scoreSort.col === col) _scoreSort.dir *= -1;
+  else { _scoreSort.col = col; _scoreSort.dir = -1; }
+  renderScoreTable();
+}
+
+// ── Tier badge HTML ────────────────────────────────────────────
+function tierBadge(tier) {
+  const cls = 'tier-' + tier.toLowerCase();
+  const label = {A:'Tier A — Low', B:'Tier B — Moderate', C:'Tier C — High', D:'Tier D — Very High'}[tier];
+  return `<span class="${cls}">${label}</span>`;
+}
+
+// ── Citation chip (identical to Archer Lewis ecite pattern) ────
+function hcite(key) {
+  const c = HC[key];
+  if (!c) return '';
+  const tier = c[2];
+  const score = tier===1?100:tier===2?62:38;
+  const color = tier===1?'#3adf8a':tier===2?'#f0c040':'#9aaec4';
+  const bgColor = tier===1?'#1a3a2a':tier===2?'#3a2a00':'#1a1e26';
+  const borderColor = tier===1?'#2a6a4a':tier===2?'#6a4a00':'#2a2f3d';
+  const label = tier===1?'High':tier===2?'Med':'Low';
+  const tierDesc = tier===1?'Primary statute / state agency':tier===2?'Enacted bill / formal guidance':'Aggregator — verify against primary';
+  const chip = `<span class="field-conf-chip" style="background:${bgColor};color:${color};border:1px solid ${borderColor}" title="Confidence ${score}/100 · ${label}\n${tierDesc}">${score}</span>`;
+  return `<span class="fnwrap"><a class="b-t${tier}" href="${c[1]}" target="_blank" rel="noopener" title="${c[0]}">[T${tier}]↗</a><span class="fnpop" style="pointer-events:none"><b>${c[0]}</b><br>Tier ${tier} &mdash; ${tierDesc}<br><a href="${c[1]}" target="_blank" rel="noopener" style="color:#61c3f4;word-break:break-all;font-size:10.5px;pointer-events:auto;display:block;margin-top:3px">${c[1]}</a></span></span>${chip}`;
+}
+
+// ── Confidence badge per state ─────────────────────────────────
+function scoreConfBadge(id) {
+  const d = SCORE_DATA[id];
+  if (!d) return '';
+  const allCites = ['mw','pfml','pt','wc','sl','ad'].flatMap(dim => d[dim].c || []);
+  const tiers = allCites.map(k => HC[k] ? HC[k][2] : 3);
+  const avg = tiers.length ? tiers.reduce((a,b)=>a+b,0)/tiers.length : 3;
+  const score = Math.round(avg===1?100:avg<=1.5?82:avg<=2?62:avg<=2.5?50:38);
+  const color = score>=80?'#3adf8a':score>=60?'#f0c040':'#9aaec4';
+  const bg = score>=80?'#1a3a2a':score>=60?'#3a2a00':'#1a1e26';
+  return `<div style="text-align:right"><div style="font-size:20px;font-weight:800;color:${color}">${score}</div><div style="font-size:10px;color:var(--muted);font-weight:600">CONFIDENCE</div><div class="score-bar-wrap" style="width:70px;margin-left:auto"><div class="score-bar" style="width:${score}%;background:${color}"></div></div></div>`;
+}
+
+// ── Render score KPIs ──────────────────────────────────────────
+function renderScoreKPIs() {
+  const el = document.getElementById('score-kpis');
+  if (!el) return;
+  const ids = Object.keys(SCORES);
+  const tierCounts = {A:0,B:0,C:0,D:0};
+  ids.forEach(id => tierCounts[SCORES[id].tier]++);
+  const scores = ids.map(id => SCORES[id].total);
+  const avg = Math.round(scores.reduce((a,b)=>a+b,0)/scores.length);
+  el.innerHTML = `
+    <div class="score-stat"><div class="score-stat-num" style="color:#6adf6a">${tierCounts.A}</div><div class="score-stat-label">Tier A &mdash; Low Burden</div></div>
+    <div class="score-stat"><div class="score-stat-num" style="color:#aad06a">${tierCounts.B}</div><div class="score-stat-label">Tier B &mdash; Moderate</div></div>
+    <div class="score-stat"><div class="score-stat-num" style="color:#f0c040">${tierCounts.C}</div><div class="score-stat-label">Tier C &mdash; High</div></div>
+    <div class="score-stat"><div class="score-stat-num" style="color:#f08080">${tierCounts.D}</div><div class="score-stat-label">Tier D &mdash; Very High</div></div>
+    <div class="score-stat"><div class="score-stat-num">${avg}</div><div class="score-stat-label">National Average Score</div></div>
+    <div class="score-stat"><div class="score-stat-num">${ids.reduce((best,id) => SCORES[id].total > SCORES[best].total ? id : best)}</div><div class="score-stat-label">Highest Burden State</div></div>`;
+}
+
+// ── Render score table ─────────────────────────────────────────
+let _scoreTableBuilt = false;
+function renderScoreTable() {
+  const tbody = document.getElementById('score-tbody');
+  if (!tbody) return;
+  let rows = Object.keys(SCORE_DATA).map(id => ({
+    id, name: SN[id]||id, ...SCORES[id],
+    mw: SCORE_DATA[id].mw.s, pfml: SCORE_DATA[id].pfml.s,
+    pt: SCORE_DATA[id].pt.s, wc: SCORE_DATA[id].wc.s,
+    sl: SCORE_DATA[id].sl.s, ad: SCORE_DATA[id].ad.s,
+  }));
+  // Filter
+  if (_sfFilter !== 'all') rows = rows.filter(r => r.tier === _sfFilter);
+  // Sort
+  const col = _scoreSort.col;
+  rows.sort((a,b) => {
+    const av = col==='name' ? a.name : (a[col]||0);
+    const bv = col==='name' ? b.name : (b[col]||0);
+    if (av < bv) return -_scoreSort.dir;
+    if (av > bv) return _scoreSort.dir;
+    return 0;
+  });
+
+  function dimBar(s) {
+    const color = s>=80?'#f08080':s>=60?'#f0c040':s>=40?'#aad06a':'#6adf6a';
+    return `<span class="mini-bar-wrap"><span class="mini-bar" style="width:${s}%;background:${color}"></span></span>`;
+  }
+
+  tbody.innerHTML = rows.map((r,i) => `
+    <tr onclick="showScoreDetail('${r.id}')" style="cursor:pointer">
+      <td style="color:var(--muted);font-size:11px">${i+1}</td>
+      <td class="st-state">${r.id} &mdash; ${r.name}</td>
+      <td class="st-score" style="color:${r.total>=80?'#f08080':r.total>=60?'#f0c040':r.total>=40?'#aad06a':'#6adf6a'}">${r.total}${dimBar(r.total)}</td>
+      <td>${tierBadge(r.tier)}</td>
+      <td>${r.mw}${dimBar(r.mw)}</td>
+      <td>${r.pfml}${dimBar(r.pfml)}</td>
+      <td>${r.pt}${dimBar(r.pt)}</td>
+      <td>${r.wc}${dimBar(r.wc)}</td>
+      <td>${r.sl}${dimBar(r.sl)}</td>
+      <td>${r.ad}${dimBar(r.ad)}</td>
+    </tr>`).join('');
+}
+
+// ── Render score detail panel ──────────────────────────────────
+function showScoreDetail(id) {
+  const d = SCORE_DATA[id];
+  const sc = SCORES[id];
+  if (!d || !sc) return;
+  const name = SN[id] || id;
+
+  const detailEl = document.getElementById('score-detail');
+  if (!detailEl) return;
+  detailEl.style.display = '';
+  const nameEl = document.getElementById('score-detail-name');
+  const subEl = document.getElementById('score-detail-sub');
+  const badgeEl = document.getElementById('score-detail-badge');
+  const dimGridEl = document.getElementById('score-dim-grid');
+  const sourcesEl = document.getElementById('score-sources-list');
+  if (nameEl) nameEl.textContent = id + ' \u2014 ' + name;
+  if (subEl) subEl.textContent = 'Overall score: ' + sc.total + '/100 \u00b7 ' + {A:'Low burden',B:'Moderate burden',C:'High burden',D:'Very high burden'}[sc.tier];
+  if (badgeEl) badgeEl.innerHTML = tierBadge(sc.tier) + '&nbsp;&nbsp;' + scoreConfBadge(id);
+
+  const dims = [
+    {key:'mw',  label:'Minimum Wage',        weight:'15%'},
+    {key:'pfml',label:'PFML Complexity',      weight:'20%'},
+    {key:'pt',  label:'Pay Transparency',     weight:'15%'},
+    {key:'wc',  label:'Workers Comp',         weight:'15%'},
+    {key:'sl',  label:'Sick Leave',           weight:'15%'},
+    {key:'ad',  label:'Anti-Discrimination / AI', weight:'20%'},
+  ];
+
+  if (dimGridEl) dimGridEl.innerHTML = dims.map(dim => {
+    const dd = d[dim.key];
+    const barColor = dd.s>=80?'#f08080':dd.s>=60?'#f0c040':dd.s>=40?'#aad06a':'#6adf6a';
+    const cites = (dd.c||[]).map(hcite).join(' ');
+    return `<div class="score-dim">
+      <div class="score-dim-title">${dim.label} <span style="color:var(--muted);font-weight:400">(weight ${dim.weight})</span></div>
+      <div class="score-dim-val">${dd.v}</div>
+      <div class="score-bar-wrap"><div class="score-bar" style="width:${dd.s}%;background:${barColor}"></div></div>
+      <div style="display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);margin-bottom:5px"><span>Score: <strong style="color:${barColor}">${dd.s}/100</strong></span>${cites}</div>
+      <div class="score-dim-note">${dd.n}</div>
+    </div>`;
+  }).join('');
+
+  // Source citations table
+  const seen = new Set();
+  const sources = [];
+  dims.forEach(dim => {
+    (d[dim.key].c||[]).forEach(key => {
+      if (seen.has(key)) return;
+      seen.add(key);
+      const src = HC[key];
+      if (src) sources.push({key, name:src[0], url:src[1], tier:src[2], dim:dim.label});
+    });
+  });
+
+  if (sourcesEl) sourcesEl.innerHTML = sources.map(s => {
+    const tierColor = s.tier===1?'#3adf8a':s.tier===2?'#f0c040':'#9aaec4';
+    const tierBg = s.tier===1?'#1a3a2a':s.tier===2?'#3a2a00':'#1a1e26';
+    return `<div class="score-source-row">
+      <span style="background:${tierBg};color:${tierColor};font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;flex:none">T${s.tier}</span>
+      <span style="flex:0 0 140px;font-size:11px;color:var(--muted)">${s.dim}</span>
+      <span style="flex:1;font-size:12px;color:var(--ink)">${s.name}</span>
+      <a href="${s.url}" target="_blank" rel="noopener" style="color:#61c3f4;font-size:11.5px;font-weight:600;flex:none;white-space:nowrap">Open ↗</a>
+    </div>`;
+  }).join('');
+
+}
+
+// ── Score map ─────────────────────────────────────────────────
+let scoreMB = false;
+let scoreMapRef = null;
+function buildScoreMap() {
+  scoreMB = true;
+  buildMap('score-map-svg', scoreC,
+    id => { const sc=SCORES[id]; return {n:SN[id]||id, s:sc?'Score '+sc.total+' · Tier '+sc.tier:''}; },
+    (id,ft,path,svg,mz,mg) => {
+      if (scoreMapRef && scoreMapRef._sel===id) {
+        scoreMapRef._sel=null;
+        document.getElementById('score-reset-btn').classList.remove('vis');
+        resetZoom(svg,mz,mg);
+        svg.selectAll('.state-path').classed('active',false).classed('dimmed',false);
+      } else {
+        if (scoreMapRef) scoreMapRef._sel=id;
+        document.getElementById('score-reset-btn').classList.add('vis');
+        zoomTo(ft[id],path,svg,mz,mg);
+        svg.selectAll('.state-path').classed('active',d=>{ const sid=FIPS[String(d.id).padStart(2,'0')]; return sid===id; }).classed('dimmed',d=>{ const sid=FIPS[String(d.id).padStart(2,'0')]; return sid&&sid!==id; });
+        showScoreDetail(id);
+      }
+    }
+  ).then(ref => { scoreMapRef = ref; scoreMapRef._sel=null; });
+}
+function resetScoreMap() {
+  if (scoreMapRef) scoreMapRef.resetZoom();
+}
+
+// ── Init score tab ────────────────────────────────────────────
+function initScoreTab() {
+  if (!SCORES || !Object.keys(SCORES).length) return;
+  renderScoreKPIs();
+  renderScoreTable();
+  if (!scoreMB) buildScoreMap();
+}
+
+
+// ═══════════════════════════════════════════════════════
+// PAID LEAVE DATA
+// [hasProgram, type, employerContrib%, employeeContrib%, maxWeeks, effectiveYear, note]
+// type: 'pfml'=full PFML, 'tdi'=TDI only, 'partial'=limited, 'none'
+// ═══════════════════════════════════════════════════════
+const PL={
+  AL:{has:false,type:'none',note:'No state PFML program.'},
+  AK:{has:false,type:'none',note:'No state PFML program.'},
+  AZ:{has:false,type:'none',note:'No state PFML program.'},
+  AR:{has:false,type:'none',note:'No state PFML program.'},
+  CA:{has:true,type:'pfml',er:0,ee:1.0,wks:8,yr:2004,note:'CA SDI/PFL — employee-funded 1%; 60-90% wage replacement; all employers; most mature program in US.'},
+  CO:{has:true,type:'pfml',er:0.45,ee:0.45,wks:12,yr:2024,note:'CO FAMLI — 0.9% split; 12 wks family+medical; all employers 1+; Q2 2026 filing due Jul 31.'},
+  CT:{has:true,type:'pfml',er:0,ee:0.5,wks:12,yr:2022,note:'CT Paid Leave — employee-funded 0.5%; all employers 1+; benefits since Jan 2022.'},
+  DE:{has:true,type:'pfml',er:0.4,ee:0.4,wks:12,yr:2026,note:'DE Paid Leave — 0.8% split; benefits launched Jan 2026; employers 10+ EE.'},
+  DC:{has:true,type:'pfml',er:0.26,ee:0.26,wks:12,yr:2020,note:'DC PFL — 0.52% split; parental up to 12 wks; among most generous programs.'},
+  FL:{has:false,type:'none',note:'No state PFML program.'},
+  GA:{has:false,type:'none',note:'No state PFML program.'},
+  HI:{has:true,type:'tdi',er:0,ee:0.5,wks:26,yr:1969,note:'HI TDI (Prepaid Healthcare) — short-term disability including pregnancy; 26 wks; PFML expansion pending.'},
+  ID:{has:false,type:'none',note:'No state PFML program.'},
+  IL:{has:true,type:'partial',er:0,ee:0,wks:12,yr:2024,note:'IL PLAWA — 40 hrs/yr general paid leave (not true PFML); no contributions required; all employers.'},
+  IN:{has:false,type:'none',note:'No state PFML program.'},
+  IA:{has:false,type:'none',note:'No state PFML program.'},
+  KS:{has:false,type:'none',note:'No state PFML program.'},
+  KY:{has:false,type:'none',note:'No state PFML program.'},
+  LA:{has:false,type:'none',note:'No state PFML program.'},
+  ME:{has:true,type:'pfml',er:0.5,ee:0.5,wks:12,yr:2026,note:'ME PFML — 1% split; benefits launched May 2026; employers 15+ EE for employer share.'},
+  MD:{has:true,type:'pfml',er:0.45,ee:0.45,wks:12,yr:2026,note:'MD Time to Care Act — 0.90% split; benefits begin Jul 2026; employers 15+ EE for employer share.'},
+  MA:{has:true,type:'pfml',er:0.441,ee:0.441,wks:26,yr:2021,note:'MA PFML — most generous program; up to 26 wks combined; 0.88% split; all employers 1+.'},
+  MI:{has:true,type:'partial',er:0,ee:0,wks:8,yr:2019,note:'MI Paid Medical Leave Act — 40 hrs/yr; employers 50+ EE only; limited scope, not true PFML.'},
+  MN:{has:true,type:'pfml',er:0.44,ee:0.44,wks:24,yr:2026,note:'MN PFML — 0.88% split; benefits active Jan 2026; up to 12 wks family + 12 wks medical; all employers.'},
+  MS:{has:false,type:'none',note:'No state PFML program.'},
+  MO:{has:false,type:'none',note:'No state PFML program.'},
+  MT:{has:false,type:'none',note:'No state PFML program.'},
+  NE:{has:false,type:'none',note:'No state PFML program.'},
+  NV:{has:false,type:'none',note:'No state PFML program.'},
+  NH:{has:true,type:'partial',er:0,ee:0,wks:0,yr:2021,note:'NH Granite State Paid Leave — voluntary employer opt-in only; no mandate; no employee contribution.'},
+  NJ:{has:true,type:'pfml',er:0,ee:0.09,wks:12,yr:2009,note:'NJ FLI + TDI — employee-funded; up to 12 wks at 85% WR; all employers; mature combined program.'},
+  NM:{has:false,type:'none',note:'No state PFML program.'},
+  NY:{has:true,type:'pfml',er:0,ee:0.432,wks:12,yr:2018,note:'NY PFL — employee-funded 0.432%; up to 12 wks at 67% AWW; all employers; annual benefit updates.'},
+  NC:{has:false,type:'none',note:'No state PFML program.'},
+  ND:{has:false,type:'none',note:'No state PFML program.'},
+  OH:{has:false,type:'none',note:'No state PFML program.'},
+  OK:{has:false,type:'none',note:'No state PFML program.'},
+  OR:{has:true,type:'pfml',er:0.6,ee:0.4,wks:12,yr:2023,note:'OR Paid Leave — 1% split (60/40 ER/EE); benefits since Sep 2023; all employers 1+.'},
+  PA:{has:false,type:'none',note:'No state PFML program.'},
+  RI:{has:true,type:'tdi',er:0,ee:1.1,wks:6,yr:2014,note:'RI TCI (Temporary Caregiver Insurance) — employee-funded 1.1%; up to 6 wks; expanding scope.'},
+  SC:{has:false,type:'none',note:'No state PFML program.'},
+  SD:{has:false,type:'none',note:'No state PFML program.'},
+  TN:{has:false,type:'none',note:'No state PFML program.'},
+  TX:{has:false,type:'none',note:'No state PFML program.'},
+  UT:{has:false,type:'none',note:'No state PFML program.'},
+  VT:{has:true,type:'partial',er:0,ee:0,wks:12,yr:2004,note:'VT FLA — job-protected leave; partial pay via state program for some; employers 10+; limited.'},
+  VA:{has:false,type:'none',note:'No state PFML program.'},
+  WA:{has:true,type:'pfml',er:0.37,ee:0.37,wks:18,yr:2020,note:'WA PFML — up to 18 wks combined; 0.74% split; mature program; high wage replacement up to 90%.'},
+  WV:{has:false,type:'none',note:'No state PFML program.'},
+  WI:{has:false,type:'none',note:'No state PFML program.'},
+  WY:{has:false,type:'none',note:'No state PFML program.'},
+};
+
+function plC(id){
+  const d=PL[id];
+  if(!d||!d.has) return '#1a1e26';
+  if(d.type==='pfml') return '#2a4a8a';
+  if(d.type==='tdi') return '#1a6b6b';
+  return '#4a3a1a';
+}
+
+// ═══════════════════════════════════════════════════════
+// WORKERS COMP DATA
+// type: 'exclusive'=monopolistic state fund only
+//       'competitive'=state fund + private market
+//       'private'=private market only
+//       'optional'=employer can opt out (TX only)
+// ═══════════════════════════════════════════════════════
+const WCD={
+  AL:{type:'private',thresh:'1+',note:'Private market required; all employers with 1+ EE.'},
+  AK:{type:'private',thresh:'1+',note:'Private market required; all employers.'},
+  AZ:{type:'private',thresh:'1+',note:'Private market; State Compensation Fund also available.'},
+  AR:{type:'private',thresh:'3+',note:'Private market; employers with 3+ EE.'},
+  CA:{type:'competitive',thresh:'1+',note:'SCIF (State Compensation Insurance Fund) competes with private market; among highest premium states.'},
+  CO:{type:'competitive',thresh:'1+',note:'Pinnacol Assurance (state fund) competes with private; all employers.'},
+  CT:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  DE:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  DC:{type:'private',thresh:'1+',note:'Private market; high oversight by DOES.'},
+  FL:{type:'private',thresh:'4+',note:'Private market; construction 1+; other industries 4+ EE.'},
+  GA:{type:'private',thresh:'3+',note:'Private market; employers with 3+ EE.'},
+  HI:{type:'competitive',thresh:'1+',note:'State Fund (HSCF) competes with private; all employers.'},
+  ID:{type:'competitive',thresh:'1+',note:'State Insurance Fund competes with private; all employers.'},
+  IL:{type:'private',thresh:'1+',note:'Private market; all employers; historically high premium state.'},
+  IN:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  IA:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  KS:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  KY:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  LA:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  ME:{type:'competitive',thresh:'1+',note:'Maine Employers Mutual competes with private; all employers.'},
+  MD:{type:'private',thresh:'1+',note:'Private market plus Injured Workers Insurance Fund (IWIF).'},
+  MA:{type:'private',thresh:'1+',note:'Private market; all employers; state assigned risk pool for hard-to-insure.'},
+  MI:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  MN:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  MS:{type:'private',thresh:'5+',note:'Private market; employers with 5+ EE.'},
+  MO:{type:'private',thresh:'5+',note:'Private market; 5+ EE (1+ in construction).'},
+  MT:{type:'exclusive',thresh:'1+',note:'Montana State Fund — MONOPOLISTIC. All employers must use State Fund or self-insure. No private market.'},
+  NE:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  NV:{type:'competitive',thresh:'1+',note:'EMPLOYERS Holdings competes with private; all employers.'},
+  NH:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  NJ:{type:'private',thresh:'1+',note:'Private market; all employers; moderate premium state.'},
+  NM:{type:'private',thresh:'3+',note:'Private market; 3+ EE.'},
+  NY:{type:'competitive',thresh:'1+',note:'NYSIF (State Insurance Fund) competes with private; high premium state.'},
+  NC:{type:'private',thresh:'3+',note:'Private market; 3+ EE.'},
+  ND:{type:'exclusive',thresh:'1+',note:'Workforce Safety & Insurance (WSI) — MONOPOLISTIC. Only WSI; no private market; all employers.'},
+  OH:{type:'exclusive',thresh:'1+',note:'Ohio BWC — MONOPOLISTIC. All employers must use BWC or self-insure. No private market.'},
+  OK:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  OR:{type:'competitive',thresh:'1+',note:'SAIF Corporation (state fund) competes with private; all employers.'},
+  PA:{type:'competitive',thresh:'1+',note:'State Workers Insurance Fund (SWIF) competes with private; all employers.'},
+  RI:{type:'competitive',thresh:'1+',note:'Beacon Mutual (state-created insurer) competes with private.'},
+  SC:{type:'private',thresh:'4+',note:'Private market; 4+ EE.'},
+  SD:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  TN:{type:'private',thresh:'5+',note:'Private market; 5+ EE (1+ in construction/mining).'},
+  TX:{type:'optional',thresh:'opt',note:'OPTIONAL — Texas is the only state where WC is not required. Nonsubscribers face unlimited tort liability.'},
+  UT:{type:'competitive',thresh:'1+',note:'Workers Compensation Fund (state-created) competes with private; all employers.'},
+  VT:{type:'private',thresh:'1+',note:'Private market; all employers.'},
+  VA:{type:'private',thresh:'2+',note:'Private market; 2+ EE.'},
+  WA:{type:'exclusive',thresh:'1+',note:'Washington L&I — MONOPOLISTIC. All employers must use L&I. No private market. Quarterly premium filings.'},
+  WV:{type:'exclusive',thresh:'1+',note:'BrickStreet/Encova (formerly BWCWV) — effectively exclusive; all employers.'},
+  WI:{type:'private',thresh:'3+',note:'Private market; 3+ EE.'},
+  WY:{type:'exclusive',thresh:'1+',note:'Wyoming WCSD — MONOPOLISTIC. State fund only; no private market; all employers.'},
+};
+
+function wcC(id){
+  const d=WCD[id];
+  if(!d) return '#1a1e26';
+  if(d.type==='exclusive') return '#6a1010';
+  if(d.type==='optional')  return '#1a3a28';
+  if(d.type==='competitive') return '#1a4a6a';
+  return '#2a2f3d';
+}
+
+// ═══════════════════════════════════════════════════════
+// EEOC DATA
+// charges = FY2024 charges filed in that state (EEOC public data)
+// rate = charges per 100K workers (approximate)
+// topBasis = most common charge basis
+// ═══════════════════════════════════════════════════════
+let EE={};
+
+function eeC(id){
+  const d=EE[id];
+  if(!d) return '#1a1e26';
+  const r=d.rate;
+  if(r>=12) return '#6a1010';
+  if(r>=9)  return '#7a4a00';
+  if(r>=6)  return '#1a4a6a';
+  return '#1a3a28';
+}
+
+// ── Map state vars ────────────────────────────────────────────
+let plB=false,wcB=false,eeB=false;
+let plS=null,wcS=null,eeS=null;
+let plR=null,wcR=null,eeR=null;
+
+function buildPLMap(){
+  plB=true;
+  buildMap('pl-map-svg',plC,
+    id=>({n:SN[id]||id,s:PL[id]&&PL[id].has?PL[id].type.toUpperCase()+' \u00b7 '+PL[id].wks+'wks':'No PFML'}),
+    (id,ft,path,svg,mz,mg)=>{
+      if(plS===id){plS=null;document.getElementById('pl-reset-btn').classList.remove('vis');resetZoom(svg,mz,mg);renderPLGrid();}
+      else{plS=id;document.getElementById('pl-reset-btn').classList.add('vis');zoomTo(ft[id],path,svg,mz,mg);
+        mg.selectAll('.state-path').classed('active',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s===id;}).classed('dimmed',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s&&s!==id;});
+        renderPLDetail(id);}
+    }
+  ).then(r=>{plR=r;});
+}
+
+function buildWCMap(){
+  wcB=true;
+  buildMap('wc-map-svg',wcC,
+    id=>({n:SN[id]||id,s:WC[id]?WC[id].type.charAt(0).toUpperCase()+WC[id].type.slice(1):''}),
+    (id,ft,path,svg,mz,mg)=>{
+      if(wcS===id){wcS=null;document.getElementById('wc-reset-btn').classList.remove('vis');resetZoom(svg,mz,mg);renderWCGrid();}
+      else{wcS=id;document.getElementById('wc-reset-btn').classList.add('vis');zoomTo(ft[id],path,svg,mz,mg);
+        mg.selectAll('.state-path').classed('active',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s===id;}).classed('dimmed',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s&&s!==id;});
+        renderWCDetail(id);}
+    }
+  ).then(r=>{wcR=r;});
+}
+
+function buildEEMap(){
+  eeB=true;
+  buildMap('ee-map-svg',eeC,
+    id=>({n:SN[id]||id,s:EE[id]?EE[id].rate+'/100K \u00b7 '+EE[id].top:''}),
+    (id,ft,path,svg,mz,mg)=>{
+      if(eeS===id){eeS=null;document.getElementById('ee-reset-btn').classList.remove('vis');resetZoom(svg,mz,mg);renderEEGrid();}
+      else{eeS=id;document.getElementById('ee-reset-btn').classList.add('vis');zoomTo(ft[id],path,svg,mz,mg);
+        mg.selectAll('.state-path').classed('active',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s===id;}).classed('dimmed',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s&&s!==id;});
+        renderEEDetail(id);}
+    }
+  ).then(r=>{eeR=r;});
+}
+
+function resetPLMap(){plS=null;document.getElementById('pl-reset-btn').classList.remove('vis');if(plR)resetZoom(plR.svg,plR.mz,plR.mg);renderPLGrid();}
+function resetWCMap(){wcS=null;document.getElementById('wc-reset-btn').classList.remove('vis');if(wcR)resetZoom(wcR.svg,wcR.mz,wcR.mg);renderWCGrid();}
+function resetEEMap(){eeS=null;document.getElementById('ee-reset-btn').classList.remove('vis');if(eeR)resetZoom(eeR.svg,eeR.mz,eeR.mg);renderEEGrid();}
+
+// ── Grid renderers ────────────────────────────────────────────
+function renderPLGrid(){
+  const g=document.getElementById('pl-jgrid');
+  if(!g)return;
+  g.innerHTML=Object.keys(SN).sort().map(id=>{
+    const d=PL[id];
+    const color=d&&d.has?plC(id):'#2a2f3d';
+    return `<div class="j${plS===id?' on':''}" onclick="plClick('${id}')" style="border-color:${plS===id?'var(--sky)':''}">
+      ${id}<div class="dp" style="background:${color}"></div></div>`;
+  }).join('');
+}
+
+function renderWCGrid(){
+  const g=document.getElementById('wc-jgrid');
+  if(!g)return;
+  g.innerHTML=Object.keys(SN).sort().map(id=>{
+    const color=wcC(id);
+    return `<div class="j${wcS===id?' on':''}" onclick="wcClick('${id}')" style="border-color:${wcS===id?'var(--sky)':''}">
+      ${id}<div class="dp" style="background:${color}"></div></div>`;
+  }).join('');
+}
+
+function renderEEGrid(){
+  const g=document.getElementById('ee-jgrid');
+  if(!g)return;
+  g.innerHTML=Object.keys(SN).sort().map(id=>{
+    const color=eeC(id);
+    return `<div class="j${eeS===id?' on':''}" onclick="eeClick('${id}')" style="border-color:${eeS===id?'var(--sky)':''}">
+      ${id}<div class="dp" style="background:${color}"></div></div>`;
+  }).join('');
+}
+
+// ── Click handlers ────────────────────────────────────────────
+function plClick(id){
+  if(plS===id){plS=null;if(plR){plR.svg.selectAll('.state-path').classed('active',false).classed('dimmed',false);resetZoom(plR.svg,plR.mz,plR.mg);}document.getElementById('pl-reset-btn').classList.remove('vis');}
+  else{plS=id;if(plR){plR.svg.selectAll('.state-path').classed('active',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s===id;}).classed('dimmed',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s&&s!==id;});zoomTo(plR.ft[id],plR.path,plR.svg,plR.mz,plR.mg);}document.getElementById('pl-reset-btn').classList.add('vis');}
+  renderPLGrid();renderPLDetail(id);
+}
+
+function wcClick(id){
+  if(wcS===id){wcS=null;if(wcR){wcR.svg.selectAll('.state-path').classed('active',false).classed('dimmed',false);resetZoom(wcR.svg,wcR.mz,wcR.mg);}document.getElementById('wc-reset-btn').classList.remove('vis');}
+  else{wcS=id;if(wcR){wcR.svg.selectAll('.state-path').classed('active',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s===id;}).classed('dimmed',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s&&s!==id;});zoomTo(wcR.ft[id],wcR.path,wcR.svg,wcR.mz,wcR.mg);}document.getElementById('wc-reset-btn').classList.add('vis');}
+  renderWCGrid();renderWCDetail(id);
+}
+
+function eeClick(id){
+  if(eeS===id){eeS=null;if(eeR){eeR.svg.selectAll('.state-path').classed('active',false).classed('dimmed',false);resetZoom(eeR.svg,eeR.mz,eeR.mg);}document.getElementById('ee-reset-btn').classList.remove('vis');}
+  else{eeS=id;if(eeR){eeR.svg.selectAll('.state-path').classed('active',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s===id;}).classed('dimmed',d=>{const s=FIPS[String(d.id).padStart(2,'0')];return s&&s!==id;});zoomTo(eeR.ft[id],eeR.path,eeR.svg,eeR.mz,eeR.mg);}document.getElementById('ee-reset-btn').classList.add('vis');}
+  renderEEGrid();renderEEDetail(id);
+}
+
+// ── Detail renderers ──────────────────────────────────────────
+function renderPLDetail(id){
+  const el=document.getElementById('pl-detail');
+  const d=PL[id];
+  if(!d||!el)return;
+  el.style.display='';
+  const name=SN[id]||id;
+  const typeLabel={pfml:'Full PFML Program',tdi:'TDI / Short-Term Disability',partial:'Partial / Sick Leave Only',none:'No Program'}[d.type];
+  const typeColor={pfml:'#2a4a8a',tdi:'#1a6b6b',partial:'#4a3a1a',none:'#2a2f3d'}[d.type];
+  el.innerHTML=`<div style="padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+    <div style="font-size:17px;font-weight:800;color:var(--ink)">${id} \u2014 ${name}</div>
+    <span style="background:${typeColor};color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px">${typeLabel}</span>
+  </div>
+  <div style="padding:14px 18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px">
+    ${d.has?`
+    <div style="background:var(--wash);border:1px solid var(--line);border-radius:7px;padding:10px 12px">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px">Employer contribution</div>
+      <div style="font-size:16px;font-weight:800;color:var(--ink)">${d.er>0?d.er+'%':'None'}</div>
+    </div>
+    <div style="background:var(--wash);border:1px solid var(--line);border-radius:7px;padding:10px 12px">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px">Employee contribution</div>
+      <div style="font-size:16px;font-weight:800;color:var(--ink)">${d.ee>0?d.ee+'%':'None'}</div>
+    </div>
+    <div style="background:var(--wash);border:1px solid var(--line);border-radius:7px;padding:10px 12px">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px">Max weeks of leave</div>
+      <div style="font-size:16px;font-weight:800;color:var(--ink)">${d.wks||'Varies'}</div>
+    </div>
+    <div style="background:var(--wash);border:1px solid var(--line);border-radius:7px;padding:10px 12px">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px">Program since</div>
+      <div style="font-size:16px;font-weight:800;color:var(--ink)">${d.yr}</div>
+    </div>`:'<div style="color:var(--muted);font-style:italic;padding:8px 0">No state PFML program. Federal FMLA (unpaid) applies to employers with 50+ employees.</div>'}
+  </div>
+  <div style="padding:0 18px 14px;font-size:12px;color:var(--muted);line-height:1.6">${d.note}</div>`;
+}
+
+function renderWCDetail(id){
+  const el=document.getElementById('wc-detail');
+  const d=WC[id];
+  if(!d||!el)return;
+  el.style.display='';
+  const name=SN[id]||id;
+  const typeLabel={exclusive:'Exclusive State Fund (Monopolistic)',competitive:'Competitive State Fund',private:'Private Market Only',optional:'Optional (TX Nonsubscriber)'}[d.type];
+  const typeColor={exclusive:'#6a1010',competitive:'#1a4a6a',private:'#2a2f3d',optional:'#1a3a28'}[d.type];
+  el.innerHTML=`<div style="padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+    <div style="font-size:17px;font-weight:800;color:var(--ink)">${id} \u2014 ${name}</div>
+    <span style="background:${typeColor};color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px">${typeLabel}</span>
+  </div>
+  <div style="padding:14px 18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px">
+    <div style="background:var(--wash);border:1px solid var(--line);border-radius:7px;padding:10px 12px">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px">Market type</div>
+      <div style="font-size:15px;font-weight:800;color:var(--ink)">${typeLabel}</div>
+    </div>
+    <div style="background:var(--wash);border:1px solid var(--line);border-radius:7px;padding:10px 12px">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px">Coverage threshold</div>
+      <div style="font-size:16px;font-weight:800;color:var(--ink)">${d.thresh==='opt'?'Optional':d.thresh+' employee(s)'}</div>
+    </div>
+  </div>
+  <div style="padding:0 18px 14px;font-size:12px;color:var(--muted);line-height:1.6">${d.note}</div>`;
+}
+
+function renderEEDetail(id){
+  const el=document.getElementById('ee-detail');
+  const d=EE[id];
+  if(!d||!el)return;
+  el.style.display='';
+  const name=SN[id]||id;
+  const rColor=d.rate>=12?'#f08080':d.rate>=9?'#f0c040':d.rate>=6?'#61c3f4':'#6adf6a';
+  el.innerHTML=`<div style="padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+    <div style="font-size:17px;font-weight:800;color:var(--ink)">${id} \u2014 ${name}</div>
+    <span style="background:#1a1e26;color:${rColor};border:1px solid ${rColor}44;font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px">${d.rate}/100K workers</span>
+  </div>
+  <div style="padding:14px 18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px">
+    <div style="background:var(--wash);border:1px solid var(--line);border-radius:7px;padding:10px 12px">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px">Charges filed (FY2024)</div>
+      <div style="font-size:18px;font-weight:800;color:var(--ink)">${d.charges.toLocaleString()}</div>
+    </div>
+    <div style="background:var(--wash);border:1px solid var(--line);border-radius:7px;padding:10px 12px">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px">Rate per 100K workers</div>
+      <div style="font-size:18px;font-weight:800;color:${rColor}">${d.rate}</div>
+    </div>
+    <div style="background:var(--wash);border:1px solid var(--line);border-radius:7px;padding:10px 12px">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px">Top charge basis</div>
+      <div style="font-size:15px;font-weight:800;color:var(--ink)">${d.top}</div>
+    </div>
+  </div>
+  <div style="padding:0 18px 14px;font-size:12px;color:var(--muted);line-height:1.6">${d.note}</div>`;
+}
+
+// ── UNIFIED STATES TAB ENGINE ─────────────────────────────────
+
+// Layer config for the unified map
+const LAYER_CONFIGS = {
+  mw: {
+    label: 'Min Wage',
+    color: id => {
+      if (!id || !MW[id]) return '#253347';
+      const r = MW[id][0];
+      if (r <= 7.25) return '#0a1e35';
+      if (r <= 11)   return '#0e2d50';
+      if (r <= 14)   return '#35b5ec';
+      return '#61c3f4';
+    },
+    tip: id => ({ n: SN[id]||id, s: MW[id] ? '$'+MW[id][0].toFixed(2)+'/hr' : '' }),
+    legend: `<strong>Min Wage:</strong>
+      <div class="legitem"><span class="dot" style="background:#0a1e35"></span>$7.25 federal</div>
+      <div class="legitem"><span class="dot" style="background:#0e2d50"></span>$8–$11</div>
+      <div class="legitem"><span class="dot" style="background:#35b5ec"></span>$11–$14</div>
+      <div class="legitem"><span class="dot" style="background:#61c3f4"></span>$14+</div>`
+  },
+  ue: {
+    label: 'Unemployment',
+    color: id => {
+      if (!id || !UE[id]) return '#253347';
+      const r = UE[id][0];
+      if (r < 3.5) return '#1a5e2a';
+      if (r < 5.0) return '#c87820';
+      return '#b82020';
+    },
+    tip: id => ({ n: SN[id]||id, s: UE[id] ? UE[id][0]+'% unemployment' : '' }),
+    legend: `<strong>Unemployment:</strong>
+      <div class="legitem"><span class="dot" style="background:#1a5e2a"></span>Below 3.5%</div>
+      <div class="legitem"><span class="dot" style="background:#c87820"></span>3.5–5%</div>
+      <div class="legitem"><span class="dot" style="background:#b82020"></span>Above 5%</div>`
+  },
+  pl: {
+    label: 'Paid Leave',
+    color: id => {
+      if (!id || !PL_STATES[id]) return '#2a2f3d';
+      return PL_STATES[id].color;
+    },
+    tip: id => ({ n: SN[id]||id, s: PL_STATES[id] ? PL_STATES[id].label : 'No program' }),
+    legend: `<strong>Paid Leave:</strong>
+      <div class="legitem"><span class="dot" style="background:#2a4a8a"></span>Full PFML</div>
+      <div class="legitem"><span class="dot" style="background:#1a6b6b"></span>TDI only</div>
+      <div class="legitem"><span class="dot" style="background:#4a3a1a"></span>Partial/Sick</div>
+      <div class="legitem"><span class="dot" style="background:#2a2f3d"></span>None</div>`
+  },
+  wc: {
+    label: 'Workers Comp',
+    color: id => {
+      if (!id || !WC[id]) return '#2a2f3d';
+      const ins = WC[id][1]||'';
+      if (ins.includes('EXCLUSIVE')) return '#6a1010';
+      if (ins.includes('optional') || ins.includes('Pinnacol') || ins.includes('SAIF') || ins.includes('SWIF') || ins.includes('State Fund') || ins.includes('NYSIF') || ins.includes('Beacon') || ins.includes('WCF') || ins.includes('State WC')) return '#1a4a6a';
+      if (id === 'TX') return '#1a3a28';
+      return '#2a2f3d';
+    },
+    tip: id => ({ n: SN[id]||id, s: WC[id] ? WC[id][1] : '' }),
+    legend: `<strong>Workers Comp:</strong>
+      <div class="legitem"><span class="dot" style="background:#6a1010"></span>Exclusive state fund</div>
+      <div class="legitem"><span class="dot" style="background:#1a4a6a"></span>Competitive/optional fund</div>
+      <div class="legitem"><span class="dot" style="background:#2a2f3d"></span>Private market only</div>
+      <div class="legitem"><span class="dot" style="background:#1a3a28"></span>Optional (TX)</div>`
+  },
+  ee: {
+    label: 'EEOC',
+    color: id => {
+      if (!id || !EE[id]) return '#2a2f3d';
+      const r = EE[id].rate;
+      if (r >= 12) return '#6a1010';
+      if (r >= 9)  return '#7a4a00';
+      if (r >= 6)  return '#1a4a6a';
+      return '#1a3a28';
+    },
+    tip: id => ({ n: SN[id]||id, s: EE[id] ? EE[id].rate+'/100K workers' : '' }),
+    legend: `<strong>EEOC Charge Rate:</strong>
+      <div class="legitem"><span class="dot" style="background:#1a3a28"></span>Low (&lt;6)</div>
+      <div class="legitem"><span class="dot" style="background:#1a4a6a"></span>Moderate (6–9)</div>
+      <div class="legitem"><span class="dot" style="background:#7a4a00"></span>High (9–12)</div>
+      <div class="legitem"><span class="dot" style="background:#6a1010"></span>Very High (12+)</div>`
+  }
+};
+
+// Paid Leave lookup table (derived from PL data)
+let PL_STATES = {};
+
+let statesMapBuilt = false;
+let statesMapRef = null;
+let currentLayer = 'mw';
+let selectedState = null;
+
+function switchStateLayer(layer, btn) {
+  currentLayer = layer;
+  document.querySelectorAll('.slb').forEach(b => b.classList.remove('on'));
+  if (btn) btn.classList.add('on');
+  document.getElementById('states-legend').innerHTML = LAYER_CONFIGS[layer].legend + `<span style="margin-left:auto;font-size:11px">Click any state for full detail</span>`;
+  if (statesMapRef) {
+    statesMapRef.mg.selectAll('.state-path')
+      .attr('fill', d => {
+        const id = FIPS[String(d.id).padStart(2,'0')];
+        return LAYER_CONFIGS[layer].color(id);
+      });
+  }
+  renderStatesGrid();
+}
+
+function initStatesTab() {
+  if (!statesMapBuilt) {
+    statesMapBuilt = true;
+    buildStatesMap();
+    renderStatesGrid();
+    buildStatesTable();
+    switchStateLayer('mw', document.querySelector('.slb[data-layer="mw"]'));
+  }
+}
+
+async function buildStatesMap() {
+  const layer = LAYER_CONFIGS[currentLayer];
+  const result = await buildMap(
+    'states-map-svg',
+    id => LAYER_CONFIGS[currentLayer].color(id),
+    id => LAYER_CONFIGS[currentLayer].tip(id),
+    (id, ft, path, svg, mz, mg) => {
+      // Click: zoom in and show detail
+      if (selectedState === id) {
+        selectedState = null;
+        document.getElementById('states-reset-btn').classList.remove('vis');
+        resetZoom(svg, mz, mg);
+        mg.selectAll('.state-path').classed('active', false).classed('dimmed', false);
+      } else {
+        selectedState = id;
+        document.getElementById('states-reset-btn').classList.add('vis');
+        mg.selectAll('.state-path')
+          .classed('active', d => FIPS[String(d.id).padStart(2,'0')] === id)
+          .classed('dimmed', d => FIPS[String(d.id).padStart(2,'0')] !== id);
+        zoomTo(ft[id], path, svg, mz);
+        showStateDetail(id);
+      }
+      renderStatesGrid();
+    }
+  );
+  statesMapRef = result;
+}
+
+function resetStatesMap() {
+  selectedState = null;
+  document.getElementById('states-reset-btn').classList.remove('vis');
+  document.getElementById('state-detail-panel').style.display = 'none';
+  if (statesMapRef) resetZoom(statesMapRef.svg, statesMapRef.mz, statesMapRef.mg);
+  renderStatesGrid();
+}
+
+function closeStateDetail() {
+  selectedState = null;
+  document.getElementById('state-detail-panel').style.display = 'none';
+  document.getElementById('states-reset-btn').classList.remove('vis');
+  if (statesMapRef) {
+    statesMapRef.mg.selectAll('.state-path').classed('active', false).classed('dimmed', false);
+    resetZoom(statesMapRef.svg, statesMapRef.mz, statesMapRef.mg);
+  }
+  renderStatesGrid();
+}
+
+function renderStatesGrid() {
+  const el = document.getElementById('states-jgrid');
+  if (!el) return;
+  const layer = currentLayer;
+  el.innerHTML = Object.keys(SN).sort().map(id => {
+    let sub = '';
+    if (layer === 'mw')  sub = MW[id] ? '$'+MW[id][0].toFixed(2) : '—';
+    if (layer === 'ue')  sub = UE[id] ? UE[id][0]+'%' : '—';
+    if (layer === 'pl')  sub = PL_STATES[id] ? 'Yes' : 'None';
+    if (layer === 'wc')  sub = WC[id] ? (WC[id][1].includes('EXCLUSIVE') ? 'Excl.' : 'Pvt') : '—';
+    if (layer === 'ee')  sub = EE[id] ? EE[id].rate : '—';
+    return `<div class="j${selectedState===id?' on':''}" onclick="showStateDetail('${id}');selectedState='${id}';renderStatesGrid()">${id}<br><span style="font-size:10px;font-weight:600;opacity:.75">${sub}</span></div>`;
+  }).join('');
+}
+
+function sdpToggle(head) {
+  const body = head.nextElementSibling;
+  const chev = head.querySelector('.sdp-acc-chev');
+  const open = body.classList.toggle('open');
+  if (chev) chev.classList.toggle('open', open);
+}
+
+function showStateDetail(id) {
+  const panel = document.getElementById('state-detail-panel');
+  const name = SN[id] || id;
+  document.getElementById('sdp-name').textContent = name + ' (' + id + ')';
+
+  // Build sub-label from current layer value
+  let subLabel = '';
+  if (MW[id]) subLabel += 'Min Wage: $' + MW[id][0].toFixed(2) + '/hr  ·  ';
+  if (UE[id]) subLabel += 'Unemployment: ' + UE[id][0] + '%';
+  document.getElementById('sdp-sub').textContent = subLabel;
+
+  const mw = MW[id] || [7.25, 'Federal floor applies', '', null];
+  const ue = UE[id] || [null];
+  const pl = PL_STATES[id] || null;
+  const wc = WC[id] || null;
+  const ee = EE[id] || null;
+  const score = SCORES[id] || null;
+
+  // Build prose summaries for each category
+  const mwDiff = mw[0] - 7.25;
+  const mwProse = mw[0] <= 7.25
+    ? `${name} has no state minimum wage law above the federal floor, so the federal rate of $7.25/hr applies to all covered employees. Employers should monitor federal FLSA updates and any local ordinances in municipalities within the state.`
+    : `${name}'s minimum wage is <strong>$${mw[0].toFixed(2)}/hr</strong>${mw[2] ? ', effective ' + mw[2] : ''} — $${mwDiff.toFixed(2)} above the federal floor of $7.25/hr. ${mw[1] || ''} Employers must post the required state minimum wage notice and update payroll systems whenever the rate changes.`;
+
+  const ueProse = ue[0]
+    ? `${name}'s unemployment rate as of May 2026 is <strong>${ue[0]}%</strong>, which is ${ue[0] >= 5 ? 'above' : ue[0] >= 3.5 ? 'near' : 'below'} the national average of 4.3%. A ${ue[0] >= 5 ? 'higher' : ue[0] < 3.5 ? 'lower' : 'moderate'} rate indicates a labor market that is ${ue[0] >= 5 ? 'looser, with more workers available and potentially easier hiring' : ue[0] < 3.5 ? 'tight, meaning talent is scarce and wage pressure is elevated' : 'balanced'}. Employers with multi-state operations should track state-level trends alongside the national BLS Employment Situation report.`
+    : `Unemployment data for ${name} is not available in this dataset. Refer to the BLS Local Area Unemployment Statistics (LAUS) program for current figures.`;
+
+  const plProse = pl
+    ? `${name} has an active paid leave program: <strong>${pl.label}</strong>. ${pl.weeks > 0 ? `Eligible employees may take up to <strong>${pl.weeks} weeks</strong> of leave with wage replacement of approximately <strong>${pl.rate}</strong> of their regular wages.` : ''} ${pl.contrib !== 'N/A' ? `The program is funded through a payroll contribution of <strong>${pl.contrib}</strong>.` : ''} ${pl.since > 0 ? `The program has been active since ${pl.since}.` : ''} Employers must ensure payroll systems are configured to collect and remit the correct contributions, and employees must receive the required notice posting. Verify exact contribution caps and benefit amounts with the state agency annually as rates adjust.`
+    : `${name} does not have a state paid family and medical leave program. Federal FMLA provides up to 12 weeks of <em>unpaid</em> leave for qualifying reasons for employees at employers with 50 or more employees. Employers may voluntarily offer paid leave benefits. Monitor state legislation, as PFML programs are expanding nationally.`;
+
+  const wcType = wc ? wc[1] : '';
+  const wcProse = !wc
+    ? `Workers' compensation data is not available for ${name}.`
+    : id === 'TX'
+    ? `Texas is the only state where workers' compensation is <strong>optional</strong> for most private employers. Employers who opt out (nonsubscribers) lose the protection of the exclusive remedy doctrine and face unlimited tort liability for workplace injuries. Any employer operating in Texas should carefully assess their nonsubscriber risk exposure and ensure they have an adequate occupational accident policy in place.`
+    : wcType.includes('EXCLUSIVE')
+    ? `${name} operates an <strong>exclusive state fund</strong> for workers' compensation — employers must purchase coverage through the state fund and cannot use private carriers. Coverage is required for ${wc[0]}. Premiums and classifications are set by the state, and employers should ensure timely reporting of payroll and classifications to avoid penalties.`
+    : `${name} requires workers' compensation coverage for ${wc[0]}. The state uses a <strong>${wcType.includes('optional') || wcType.includes('State Fund') ? 'competitive market with an optional state fund' : 'private insurance market'}</strong>, giving employers flexibility to shop carriers. Ensure your policy meets state minimum requirements and that certificates of insurance are current. ${wcType.includes('competitive') || wcType.includes('optional') ? 'A state fund option exists as an insurer of last resort.' : ''}`;
+
+  const eeProse = ee
+    ? `${name} had <strong>${ee.charges.toLocaleString()} EEOC charges filed</strong> in FY2024, a rate of <strong>${ee.rate} per 100,000 workers</strong> — placing the state in the <strong>${ee.rate>=12?'Very High':ee.rate>=9?'High':ee.rate>=6?'Moderate':'Low'}</strong> category nationally. The most common charge basis is <strong>${ee.top}</strong>. ${ee.note} Employers should maintain up-to-date EEO policies, conduct regular harassment and discrimination training, and ensure the EEOC "Know Your Rights" poster is visibly posted.`
+    : `EEOC charge data for ${name} is not available in this dataset. Refer to the EEOC Charge Statistics portal for current figures.`;
+
+  const scoreProse = score
+    ? `${name} has an overall HR Compliance Burden Score of <strong>${score.total}/100</strong> (Tier ${score.tier}). This composite score reflects the administrative weight of operating in this state across six dimensions: minimum wage, PFML, pay transparency, workers' comp, sick leave, and anti-discrimination laws. A higher score means more filings, more postings, more compliance deadlines — not necessarily more legal risk. ${score.tier === 'D' ? 'This is one of the highest-burden states nationally. HR managers and PEOs supporting clients here should plan for active monthly compliance monitoring.' : score.tier === 'A' ? 'This is a relatively low-burden state. Quarterly compliance reviews are typically sufficient.' : 'Mid-tier burden. Review PFML filing calendars and sick leave accrual policies regularly.'}`
+    : '';
+
+  const sections = [
+    {
+      icon: '$', bg: '#0e2d50', title: 'Minimum Wage', val: '$' + mw[0].toFixed(2) + '/hr',
+      kvs: [
+        { l: 'State Rate', v: '$' + mw[0].toFixed(2) + '/hr' },
+        { l: 'Federal Floor', v: '$7.25/hr' },
+        { l: 'Above Federal', v: mw[0] > 7.25 ? '+$' + mwDiff.toFixed(2) : 'None' },
+        { l: 'Effective', v: mw[2] || 'Federal' },
+      ],
+      prose: mwProse,
+      link: mw[3] ? `<a href="${mw[3]}" target="_blank" style="color:var(--sky-2);font-size:11.5px;font-weight:700">State DOL source →</a>` : ''
+    },
+    {
+      icon: '%', bg: '#1a5e2a', title: 'Unemployment Rate', val: ue[0] ? ue[0] + '%' : 'N/A',
+      kvs: [
+        { l: 'Rate (May 2026)', v: ue[0] ? ue[0] + '%' : 'N/A' },
+        { l: 'Level', v: !ue[0] ? '—' : ue[0] >= 5 ? 'High' : ue[0] >= 3.5 ? 'Moderate' : 'Low' },
+        { l: 'National Avg', v: '4.3%' },
+        { l: 'Source', v: 'BLS LAUS' },
+      ],
+      prose: ueProse,
+      link: `<a href="https://www.bls.gov/lau/" target="_blank" style="color:var(--sky-2);font-size:11.5px;font-weight:700">BLS LAUS →</a>`
+    },
+    {
+      icon: 'PL', bg: '#2a4a8a', title: 'Paid Family & Medical Leave', val: pl ? pl.label.split('(')[0].trim() : 'No Program',
+      kvs: pl ? [
+        { l: 'Program Type', v: pl.label },
+        { l: 'Wage Replacement', v: pl.rate },
+        { l: 'Max Weeks', v: pl.weeks > 0 ? pl.weeks + ' wks' : 'Varies' },
+        { l: 'Contribution', v: pl.contrib },
+        { l: 'Since', v: pl.since > 0 ? pl.since : 'N/A' },
+      ] : [
+        { l: 'Program', v: 'None' },
+        { l: 'Federal FMLA', v: 'Unpaid (50+ EE)' },
+        { l: 'FMLA Weeks', v: '12 weeks' },
+        { l: 'State Program', v: 'Not enacted' },
+      ],
+      prose: plProse,
+      link: ''
+    },
+    {
+      icon: 'WC', bg: '#0a6b6b', title: "Workers' Compensation", val: wc ? wc[1].replace('EXCLUSIVE state fund','Exclusive').substring(0,30) : '—',
+      kvs: wc ? [
+        { l: 'Market Type', v: wc[1] },
+        { l: 'Coverage Threshold', v: wc[0] },
+        { l: 'TX Exception', v: id==='TX'?'Optional — no mandate':'N/A' },
+      ] : [{ l: 'Coverage', v: 'N/A' }],
+      prose: wcProse,
+      link: wc && wc[2] ? `<a href="${wc[2]}" target="_blank" style="color:var(--sky-2);font-size:11.5px;font-weight:700">State WC Agency →</a>` : ''
+    },
+    {
+      icon: 'EE', bg: '#4a2d9e', title: 'EEOC Charge Activity (FY2024)', val: ee ? ee.rate + '/100K workers' : '—',
+      kvs: ee ? [
+        { l: 'Rate per 100K', v: ee.rate },
+        { l: 'Charges Filed', v: ee.charges.toLocaleString() },
+        { l: 'Level', v: ee.rate>=12?'Very High':ee.rate>=9?'High':ee.rate>=6?'Moderate':'Low' },
+        { l: 'Top Basis', v: ee.top },
+      ] : [{ l: 'Data', v: 'Not available' }],
+      prose: eeProse,
+      link: `<a href="https://www.eeoc.gov/data/charge-statistics-charges-filed-eeoc-fy-1997-through-fy-2024" target="_blank" style="color:var(--sky-2);font-size:11.5px;font-weight:700">EEOC data →</a>`
+    },
+  ];
+
+  if (score) {
+    sections.push({
+      icon: 'SC', bg: '#5a3a10', title: 'HR Compliance Burden Score', val: score.total + '/100 · Tier ' + score.tier,
+      kvs: [
+        { l: 'Overall Score', v: score.total + '/100' },
+        { l: 'Tier', v: 'Tier ' + score.tier },
+        { l: 'Min Wage', v: score.dims.mw + '/100' },
+        { l: 'PFML', v: score.dims.pfml + '/100' },
+        { l: 'Pay Transparency', v: score.dims.pt + '/100' },
+        { l: 'Workers Comp', v: score.dims.wc + '/100' },
+        { l: 'Sick Leave', v: score.dims.sl + '/100' },
+        { l: 'Anti-Disc./AI', v: score.dims.ad + '/100' },
+      ],
+      prose: scoreProse,
+      link: ''
+    });
+  }
+
+  document.getElementById('sdp-sections').innerHTML = sections.map((s, i) => `
+    <div>
+      <div class="sdp-acc-head" onclick="sdpToggle(this)">
+        <div class="sdp-acc-icon" style="background:${s.bg}">${s.icon}</div>
+        <div class="sdp-acc-title">${s.title}</div>
+        <div class="sdp-acc-val">${s.val}</div>
+        <span class="sdp-acc-chev ${i===0?'open':''}">▼</span>
+      </div>
+      <div class="sdp-acc-body ${i===0?'open':''}">
+        <div class="sdp-acc-inner">
+          ${s.kvs.map(kv => `<div class="sdp-kv"><div class="sdp-kv-l">${kv.l}</div><div class="sdp-kv-v">${kv.v}</div></div>`).join('')}
+        </div>
+        <div class="sdp-note" style="line-height:1.7">${s.prose}</div>
+        ${s.link ? `<div style="padding:0 16px 12px">${s.link}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+
+  panel.style.display = '';
+}
+
+function buildStatesTable() {
+  const ids = Object.keys(SN).sort((a,b) => SN[a].localeCompare(SN[b]));
+  let h = `<thead><tr>
+    <th>State</th>
+    <th>Min Wage</th>
+    <th>Unemployment</th>
+    <th>Paid Leave</th>
+    <th>Workers Comp</th>
+    <th>EEOC Rate</th>
+  </tr></thead><tbody>`;
+  ids.forEach(id => {
+    const mw = MW[id] ? '$'+MW[id][0].toFixed(2) : '$7.25';
+    const ue = UE[id] ? UE[id][0]+'%' : '—';
+    const ueBadge = !UE[id] ? '' : UE[id][0]>=5?'<span class="badge bg-red">High</span>':UE[id][0]>=3.5?'<span class="badge bg-gold">Mod</span>':'<span class="badge bg-green">Low</span>';
+    const pl = PL_STATES[id] ? '<span class="badge bg-sky">Yes</span>' : '<span class="badge bg-gray">None</span>';
+    const wcType = WC[id] ? (WC[id][1].includes('EXCLUSIVE')?'<span class="badge bg-red">Excl</span>':id==='TX'?'<span class="badge bg-green">Opt</span>':'<span class="badge bg-gray">Pvt</span>') : '—';
+    const ee = EE[id] ? EE[id].rate : '—';
+    const eeBadge = !EE[id] ? '' : EE[id].rate>=12?'<span class="badge bg-red">V.High</span>':EE[id].rate>=9?'<span class="badge bg-gold">High</span>':EE[id].rate>=6?'<span class="badge bg-sky">Mod</span>':'<span class="badge bg-green">Low</span>';
+    h += `<tr style="cursor:pointer" onclick="switchTab('states');showStateDetail('${id}');selectedState='${id}';renderStatesGrid()">
+      <td class="snm">${SN[id]}</td>
+      <td><strong>${mw}</strong></td>
+      <td>${ue} ${ueBadge}</td>
+      <td>${pl}</td>
+      <td>${wcType}</td>
+      <td>${ee} ${eeBadge}</td>
+    </tr>`;
+  });
+  const el = document.getElementById('states-table');
+  if (el) el.innerHTML = h + '</tbody>';
+}
+
+// ── Tab inits ─────────────────────────────────────────────────
+
+function switchTab(tabId) {
+  document.querySelectorAll('.nt').forEach(b => b.classList.remove('on'));
+  document.querySelectorAll('.tabpanel').forEach(p => p.classList.remove('on'));
+  const btn = document.querySelector(`.nt[data-tab="${tabId}"]`);
+  const panel = document.getElementById('panel-' + tabId);
+  if (btn) btn.classList.add('on');
+  if (panel) panel.classList.add('on');
+  if (tabId === 'states') initStatesTab();
+  if (tabId === 'overview') initScoreTab();
+}
+
+
+// ─────────────────────────────────────────────
+// BOOTSTRAP — load external data.json, then start the app
+// ─────────────────────────────────────────────
+function showDataError(msg) {
+  const banner = document.createElement('div');
+  banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:9999;background:#6a1010;color:#fff;padding:12px 20px;font:600 13px/1.5 -apple-system,sans-serif;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.5)';
+  banner.innerHTML = msg;
+  document.body.prepend(banner);
+}
+
+async function loadData() {
+  // Cache-bust so a freshly-updated data.json is always picked up
+  const res = await fetch('data.json?v=' + Date.now(), { cache: 'no-store' });
+  if (!res.ok) throw new Error('HTTP ' + res.status + ' fetching data.json');
+  return res.json();
+}
+
+function applyData(d) {
+  // Assign every dataset from the loaded JSON into the app's live variables
+  MW = d.minimumWage || {};
+  UE = d.unemployment || {};
+  PFML = d.paidLeaveTable || [];
+  WC = d.workersComp || {};
+  PD = d.posters || {};
+  FEED_SEED_THIS_WEEK = d.newsFeed || [];
+  SCORE_DATA = d.scoreData || {};
+  EE = d.eeoc || {};
+  PL_STATES = d.paidLeaveMap || {};
+
+  // Derived data + static tables that depend on the datasets above
+  computeAllScores();
+  buildPFMLTable();
+  buildWCTable();
+
+  // Surface the data freshness date in the UI if the meta element exists
+  if (d.meta && d.meta.lastUpdated) {
+    const el = document.getElementById('data-updated');
+    if (el) {
+      const dt = new Date(d.meta.lastUpdated);
+      el.textContent = 'Data updated ' + dt.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+    }
+  }
+}
+
+async function bootstrap() {
+  try {
+    const data = await loadData();
+    applyData(data);
+  } catch (err) {
+    // If data.json can't be loaded, the app can't render meaningfully
+    showDataError('⚠ Could not load compliance data (data.json). ' +
+      'If viewing locally, serve the folder over HTTP (e.g. "python3 -m http.server") rather than opening the file directly. Details: ' + err.message);
+    return;
+  }
+  // Data is ready — start the app exactly as before
+  initHomePage();
+}
+
+bootstrap();
+
+</script>
+</body>
+</html>
