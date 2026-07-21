@@ -35,6 +35,48 @@ a{color:var(--sky-2)}a:hover{text-decoration:underline}
 .home-hero-sub{font-size:12.5px;color:rgba(10,30,53,.85);margin-bottom:12px;line-height:1.5}
 .home-hero-meta{font-size:11px;color:rgba(10,30,53,.75);letter-spacing:.03em}
 .home-hero-right{flex-shrink:0}
+/* TRUST BAR — data provenance signature element */
+.trustbar{display:flex;align-items:center;gap:0;flex-wrap:wrap;background:#12161d;border:1px solid var(--line);border-radius:10px;margin-bottom:16px;overflow:hidden}
+.trustbar-seg{display:flex;align-items:center;gap:9px;padding:11px 16px;border-right:1px solid var(--line);flex:1;min-width:150px}
+.trustbar-seg:last-child{border-right:none}
+.trustbar-dot{width:8px;height:8px;border-radius:50%;flex:none;box-shadow:0 0 0 3px rgba(37,182,122,.15)}
+.trustbar-dot.ok{background:#25b67a}
+.trustbar-dot.warn{background:#e0a020;box-shadow:0 0 0 3px rgba(224,160,32,.15)}
+.trustbar-l{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);line-height:1.3}
+.trustbar-v{font-size:13px;font-weight:750;color:var(--ink);line-height:1.25}
+.trustbar-review{margin-left:auto;display:flex;align-items:center;gap:7px;padding:11px 16px;cursor:pointer;background:transparent;border:none;border-left:1px solid var(--line);transition:background .13s}
+.trustbar-review:hover{background:#1a1f28}
+.trustbar-review-count{background:#e0a020;color:#000;font-size:11px;font-weight:800;border-radius:11px;padding:1px 8px;min-width:20px;text-align:center}
+.trustbar-review-lbl{font-size:11.5px;font-weight:700;color:var(--gold, #e0a020)}
+.trustbar-review-chev{font-size:9px;color:var(--faint);transition:transform .2s}
+.trustbar-review-chev.open{transform:rotate(180deg)}
+/* REVIEW NOTES PANEL */
+.reviewpanel{max-height:0;overflow:hidden;transition:max-height .32s ease;margin-bottom:0}
+.reviewpanel.open{max-height:1200px;margin-bottom:16px}
+.reviewpanel-inner{background:#1a160c;border:1px solid #4a3a12;border-radius:10px;padding:14px 18px}
+.reviewpanel-head{font-size:12px;font-weight:800;color:#e0a020;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.reviewpanel-sub{font-size:11.5px;color:var(--muted);margin-bottom:11px;line-height:1.5}
+.reviewpanel-item{display:flex;gap:9px;padding:7px 0;border-top:1px solid #33280e;font-size:12.5px;color:var(--ink);line-height:1.55}
+.reviewpanel-item:first-of-type{border-top:none}
+.reviewpanel-item::before{content:"▸";color:#e0a020;flex:none;font-size:11px;margin-top:2px}
+/* DISCLAIMER */
+.disclaimer{background:#12161d;border:1px solid var(--line);border-radius:10px;padding:13px 18px;margin-top:20px;display:flex;gap:12px;align-items:flex-start}
+.disclaimer-icon{width:22px;height:22px;flex:none;border-radius:6px;background:#26303d;color:var(--sky-2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;margin-top:1px}
+.disclaimer-text{font-size:11.5px;color:var(--muted);line-height:1.6}
+.disclaimer-text strong{color:var(--soft);font-weight:700}
+/* LOADING + ERROR STATES */
+#boot-loading{position:fixed;inset:0;z-index:9998;background:var(--page);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .3s}
+#boot-loading.hide{opacity:0;pointer-events:none}
+.boot-spinner{width:34px;height:34px;border:3px solid var(--line);border-top-color:var(--sky-2);border-radius:50%;animation:bootspin .8s linear infinite}
+@keyframes bootspin{to{transform:rotate(360deg)}}
+.boot-msg{font-size:13px;color:var(--muted);font-weight:600}
+#boot-error{position:fixed;inset:0;z-index:9999;background:var(--page);display:none;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+#boot-error.show{display:flex}
+.boot-error-card{max-width:460px;background:#1a1114;border:1px solid #5a2020;border-radius:14px;padding:28px 26px}
+.boot-error-icon{width:44px;height:44px;border-radius:11px;background:#3a1414;color:#e86464;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 14px}
+.boot-error-title{font-size:17px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.boot-error-body{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.boot-error-body code{background:#12161d;border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:12px;color:var(--sky-2)}
 .home-kpi-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .hkpi{background:rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:12px 14px;min-width:110px}
 .hkpi.a-red{border-color:rgba(100,0,0,.5);background:rgba(100,0,0,.2)}
@@ -412,6 +454,19 @@ table.dt td.snm{font-weight:700;color:var(--ink)}
 </head>
 <body>
 
+<div id="boot-loading">
+  <div class="boot-spinner"></div>
+  <div class="boot-msg">Loading compliance data…</div>
+</div>
+<div id="boot-error">
+  <div class="boot-error-card">
+    <div class="boot-error-icon">!</div>
+    <div class="boot-error-title">Couldn't load compliance data</div>
+    <div class="boot-error-body" id="boot-error-body"></div>
+    <div class="boot-error-body" style="margin-bottom:0">Try reloading the page. If this persists, the data file may be missing or invalid — contact whoever maintains this dashboard.</div>
+  </div>
+</div>
+
 <div class="topnav">
   <a class="tn-brand" href="https://stoiclane.com" target="_blank">
     <img src="data:image/png;base64,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" alt="StoicLane">
@@ -450,6 +505,41 @@ table.dt td.snm{font-weight:700;color:var(--ink)}
           <div class="hkpi a-green"><div class="hkv">15</div><div class="hkl">PFML States</div></div>
           <div class="hkpi a-gold"><div class="hkv">$35.6K</div><div class="hkl">OT Threshold</div></div>
         </div>
+      </div>
+    </div>
+
+    <!-- TRUST BAR — data provenance -->
+    <div class="trustbar">
+      <div class="trustbar-seg">
+        <span class="trustbar-dot ok" id="tb-dot"></span>
+        <div>
+          <div class="trustbar-l">Last verified</div>
+          <div class="trustbar-v" id="tb-verified">—</div>
+        </div>
+      </div>
+      <div class="trustbar-seg">
+        <div>
+          <div class="trustbar-l">Data version</div>
+          <div class="trustbar-v" id="tb-version">—</div>
+        </div>
+      </div>
+      <div class="trustbar-seg">
+        <div>
+          <div class="trustbar-l">Unemployment period</div>
+          <div class="trustbar-v" id="tb-ueperiod">—</div>
+        </div>
+      </div>
+      <button class="trustbar-review" id="tb-review-btn" onclick="toggleReviewPanel()" style="display:none">
+        <span class="trustbar-review-count" id="tb-review-count">0</span>
+        <span class="trustbar-review-lbl">Review notes</span>
+        <span class="trustbar-review-chev" id="tb-review-chev">▼</span>
+      </button>
+    </div>
+    <div class="reviewpanel" id="reviewpanel">
+      <div class="reviewpanel-inner">
+        <div class="reviewpanel-head">Flagged for review this cycle</div>
+        <div class="reviewpanel-sub">Figures the last update could not fully confirm against a primary source, or that affect payroll and need compliance-owner sign-off before use.</div>
+        <div id="reviewpanel-items"></div>
       </div>
     </div>
 
@@ -507,6 +597,13 @@ table.dt td.snm{font-weight:700;color:var(--ink)}
           <div id="state-spotlight"></div>
         </div>
 
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <div class="disclaimer-icon">i</div>
+      <div class="disclaimer-text">
+        <strong>Internal reference — not legal advice.</strong> This dashboard is verified weekly against official government sources, but figures can change and errors can occur. Confirm any payroll- or compliance-critical figure against the linked official source, and route wage and paid-leave changes to your compliance owner for sign-off before acting on them.
       </div>
     </div>
 
@@ -1221,25 +1318,6 @@ async function fetchAndApplyRSSFeed() {
   }
 }
 
-// WEEK N-1 SEED — the update live last week (week of Jun 16, 2026)
-// Shown on first load when no stored state exists yet.
-const FEED_SEED_LAST_WEEK = [
-  {id:"w1f001",date:"Jun 19, 2026",category:"alert",priority:"high",iconBg:"#9e2020",icon:"CO",title:"Colorado AI Act Effective Jun 30 \u2014 Employer Action Required",desc:"Colorado's AI Act takes effect June 30, 2026, requiring employers using high-risk AI systems in hiring, promotion, or termination to exercise reasonable care to prevent algorithmic discrimination. A safe harbor exists for employers who conduct documented bias testing. Review all AI-assisted HR tools now.",tags:["AI","Colorado","Discrimination"],link:"https://www.sixfifty.com/blog/key-employment-law-changes-for-jan-1st-2026/",linkLabel:"SixFifty guidance",isNew:false},
-  {id:"w1f002",date:"Jun 18, 2026",category:"state",priority:"high",iconBg:"#1a8a50",icon:"IL",title:"Illinois NICU Leave Law Active Since Jun 1 \u2014 Compliance Check",desc:"Illinois's new Neonatal Intensive Care Unit leave law took effect June 1, 2026. Employers with 16 to 50 employees must provide up to 10 days of unpaid NICU leave; employers with 51 or more must provide up to 20 days. Leave is in addition to FMLA and may be taken intermittently.",tags:["Illinois","Leave","NICU"],link:"https://www.adp.com/spark/articles/2026/01/48-state-specific-hr-compliance-changes-for-2026.aspx",linkLabel:"ADP 2026 guide",isNew:false},
-  {id:"w1f003",date:"Jun 17, 2026",category:"state",priority:"high",iconBg:"#1a8a50",icon:"MW",title:"IL and NJ Minimum Wage Increases Effective Jul 1 \u2014 Prep Now",desc:"Illinois moves to $15.60/hr and New Jersey to $15.90/hr on July 1, 2026. Chicago's city rate rises to $16.50/hr. Both state rates index to CPI going forward. Payroll systems must be updated before the July 1 effective date or penalties apply immediately.",tags:["Min Wage","Illinois","New Jersey"],link:"https://www.dol.gov/agencies/whd/minimum-wage/state",linkLabel:"DOL WHD tracker",isNew:false},
-  {id:"w1f004",date:"Jun 16, 2026",category:"pfml",priority:"med",iconBg:"#4a2d9e",icon:"MN",title:"Minnesota PFML Benefits Active \u2014 2026 Rate Confirmed at 0.88%",desc:"Minnesota's Paid Family and Medical Leave benefits launched January 1, 2026. The 2026 premium rate is 0.88% of wages up to the OASDI wage base, with a maximum employee contribution of 0.44%. Small employers with fewer than 30 employees qualify for a reduced employer share of 0.22%. Verify payroll configurations.",tags:["PFML","Minnesota","Benefits"],link:"https://paidleave.mn.gov",linkLabel:"MN Paid Leave",isNew:false},
-  {id:"w1f005",date:"Jun 16, 2026",category:"pfml",priority:"med",iconBg:"#4a2d9e",icon:"ME",title:"Maine PFML Benefits Launched May 1, 2026 \u2014 First Claims Processing",desc:"Maine's paid family and medical leave program began accepting benefit claims May 1, 2026. Employers with fewer than 15 employees are exempt from the employer share of the 1% combined contribution. Eligible employees receive up to 12 weeks at up to 90% wage replacement.",tags:["PFML","Maine","Benefits"],link:"https://www.maine.gov/pfml/",linkLabel:"ME PFML",isNew:false},
-  {id:"w1f006",date:"Jun 14, 2026",category:"state",priority:"med",iconBg:"#1a8a50",icon:"NY",title:"NY PFL 2026 \u2014 Rate Rises to 0.432%, Max Benefit $1,228/wk",desc:"New York's Paid Family Leave 2026 contribution rate increased to 0.432% of gross wages, with a maximum weekly benefit of $1,228.53. The annual employee cap is $411.91. Verify payroll deductions and ensure employees have received the updated required notice posting.",tags:["PFML","New York","NY PFL"],link:"https://paidfamilyleave.ny.gov",linkLabel:"NY PFL",isNew:false},
-  {id:"w1f007",date:"Jun 13, 2026",category:"federal",priority:"high",iconBg:"#0e82be",icon:"TIP",title:"One Big Beautiful Bill \u2014 Tip and OT Tax Deduction Creates W-2 Complexity",desc:"The 2025 tax law allows workers to deduct qualified tips and overtime pay on personal returns for 2025 through 2028, but employers remain responsible for withholding and face new W-2 reporting requirements. The IRS provided temporary penalty relief for 2025 filings. Employers should prepare payroll system updates for 2026 W-2 reporting now.",tags:["IRS","Tax","Payroll","W-2"],link:"https://hrexecutive.com/2026-hr-compliance-changes-what-leaders-cant-afford-to-miss/",linkLabel:"HR Executive",isNew:false},
-  {id:"w1f008",date:"Jun 12, 2026",category:"state",priority:"med",iconBg:"#1a8a50",icon:"CA",title:"California Automated Decision Tech Rules \u2014 Phased Compliance Ongoing",desc:"California's automated decision-making technology rules under the Consumer Privacy Act are in phased implementation since January 2026. Covered employers using automated tools for significant employment decisions without meaningful human involvement must complete risk assessments, provide advance notice, and often allow workers to opt out.",tags:["California","AI","CPRA"],link:"https://hrexecutive.com/2026-hr-compliance-changes-what-leaders-cant-afford-to-miss/",linkLabel:"HR Executive",isNew:false},
-  {id:"w1f009",date:"Jun 11, 2026",category:"state",priority:"med",iconBg:"#1a8a50",icon:"PT",title:"Pay Transparency \u2014 42% of Employers Now in a Covered Jurisdiction",desc:"A 2026 compliance survey found 42% of organizations operate where pay range transparency is required in job postings. Active states include CA, CO, NY, WA, IL, MD, NV, RI, CT, and HI. Several more states are legislating in 2026. Audit all job postings and document pay bands annually.",tags:["Pay Transparency","Multi-State"],link:"https://www.dol.gov/agencies/ofccp/pay-transparency",linkLabel:"DOL guidance",isNew:false},
-  {id:"w1f010",date:"Jun 10, 2026",category:"state",priority:"med",iconBg:"#1a8a50",icon:"CT",title:"Connecticut Sick Leave \u2014 Employer Threshold Drops to 11 Employees",desc:"Connecticut amended its paid sick leave law, lowering the employer coverage threshold from 25 to 11 employees effective January 1, 2026. Covered employees accrue 1 hour per 30 hours worked. Review headcount, update accrual systems, and revise offer letters for Connecticut operations.",tags:["Sick Leave","Connecticut"],link:null,linkLabel:null,isNew:false},
-  {id:"w1f011",date:"Jun 9, 2026",category:"federal",priority:"med",iconBg:"#0e82be",icon:"AI",title:"NJ Confirms AI Anti-Discrimination Coverage Under Existing Law",desc:"New Jersey clarified that its existing Law Against Discrimination already applies to AI-driven hiring and employment decisions without new legislation. This interpretation is expected to spread nationally. Employers in all states should document bias testing for any AI screening or performance tools.",tags:["AI","New Jersey","Discrimination"],link:"https://www.sixfifty.com/blog/key-employment-law-changes-for-jan-1st-2026/",linkLabel:"SixFifty",isNew:false},
-  {id:"w1f012",date:"Jun 8, 2026",category:"market",priority:"info",iconBg:"#0a6b6b",icon:"BLS",title:"BLS May 2026 Jobs Report \u2014 152K Payrolls Added, Unemployment 4.3%",desc:"The May 2026 employment situation showed 152,000 nonfarm payroll additions and unemployment at 4.3%. Healthcare added 41K jobs and government added 29K. Average hourly earnings rose 3.6% year-over-year to $36.54, reflecting continued wage pressure in services sectors.",tags:["BLS","Labor Market","Unemployment"],link:"https://www.bls.gov/news.release/empsit.nr0.htm",linkLabel:"BLS release",isNew:false},
-  {id:"w1f013",date:"Jun 7, 2026",category:"state",priority:"med",iconBg:"#1a8a50",icon:"OR",title:"Oregon Sick Leave \u2014 Blood Donation Now a Qualifying Reason",desc:"Oregon expanded its paid sick leave law to add blood donation as a qualifying reason for leave use, effective January 1, 2026. Oregon also amended its Family Leave law to restrict coverage of children to those under 18 or with substantially limiting impairments. Update employee handbooks for Oregon operations.",tags:["Sick Leave","Oregon"],link:null,linkLabel:null,isNew:false},
-  {id:"w1f014",date:"Jun 6, 2026",category:"pfml",priority:"info",iconBg:"#4a2d9e",icon:"DE",title:"Delaware PFML Active \u2014 0.8% Contribution Rate Holds Through 2027",desc:"Delaware's Paid Leave program launched January 2026. The 0.8% contribution rate split between employer and employee is confirmed through 2027. Employers with 10 or more employees are covered. Benefits of up to 12 weeks of paid leave are available for qualifying events.",tags:["PFML","Delaware","Benefits"],link:"https://dol.delaware.gov/familyleave/",linkLabel:"DE Family Leave",isNew:false},
-  {id:"w1f015",date:"Jun 5, 2026",category:"market",priority:"info",iconBg:"#0a6b6b",icon:"145",title:"145+ Compliance Changes Took Effect Jan 1, 2026 \u2014 Mid-Year Check",desc:"More than 145 compliance changes took effect January 1, 2026, including over 70 minimum wage increases across 15 or more states and dozens of localities. HR teams are now conducting mid-year audits. Key gaps found: sick leave accrual system updates, updated mandatory poster sets, and AI governance policies.",tags:["Compliance","Multi-State"],link:"https://www.brightmine.com/uk/resources/hr-compliance/employment-law-updates/global-legislative-changes-2026/",linkLabel:"Brightmine 2026",isNew:false},
-];
 
 let FEED_SEED_THIS_WEEK = [];
 
@@ -2594,18 +2672,44 @@ function switchTab(tabId) {
 // ─────────────────────────────────────────────
 // BOOTSTRAP — load external data.json, then start the app
 // ─────────────────────────────────────────────
-function showDataError(msg) {
-  const banner = document.createElement('div');
-  banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:9999;background:#6a1010;color:#fff;padding:12px 20px;font:600 13px/1.5 -apple-system,sans-serif;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.5)';
-  banner.innerHTML = msg;
-  document.body.prepend(banner);
+function toggleReviewPanel() {
+  const p = document.getElementById('reviewpanel');
+  const chev = document.getElementById('tb-review-chev');
+  const open = p.classList.toggle('open');
+  if (chev) chev.classList.toggle('open', open);
 }
 
-async function loadData() {
-  // Cache-bust so a freshly-updated data.json is always picked up
-  const res = await fetch('data.json?v=' + Date.now(), { cache: 'no-store' });
-  if (!res.ok) throw new Error('HTTP ' + res.status + ' fetching data.json');
-  return res.json();
+function renderProvenance(meta) {
+  if (!meta) return;
+  // Last verified date
+  const vEl = document.getElementById('tb-verified');
+  const dot = document.getElementById('tb-dot');
+  if (meta.lastUpdated) {
+    const dt = new Date(meta.lastUpdated);
+    const days = Math.floor((Date.now() - dt.getTime()) / 86400000);
+    vEl.textContent = dt.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+    // Green if verified within 10 days, amber if older (stale)
+    if (dot) dot.className = 'trustbar-dot ' + (days > 10 ? 'warn' : 'ok');
+    const luEl = document.getElementById('data-updated');
+    if (luEl) luEl.textContent = days <= 1 ? 'Updated today' : 'Updated ' + days + ' days ago';
+  }
+  // Version + period
+  const verEl = document.getElementById('tb-version');
+  if (verEl && meta.dataVersion) verEl.textContent = 'v' + meta.dataVersion;
+  const upEl = document.getElementById('tb-ueperiod');
+  if (upEl) upEl.textContent = meta.unemploymentPeriod || '—';
+
+  // Review notes (optional array the routine populates)
+  const notes = Array.isArray(meta.reviewNotes) ? meta.reviewNotes : [];
+  const btn = document.getElementById('tb-review-btn');
+  if (notes.length > 0) {
+    document.getElementById('tb-review-count').textContent = notes.length;
+    document.getElementById('reviewpanel-items').innerHTML =
+      notes.map(n => `<div class="reviewpanel-item">${typeof n === 'string' ? n : (n.text || '')}</div>`).join('');
+    btn.style.display = '';
+  } else {
+    btn.style.display = 'none';
+  }
 }
 
 function applyData(d) {
@@ -2625,14 +2729,33 @@ function applyData(d) {
   buildPFMLTable();
   buildWCTable();
 
-  // Surface the data freshness date in the UI if the meta element exists
-  if (d.meta && d.meta.lastUpdated) {
-    const el = document.getElementById('data-updated');
-    if (el) {
-      const dt = new Date(d.meta.lastUpdated);
-      el.textContent = 'Data updated ' + dt.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-    }
+  // Surface data provenance (freshness, version, review flags)
+  renderProvenance(d.meta);
+}
+
+async function loadData() {
+  // Cache-bust so a freshly-updated data.json is always picked up
+  const res = await fetch('data.json?v=' + Date.now(), { cache: 'no-store' });
+  if (!res.ok) throw new Error('HTTP ' + res.status + ' fetching data.json');
+  return res.json();
+}
+
+function hideLoading() {
+  const l = document.getElementById('boot-loading');
+  if (l) { l.classList.add('hide'); setTimeout(() => l.remove(), 320); }
+}
+
+function showBootError(err) {
+  hideLoading();
+  const box = document.getElementById('boot-error');
+  const body = document.getElementById('boot-error-body');
+  const isLocal = location.protocol === 'file:';
+  if (body) {
+    body.innerHTML = isLocal
+      ? 'This page needs to be served over HTTP, not opened directly from a file. Run <code>python3 -m http.server</code> in the folder, or use the live hosted URL.'
+      : 'The data file could not be read (' + (err && err.message ? err.message : 'unknown error') + ').';
   }
+  if (box) box.classList.add('show');
 }
 
 async function bootstrap() {
@@ -2640,12 +2763,10 @@ async function bootstrap() {
     const data = await loadData();
     applyData(data);
   } catch (err) {
-    // If data.json can't be loaded, the app can't render meaningfully
-    showDataError('⚠ Could not load compliance data (data.json). ' +
-      'If viewing locally, serve the folder over HTTP (e.g. "python3 -m http.server") rather than opening the file directly. Details: ' + err.message);
+    showBootError(err);
     return;
   }
-  // Data is ready — start the app exactly as before
+  hideLoading();
   initHomePage();
 }
 
