@@ -1,0 +1,98 @@
+name: Validate compliance data
+
+# Runs on every pull request that touches data.json (which is what the routine opens),
+# and on manual dispatch. A green check here means the FILE is structurally safe —
+# valid JSON, correct shape, all 51 states present, no broken fields. It does NOT
+# judge whether the numbers are correct; that is the human reviewer's job.
+
+on:
+  pull_request:
+    paths:
+      - "data.json"
+      - "data.schema.json"
+      - ".github/workflows/validate-data.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the PR
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validator
+        run: pip install jsonschema
+
+      - name: Validate data.json is well-formed and matches the schema
+        run: |
+          python3 - <<'PY'
+          import json, sys, jsonschema
+
+          # 1. data.json must be valid JSON
+          try:
+              data = json.load(open("data.json"))
+          except Exception as e:
+              print(f"::error file=data.json::data.json is not valid JSON: {e}")
+              sys.exit(1)
+
+          # 2. schema itself must load
+          schema = json.load(open("data.schema.json"))
+
+          # 3. data must match the contract (shape, all 51 states, key names, value types)
+          try:
+              jsonschema.validate(data, schema)
+          except jsonschema.ValidationError as e:
+              path = "/".join(str(p) for p in e.absolute_path) or "(root)"
+              print(f"::error file=data.json::Schema violation at {path}: {e.message}")
+              sys.exit(1)
+
+          print("data.json is valid JSON and matches the schema.")
+          PY
+
+      - name: Sanity checks the schema can't express
+        run: |
+          python3 - <<'PY'
+          import json, sys, re
+          data = json.load(open("data.json"))
+          problems = []
+
+          # meta.lastUpdated should parse as a date and not be in the future
+          from datetime import datetime, timezone
+          try:
+              lu = datetime.fromisoformat(data["meta"]["lastUpdated"].replace("Z", "+00:00"))
+              if lu > datetime.now(timezone.utc):
+                  problems.append("meta.lastUpdated is in the future")
+          except Exception as e:
+              problems.append(f"meta.lastUpdated does not parse as a date: {e}")
+
+          # No minimum wage below the federal floor unless explicitly a sub-federal state (GA, WY at 5.15)
+          for st, row in data["minimumWage"].items():
+              rate = row[0]
+              if rate < 5.0 or rate > 30.0:
+                  problems.append(f"minimumWage[{st}] rate {rate} is outside a sane range (5.00-30.00)")
+
+          # Every newsFeed id must be unique
+          ids = [i["id"] for i in data["newsFeed"]]
+          if len(ids) != len(set(ids)):
+              problems.append("newsFeed has duplicate ids")
+
+          # Unemployment rates in a sane band
+          for st, row in data["unemployment"].items():
+              if not (0.5 <= row[0] <= 25.0):
+                  problems.append(f"unemployment[{st}] {row[0]}% is outside a sane range")
+
+          if problems:
+              for p in problems:
+                  print(f"::error::{p}")
+              sys.exit(1)
+          print("Sanity checks passed.")
+          PY
+
+      - name: Summary
+        if: success()
+        run: echo "Structural validation passed. A human reviewer still confirms the numbers before merge."
