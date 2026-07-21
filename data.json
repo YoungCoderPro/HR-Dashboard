@@ -4,12 +4,19 @@
     "lastUpdated": "2026-07-20T21:08:07.000Z",
     "unemploymentPeriod": "May 2026",
     "eeocPeriod": "FY2024",
-    "notes": "Compliance data current as of mid-2026. Verify with linked official sources before relying on any figure for a compliance decision."
+    "notes": "Compliance data current as of mid-2026. Verify with linked official sources before relying on any figure for a compliance decision.",
+    "reviewNotes": [
+      "Minimum wage rate changes (22 states + DC) are payroll-critical \u2014 confirm against the linked state source and route to your compliance owner before payroll use.",
+      "PFML contribution-rate changes (CA, NJ, NY, WA, CO, DC, MN) affect withholding \u2014 verify before updating payroll systems.",
+      "AZ, CO, AK, VT, and NM figures were corroborated via secondary official-domain sources because the state site blocked direct fetch \u2014 spot-check these before relying on them.",
+      "Maryland PFML is delayed to 2028 (not mid-2026) \u2014 confirm before communicating internally.",
+      "Unemployment table reflects BLS May 2026 LAUS; re-verify when the June 2026 release posts."
+    ]
   },
   "minimumWage": {
     "AL": [
       7.25,
-      "No state law — federal minimum applies",
+      "No state law \u2014 federal minimum applies",
       "Federal",
       "https://www.dol.gov/agencies/whd/minimum-wage/state"
     ],
@@ -63,7 +70,7 @@
     ],
     "GA": [
       5.15,
-      "State below federal — FLSA $7.25 applies",
+      "State below federal \u2014 FLSA $7.25 applies",
       "",
       "https://dol.georgia.gov/minimum-wage"
     ],
@@ -111,7 +118,7 @@
     ],
     "LA": [
       7.25,
-      "No state law — federal applies",
+      "No state law \u2014 federal applies",
       "Federal",
       "https://www.dol.gov/agencies/whd/minimum-wage/state"
     ],
@@ -147,7 +154,7 @@
     ],
     "MS": [
       7.25,
-      "No state law — federal applies",
+      "No state law \u2014 federal applies",
       "Federal",
       "https://www.dol.gov/agencies/whd/minimum-wage/state"
     ],
@@ -243,7 +250,7 @@
     ],
     "SC": [
       7.25,
-      "No state law — federal applies",
+      "No state law \u2014 federal applies",
       "Federal",
       null
     ],
@@ -255,7 +262,7 @@
     ],
     "TN": [
       7.25,
-      "No state law — federal applies",
+      "No state law \u2014 federal applies",
       "Federal",
       null
     ],
@@ -303,7 +310,7 @@
     ],
     "WY": [
       5.15,
-      "State below federal — FLSA $7.25 applies",
+      "State below federal \u2014 FLSA $7.25 applies",
       "",
       "https://dws.wyo.gov/dws-division/labor-standards/workers-and-job-seekers/your-rights-as-a-worker/"
     ],
@@ -1603,7 +1610,7 @@
         },
         {
           "n": "Law Against Discrimination",
-          "r": "All employers — incl. AI coverage",
+          "r": "All employers \u2014 incl. AI coverage",
           "pdf": null
         },
         {
@@ -2123,7 +2130,7 @@
       "priority": "med",
       "iconBg": "#1a8a50",
       "icon": "DC",
-      "title": "DC Minimum Wage Rises to $18.40/hr — Highest in the Nation",
+      "title": "DC Minimum Wage Rises to $18.40/hr \u2014 Highest in the Nation",
       "desc": "The District of Columbia's minimum wage increased to $18.40/hour effective July 1, 2026 under its annual CPI-indexed adjustment; the tipped base wage rose to $10.30/hour. DC remains the highest minimum wage jurisdiction in the country.",
       "tags": [
         "Min Wage",
@@ -2178,7 +2185,7 @@
       "iconBg": "#0e82be",
       "icon": "WH",
       "title": "DOL Recovers $1.73M in Back Wages for 1,666 Workers at TN EV Battery Plant",
-      "desc": "DOL's Wage and Hour Division recovered $1,730,598 in back overtime wages for 1,666 workers following an FLSA investigation at a Ford EV/battery campus in Stanton, Tennessee — a reminder that large manufacturing and construction sites remain a WHD enforcement priority.",
+      "desc": "DOL's Wage and Hour Division recovered $1,730,598 in back overtime wages for 1,666 workers following an FLSA investigation at a Ford EV/battery campus in Stanton, Tennessee \u2014 a reminder that large manufacturing and construction sites remain a WHD enforcement priority.",
       "tags": [
         "DOL",
         "FLSA",
@@ -2215,7 +2222,7 @@
       "iconBg": "#9e2020",
       "icon": "OT",
       "title": "DOL Restores $35,568 Overtime Salary Threshold",
-      "desc": "DOL published a technical amendment removing the vacated 2024 overtime rule from the CFR, restoring the pre-existing $684/week ($35,568/yr) standard salary level and $107,432 HCE compensation threshold. The 2024 rule (which would have raised the threshold to $58,656) was vacated by a Texas federal district court in Nov 2024 — not the Fifth Circuit as earlier reported — and DOL's appeal remains pending.",
+      "desc": "DOL published a technical amendment removing the vacated 2024 overtime rule from the CFR, restoring the pre-existing $684/week ($35,568/yr) standard salary level and $107,432 HCE compensation threshold. The 2024 rule (which would have raised the threshold to $58,656) was vacated by a Texas federal district court in Nov 2024 \u2014 not the Fifth Circuit as earlier reported \u2014 and DOL's appeal remains pending.",
       "tags": [
         "DOL",
         "FLSA",
@@ -2232,7 +2239,7 @@
       "priority": "info",
       "iconBg": "#4a2d9e",
       "icon": "ME",
-      "title": "Maine PFML Benefits Launch Confirmed — May 1, 2026",
+      "title": "Maine PFML Benefits Launch Confirmed \u2014 May 1, 2026",
       "desc": "Maine's Paid Family and Medical Leave program began accepting and paying benefit claims May 1, 2026 (not June 1 as earlier reported). The combined 1% contribution rate applies; employers with fewer than 15 employees owe no employer share. Wage replacement is 90% up to 50% of the state average weekly wage and 66% above that, for up to 12 weeks.",
       "tags": [
         "PFML",
@@ -2494,7 +2501,7 @@
       },
       "pfml": {
         "s": 100,
-        "v": "CA SDI/PFL — 90% low / 70% WR, up to 8 wks",
+        "v": "CA SDI/PFL \u2014 90% low / 70% WR, up to 8 wks",
         "n": "Most mature PFML in US; 1.3% employee contribution, no wage cap; employer of any size; benefits since 2004.",
         "c": [
           "ca_edd"
@@ -2502,7 +2509,7 @@
       },
       "pt": {
         "s": 100,
-        "v": "SB 1162 — salary range required all postings",
+        "v": "SB 1162 \u2014 salary range required all postings",
         "n": "All employers must post pay range; pay data reporting to DFEH; civil penalties $100-$10K/violation.",
         "c": [
           "ca_dfeh",
@@ -2548,7 +2555,7 @@
       },
       "pfml": {
         "s": 85,
-        "v": "FAMLI — 0.88% split, up to 12 wks",
+        "v": "FAMLI \u2014 0.88% split, up to 12 wks",
         "n": "Benefits active 2024; employer + employee contribution; all employers 1+; 90% WR for low earners.",
         "c": [
           "co_famli"
@@ -2556,7 +2563,7 @@
       },
       "pt": {
         "s": 90,
-        "v": "COMPS Order — all postings required",
+        "v": "COMPS Order \u2014 all postings required",
         "n": "Salary range + benefits in all job postings including remote; civil penalties up to $10K/violation.",
         "c": [
           "co_pt",
@@ -2573,7 +2580,7 @@
       },
       "sl": {
         "s": 70,
-        "v": "HFWA — 48 hrs/yr accrual",
+        "v": "HFWA \u2014 48 hrs/yr accrual",
         "n": "Healthy Families and Workplaces Act; all employers; 1hr/30hrs; expanded to COVID safe leave.",
         "c": [
           "co_cdle"
@@ -2582,7 +2589,7 @@
       "ad": {
         "s": 90,
         "v": "CO AI Act (SB 205) + CDLE EPEWA",
-        "n": "AI Act effective June 30 2026 — employer liability for high-risk AI decisions; salary history ban active.",
+        "n": "AI Act effective June 30 2026 \u2014 employer liability for high-risk AI decisions; salary history ban active.",
         "c": [
           "co_ai",
           "co_cdle",
@@ -2602,7 +2609,7 @@
       },
       "pfml": {
         "s": 80,
-        "v": "CT Paid Leave — 0.5% EE contribution, 12 wks",
+        "v": "CT Paid Leave \u2014 0.5% EE contribution, 12 wks",
         "n": "Benefits since Jan 2022; employee-funded; all employers 1+.",
         "c": [
           "ct_pfml"
@@ -2610,7 +2617,7 @@
       },
       "pt": {
         "s": 75,
-        "v": "SB 1, 2021 — salary ranges on request + posting",
+        "v": "SB 1, 2021 \u2014 salary ranges on request + posting",
         "n": "Salary range required in postings and on request; employer size: all.",
         "c": [
           "ct_pt",
@@ -2627,7 +2634,7 @@
       },
       "sl": {
         "s": 75,
-        "v": "40 hrs/yr — threshold now 11 EE (2026)",
+        "v": "40 hrs/yr \u2014 threshold now 11 EE (2026)",
         "n": "Threshold dropped from 25 to 11 employees Jan 2026; accrual 1hr/40hrs.",
         "c": [
           "ct_sl"
@@ -2635,7 +2642,7 @@
       },
       "ad": {
         "s": 70,
-        "v": "CT FEPA — broad coverage + salary history ban",
+        "v": "CT FEPA \u2014 broad coverage + salary history ban",
         "n": "Salary history ban active; CHRO enforcement; no standalone AI law.",
         "c": [
           "eeoc_main",
@@ -2654,7 +2661,7 @@
       },
       "pfml": {
         "s": 65,
-        "v": "DE Paid Leave — 0.8% split, 12 wks (2026)",
+        "v": "DE Paid Leave \u2014 0.8% split, 12 wks (2026)",
         "n": "Benefits launched Jan 2026; employers 10+ EE; 80% WR.",
         "c": [
           "de_pfml"
@@ -2662,7 +2669,7 @@
       },
       "pt": {
         "s": 30,
-        "v": "HB 1, 2023 — salary range on request",
+        "v": "HB 1, 2023 \u2014 salary range on request",
         "n": "Employers must provide salary range when requested by applicant.",
         "c": [
           "shrm_pt"
@@ -2705,7 +2712,7 @@
       },
       "pfml": {
         "s": 90,
-        "v": "DC PFL — 0.75% ER (no EE contribution), 12 wks",
+        "v": "DC PFL \u2014 0.75% ER (no EE contribution), 12 wks",
         "n": "Benefits since 2020; among most generous in US; parental leave 12 wks.",
         "c": [
           "dc_pfml"
@@ -2713,7 +2720,7 @@
       },
       "pt": {
         "s": 85,
-        "v": "Wage Transparency Act 2023 — all postings",
+        "v": "Wage Transparency Act 2023 \u2014 all postings",
         "n": "All employers must post salary range and benefits in job postings.",
         "c": [
           "dc_does",
@@ -2730,7 +2737,7 @@
       },
       "sl": {
         "s": 85,
-        "v": "ASSLA — 7-10 days/yr",
+        "v": "ASSLA \u2014 7-10 days/yr",
         "n": "DC Accrued Sick & Safe Leave Act; most employers 7-10 days depending on size.",
         "c": [
           "dc_sl"
@@ -2738,7 +2745,7 @@
       },
       "ad": {
         "s": 90,
-        "v": "DC HRA — broadest protected classes in US",
+        "v": "DC HRA \u2014 broadest protected classes in US",
         "n": "Includes political affiliation, credit information, family responsibilities; salary history ban; no AI law yet.",
         "c": [
           "dc_does",
@@ -2865,7 +2872,7 @@
       },
       "pt": {
         "s": 60,
-        "v": "HB 2408 — salary range required in postings",
+        "v": "HB 2408 \u2014 salary range required in postings",
         "n": "Active 2023; all employers posting jobs in HI.",
         "c": [
           "shrm_pt"
@@ -2889,7 +2896,7 @@
       },
       "ad": {
         "s": 55,
-        "v": "HI HRS Ch. 378 — broad + salary history ban",
+        "v": "HI HRS Ch. 378 \u2014 broad + salary history ban",
         "n": "Among broadest state discrimination laws; salary history ban active.",
         "c": [
           "eeoc_main",
@@ -2967,7 +2974,7 @@
       },
       "pt": {
         "s": 75,
-        "v": "Equal Pay Act amendments — pay range required",
+        "v": "Equal Pay Act amendments \u2014 pay range required",
         "n": "All employers posting in IL must include salary range; penalties up to $10K.",
         "c": [
           "il_pt",
@@ -2984,8 +2991,8 @@
       },
       "sl": {
         "s": 70,
-        "v": "PLAWA — 40 hrs/yr paid leave",
-        "n": "Broadest in US — general paid leave, not just sick; 1hr/40hrs; all employers.",
+        "v": "PLAWA \u2014 40 hrs/yr paid leave",
+        "n": "Broadest in US \u2014 general paid leave, not just sick; 1hr/40hrs; all employers.",
         "c": [
           "il_sl"
         ]
@@ -3262,7 +3269,7 @@
       },
       "pfml": {
         "s": 70,
-        "v": "ME PFML — 1% split, 12 wks (benefits live since May 2026)",
+        "v": "ME PFML \u2014 1% split, 12 wks (benefits live since May 2026)",
         "n": "Benefits launched May 2026; employers 15+ EE for employer share; all employees eligible.",
         "c": [
           "me_pfml"
@@ -3286,7 +3293,7 @@
       },
       "sl": {
         "s": 55,
-        "v": "Earned Employee Leave — 40 hrs/yr",
+        "v": "Earned Employee Leave \u2014 40 hrs/yr",
         "n": "All employers 10+ EE; 1hr/40hrs worked.",
         "c": [
           "brightmine"
@@ -3294,7 +3301,7 @@
       },
       "ad": {
         "s": 45,
-        "v": "ME MHRA — broad coverage + salary history ban",
+        "v": "ME MHRA \u2014 broad coverage + salary history ban",
         "n": "Salary history ban active; broad protected classes.",
         "c": [
           "eeoc_main",
@@ -3313,7 +3320,7 @@
       },
       "pfml": {
         "s": 75,
-        "v": "MD Time to Care Act — 0.90% split, 12 wks (contributions 2027; benefits by 2028)",
+        "v": "MD Time to Care Act \u2014 0.90% split, 12 wks (contributions 2027; benefits by 2028)",
         "n": "Contributions active; benefits begin Jul 2026; 15+ EE for employer share.",
         "c": [
           "md_pfml"
@@ -3321,7 +3328,7 @@
       },
       "pt": {
         "s": 65,
-        "v": "HB 649 — salary range required on request + postings",
+        "v": "HB 649 \u2014 salary range required on request + postings",
         "n": "Must include salary range in job postings; penalty up to $300/violation.",
         "c": [
           "md_pt",
@@ -3338,7 +3345,7 @@
       },
       "sl": {
         "s": 65,
-        "v": "Healthy Working Families Act — 64 hrs/yr",
+        "v": "Healthy Working Families Act \u2014 64 hrs/yr",
         "n": "Employers 15+ EE: paid; under 15: unpaid; 1hr/30hrs.",
         "c": [
           "md_sl"
@@ -3366,7 +3373,7 @@
       },
       "pfml": {
         "s": 90,
-        "v": "MA PFML — 0.88% split, up to 26 wks",
+        "v": "MA PFML \u2014 0.88% split, up to 26 wks",
         "n": "One of most generous; 26 wks total; employer + employee contribution; all employers 1+.",
         "c": [
           "ma_pfml"
@@ -3390,7 +3397,7 @@
       },
       "sl": {
         "s": 75,
-        "v": "Earned Sick Time — 40 hrs/yr",
+        "v": "Earned Sick Time \u2014 40 hrs/yr",
         "n": "Employers 11+ EE: paid; under 11: unpaid.",
         "c": [
           "ma_sl"
@@ -3398,7 +3405,7 @@
       },
       "ad": {
         "s": 65,
-        "v": "MA MCAD — broad coverage + salary history ban",
+        "v": "MA MCAD \u2014 broad coverage + salary history ban",
         "n": "Very broad protected classes; salary history ban strict.",
         "c": [
           "eeoc_main",
@@ -3417,7 +3424,7 @@
       },
       "pfml": {
         "s": 35,
-        "v": "Paid Medical Leave Act — 40 hrs/yr",
+        "v": "Paid Medical Leave Act \u2014 40 hrs/yr",
         "n": "Employers 50+ EE; primarily sick leave not PFML; 1hr/35hrs.",
         "c": [
           "brightmine"
@@ -3441,7 +3448,7 @@
       },
       "sl": {
         "s": 35,
-        "v": "PMLA — 40 hrs/yr (50+ EE)",
+        "v": "PMLA \u2014 40 hrs/yr (50+ EE)",
         "n": "Only applies to larger employers.",
         "c": [
           "brightmine"
@@ -3449,7 +3456,7 @@
       },
       "ad": {
         "s": 45,
-        "v": "MI ELCRA — broader than federal",
+        "v": "MI ELCRA \u2014 broader than federal",
         "n": "Broader than federal; Elliott-Larsen Act; salary history ban proposed not passed.",
         "c": [
           "eeoc_main"
@@ -3468,7 +3475,7 @@
       },
       "pfml": {
         "s": 80,
-        "v": "MN PFML — 0.88%, 12+12 wks (benefits live since Jan 2026)",
+        "v": "MN PFML \u2014 0.88%, 12+12 wks (benefits live since Jan 2026)",
         "n": "Benefits launched Jan 2026; most comprehensive new program; 0.44% EE max; all employers.",
         "c": [
           "mn_pfml"
@@ -3476,7 +3483,7 @@
       },
       "pt": {
         "s": 65,
-        "v": "SF 3035 — salary range required in postings (2025)",
+        "v": "SF 3035 \u2014 salary range required in postings (2025)",
         "n": "All employers with 1+ EE posting jobs in MN must include salary range.",
         "c": [
           "mn_pt",
@@ -3493,7 +3500,7 @@
       },
       "sl": {
         "s": 75,
-        "v": "Earned Sick and Safe Time — 48 hrs/yr",
+        "v": "Earned Sick and Safe Time \u2014 48 hrs/yr",
         "n": "All employers; 1hr/30hrs; effective Jan 2024.",
         "c": [
           "mn_sl"
@@ -3501,7 +3508,7 @@
       },
       "ad": {
         "s": 65,
-        "v": "MN HRA — broad + salary history ban + employer meetings ban",
+        "v": "MN HRA \u2014 broad + salary history ban + employer meetings ban",
         "n": "Salary history ban; 2025 law bans mandatory employer anti-union meetings.",
         "c": [
           "eeoc_main",
@@ -3694,7 +3701,7 @@
       },
       "sl": {
         "s": 30,
-        "v": "Paid Sick Leave — 40 hrs (eff. Oct 2025)",
+        "v": "Paid Sick Leave \u2014 40 hrs (eff. Oct 2025)",
         "n": "Voter-approved; took effect Oct 2025; all employers.",
         "c": [
           "brightmine"
@@ -3728,7 +3735,7 @@
       },
       "pt": {
         "s": 55,
-        "v": "SB 293 — salary range on request required",
+        "v": "SB 293 \u2014 salary range on request required",
         "n": "Must provide salary range to applicants who request; no posting requirement yet.",
         "c": [
           "nv_pt",
@@ -3745,7 +3752,7 @@
       },
       "sl": {
         "s": 50,
-        "v": "SB 312 — 40 hrs/yr",
+        "v": "SB 312 \u2014 40 hrs/yr",
         "n": "All employers; effective 2020.",
         "c": [
           "brightmine"
@@ -3823,7 +3830,7 @@
       },
       "pfml": {
         "s": 85,
-        "v": "NJ FLI + TDI — combined 12 wks, up to 85% WR",
+        "v": "NJ FLI + TDI \u2014 combined 12 wks, up to 85% WR",
         "n": "Mature combined program; employee-funded; all employers.",
         "c": [
           "nj_pfml"
@@ -3847,7 +3854,7 @@
       },
       "sl": {
         "s": 75,
-        "v": "NJ Earned Sick Leave — 40 hrs/yr",
+        "v": "NJ Earned Sick Leave \u2014 40 hrs/yr",
         "n": "All employers 1+; 1hr/30hrs; very broad qualifying reasons.",
         "c": [
           "nj_sl"
@@ -3855,7 +3862,7 @@
       },
       "ad": {
         "s": 80,
-        "v": "NJ LAD — AI discrimination + salary history ban + SAFE Act",
+        "v": "NJ LAD \u2014 AI discrimination + salary history ban + SAFE Act",
         "n": "NJ LAD covers AI systems; salary history ban; domestic violence leave; SAFE Act; among broadest.",
         "c": [
           "nj_lad",
@@ -3899,7 +3906,7 @@
       },
       "sl": {
         "s": 60,
-        "v": "Healthy Workplaces Act — 64 hrs/yr",
+        "v": "Healthy Workplaces Act \u2014 64 hrs/yr",
         "n": "All employers; effective 2022.",
         "c": [
           "brightmine"
@@ -3926,7 +3933,7 @@
       },
       "pfml": {
         "s": 90,
-        "v": "NY PFL — 0.432% EE, up to 12 wks",
+        "v": "NY PFL \u2014 0.432% EE, up to 12 wks",
         "n": "Employee-funded; 67% WR; all employers; continuous updates to benefit amounts.",
         "c": [
           "ny_pfl"
@@ -3934,7 +3941,7 @@
       },
       "pt": {
         "s": 80,
-        "v": "S9427A — salary range required all postings",
+        "v": "S9427A \u2014 salary range required all postings",
         "n": "All employers 4+ EE must post salary range; NYC adds Local Law 32; $1K-$250K civil penalties.",
         "c": [
           "ny_pt",
@@ -3951,7 +3958,7 @@
       },
       "sl": {
         "s": 80,
-        "v": "NY Paid Sick Leave — 40-56 hrs/yr",
+        "v": "NY Paid Sick Leave \u2014 40-56 hrs/yr",
         "n": "Graduated by employer size; 100+ EE: 56 hrs paid; all employers must offer.",
         "c": [
           "ny_sl"
@@ -4045,7 +4052,7 @@
       },
       "wc": {
         "s": 50,
-        "v": "Exclusive state fund (WSI) — monopolistic",
+        "v": "Exclusive state fund (WSI) \u2014 monopolistic",
         "n": "Only WSI; no private market; all employers.",
         "c": [
           "brightmine"
@@ -4095,7 +4102,7 @@
       },
       "wc": {
         "s": 55,
-        "v": "Exclusive state fund (BWC) — monopolistic",
+        "v": "Exclusive state fund (BWC) \u2014 monopolistic",
         "n": "Ohio BWC only; no private market; high compliance burden.",
         "c": [
           "oh_bwc"
@@ -4180,7 +4187,7 @@
       },
       "pfml": {
         "s": 85,
-        "v": "OR Paid Leave — 1% split, 12 wks",
+        "v": "OR Paid Leave \u2014 1% split, 12 wks",
         "n": "Benefits since Sep 2023; employer + employee split; all employers 1+.",
         "c": [
           "or_pfml"
@@ -4204,7 +4211,7 @@
       },
       "sl": {
         "s": 70,
-        "v": "OR PSL — 40 hrs/yr + blood donation (2026)",
+        "v": "OR PSL \u2014 40 hrs/yr + blood donation (2026)",
         "n": "All employers; expanded to blood donation as qualifying reason Jan 2026.",
         "c": [
           "or_sl"
@@ -4212,7 +4219,7 @@
       },
       "ad": {
         "s": 70,
-        "v": "OR BOLI — Workplace Fairness Act + salary history ban",
+        "v": "OR BOLI \u2014 Workplace Fairness Act + salary history ban",
         "n": "WFA anti-harassment requirements; salary history ban; no standalone AI law.",
         "c": [
           "eeoc_main",
@@ -4263,7 +4270,7 @@
       },
       "ad": {
         "s": 40,
-        "v": "PA HRL + PHRA — broader than federal",
+        "v": "PA HRL + PHRA \u2014 broader than federal",
         "n": "Broader than federal; no statewide salary history ban.",
         "c": [
           "eeoc_main"
@@ -4281,7 +4288,7 @@
       },
       "pfml": {
         "s": 65,
-        "v": "RI TCI — 1.1% EE, 4-6 wks",
+        "v": "RI TCI \u2014 1.1% EE, 4-6 wks",
         "n": "Temporary Caregiver Insurance; employee-funded; expanding scope.",
         "c": [
           "ri_tci"
@@ -4305,7 +4312,7 @@
       },
       "sl": {
         "s": 60,
-        "v": "RI Healthy and Safe Families — 40 hrs/yr",
+        "v": "RI Healthy and Safe Families \u2014 40 hrs/yr",
         "n": "All employers 18+ EE; expanding.",
         "c": [
           "brightmine"
@@ -4313,7 +4320,7 @@
       },
       "ad": {
         "s": 50,
-        "v": "RI FEPA — broader than federal",
+        "v": "RI FEPA \u2014 broader than federal",
         "n": "Standard+ coverage; no salary history ban.",
         "c": [
           "eeoc_main"
@@ -4513,7 +4520,7 @@
       },
       "ad": {
         "s": 20,
-        "v": "TX Labor Code — mirrors federal",
+        "v": "TX Labor Code \u2014 mirrors federal",
         "n": "Standard federal mirror; no salary history ban statewide.",
         "c": [
           "eeoc_main"
@@ -4605,7 +4612,7 @@
       },
       "sl": {
         "s": 50,
-        "v": "VT PSL — 40 hrs/yr",
+        "v": "VT PSL \u2014 40 hrs/yr",
         "n": "All employers 5+ EE.",
         "c": [
           "brightmine"
@@ -4663,7 +4670,7 @@
       },
       "ad": {
         "s": 45,
-        "v": "VA Human Rights Act — expanded 2020 + salary history ban",
+        "v": "VA Human Rights Act \u2014 expanded 2020 + salary history ban",
         "n": "Expanded to cover employers 1+; salary history ban; broader than federal.",
         "c": [
           "eeoc_main",
@@ -4683,7 +4690,7 @@
       },
       "pfml": {
         "s": 90,
-        "v": "WA PFML — 1.13% split, 12-18 wks",
+        "v": "WA PFML \u2014 1.13% split, 12-18 wks",
         "n": "Mature program since 2020; employer + employee split; up to 18 wks combined.",
         "c": [
           "wa_pfml"
@@ -4691,7 +4698,7 @@
       },
       "pt": {
         "s": 80,
-        "v": "EPOA — salary range required all postings",
+        "v": "EPOA \u2014 salary range required all postings",
         "n": "All employers 15+ EE; civil penalties $500-$1K/violation first offense.",
         "c": [
           "wa_pt",
@@ -4700,7 +4707,7 @@
       },
       "wc": {
         "s": 55,
-        "v": "Exclusive state fund (L&I) — monopolistic",
+        "v": "Exclusive state fund (L&I) \u2014 monopolistic",
         "n": "Washington L&I only; no private market; quarterly premium filings.",
         "c": [
           "wa_lni_wc"
@@ -4708,7 +4715,7 @@
       },
       "sl": {
         "s": 75,
-        "v": "WA PSL — 1hr/40hrs; all employers",
+        "v": "WA PSL \u2014 1hr/40hrs; all employers",
         "n": "All employers; broad qualifying reasons.",
         "c": [
           "wa_sl"
@@ -4716,7 +4723,7 @@
       },
       "ad": {
         "s": 75,
-        "v": "WA LAD — broad coverage + salary history ban",
+        "v": "WA LAD \u2014 broad coverage + salary history ban",
         "n": "Salary history ban; broad protected classes; AGO enforcement.",
         "c": [
           "eeoc_main",
@@ -4851,7 +4858,7 @@
       },
       "wc": {
         "s": 45,
-        "v": "Exclusive state fund (WSCD) — monopolistic",
+        "v": "Exclusive state fund (WSCD) \u2014 monopolistic",
         "n": "Wyoming WSCD only; no private market.",
         "c": [
           "wy_wscd"
