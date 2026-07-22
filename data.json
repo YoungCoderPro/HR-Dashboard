@@ -1,16 +1,23 @@
 {
   "meta": {
-    "dataVersion": "1.0.1",
-    "lastUpdated": "2026-07-20T21:08:07.000Z",
-    "unemploymentPeriod": "May 2026",
+    "dataVersion": "1.0.2",
+    "lastUpdated": "2026-07-22T14:29:00.000Z",
+    "unemploymentPeriod": "June 2026",
     "eeocPeriod": "FY2024",
     "notes": "Compliance data current as of mid-2026. Verify with linked official sources before relying on any figure for a compliance decision.",
     "reviewNotes": [
-      "Minimum wage rate changes (22 states + DC) are payroll-critical \u2014 confirm against the linked state source and route to your compliance owner before payroll use.",
-      "PFML contribution-rate changes (CA, NJ, NY, WA, CO, DC, MN) affect withholding \u2014 verify before updating payroll systems.",
-      "AZ, CO, AK, VT, and NM figures were corroborated via secondary official-domain sources because the state site blocked direct fetch \u2014 spot-check these before relying on them.",
-      "Maryland PFML is delayed to 2028 (not mid-2026) \u2014 confirm before communicating internally.",
-      "Unemployment table reflects BLS May 2026 LAUS; re-verify when the June 2026 release posts."
+      "PAYROLL SIGN-OFF \u2014 Montana minimum wage corrected from $10.55 to $10.85/hr (confirmed on the state's official 2026 wage poster); route to compliance owner before running MT payroll.",
+      "PAYROLL SIGN-OFF \u2014 Rhode Island TCI (PFML) family-leave weeks increased from 6 to 8 and the max weekly benefit rose to $1,150 (effective Jul 2026, confirmed on dlt.ri.gov); update leave-administration systems.",
+      "PAYROLL SIGN-OFF \u2014 Delaware Paid Leave's medical/family-caregiving/military leave is capped at 6 weeks per 24 months (not 12) \u2014 only parental/bonding leave gets 12 weeks/year, with a 12-week combined annual cap; confirm any DE leave calculators reflect this.",
+      "PAYROLL SIGN-OFF \u2014 DC Paid Family Leave's wage-replacement formula was corrected from an inaccurate 'low/65%' description to the actual tiered 90%/50% formula, capped at $1,190/wk; update any DC PFL payroll estimators referencing the old figure.",
+      "Washington PFML's 2026 maximum weekly benefit ($1,647/wk) is now recorded \u2014 this specific dollar cap wasn't previously tracked.",
+      "Unemployment table refreshed to BLS's June 2026 LAUS release (published Jul 21, 2026); all 51 rates changed from the prior May 2026 figures for most jurisdictions. Re-verify again once the July 2026 release posts.",
+      "CORROBORATED ONLY (primary state site blocked automated access this cycle \u2014 spot-check before relying on): AZ, CO, and FL minimum wage; NH and NM minimum wage; UT and VT minimum wage; WI minimum wage; CO and MN PFML program pages.",
+      "COULD NOT VERIFY / LEFT AS-IS: a Milwaukee, WI local minimum-wage rate appearing in some vendor-aggregator content was NOT added \u2014 Wisconsin state law preempts local minimum-wage ordinances and no .gov source confirmed it.",
+      "NY minimum wage labeling \u2014 the dataset's headline $17.00 figure is the NYC/Long Island/Westchester rate, not the broader 'rest of state' $16.00 rate; both are confirmed current for Jan 2026, but confirm this labeling convention is what you intend for general compliance use.",
+      "Nebraska's minimum wage note now reflects LB258 (signed 2026), which replaces the previously-planned CPI indexing with a fixed 1.75%/yr increase starting Jan 2027.",
+      "Source-link corrections (not figure changes): SC and TN minimum wage previously had no source link \u2014 added SC LLR and TN DOL pages. Maryland and Maine PFML source URLs were stale (pointed to an unrelated statute or a 404) \u2014 corrected to paidleave.maryland.gov and maine.gov/paidleave/. New Jersey's FLI landing page URL 404'd \u2014 replaced with a live NJ DOL 2026-rates press release. NLRB and CO FAMLI newsFeed links were also corrected (broken or non-substantiating links); underlying facts were independently confirmed before the fix.",
+      "Burden-score flag \u2014 Rhode Island's PFML score (scoreData.RI.pfml.s = 65) may now read slightly conservative given the confirmed increase in family-leave weeks and benefit cap; flagged for the score owner to review, not changed here."
     ]
   },
   "minimumWage": {
@@ -52,7 +59,7 @@
     ],
     "CT": [
       16.94,
-      "Increases tied to CPI through 2026",
+      "Indexed annually to the federal Employment Cost Index (Public Act 19-4) — an ongoing mechanism, not limited to 2026",
       "Jan 2026",
       "https://portal.ct.gov/dol/divisions/wage-and-workplace-standards/standard-wage-rates"
     ],
@@ -165,14 +172,14 @@
       "https://labor.mo.gov/DLS/MinimumWage"
     ],
     "MT": [
-      10.55,
+      10.85,
       "Indexed to CPI; no tip credit, training wage, or meal credit allowed",
       "Jan 2026",
       "https://erd.dli.mt.gov/labor-standards/wage-and-hour-payment-act/state-minimum-wage"
     ],
     "NE": [
       15,
-      "CPI-indexed annually starting 2027 (published by Oct 15)",
+      "LB258 (2026) replaced planned CPI indexing with a fixed 1.75%/yr increase starting Jan 2027; new sub-minimum youth wage $13.50 (ages 14-15)",
       "Jan 2026",
       "https://dol.nebraska.gov/laborstandards"
     ],
@@ -252,7 +259,7 @@
       7.25,
       "No state law \u2014 federal applies",
       "Federal",
-      null
+      "https://llr.sc.gov/wage/"
     ],
     "SD": [
       11.85,
@@ -264,7 +271,7 @@
       7.25,
       "No state law \u2014 federal applies",
       "Federal",
-      null
+      "https://www.tn.gov/workforce/employees/labor-laws.html"
     ],
     "TX": [
       7.25,
@@ -323,37 +330,37 @@
   },
   "unemployment": {
     "AL": [
-      3.0
+      3.2
     ],
     "AK": [
-      4.6
+      4.4
     ],
     "AZ": [
-      4.8
+      4.9
     ],
     "AR": [
-      4.2
+      4.1
     ],
     "CA": [
-      5.3
+      5.2
     ],
     "CO": [
       3.9
     ],
     "CT": [
-      5.1
+      5.2
     ],
     "DE": [
-      5.1
+      4.9
     ],
     "FL": [
-      4.8
+      4.7
     ],
     "GA": [
       3.4
     ],
     "HI": [
-      2.5
+      2.6
     ],
     "ID": [
       3.7
@@ -371,22 +378,22 @@
       3.8
     ],
     "KY": [
-      4.5
+      4.7
     ],
     "LA": [
-      4.5
+      4.4
     ],
     "ME": [
       3.1
     ],
     "MD": [
-      4.4
+      4.3
     ],
     "MA": [
-      4.5
+      4.4
     ],
     "MI": [
-      5.1
+      5.0
     ],
     "MN": [
       4.4
@@ -395,85 +402,85 @@
       3.8
     ],
     "MO": [
-      3.8
+      3.7
     ],
     "MT": [
-      3.4
+      3.3
     ],
     "NE": [
-      3.0
+      2.9
     ],
     "NV": [
-      5.2
+      5.1
     ],
     "NH": [
-      3.0
+      2.9
     ],
     "NJ": [
-      4.7
+      4.5
     ],
     "NM": [
-      4.9
+      4.8
     ],
     "NY": [
       4.6
     ],
     "NC": [
-      3.7
+      3.6
     ],
     "ND": [
-      2.4
+      2.3
     ],
     "OH": [
-      3.7
+      3.6
     ],
     "OK": [
-      4.1
+      4.2
     ],
     "OR": [
       5.2
     ],
     "PA": [
-      4.2
+      4.1
     ],
     "RI": [
-      4.3
+      4.1
     ],
     "SC": [
-      4.6
+      4.4
     ],
     "SD": [
-      2.1
+      2.0
     ],
     "TN": [
-      3.6
+      3.5
     ],
     "TX": [
-      4.3
+      4.4
     ],
     "UT": [
-      3.7
+      3.6
     ],
     "VT": [
       2.6
     ],
     "VA": [
-      3.8
+      3.7
     ],
     "WA": [
       5.2
     ],
     "WV": [
-      4.3
+      4.2
     ],
     "WI": [
-      3.4
+      3.3
     ],
     "WY": [
-      3.4
+      3.2
     ],
     "DC": [
-      6.1
+      6.0
     ]
   },
   "paidLeaveTable": [
@@ -496,14 +503,14 @@
       "m": 26,
       "y": 2009,
       "c": "0.23% EE",
-      "u": "https://www.nj.gov/labor/myleavebenefits/workers/fli/",
+      "u": "https://www.nj.gov/labor/lwdhome/press/2025/20251229_newbenefitrates2026.shtml",
       "act": true
     },
     {
       "s": "Rhode Island",
       "a": "RI",
-      "p": "60% (up to $1,103/wk)",
-      "f": 6,
+      "p": "60% (up to $1,150/wk, eff Jul 2026)",
+      "f": 8,
       "m": 30,
       "y": 2014,
       "c": "1.1% EE",
@@ -524,7 +531,7 @@
     {
       "s": "Washington",
       "a": "WA",
-      "p": "90% low / 60-70%",
+      "p": "90% low / 60-70% (up to $1,647/wk, 2026)",
       "f": 12,
       "m": 12,
       "y": 2020,
@@ -579,7 +586,7 @@
     {
       "s": "Dist. of Columbia",
       "a": "DC",
-      "p": "90% low / 65%",
+      "p": "90% low / 50% high (up to $1,190/wk)",
       "f": 12,
       "m": 12,
       "y": 2020,
@@ -592,10 +599,10 @@
       "a": "DE",
       "p": "80% (up to $900/wk)",
       "f": 12,
-      "m": 12,
+      "m": 6,
       "y": 2026,
       "c": "0.8% split",
-      "u": "https://dol.delaware.gov/familyleave/",
+      "u": "https://labor.delaware.gov/delaware-paid-leave/",
       "act": true
     },
     {
@@ -617,7 +624,7 @@
       "m": 12,
       "y": 2028,
       "c": "0.9% split",
-      "u": "https://www.labor.maryland.gov/paidleave/",
+      "u": "https://paidleave.maryland.gov",
       "act": false
     },
     {
@@ -628,7 +635,7 @@
       "m": 12,
       "y": 2026,
       "c": "1% split",
-      "u": "https://www.maine.gov/pfml/",
+      "u": "https://www.maine.gov/paidleave/",
       "act": true
     }
   ],
@@ -2124,6 +2131,130 @@
   },
   "newsFeed": [
     {
+      "id": "w2f030",
+      "date": "Jul 21, 2026",
+      "category": "federal",
+      "priority": "high",
+      "iconBg": "#0e82be",
+      "icon": "EEO",
+      "title": "EEOC Proposes Rescission of Annual EEO-1 Race/Sex Reporting Requirements",
+      "desc": "The EEOC voted to propose eliminating mandatory EEO-1 through EEO-6 demographic reporting, citing roughly $275M in annual employer compliance costs and Title VII colorblindness concerns. A public hearing is scheduled for Aug 11, 2026 before any final rule. Employers should not stop preparing EEO-1 data yet — this is a proposal, not yet final.",
+      "tags": [
+        "EEOC",
+        "EEO-1",
+        "Reporting"
+      ],
+      "link": "https://www.eeoc.gov/newsroom/eeoc-proposes-rescission-annual-race-and-sex-reporting-requirements",
+      "linkLabel": "EEOC press release",
+      "isNew": true
+    },
+    {
+      "id": "w2f029",
+      "date": "Jul 20, 2026",
+      "category": "federal",
+      "priority": "med",
+      "iconBg": "#0e82be",
+      "icon": "EEO",
+      "title": "EEOC: Battelle Energy Alliance to Pay $5M Over Vaccine-Mandate Accommodation Discrimination",
+      "desc": "The Idaho Falls engineering firm settled systemic EEOC charges alleging it denied religious and disability accommodations to more than 100 employees under its COVID-19 vaccine mandate. Employers should review accommodation-request procedures for mandatory workplace policies.",
+      "tags": [
+        "EEOC",
+        "Accommodation",
+        "Settlement"
+      ],
+      "link": "https://www.eeoc.gov/newsroom/battelle-energy-alliance-reaches-5-million-agreement-resolving-eeoc-charges-religious-and",
+      "linkLabel": "EEOC press release",
+      "isNew": true
+    },
+    {
+      "id": "w2f028",
+      "date": "Jul 17, 2026",
+      "category": "federal",
+      "priority": "low",
+      "iconBg": "#0e82be",
+      "icon": "WH",
+      "title": "DOL Recovers $500,256 for 6 San Diego Deli Workers",
+      "desc": "DOL's Wage and Hour Division found Chau Deli (d/b/a A Chau Sandwich) paid a flat $100/day regardless of roughly 55-hour workweeks, violating FLSA minimum wage and overtime requirements — a reminder that flat daily-rate pay schemes require careful FLSA regular-rate analysis.",
+      "tags": [
+        "DOL",
+        "FLSA",
+        "Enforcement"
+      ],
+      "link": "https://www.dol.gov/newsroom/releases/whd/whd20260717",
+      "linkLabel": "DOL press release",
+      "isNew": true
+    },
+    {
+      "id": "w2f027",
+      "date": "Jul 2, 2026",
+      "category": "federal",
+      "priority": "med",
+      "iconBg": "#0e82be",
+      "icon": "DOL",
+      "title": "DOL Rescinds Portions of Title VI Regulations, Eliminating Disparate-Impact Liability",
+      "desc": "DOL amended 29 CFR Part 31 to remove disparate-impact liability under Title VI, aligning with recent case law and EO 14173/14281. Employers receiving federal funds should review compliance programs that previously relied on disparate-impact analysis.",
+      "tags": [
+        "DOL",
+        "Title VI",
+        "Disparate Impact"
+      ],
+      "link": "https://www.federalregister.gov/documents/2026/07/02/2026-13371/rescinding-portions-of-department-of-labor-title-vi-regulations",
+      "linkLabel": "Federal Register notice",
+      "isNew": false
+    },
+    {
+      "id": "w2f026",
+      "date": "Jul 1, 2026",
+      "category": "state",
+      "priority": "low",
+      "iconBg": "#1a8a50",
+      "icon": "OR",
+      "title": "Oregon Minimum Wage Increases (Region-Based, Effective Jul 1)",
+      "desc": "BOLI's annual CPI adjustment raised Oregon's regional minimum wage rates to $16.80/hr (Portland metro), $15.55/hr (standard), and $14.55/hr (nonurban counties), effective July 1, 2026.",
+      "tags": [
+        "Min Wage",
+        "Oregon"
+      ],
+      "link": "https://www.oregon.gov/boli/workers/pages/minimum-wage.aspx",
+      "linkLabel": "OR BOLI minimum wage page",
+      "isNew": false
+    },
+    {
+      "id": "w2f025",
+      "date": "Jul 1, 2026",
+      "category": "state",
+      "priority": "low",
+      "iconBg": "#1a8a50",
+      "icon": "AK",
+      "title": "Alaska Minimum Wage Rises to $14.00/hr",
+      "desc": "Alaska's minimum wage increased from $13.00 to $14.00/hour effective July 1, 2026 under the voter-approved Ballot Measure 1 step schedule; the exempt-salary threshold also rose to $1,120/week. The next step to $15.00 is scheduled for July 2027, with CPI indexing resuming in 2028.",
+      "tags": [
+        "Min Wage",
+        "Alaska"
+      ],
+      "link": "https://labor.alaska.gov/lss/whhome.htm",
+      "linkLabel": "AK Dept of Labor",
+      "isNew": false
+    },
+    {
+      "id": "w2f024",
+      "date": "Jun 15, 2026",
+      "category": "federal",
+      "priority": "med",
+      "iconBg": "#0e82be",
+      "icon": "WH",
+      "title": "DOL Secures $750K Court Order Against Washington Restaurant Owners",
+      "desc": "A federal court ordered the owners of Rancho Chico's to pay $750,000 in back wages and damages to 42 workers after defaulting on an earlier settlement covering overtime violations, sub-minimum-wage salaried pay, retaliation, and child labor violations — illustrating enforcement risk when employers don't follow through on consent judgments.",
+      "tags": [
+        "DOL",
+        "FLSA",
+        "Child Labor"
+      ],
+      "link": "https://www.dol.gov/newsroom/releases/whd/whd20260615",
+      "linkLabel": "DOL press release",
+      "isNew": false
+    },
+    {
       "id": "w2f020",
       "date": "Jul 1, 2026",
       "category": "state",
@@ -2210,8 +2341,8 @@
         "FAMLI",
         "Deadline"
       ],
-      "link": "https://famli.colorado.gov",
-      "linkLabel": "CO FAMLI",
+      "link": "https://famli.colorado.gov/employers",
+      "linkLabel": "CO FAMLI employer portal",
       "isNew": false
     },
     {
@@ -2264,8 +2395,8 @@
         "Joint Employer",
         "Staffing"
       ],
-      "link": "https://www.nlrb.gov/about-nlrb/what-we-do/the-standard-for-determining-joint-employer-status",
-      "linkLabel": "NLRB joint employer standard",
+      "link": "https://www.federalregister.gov/documents/2026/02/27/2026-03955/withdrawal-of-2023-standard-for-determining-joint-employer-status",
+      "linkLabel": "Federal Register notice",
       "isNew": false
     },
     {
@@ -3619,7 +3750,7 @@
     "MT": {
       "mw": {
         "s": 25,
-        "v": "$10.55/hr",
+        "v": "$10.85/hr",
         "n": "CPI-indexed annually.",
         "c": [
           "dol_whd"
@@ -4288,8 +4419,8 @@
       },
       "pfml": {
         "s": 65,
-        "v": "RI TCI \u2014 1.1% EE, 4-6 wks",
-        "n": "Temporary Caregiver Insurance; employee-funded; expanding scope.",
+        "v": "RI TCI \u2014 1.1% EE, 8 wks family / 30 wks disability",
+        "n": "Temporary Caregiver Insurance; employee-funded; family-leave weeks rose 6\u21928 (2026), cap now $1,150/wk.",
         "c": [
           "ri_tci"
         ]
@@ -5266,7 +5397,7 @@
     "DC": {
       "color": "#2a4a8a",
       "label": "Full PFML",
-      "rate": "90% low/65%",
+      "rate": "90% low/50% high",
       "weeks": 12,
       "contrib": "0.75%",
       "since": 2020
